@@ -1,0 +1,43 @@
+% folha de rosto s
+%\folhaderostoname{Folha de rosto}
+%http://code.google.com/p/abntex2/wiki/ComoCustomizar
+
+\makeatletter
+\renewcommand{\folhaderostocontent}{
+\begin{center}%
+	\begin{SingleSpacing}
+		{\ABNTEXchapterfont\large\MakeUppercase\imprimirautor}\\
+	\end{SingleSpacing}
+  
+  \vspace*{\fill}%
+  \vspace*{\fill}%
+  \vspace*{\fill}%
+  
+  {\ABNTEXchapterfont\bfseries\Large\MakeUppercase\imprimirtitulo}\\
+  \vspace*{\fill}%
+\abntex@ifnotempty{\imprimirpreambulo}{%
+  \hspace{.45\textwidth}
+  \begin{minipage}{.5\textwidth}
+    \SingleSpacing
+    \imprimirpreambulo
+  \vspace{.1\textwidth}\\%
+  {\imprimirorientadorRotulo:~\imprimirorientador}
+  \abntex@ifnotempty{\imprimircoorientador}{%
+    \hspace{.45\textwidth}
+    {\large\imprimircoorientadorRotulo~:\imprimircoorientador}%
+  }%
+  \end{minipage}%
+}%
+  \vspace*{\fill}\\%
+  
+  \begin{SingleSpacing}
+  	{\ABNTEXchapterfont\large\bfseries\MakeUppercase\imprimirinstituicao}\\
+  	{\large\bfseries\MakeUppercase\imprimirlocal}\\
+  	{\large\bfseries\MakeUppercase\imprimirdata}
+  \end{SingleSpacing}
+  
+\end{center}
+}%end of folhaderostocontent
+\makeatother
+
+\imprimirfolhaderosto*{}

@@ -1,0 +1,8 @@
+\changetocdepth {4}
+\changetocdepth {2}
+\select@language {brazil}
+\contentsline {section}{\numberline {0.1}\textit {Web Services}}{2}{section.0.1}
+\contentsline {subsection}{\numberline {0.1.1}REST}{3}{subsection.0.1.1}
+\contentsline {section}{\numberline {0.2}\textit {Apache Tomcat}}{3}{section.0.2}
+\vspace {\cftbeforechapterskip }
+\contentsline {chapter}{REFER\IeC {\^E}NCIAS}{5}{section*.3}

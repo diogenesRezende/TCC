@@ -1,0 +1,1115 @@
+<!doctype html>
+<html xmlns:og="http://opengraphprotocol.org/schema/"  xml:lang="pt-br" lang="pt-br">
+
+<head>
+<title>Introdução às tecnologias Web Services: SOA, SOAP, WSDL e UDDI - Parte1</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+
+<link href="http://www.devmedia.com.br/articles/css/artigo_style_2013.css" rel="stylesheet" type="text/css">
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META HTTP-EQUIV="Expires" CONTENT="0">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+
+	<meta property="og:image" content="http://www.devmedia.com.br/imagens/fotoscolunistas/Col_160248_toma.jpg">
+
+<META NAME="description" CONTENT="Mobile magazine - Neste artigo veremos uma introdução às tecnologias Web Services: SOA, SOAP, WSDL e UDDI."> 
+
+<link rel="canonical" href="http://www.devmedia.com.br/introducao-as-tecnologias-web-services-soa-soap-wsdl-e-uddi-parte1/2873"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="content-language" content="pt-br" />
+<meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=3.0,initial-scale=1.0" />
+<meta name="msapplication-tap-highlight" content="no" />
+
+<!-- ICON MAC -->  
+<link rel="apple-touch-icon" href="http://www.devmedia.com.br/favicon.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="http://www.devmedia.com.br/imagens/2013/Devmedia72x.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.devmedia.com.br/imagens/2013/Devmedia114x.png" />
+<link rel="apple-touch-icon" sizes="129x129" href="http://www.devmedia.com.br/imagens/2013/Devmedia129x.png" />  
+<!-- FAVICON HTML5-->
+<link rel="icon" href="http://www.devmedia.com.br/favicon.png">
+<!-- FAVICON IE-->
+<link rel="icon" type="image/png" href="http://www.devmedia.com.br/favicon.png">
+
+<link href="https://plus.google.com/101753743720604160232" rel="publisher" />
+<!-- CSS - RESET E PRESET -->
+<link rel="stylesheet" type="text/css" href="http://www.devmedia.com.br/css/2013/devmedia.css?d=1">
+<!-- CSS - RESPONSIVO -->
+<link rel="stylesheet" type="text/css" href="http://www.devmedia.com.br/css/2013/devmedia-responsive.css?d=1.3">
+<!-- CSS - HEADER E FOOTER -->
+<link rel="stylesheet" type="text/css" href="http://www.devmedia.com.br/css/2013/devmedia-header-footer.css?d=4.33">
+<link rel="stylesheet" type="text/css" href="http://www.devmedia.com.br/includeb/style.min.css">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script async src="http://www.devmedia.com.br/js/2013/menu.js?d=6.4"></script><script async src="http://www.devmedia.com.br/js/2013/menu.desktop.js?d=9.12"></script>
+  <!--[if lt IE 9]>
+	<script async defer src="js/modernizr.custom.js"></script>
+  <![endif]-->
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=145393072270566";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-15997918-1']);
+_gaq.push(['_setDomainName', 'devmedia.com.br']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<script async defer src="http://www.devmedia.com.br/articles/article.js"></script>
+
+<script async type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "7fba8974-a42c-4d1b-96a9-4249a82ce8c0", onhover: false}); </script>	
+
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=3" />
+
+
+<link rel="publisher" href="https://plus.google.com/101753743720604160232"/>
+
+</head>
+
+<body>
+<div class="dm-shadow"></div>
+<section class="dm-shell">
+<header>
+<span class="opacity"></span>
+<nav class="lateral">
+<ul>
+<li><strong><a href="http://www.devmedia.com.br/" rel="nofollow"><span class="font-dev">bem</span><span class="font-media">vindo</span><span class="icon home"></span></a></strong></li>
+<li><a href="#" class="back" data-main="true">Voltar</a></li>
+
+<li><a href="http://www.devmedia.com.br/forum/"><span class="icon2 forum"></span>Fórum</a></li>
+<li><a href="http://www.devmedia.com.br/api/" style="text-transform:none;"><span class="icon2 devware"></span>APIs</a></li>
+<li><a href="#" rel="nofollow"><span class="icon2 servicos"></span>Serviços<span></span></a>
+<ul>
+<li><h5>Serviços<span class="icon servicos"></span></h5></li>
+<li><a href="#" class="back">Voltar</a></li>
+<li><a href="http://www.devmedia.com.br/player" rel="nofollow">Devmedia Player</a></li>
+<li><a href="http://www.devmedia.com.br/join" rel="nofollow">Cadastre-se</a></li>
+<li><a href="http://www.devmedia.com.br/feed" rel="nofollow">RSS</a></li>
+<li><a href="http://www.devmedia.com.br/whatsnew/?id=1">O que há de novo </a></li>
+<li><a href="http://www.devmedia.com.br/como-gerenciar-os-posts-lidos-assistidos-no-portal-devmedia/25840" rel="nofollow">Gerenciando o que foi lido</a></li>
+</ul>
+</li>
+<li><a href="http://www.devmedia.com.br/mvp/" rel="nofollow"><span class="icon2 mvp"></span>MVP</a></li>
+<li><a href="#" rel="nofollow"><span class="icon2 comprar"></span>Comprar<span></span></a>
+<ul>
+<li><h5>Comprar<span class="icon comprar"></span></h5></li>
+<li><a href="#" class="back">Voltar</a></li>
+<li><a href="http://www.devmedia.com.br/mvp/" rel="nofollow">MVP</a></li>
+<li><a href="http://www.devmedia.com.br/shop/" rel="nofollow">Loja Virtual</a></li>
+<li><a href="http://www.devmedia.com.br/assine/#assine-revistas">Assine revistas</a></li>
+</ul>
+</li>
+<li><a href="#" rel="nofollow"><span class="icon2 tecnologia"></span>Conteúdo<span></span></a>
+<ul>
+<li><h5>Conteúdo<span class="icon tecnologia"></span></h5></li>
+<li><a href="#" class="back">Voltar</a></li>
+<li><a href="http://www.devmedia.com.br/mentoring/">Mentoring</a></li>
+<li><a href="http://www.devmedia.com.br/front-end-web">Front-end web</a></li>
+<li><a href="http://www.devmedia.com.br/mobile">Mobile</a></li>
+<li><a href="http://www.devmedia.com.br/java">Java</a></li>
+<li><a href="http://www.devmedia.com.br/dotnet">.net</a></li>
+<li><a href="http://www.devmedia.com.br/banco-de-dados">Banco de dados</a></li>
+<li><a href="http://www.devmedia.com.br/engenharia-de-software">Engenharia de Software</a></li>
+<li><a href="http://www.devmedia.com.br/php">PHP</a></li>
+<li><a href="http://www.devmedia.com.br/delphi">Delphi</a></li>
+<li><a href="http://www.devmedia.com.br/canais/">Todo o conteúdo</a></li>
+</ul>
+</li>
+<li><a href="#" rel="nofollow"><span class="icon2 revistas"></span>Revistas<span></span></a>
+<ul>
+<li><h5>Revistas<span class="icon revistas"></span></h5></li>
+<li><a href="#" class="back">Voltar</a></li>
+<li><a href="http://www.devmedia.com.br/revista-front-end-magazine">Front-end Magazine</a></li>
+<li><a href="http://www.devmedia.com.br/revista-mobile-magazine">Mobile magazine</a></li>
+<li><a href="http://www.devmedia.com.br/revista-java-magazine">Java Magazine</a></li>
+<li><a href="http://www.devmedia.com.br/revista-easy-java-magazine">easy Java Magazine</a></li>
+<li><a href="http://www.devmedia.com.br/revista-dotnet-magazine">.net Magazine</a></li>
+<li><a href="http://www.devmedia.com.br/revista-easy-dotnet-magazine">easy .net Magazine</a></li>
+<li><a href="http://www.devmedia.com.br/revista-sql-magazine">SQL Magazine</a></li>
+<li><a href="http://www.devmedia.com.br/revista-engenharia-de-software-magazine">Engenharia de Software Magazine</a></li>
+<li><a href="http://www.devmedia.com.br/revista-clubedelphi">ClubeDelphi</a></li>
+<li><a href="http://www.devmedia.com.br/assgold">Todas as revistas</a></li>
+</ul>
+</li>
+<li><a href="#" rel="nofollow"><span class="icon2 cursos"></span>Cursos<span></span></a>
+<ul>
+<li><h5>Cursos<span class="icon cursos"></span></h5></li>
+<li><a href="#" class="back">Voltar</a></li>
+<li><a href="http://www.devmedia.com.br/cursos/formacoes/">Formações completas</a></li>
+<li><a href="http://www.devmedia.com.br/cursos/front-end-web">Cursos de front-end web</a></li>
+<li><a href="http://www.devmedia.com.br/cursos/mobile">Cursos de Mobile</a></li>
+<li><a href="http://www.devmedia.com.br/cursos/java">Cursos de Java</a></li>
+<li><a href="http://www.devmedia.com.br/cursos/net">Cursos de .net</a></li>
+<li><a href="http://www.devmedia.com.br/cursos/banco-de-dados">Cursos de Banco de dados</a></li>
+<li><a href="http://www.devmedia.com.br/cursos/engenharia-de-software">Cursos de Engenharia de Software</a></li>
+<li><a href="http://www.devmedia.com.br/cursos/php">Cursos de PHP</a></li>
+<li><a href="http://www.devmedia.com.br/cursos/automacao">Cursos de Automação / NFe / Paf-ecf</a></li>
+<li><a href="http://www.devmedia.com.br/cursos/delphi">Cursos de Delphi</a></li>
+<li><a href="http://www.devmedia.com.br/cursos/">Todos os cursos</a></li>
+</ul>
+</li>
+<li><a href="http://www.devmedia.com.br/pocket-video"><span class="icon2 pocketvideos"></span>Pocket Videos</a></li>
+<li><a href="http://www.devmedia.com.br/fale-conosco/" rel="nofollow"><span class="icon2 atendimento"></span>Fale conosco</a></li>
+
+</ul>
+</nav>
+            <!-- MENU DESKTOP -->  
+            <nav class="dm-bgnav-out">
+			  <div class="container-fluid dm-bgnav"> <!-- MOSTRAR E OCULTAR NAVBAR -->
+                <div class="container">     
+                  <div class="devmenu">  
+                    
+                    <i class="drop-mobile"><a href="#" class="menu"></a></i>
+					<a class="logo-mob" href="http://www.devmedia.com.br/"><span class="font-dev">Dev</span><span class="font-media">Media</span></a>
+                    <span id="headermenudesktop"></span>
+					
+					<div class="login-box">
+                    <div class="login-btn">
+					<a href="http://www.devmedia.com.br/join/" class="cadastre-se" rel="nofollow">Cadastre-se</a>
+                      <div class="popover1">Login</div>
+					  <div class="pai">
+                        <div class="login-pop deslogado">
+                          <div class="login-form">
+                            <div class="seta"></div>
+                              <form class="form-inline" method="post" action="http://www.devmedia.com.br/login/login.asp">
+                                <input type="text" name="usuario" class="input-medium pull-left" placeholder="Usuário"/>
+                                <input type="password" name="senha" class="input-medium pull-right" placeholder="Senha"/>
+								<input type="hidden" name="ac" value="1" />
+                                <br><button type="submit">OK</button>
+                                <a href="http://www.devmedia.com.br/join/" class="cadastre-se">Cadastre-se</a>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <!-- FIM MENU DESKTOP -->
+
+            <!-- REVELAR MENU DROP-->
+			<div class="revelar dm-cor5">
+            <!-- DIV COM O Z-INDEX QUE SOBREPOE O DROPDOWN, CRIA A IDEIA DE REVELAR O MENU ESCONDIDO NA TRANSIÇÃO --> 
+              <!-- BLOCO TOPO -->
+			  <div class="container-fluid dm-busca">
+                <div class="container">
+                  <div class="row-fluid"> <!-- CABEÇALHO -->
+                    <a href="http://www.devmedia.com.br/"><img src="http://www.devmedia.com.br/Imagens/2013/logo.png" alt="DevMedia" title="DevMedia"></a>
+                    <!-- BUSCA EM TELA DESKTOP E TABLET -->
+                    <nav id="busca">
+					  <form action="http://www.devmedia.com.br/busca/">
+                        <input type="text" name="txtsearch" placeholder="Buscar"/>
+                        <button type="submit"></button>
+					  </form>
+                    </nav>
+                  </div><!-- FIM CABEÇALHO -->
+                </div>
+              </div>
+              <!-- FIM BLOCO TOPO -->
+			  </div>
+</header>
+
+
+<div id="main">	
+	
+	
+
+	<div id="div_corpo_post">	 
+			
+			<section id="boxes_de_aviso">
+			<a name="boxvalorcreditos"></a>
+			<div id="div_feedback_post">
+		
+		Você precisa estar logado para dar um feedback. 
+		<a href="http://www.devmedia.com.br/login/login.asp?ret=articles/viewcomp.asp?comp=2873" rel="nofollow">Clique aqui para efetuar o login</a>
+		
+			</div>
+
+<div id="pop">
+	  
+	  Para efetuar o download você precisa estar logado. <a href='http://www.devmedia.com.br/login/login.asp'>Clique aqui para efetuar o login</a>
+	  
+</div>	
+			</section>
+			
+			<!--include file="inc_mensagem_mvp.asp" -->
+			
+			
+								
+			
+			<section id="barra_botoes" >
+			
+						   
+			   <label style='margin-right:30px;'><a href='#comentariosArtigo' rel="nofollow" class="linkpadrao">comentários</a></label>
+
+			   <label><a href='http://www.devmedia.com.br/favorite/addfavorite.asp?comp=2873' rel="nofollow" target="_blank" class="linkpadrao">post favorito 
+			   (21)
+			   </a></label>
+
+			   
+			   			
+			</section>		
+			
+			<article id="div_conteudo_post">
+			
+			
+									
+			<header>
+			<h1 class="normal">Introdução às tecnologias Web Services: SOA, SOAP, WSDL e UDDI - Parte1</h1>				
+			<div id="div_descricao">					
+			<h2 class="normal">Neste artigo veremos uma introdução às tecnologias Web Services: SOA, SOAP, WSDL e UDDI.</h2>				
+			</div>
+			</header>
+			
+																
+							
+			<div id="div_barrasocial"> 
+			
+				<div id="box_social" >		
+				  <span class="st_twitter_hcount" displayText="Tweet"></span>
+				  <span class="st_plusone_hcount" displayText="Tweet2"></span>
+				  <span class="st_fblike_hcount"  displayText="Facebook"></span>
+				</div>			
+				
+				<span id="ja_votou">0</span>
+
+
+
+<div id="box_fb_comp">			
+	
+	
+
+	<div class="float_left" >
+		<img src="http://www.devmedia.com.br/imagens/portal2010/handUp.png" border=0>
+	</div>
+
+	<div class="float_left" >
+
+	<a class="linkfeedback" href="#" onclick="document.getElementById('div_feedback_post').style.display='block';">
+	&nbsp;Gostei (14)</a>
+	</div>
+
+	
+	
+	<div class="separador_feedback_rodape2"> 
+	<a  href="#" onclick="document.getElementById('div_feedback_post').style.display='block';">
+	<img src="http://www.devmedia.com.br/articles/img/handDown.png" border=0 >
+	</a>
+	</div>
+	
+	<div class="float_left">
+	<a  class="linkfeedback" href="#" onclick="document.getElementById('div_feedback_post').style.display='block';">
+	<span class="feedback_rodape1">&nbsp;(0)</span>
+	</a>
+	</div>
+	
+	
+	
+	<div class="t_clear_both"></div>
+</div>
+	
+				
+				<div class="t_clear_both"></div>
+			
+			</div>
+			<a name="link_voto_negativo"></a>
+<section id  = "box_voto_negativo" >
+
+	<a href='#' onclick="document.getElementById('box_voto_negativo').style.display='none';" class='linkpadrao'>[fechar]</a>		
+	<p class="frase_box_qualidade1">Você não gostou da <b>qualidade</b> deste conteúdo?</p>
+	<p class="frase_box_qualidade2">(opcional) Você poderia comentar o que não lhe agradou?</p>		
+	
+	<div id="form_voto_negativo">
+	<form name="form_voto_negativo" method="post" action="http://www.devmedia.com.br/articles/grava_fb_negativo.asp" >
+	  <textarea id="texto_voto" name="texto_voto" ></textarea>
+	  <input type="hidden" name="idcomp" value="2873">
+	</form>
+	</div>
+
+	<span id='div_confirma_voto_negativo' >
+	<a href="#" class="botao_confirma_negativo"  onclick="document.forms['form_voto_negativo'].submit(); return false;">Confirmo meu voto negativo</a>
+	</span>
+</section>
+				<div id="div_conteudo" >
+					
+					<div id="section_conteudo_post" > 
+					<p><strong><a href="http://www.devmedia.com.br/articles/viewcomp.asp?comp=2855"  target="_blank">Esse artigo faz parte da revista WebMobile edição 1. Clique aqui para ler todos os artigos desta edição.</a></strong></p>
+<img src="http://www.devmedia.com.br/imagens/webmobile/edicoes/1/wm1_capa.JPG" alt="Revista WebMobile 1"><br />
+
+<p>Antes de nos aprofundarmos nos conceitos e tecnologia de web services, vejamos um pouco sua evolução. No ano de 2000, a W3C (World Wide Web Consortium) aceitou a submissão do Simple Object Access Protocol (SOAP). Este formato de mensagem baseado em XML estabeleceu uma estrutura de transmissão para comunicação entre aplicações (ou entre serviços) via HTTP. Sendo uma tecnologia não amarrada a fornecedor, o SOAP disponibilizou uma alternativa atrativa em relação aos protocolos proprietários tradicionais, tais como CORBA e DCOM.</p>
+
+<p>   No decorrer do ano seguinte, o W3C publicou a especificação WSDL. Uma nova implementação do XML, este padrão forneceu uma linguagem para descrever a interface dos web services. Posteriormente suplementada pela especificação UDDI (Universal Description, Discovery and Integration), que proporcionou um mecanismo padrão para a descoberta dinâmica (dynamic discovering) de descrições de serviço, a primeira geração da plataforma de Web services foi estabelecida. A <strong>Figura 1</strong> ilustra em alto nível o relacionamento entre estes padrões.</p>
+<img src="http://www.devmedia.com.br/imagens/webmobile/edicoes/1/wm1-7-uddi_arquivos/image001.gif" alt="O relacionamento entre especificações de primeira geração"><br />
+<p><strong>Figura 1:</strong> O relacionamento entre especificações de primeira geração</p>
+
+<ul>
+<li>Is accessed using: é acessado utilizando;</li>
+<li>Enables discovery of: permite a descoberta de;</li>
+<li>Describes: descreve;</li>
+<li>Enables communication between: permite a comunicação entre;</li>
+<li>Binds to: ligação para.</li>
+</ul>
+
+<p>Desde então, os web services foram adotados por vendedores e fabricantes num ritmo considerável. Suporte amplo da indústria seguiu-se à popularidade e importância desta plataforma e de princípios de projeto orientados a serviço. Isto levou à criação de uma segunda geração de especificação de Web services.</p>
+
+<h3>Web services e a arquitetura orientada a serviços (SOA)</h3>
+<p><strong>Entendendo serviços</strong></p>
+
+<p>O conceito de serviços em uma aplicação existe faz algum tempo. Serviços, assim como componentes, são considerados blocos de construção independentes, os quais coletivamente representam um ambiente de aplicação. No entanto, diferente de componentes tradicionais, serviços têm algumas características únicas que lhes permitem participar como parte de uma arquitetura orientada a serviços.</p>
+
+<p>Uma destas características é a completa autonomia em relação a outros serviços. Isto significa que cada serviço é responsável por seu próprio domínio, o que tipicamente significa limitar seu alcance para uma função de negócio específica (ou um grupo de funções relacionadas).</p>
+
+<p>Este enfoque de projeto resulta na criação de unidades isoladas de funcionalidades de negócio ligadas fracamente entre si. Isto é possível por causa da definição de uma estrutura padrão de comunicação. Devido à independência que esses serviços desfrutam dentro desta estrutura, a lógica de programação que encapsulam não tem necessidade de obedecer a nenhuma outra plataforma ou conjunto de tecnologias.</p>
+
+<p><strong>XML Web services</strong></p>
+
+<p>O tipo de serviço mais largamente aceito e bem sucedido é o XML Web service, que será daqui em diante chamado apenas de web service, ou simplesmente service. Este tipo de serviço possui dois requisitos fundamentais:</p>
+<ul>
+<li>comunica-se via protocolos internet (normalmente HTTP);</li>
+<li>envia e recebe dados formatados como documentos XML.</li>
+</ul>
+
+<p>A ampla aceitação do web service resultou no surgimento de um conjunto de tecnologias suplementares que se tornaram um padrão de fato. Assim ao desenvolver nossos web services devemos considerar o uso de tecnologias que:</p>
+
+<ul>
+<li>forneça uma descrição de serviço que, no mínimo, consista de um documento WSDL;</li>
+<li>seja capaz de transportar documentos XML utilizando SOAP sobre HTTP.</li>
+</ul>
+
+<p>Estas tecnologias não modificam a funcionalidade do núcleo de um serviço web, tanto como o faz sua habilidade para se representar e comunicar num modo padrão. Muitas das convenções de arquitetura expressadas neste artigo assumem que SOAP e WSDL fazem parte da estrutura de web services descrita.</p>
+
+<p>Além disto, é normal que um Web service seja:</p>
+<ul>
+<li>capaz de agir como o solicitante e o provedor de um serviço;</li>
+<li>registrado com um discovery agent através do qual possam ser localizados.</li>
+</ul>
+
+<p>Numa conversação típica com um web service, o cliente iniciador do pedido é um web service também. Como mostrado na <strong>Figura 2</strong>, qualquer interface exposta por este client service também o qualifica como um serviço a partir do qual outros serviços podem solicitar informação. Posto isto, web services não se encaixam no modelo clássico de cliente-servidor. Na verdade, eles tendem a estabelecer um sistema ponto-a-ponto, onde cada serviço pode atuar como cliente ou servidor.</p>
+<img src="http://www.devmedia.com.br/imagens/webmobile/edicoes/1/wm1-7-uddi_arquivos/image002.gif" alt="Troca de papéis do Web services durante uma conversação"><br />
+<p><strong>Figura 2:</strong> Troca de papéis do Web services durante uma conversação</p>
+
+<ul>
+<li>Now I´m like a client: agora sou um cliente;</li>
+<li>Now I´m like a server: agora sou um servidor;</li>
+<li>Service: serviços;</li>
+<li>Could you do this for me: poderia fazer isso por mim?;</li>
+<li>Ok, i´ll get right on it: Ok;</li>
+<li>Now I´ve got to ask you to do something: agora eu gostaria de lhe pedir algo;</li>
+<li>Yeah, alright. I´ll take care of if: Tudo bem, é só falar.</li>
+</ul>
+
+<p><strong>Service-oriented architecture (SOA)</strong></p>
+
+<p>Como mencionado anteriormente, adicionar uma aplicação com uns poucos web services não é nenhum problema. Esta integração limitada pode ser apropriada para uma experiência de aprendizado, ou para complementar a arquitetura de uma aplicação existente com uma peça de funcionalidade baseada em serviços que atende a um requisito específico do projeto. No entanto, isto não estabelece uma arquitetura orientada a serviço. Existe uma clara diferença entre:</p>
+
+<ul>
+<li>uma aplicação que usa web service;</li>
+<li>uma aplicação baseada numa arquitetura orientada a serviços.</li>
+</ul>
+
+<p>Uma SOA é um modelo de projeto com um conceito profundamente amarrado à questão do encapsulamento de aplicação. A arquitetura resultante estabelece essencialmente um paradigma de projeto, no qual web services são os blocos de construção chave. Isto quer dizer que ao migrar a arquitetura da sua aplicação para uma SOA, estabelece-se um compromisso com os princípios de projeto de web services e a tecnologia correspondente, como partes fundamentais do seu ambiente técnico.</p>
+
+<p>Uma SOA baseada em XML web service é construída sobre camadas de tecnologia XML estabelecidas, focada em expor a lógica de aplicação existente como um serviço fracamente acoplado. Para apoiar este modelo, uma SOA promove o uso de um mecanismo de discovery por serviços via um service broker ou discovery agent.</p>
+
+<p>A <strong>Figura 3</strong> mostra como uma SOA altera a arquitetura multicamada existente, ao introduzir uma camada lógica que, através do uso de interfaces programáticas padrão (providas pelo web services), estabelece um ponto comum de integração. Esta camada de integração de serviços constitui a base para um novo modelo que pode se estender além do escopo de uma única aplicação, unificando plataformas legadas díspares em um ambiente aberto. Quando web services são utilizados para integração cruzada de aplicações (ver <strong>Figura 4</strong>), elas se estabelecem como parte da infra-estrutura do sistema.</p>
+
+<img src="http://www.devmedia.com.br/imagens/webmobile/edicoes/1/wm1-7-uddi_arquivos/image003.gif" alt=""Uma representação lógica de uma arquitetura orientada a serviços><br />
+<p><strong>Figura 3:</strong> Uma representação lógica de uma arquitetura orientada a serviços</p>
+
+<ul>
+<li>Presentation: apresentação;</li>
+<li>Integration: integração;</li>
+<li>Business: negócio;</li>
+<li>Data: dado;</li>
+<li>Service interface: interface de serviço.</li>
+</ul>
+
+<img src="http://www.devmedia.com.br/imagens/webmobile/edicoes/1/wm1-7-uddi_arquivos/image004.gif" alt="Uma representação lógica de uma arquitetura de integração orientada a serviço"><br />
+<p><strong>Figura 4:</strong> Uma representação lógica de uma arquitetura de integração orientada a serviço</p>
+<p>É importante se conscientizar quanto ao acréscimo de complexidade de projeto introduzido pelo SOA. Mais ainda do que em um ambiente n-camada, projetistas de aplicação devem considerar de uma forma completa como a introdução de serviços vai afetar dados existentes e modelos de negócio.</p>
+
+<p>Na medida em que a utilização de serviços se diversifica, o significado dos requisitos de segurança e escalabilidade são amplificados. Ambientes orientados a serviço bem projetados tentarão vencer estes desafios com infra-estrutura adequada, ao invés de utilizar soluções sob medida, específicas de aplicação</p>
+
+<p>Os papéis e cenários ilustrados nas próximas duas seções estão limitados somente ao assunto web service. A estrutura de mensagens SOAP subjacente será explicada em separado, no próximo artigo desta série.</p>
+
+<h3>Papéis web service</h3>
+
+<p>Serviços podem assumir diferentes papéis quando envolvidos em diversos cenários de interação. Dependendo do contexto pelo qual é visualizado, assim como o estado da tarefa rodando no momento, o mesmo web service pode trocar de papéis ou ser designado para múltiplos papéis simultâneos:</p>
+
+
+<p><strong>Provedor de serviços</strong></p>
+
+<p>Agindo como um provedor de serviços, um web service expõe uma interface pública através da qual pode ser chamado por solicitantes do serviço. Um provedor de serviços disponibiliza esta interface publicando uma descrição do serviço. Num modelo cliente-servidor, o provedor de serviço pode ser comparado ao servidor.</p>
+
+<p>O termo “provedor de serviço” pode também ser usado para descrever a organização ou ambiente que hospeda (provê) o web service.</p>
+
+<p>Um provedor de serviço pode também agir como um solicitante de serviço. Por exemplo, um web service pode atuar como um provedor de serviço quando um solicitante de serviço lhe pede para executar uma função. Pode então atuar como um solicitante de serviço quando mais tarde contata o solicitante de serviço original (agora agindo como um provedor de serviço) para solicitar informação de status.</p>
+
+<p><strong>Solicitante de serviço</strong></p>
+
+<p>Um solicitante de serviço é o remetente de uma mensagem web service ou o programa de software solicitando um web service específico. O solicitante de serviço é comparável ao cliente dentro de um modelo cliente-servidor padrão. Solicitantes de serviços são às vezes chamados de consumidores de serviços.</p>
+
+<p>Um solicitante de serviço pode também ser um provedor de serviço. Por exemplo, num modelo de solicitação e resposta, o web service iniciador primeiro age como um solicitante de serviço ao requerer informações do provedor de serviço. O mesmo web service então, faz o papel de um provedor de serviço ao responder à solicitação original.</p>
+<p><strong>Intermediário</strong></p>
+
+<p>O papel de intermediário é assumido pelo web service quando ele recebe a mensagem de um solicitante de serviço e a passa adiante para o provedor de serviço. Neste caso, ele  pode também agir como um provedor de serviço (recebendo a mensagem) e como um solicitante de serviço (passando adiante a mensagem).</p>
+
+<p>Intermediários podem existir em muitas formas diferentes. Alguns são passivos e simplesmente re-transmitem ou roteam as mensagens, enquanto outros processam ativamente uma mensagem antes de repassá-la. Tipicamente, aos intermediários só é permitido o processamento e modificação do cabeçalho da mensagem. Para preservar a integridade da mensagem, seus dados não devem ser alterados.</p>
+
+<p><strong>Remetente inicial</strong></p>
+
+<p>Como o web service responsável por iniciar a transmissão da mensagem, remetentes iniciais também podem ser considerados solicitantes de serviço. Este termo existe para ajudar a diferenciar o primeiro web service que envia uma mensagem, dos intermediários também qualificados como solicitantes de serviço.</p>
+<p><strong>Receptor final</strong></p>
+
+<p>O último Web service a receber uma mensagem é o receptor final. Estes serviços representam o destino final de uma mensagem e também podem ser considerados provedores de serviço.</p>
+
+<h3>Interação web service</h3>
+
+<p>Quando mensagens são passadas entre dois ou mais web services, uma variedade de cenários de interação pode acontecer. A seguir, termos comuns utilizados para identificar e etiquetar estes cenários serão apresentados.</p>
+
+<p><strong>Caminho da mensagem</strong></p>
+
+<p>A rota pela qual a mensagem viaja é o caminho da mensagem. Deve consistir de um remetente inicial e um receptor final e pode conter nenhum, um, ou mais de um intermediários. A <strong>Figura 5</strong> ilustra um caminho de mensagem simples.</p>
+
+<p>O caminho de transmissão atual percorrido por uma mensagem pode ser dinamicamente determinado por roteadores intermediários. A lógica de roteamento pode ser ativada em resposta à carga de requisitos de balanceamento, ou pode ser baseada nas características da mensagem e outras variáveis lidas e processadas pelo intermediário em tempo de execução. A <strong>Figura 6</strong> descreve como uma mensagem é enviada via um ou dois caminhos de mensagem possíveis, tal como é determinado pelo roteador intermediário.</p>
+
+<img src="http://www.devmedia.com.br/imagens/webmobile/edicoes/1/wm1-7-uddi_arquivos/image005.gif" alt="Um caminho de mensagem formado por três Web services"><br />
+<p><strong>Figura 5:</strong> Um caminho de mensagem formado por três Web services</p>
+<ul>
+<li>Message path: caminho da mensagem.</li>
+</ul>
+
+<img src="http://www.devmedia.com.br/imagens/webmobile/edicoes/1/wm1-7-uddi_arquivos/image006.gif" alt="Uma mensagem dinamicamente determinada por um roteador intermediário"><br />
+<p><strong>Figura 6:</strong> Uma mensagem dinamicamente determinada por um roteador intermediário</p>
+<ul>
+<li>Dynamically determined message path: caminho da mensagem determinada dinamicamente.</li>
+</ul>
+
+<h3>Padrão de troca de mensagens</h3>
+
+<p>Serviços que interagem em um ambiente orientado a serviços tipicamente se enquadram em determinados padrões de troca de mensagens. Padrões típicos incluem:</p>
+
+<ul>
+<li>solicite e responda (request and response);</li>
+<li>publique e subscreva (publish and subscribe);</li>
+<li>fire and forget - um para um;</li>
+<li>fire and forget - um para muitos ou difusão;</li>
+</ul>
+
+<p>O padrão pedido e resposta é o mais comum quando se está simulando intercâmbio de dados síncronizados. Os demais padrões são usados principalmente para facilitar transferência de dados assíncrona.</p>
+
+<p><strong>Correlação</strong></p>
+
+<p>Correlação (Correlation) é a técnica utilizada para casar mensagens enviadas através de caminhos de mensagem diferentes. É comumente empregada num padrão de intercâmbio de pedido e resposta de mensagem, onde a mensagem de resposta deve estar associada à mensagem original que iniciou a solicitação. Embutir valores de ID sincronizados dentro de mensagens relacionadas é uma técnica frequentemente utilizada para conseguir correlação.</p>
+
+<p><strong>Coreografia</strong></p>
+
+<p>Regras que governam características de comportamento relacionadas à forma como um grupo de web services interagem podem ser aplicadas como uma coreografia (choreography). Estas regras incluem a seqüência na qual web services podem ser chamados, condições que se aplicam à seqüência que está sendo transportada e o padrão de uso que irá definir os cenários de interação permitidos. O escopo de uma coreografia está tipicamente amarrado ao de uma atividade ou tarefa (ver exemplo na <strong>Figura 7</strong>).</p>
+
+
+
+<img src="http://www.devmedia.com.br/imagens/webmobile/edicoes/1/wm1-7-uddi_arquivos/image007.gif" alt="A seqüência de interação de um grupo de serviços sendo comandados por uma coreografia"><br />
+<p><strong>Figura 7:</strong> A seqüência de interação de um grupo de serviços sendo comandados por uma coreografia</p>
+<ul>
+<li>Correlation: correlação.</li>
+</ul>
+<h3>Atividade</h3>
+<p>Padrões de intercâmbio de mensagens formam a base para atividades de serviços (também conhecidos como tarefas). Uma atividade consiste de um grupo de web services que interagem e colaboram para realizar uma função ou um grupo lógico de funções. A <strong>Figura 8</strong> mostra uma atividade de serviço simples. A diferença entre uma coreografia e uma atividade está no fato de que a atividade é geralmente associada com uma função de aplicação específica, tal como a execução de uma tarefa de negócio.</p>
+
+<img src="http://www.devmedia.com.br/imagens/webmobile/edicoes/1/wm1-7-uddi_arquivos/image008.gif" alt="Uma atividade de serviço envolvendo três serviços"><br />
+<p><strong>Figura 8:</strong> Uma atividade de serviço envolvendo três serviços</p>
+<ul>
+<li>Activity: atividade.</li>
+</ul>
+
+<h3>Descrição da estrutura de web services</h3>
+
+<p>Um web service é descrito através de uma coleção de documentos de definição. Estes atuam como blocos de construção para uma descrição de serviço:</p>
+
+<ul>
+<li>Abstrato + Concreto = Definição de Serviço;</li>
+<li>Definição de Serviço + Definições Complementares = Descrição de Serviço.</li>
+</ul>
+<p>A <strong>Figura 9</strong> ilustra a relação entre esses documentos.</p>
+
+<img src="http://www.devmedia.com.br/imagens/webmobile/edicoes/1/wm1-7-uddi_arquivos/image009.gif" alt="Conteúdo de uma descrição de serviço"><br />
+<p><strong>Figura 9:</strong> Conteúdo de uma descrição de serviço</p>
+<ul>
+<li>Service description: descrição do serviço;</li>
+<li>Service definifion: definição do serviço;</li>
+<li>Supplementary definitions: definições suplementares;</li>
+<li>Abstract: abstrato;</li>
+<li>Concret: concreto;</li>
+<li>service interface definition: definição da interface do serviço;</li>
+<li>service implementation definition: definição da implementação do serviço.</li>
+</ul>
+
+<p><strong>Abstrato</strong></p>
+
+<p>A descrição de uma interface web service, independente dos detalhes de implementação, é chamada de abstrato (abstract). Descrições deste elemento são fornecidas adiante neste artigo, como parte do tutorial do WSDL.</p>
+
+<p><strong>Concreto</strong></p>
+
+<p>Localização e informação de implementação específicas sobre um web service constituem as partes concretas (concrete) de um documento WSDL. Elas são representadas pelos elementos de ligação (binding), serviço (service) e ponto-de-término (endpoint ou port).</p>
+
+
+<p><strong>Definição de serviço</strong></p>
+<p>Geralmente, o conteúdo de um documento WSDL constitui uma definição de serviço (service definition) que inclui as definições da interface (abstrato) e da implementação (concreto).</p>
+
+<p><strong>Descrição de serviço</strong></p>
+
+<p>Frequentemente, uma descrição de serviço é um único documento WSDL que fornece uma definição de serviço. No entanto, pode também incluir vários documentos de definição adicionais que irão fornecer informações complementares.</p>
+
+<h3>Introdução aos web services de primeira geração</h3>
+
+<p>A estrutura W3C para web services está fundamentada em três especificações XML fundamentais:</p>
+
+<ul>
+<li>Linguagem para definição de web service (Web Services Definition Language - WSDL);</li>
+<li>Simple Object Access Protocol (SOAP);</li>
+<li>Universal Description, Discovery, and Integration (UDDI).</li>
+</ul>
+
+<p>Estes padrões de tecnologia, acoplados aos princípios de projeto orientado a serviço, formam um SOA fundamentado na tecnologia XML. Esta arquitetura de web services de primeira geração permite a criação de web services independentes capazes de encapsular unidades isoladas de funcionalidades de negócio. Esta tecnologia tem também algumas limitações, que tem sido contempladas numa segunda geração de especificações. A seção a seguir, fornece um tutorial introdutório para a tecnologia WSDL. SOAP e UDDI serão vistos no próximo artigo da série.</p>
+
+<h3>Linguagem para definição de Web Services (WSDL)</h3>
+<p>Web services devem ser definidos numa forma consistente para que possam ser descobertos e “interfaceados” com outros serviços e aplicações. A WSDL é uma especificação W3C que fornece a linguagem mais avançada para a descrição de definições de web services.</p>
+
+<p>A camada de integração introduzida pela estrutura de web services estabelece um padrão, universalmente reconhecido e com interface programática suportada. Tal como mostrado na <strong>Figura 10</strong>, WSDL permite a comunicação entre essas camadas ao fornecer descrições padronizadas.</p>
+<img src="http://www.devmedia.com.br/imagens/webmobile/edicoes/1/wm1-7-uddi_arquivos/image010.gif" alt="Documentos WSDL representando aplicações web services"><br />
+<p><strong>Figura 10:</strong> Documentos WSDL representando aplicações web services</p>
+<ul>
+<li>Application: aplicação;</li>
+<li>Integration layer: camada de integração;</li>
+<li>WSDL document providing the service interface for application b: documento WSDLl provendo a interface para o serviço da aplicação b;</li>
+<li>WSDL document providing the service interface for application a: documento WSDL provendo a interface para o serviço da aplicação a.</li>
+</ul>
+
+<p>A melhor forma de entender como é definido um web service e como ele é expresso por um documento WSDL, é caminhar através de cada construtor que coletivamente representa essa definição. Comecemos com o elemento definitions raiz, o qual age como o conteiner para a definição do serviço (ver <strong>Listagem 1</strong>).</p>
+
+<p><strong>Listagem 1:</strong> Uma definição de serviço, tal como é expressa pelo construtor definitions</p>
+<div class = 'div_listagem'><pre class='pre_listagem'>&lt;definitions&gt;
+	&lt;interface name="Catalog"&gt;
+	...
+	&lt;/interface&gt;
+	&lt;message name="BookInfo"&gt;
+	...
+	&lt;/message&gt;
+	&lt;service&gt;
+	...
+	&lt;/service&gt;
+	&lt;binding name="Binding1"&gt;
+	...
+	&lt;/binding&gt;
+&lt;/definitions&gt;</pre></div>
+
+<p>Uma definição WSDL pode conter coleções dos seguintes construtores primários:</p>
+
+<ul>
+<li>Interface;</li>
+<li>Message;</li>
+<li>Service;</li>
+<li>Binding.</li>
+</ul>
+
+<p>A <strong>Figura 11</strong> ilustra como os primeiros dois construtores representam a definição da interface de serviço e os últimos dois fornecem os detalhes de implementação do serviço.</p>
+
+<img src="http://www.devmedia.com.br/imagens/webmobile/edicoes/1/wm1-7-uddi_arquivos/image011.gif" alt="O conteúdo de um documento WSDL, tal como se relaciona com uma definição de serviço"><br />
+<p><strong>Figura 11:</strong> O conteúdo de um documento WSDL, tal como se relaciona com uma definição de serviço</p>
+<ul>
+<li>Web service definition: definição do web service;</li>
+<li>WSDL document: documento WSDL.</li>
+</ul>
+<h3>Definição de interface abstrata</h3>
+<p>Interfaces de web services individuais são representadas por elementos interface WSDL. Estes construtores contêm um grupo de operações lógicas correlatas. Numa arquitetura baseada em componentes, um elemento interface WSDL é análogo à interface do componente. Uma operação, portanto, é equivalente a um método de componente, por representar uma única ação ou função. A <strong>Listagem 2</strong> apresenta um exemplo de interface.</p>
+
+<p><strong>Listagem 2:</strong> Uma interface representada pelo elemento interface</p>
+<div class = 'div_listagem'><pre class='pre_listagem'>&lt;definitions&gt;
+	&lt;interface name="Catalog"&gt;
+		&lt;operation name="GetBook"&gt;
+		...
+		&lt;/operation&gt;
+	&lt;/interface&gt;
+&lt;/definitions&gt;</pre></div>
+
+<p>Um elemento operation típico consiste de um grupo de mensagens de entrada e saída correlatas. A execução de uma operation requer a transmissão ou intercâmbio destas mensagens entre o serviço solicitante e o provedor de serviço.</p>
+
+<p>Mensagens operation são representadas por construtores message que são declarados sob os elementos definitions. Os nomes das mensagens são então referenciados nos elementos filho das operation input ou output (ver <strong>Listagem 3</strong>).</p>
+
+<p><strong>Listagem 3:</strong> O elemento input dentro do construtor operation referenciando um bloco de mensagem</p>
+<div class = 'div_listagem'><pre class='pre_listagem'>&lt;definitions&gt;
+	&lt;message name="BookInfo"&gt;
+	...
+	&lt;/message&gt;
+	&lt;interface name="Catalog"&gt;
+		&lt;operation name="GetBook"&gt;
+			&lt;input name="Msg1" message="BookInfo"/&gt;
+		&lt;/operation&gt;
+	&lt;/interface&gt;
+&lt;/definitions&gt;</pre></div>
+
+
+<p>Um elemento message pode conter um ou mais parâmetros input ou output que pertencem a uma operation. Cada elemento part define um destes parâmetros. Ele fornece um conjunto nome/valor (name/value), junto com o tipo de dado associado. Em uma arquitetura baseada em componentes, um part WSDL equivale a um parâmetro de input ou output (ou um valor de retorno) de um método de componente (ver <strong>Listagem 4</strong>).</p>
+<p><strong>Listagem 4:</strong> Um bloco de mensagem com um construtor part representando parâmetros operation</p>
+<div class = 'div_listagem'><pre class='pre_listagem'>&lt;definitions&gt;
+	&lt;message name="BookInfo"&gt;
+		&lt;part name="title" type="xs:string"&gt;
+			Field Guide
+		&lt;/part&gt;
+		&lt;part name="author" type="xs:string"&gt;
+			Mr. T
+		&lt;/part&gt;
+	&lt;/message&gt;
+&lt;/definitions&gt;</pre></div>
+<p>A seguir, um breve resumo dos construtores fundamentais que podem ser montados para estabelecer uma definição de interface abstrata:</p>
+
+<ul>
+<li>Interfaces: representam interfaces de serviço e podem conter múltiplos operations;</li>
+<li>Operations: representam uma função web service e podem referenciar múltiplas messages;</li>
+<li>Messages: representam uma coleção de parâmetros input ou output e podem conter múltiplas parts;</li>
+<li>Parts: representam parâmetros de dados operation tanto de chegada como de partida.</li>
+</ul>
+
+<h3>Definição concrete (implementação)</h3>
+
+<p>Sobre os detalhes de implementação, usando os elementos descritos nesta seção, um documento WSDL pode estabelecer detalhes “concrete” de ligação para protocolos, tais como SOAP e HTTP.</p>
+
+<p>Dentro de um documento WSDL, o elemento service representa um ou mais pontos-de-término nos quais o web service pode ser acessado. Estes pontos-de-têrmino consistem de informações de localização e protocolo e são armazenados numa coleção de elementos endpoint (ver <strong>Listagem 5</strong>).</p>
+
+<p><strong>Listagem 5</strong>: O elemento ponto-de-término</p>
+<div class = 'div_listagem'><pre class='pre_listagem'>&lt;definitions&gt;
+	&lt;service name="Service1"&gt;
+		&lt;endpoint name="EndPoint1" binding="Binding1"&gt;
+		...concrete implementation details...
+		&lt;/endpoint&gt;
+	&lt;/service&gt;
+&lt;/definitions&gt;</pre></div>
+
+<p>Agora que descrevemos como um web service pode ser acessado, precisamos definir os requisitos de chamada para cada uma das suas operations. Os elementos binding associam às operations informações de formato de protocolo e mensagem. O construtor operation que reside dentro do bloco binding é semelhante a sua contrapartida na seção interface (ver <strong>Listagem 6</strong>).</p>
+
+<p><strong>Listagem 6:</strong> O elemento binding representando uma operation existente</p>
+<div class = 'div_listagem'><pre class='pre_listagem'>&lt;definitions&gt;
+	&lt;service name="Service1"&gt;
+		&lt;binding name="Binding1"&gt;
+			&lt;operation&gt;
+				&lt;input name="Msg1" message="book"/&gt;
+			&lt;/operation&gt;
+		&lt;/binding&gt;
+	&lt;/service&gt;
+&lt;/definitions&gt;</pre></div>
+
+
+<p>A descrição de informação concrete dentro de um documento WSDL pode ser resumida assim:</p>
+
+<ul>
+<li>elementos service: hospedam coleções de ponto-de-término representados individualmente por elementos endpoint;</li>
+<li>elementos endpoint: contem dados endpoint, incluindo endereço físico e informação de protocolo;</li>
+<li>elementos binding: se auto-associam a construtores operation;</li>
+<li>cada endpoint pode referenciar um elemento binding e, portanto, fornecer informação endpoint para a operation subordinada.</li>
+</ul>
+
+<h3>Conclusão</h3>
+<p>Vimos nesse primeiro artigo o princípio de funcionamento dos web services bem como duas de suas tecnologias de base, SOA e WSDL. No próximo artigo, complementaremos o assunto apresentado aqui analisando as tecnologias SOAP e UDDI. Até lá</p></b></i></u>
+
+					</div>	
+					
+					
+				</div>
+			
+				<footer>
+				<section id="box_autor_revista">
+
+	<a href="http://www.devmedia.com.br/autor/thomas-erl/160248"><img src="http://www.devmedia.com.br/imagens/fotoscolunistas/Col_160248_toma.jpg" width="55px" border=0></a>
+	
+	<br>
+		
+	<a href="http://www.devmedia.com.br/autor/thomas-erl/160248" rel="author" class='nome_autor'>Thomas Erl</a><br/>
+		
+	<p class='minibio_autor'>é consultor independente e arquiteto chefe da XMLTC Consulting em Vancouver, no Canadá. ele é conhecido por seus trabalhos no modelo de escopo em camadas para XML e Web services e , no FrameWork de integração de Web e Services (XW [...]</p>
+	
+
+</section>					
+				</footer>
+				
+
+				<div id="separador_vert_60"></div>
+			
+				<a name="comentariosArtigo"></a>	
+				<section id="feedback_rodape"> 
+					
+					<div id='div_frase_feedback_rodape'>
+					O que você achou deste post?
+					</div>
+					
+<div  id="box_vota_rodape">
+	
+	
+	<div class="float_left">
+	<a class="linkfeedback" href="#" onclick="document.getElementById('div_feedback_post').style.display='block';"><img src="http://www.devmedia.com.br/imagens/portal2010/handUp.png" border=0></a>
+	</div>
+
+	<div class="float_left">
+	<a href="#" onclick="document.getElementById('div_feedback_post').style.display='block';" class='linkfeedback'>&nbsp;Gostei (14)
+	</a> 
+	</div>
+	
+			
+	
+	<div class="separador_feedback_rodape2" >
+	<a class="linkfeedback" href="#" onclick="document.getElementById('div_feedback_post').style.display='block';">
+	<img src="http://www.devmedia.com.br/articles/img/handDown.png" border=0> 
+	</a>
+	</div>
+
+	<div class="separador_feedback_rodape1">
+	<a class="linkfeedback" href="#" onclick="document.getElementById('div_feedback_post').style.display='block';">
+	<span class="feedback_rodape1">(0)</span>
+	</a>
+	</div>  
+	
+	
+	
+	<div class="t_clear_both"></div>
+</div>
+	
+					<div class="t_clear_both"></div>
+					
+				</section>
+										
+					 
+			
+<style>
+	.mark-mvp {
+		display: inline-block;
+		background-color: #8CC53E;
+		margin-left: 7px;
+		padding: 0 5px;
+		height: 2em;
+		color: #fff;
+		font-weight: normal;
+		font-size: 10px;
+		line-height: 2.1em;
+		border-radius: 3px;
+		text-transform: uppercase;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.div_listagem
+	{
+	   word-wrap: normal !important;
+	}
+	.linkMyComments{text-decoration: none;color: #000;}
+	.linkMyComments:hover{text-decoration:underline;}
+	@media screen and (max-width: 480px){
+	.btn_postarDuvida{float: right;margin-top: -77px;font-family: arial;color: #fff;background-color: rgb(73, 197, 191);padding: 4px 9px 4px 9px;  border-radius: 3px;width: 25%;text-align: center;}
+	.link_postarDuvida:after{font-size:14px;content:"Postar dúvida Comentário" !important;text-align: center;}
+	}
+	.btn_postarDuvida{float: right;margin-top: -77px;font-family: arial;color: #fff;background-color: rgb(73, 197, 191);padding: 4px 9px 4px 9px;border-radius: 3px;}
+	.link_postarDuvida{color:#fff;text-decoration:none;}
+	.link_postarDuvida:after{content:"Postar dúvida / Comentário";}
+	
+	
+</style>
+<aside id="div_comentarios">
+
+<div id="comentarios" style="font-family: arial;border-top: 1px solid rgb(221, 221, 221);padding-top: 10px;color: rgb(151, 151, 151);font-size: 17px;">Todos os comentarios (2)</div><a href="http://www.devmedia.com.br/meus-comentarios/" style="display: block;margin-bottom: 35px;margin-top: 10px;font-family: Arial;font-size: 14px;color: rgb(21, 11, 197);text-decoration: none;">Meus comentarios</a><div class="btn_postarDuvida"><a href='http://www.devmedia.com.br/rte3/addcomment.asp?idcomp=2873'  class='link_postarDuvida'></a></div>
+  
+	 <div class="foto_comentario1" ><img src='http://www.devmedia.com.br/articles/img/usuariosemfoto.png' width=45>
+				
+		</div>
+		<div class="margin_left60"> 
+	    <span class="texto_comentario">  
+		
+		  
+				<span class="texto_comentario_nome">Bruno Rodrigues Franco</span>
+			
+
+			  <div class="texto_comentario_conteudo">	
+		  	  Ótimo Post, parabéns. 
+			 </div>
+
+	  	
+     	  <div class="margin_top10">
+		  [há +1 ano] - 
+		  <a href="../rte3/addcomment.asp?idcomp=2873&idco_pai=39414" rel="nofollow" class="linkpadrao">Responder</a>
+		  </div>
+	   
+	</span>
+	</div>
+
+	<div class="t_clear_both">&nbsp;</div>
+
+	<div >  
+	</div>	
+	
+	
+		
+		<div id="divisor_comentarios"></div>
+				 
+	
+	 <div class="foto_comentario1" ><img src='http://www.devmedia.com.br/articles/img/usuariosemfoto.png' width=45>
+				
+		</div>
+		<div class="margin_left60"> 
+	    <span class="texto_comentario">  
+		
+		  
+				<span class="texto_comentario_nome">Roger Moraes</span>
+			
+
+			  <div class="texto_comentario_conteudo">	
+		  	  Excelente Post Parabéns por repassar seu conhecimento. 
+			 </div>
+
+	  	
+     	  <div class="margin_top10">
+		  [há +1 ano] - 
+		  <a href="../rte3/addcomment.asp?idcomp=2873&idco_pai=44513" rel="nofollow" class="linkpadrao">Responder</a>
+		  </div>
+	   
+	</span>
+	</div>
+
+	<div class="t_clear_both">&nbsp;</div>
+
+	<div >  
+	</div>	
+	
+	
+</aside>
+
+
+	
+														
+									
+		</article>
+						
+					
+		<div id='box_ad_mvp'>
+		<span class='titulo_box_ad_mvp'>Conhece a assinatura MVP?</span>
+		<div >
+		<iframe src="http://www.devmedia.com.br/imagens/banners/assinatura-mvp/Untitled-5.html" width="265" height="90" scrolling="no" frameborder="0" marginwidth="0px" marginheight="0px"></iframe>
+		
+		</div>
+</div>
+
+<!--<object  width="265" height="100">
+		<param name="movie" value="http://www.devmedia.com.br/imagens/banners/bannerMVP_300x100.swf">	
+		<param name="quality" value="high">
+		<param name="wmode" value="transparent">
+		<embed wmode="transparent"  src="http://www.devmedia.com.br/imagens/banners/bannerMVP_300x100.swf" width="265" height="100">	
+		</object>
+		-->
+		<div id="div_publicidade" >		
+		
+<span style="font-size:10px; font-family:Arial, Verdana; color:#999999;">Publicidade</span><br>
+<a target="_blank" href="http://www.devmedia.com.br/campanha/v.asp?i=129"><img width="300" height="250" src="http://www.devmedia.com.br/imagens/banners/1-portugues.gif" border="0"></a>
+
+		<div style='margin-top:40px;margin-bottom:40px;'></div>
+
+		
+		<a target="_blank" href="http://www.devmedia.com.br/campanha/v.asp?i=128"><img width="300" height="100" src="http://www.devmedia.com.br/imagens/banners/banner_DevMidia-300x100.gif" border="0"></a>
+	
+		</div>
+		<section id="box_servicos_new" > 
+
+<div id="box_post_title">
+<center>
+Serviços
+</center>
+</div>
+
+ <div id="conteudo_box_servicos" >
+
+			  
+
+			 
+					<div>
+						
+						<a class="linkservico" href="http://www.devmedia.com.br/rte3/addcomment.asp?idcomp=2873" rel="nofollow">Inclua um comentário</a>
+						</div>
+				  
+					<div class="link_box_servico">
+						<a href="http://www.devmedia.com.br/favorite/addfavorite.asp?comp=2873" class="linkservico" rel="nofollow">
+						Adicionar aos Favoritos</a>
+						</div>
+				  
+				  <div class="link_box_servico">
+					<a href="http://www.devmedia.com.br/favorite/add_finished.asp?comp=2873" class="linkservico" rel="nofollow">Marcar como lido/assistido</a>
+				  </div>
+
+				  <div class="link_box_servico">
+						<a class="linkservico" href="http://www.devmedia.com.br/anotacoes/add/?idcomp=2873" rel="nofollow">
+						Incluir anotação pessoal</a>				  						
+					</div>
+					
+				  <div class="link_box_servico">
+						<a class="linkservico" href="http://www.devmedia.com.br/articles/viewcomp_forprint.asp?comp=2873">Versão para impressão</a>
+						</div>
+					
+
+	</div>
+</section><div id="box_artigo_canal" >  
+
+	<div id="div_link_canal">
+	
+	<a  href='http://www.devmedia.com.br/mobile'>
+	
+	
+	+mobile
+	</a> 
+	</div>
+	
+   
+</div>	
+		</div>
+		
+	</div>
+
+<div class="t_clear_both"></div>
+
+
+<!--include file="box_relacionados.asp" -->
+
+<style>
+mark {
+	padding: 0 5px;
+	height: 20px;
+	margin-left: 7px;
+	background-color: #43B1AB;
+	color: #fff;
+	border-radius: 3px;
+	font-weight: normal;
+	display: inline-block;
+	font-size: 10px;
+	text-transform: uppercase;
+	top: -4px;
+	position: relative;
+	box-sizing: border-box;
+	line-height: 20px;
+}
+
+
+
+#botao-mais-canal {
+  width: 200px;
+  font-family: Roboto,sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  color: #FFF;
+  background-color: #6c6;;
+  padding: 10px;
+  margin: -65px 0px 0px 230px;  
+}
+
+@media (max-width: 480px) {
+
+#botao-mais-canal {
+  width: 200px;
+  font-family: Roboto,sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  color: #FFF;
+  background-color: #6c6;;
+  padding: 10px; 
+  margin: 0px 0px 0px 0px;   
+}
+
+}
+</style>
+
+<link href="http://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css">
+<link href="http://devmedia.com.br/articles/css/artigo_style_2013.css?d=3" rel="stylesheet" type="text/css">
+
+<section id='section_relacionados'>
+	<p class="titulo_relacionados">Mais posts</p> 
+	<div class="separador10px"></div>
+	<nav id='nav_relacionados'>		
+		<ul class="ul_lista_relacionados"> 
+			<li class='lista_relacionados'><div id='tipo_post_relacionado'>Revista</div><div id='box_titulo_post_relacionado'><a href=http://www.devmedia.com.br/revista-mobile-magazine-65/32365 class='titulo_post_relacionado'>Revista Mobile Magazine 65</a></div></li><li class='lista_relacionados'><div id='tipo_post_relacionado'>Artigo</div><div id='box_titulo_post_relacionado'><a href=http://www.devmedia.com.br/conheca-o-google-material-design/32364 class='titulo_post_relacionado'>Conheça o Google Material Design</a></div></li><li class='lista_relacionados'><div id='tipo_post_relacionado'>Artigo</div><div id='box_titulo_post_relacionado'><a href=http://www.devmedia.com.br/android-robotium-qualidade-de-software-em-aplicativos-android/32363 class='titulo_post_relacionado'>Android Robotium: Qualidade de software em aplicativos Android</a></div></li><li class='lista_relacionados'><div id='tipo_post_relacionado'>Artigo</div><div id='box_titulo_post_relacionado'><a href=http://www.devmedia.com.br/utilizando-o-framework-de-sensores-no-android/32362 class='titulo_post_relacionado'>Utilizando o framework de sensores no Android</a></div></li><li class='lista_relacionados'><div id='tipo_post_relacionado'>Artigo</div><div id='box_titulo_post_relacionado'><a href=http://www.devmedia.com.br/como-criar-aplicativos-mobile-hibridos-e-offline/32361 class='titulo_post_relacionado'>Como criar aplicativos mobile híbridos e offline</a></div></li><li class='lista_relacionados'><div id='tipo_post_relacionado'>Artigo</div><div id='box_titulo_post_relacionado'><a href=http://www.devmedia.com.br/como-criar-um-jogo-2d-com-enchant-js-parte-1/32360 class='titulo_post_relacionado'>Como criar um jogo 2D com Enchant.js – Parte 1</a></div></li><li class='lista_relacionados'><div id='tipo_post_relacionado'>Artigo</div><div id='box_titulo_post_relacionado'><a href=http://www.devmedia.com.br/phonegap-criando-um-aplicativo-de-tarefas-multiplataforma/32118 class='titulo_post_relacionado'>PhoneGap: Criando um aplicativo de tarefas multiplataforma</a></div></li><li class='lista_relacionados'><div id='tipo_post_relacionado'>Artigo</div><div id='box_titulo_post_relacionado'><a href=http://www.devmedia.com.br/utilizando-sqlite-em-aplicativos-android/32117 class='titulo_post_relacionado'>Utilizando SQLite em aplicativos Android</a></div></li><li class='lista_relacionados'><div id='tipo_post_relacionado'>Artigo</div><div id='box_titulo_post_relacionado'><a href=http://www.devmedia.com.br/google-app-engine-desenvolvendo-solucoes-para-android/32116 class='titulo_post_relacionado'>Google App Engine: Desenvolvendo soluções para Android</a></div></li>
+		</ul>
+	</nav>
+	<div class="separador10px"></div>
+	<div id="div_listar_relacionados" >
+		<div id="botao_listar_relacionados"> 
+			<center>
+			
+			
+			    
+				  <a href='http://www.devmedia.com.br/mobile' class='link_listar_relacionados'>Listar mais conteúdo</a>
+				
+								
+			</center>
+		
+		</div>
+
+
+		
+				
+	</div>	
+	
+	
+
+	
+</section>
+<section class="dm-limitfoot"></section>
+<footer class="footer-fixed">
+<section class="container-fluid dm-cor1 footer-box">
+<div class="container">
+<div class="row-fluid">
+<div class="span7 f-box-filho">
+<div class="row-fluid cx2">
+<img src="http://www.devmedia.com.br/imagens/2013/logo-footer.png" alt="DevMedia - asp.net, Java, Delphi, SQL e web Design, tudo em um só lugar!" title="DevMedia - asp.net, Java, Delphi, SQL e web Design, tudo em um só lugar!" width="145" height="32">
+<nav><a href="http://www.web-03.net/devmedia.asp" target="_blank">Anuncie</a> | <a href="http://www.devmedia.com.br/shop/">Loja</a> | <a href="http://www.devmedia.com.br/seja-um-autor-devmedia/28103">Publique</a> | <a href="http://www.devmedia.com.br/mvp/">Assine</a> | <a href="http://www.devmedia.com.br/fale-conosco/">Fale conosco</a></nav>
+</div>
+<ul class="social-bar">
+<li><a class="icon-1" href="http://www.facebook.com/pages/DevMedia/144522665592650" target="_blank"></a></li>
+<li><a class="icon-3" href="http://twitter.com/devmedia" target="_blank"></a></li>
+<li><a class="icon-4" href="https://plus.google.com/101753743720604160232?prsrc=3" target="_blank"></a></li>
+<li><a class="icon-2" href="http://www.devmedia.com.br/feed/"></a></li>
+</ul>
+</div>
+<div class="span5 cx3">
+<div id="fb-root"></div>
+<div class="fb-shell">
+<div class="fb-like-box" data-href="https://www.facebook.com/DevmediaWeb03" data-width="767" data-height="184" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="container-fluid dm-cor2 footer-box2">
+<div class="container">
+<div class="row-fluid">
+<div class="span4">Hospedagem web por <a href="http://www.porta80.com.br/" target="_blank">Porta 80 Web Hosting</a></div>
+
+</div>
+</div>
+</section>
+</div>
+</footer>
+</section>
+</body>
+</html>
