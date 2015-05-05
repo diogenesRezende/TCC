@@ -1,0 +1,328 @@
+\chapter{QUADRO TEÓRICO}
+
+	\par Neste capítulo serão descritos os principais conceitos e características
+das tecnologias a serem utilizadas para o desenvolvimento dos \textit{softwares}
+propostos nos objetivos dessa pesquisa.
+
+\section{\textit{Java}}
+
+	\par Segundo \citeonline{deitel2002} o java veio ao publico em 1995 pela
+\textit{Sun Microsystem}. Os criadores dessa nova tecnologia liderados por
+James Gosling basearam-se em duas linguagens muito utilizadas no mundo, C e C++.
+Isso deu ao java uma base para implementar em novos sistemas como, sistemas
+operacionais, sistemas de comunicações, sistema de banco de dados e aplicativos
+para computadores pessoais.
+
+	\par Entre as principais características pode – se dizer que o Java é:
+	
+	\begin{itemize}
+
+	  \item Orientado a objeto.
+	  
+	  \item Seguro.
+	  
+	  \item Independente de plataforma. 
+
+	\end{itemize}
+	
+	\par \citeonline{deitel2002} O \textit{java} será utilizado para codificar e
+criar regras para proteger o banco de dados , gerenciando a infraestrutura que
+o próprio java fornece como, Transação, Acesso remoto, Web services,
+Gerenciamento de threads, Gerenciamento de conexões http\footnote{Http -
+HyperText Transfer Protocol.}.
+
+	\par Para acessar o servidor precisamos de um serviço \textit{web} (\textit{Web
+services}) que utilizara o \textit{java} para criar as regras e serviços de
+compilação de dados. Segundo \citeonline{deitel2002} existem 5 fases para que os dados
+cheguem em seu dispositivo que são, armazenamento em disco, o compilador cria os
+\textit{bytecodes}, transferência dos \textit{bytecodes} para memória, verifica
+a integridade dos \textit{bytecodes} para que não haja nenhuma violação das
+restrições de segurança e por ultimo o interpretador(JMV) lê os
+\textit{bytecodes} e os traduz para a linguagem que o computador entenda e
+possivelmente armazena os valores dos dados enquanto executa o programa.
+
+	\par \citeonline{romanato2015} afirma, que o \textit{Java} usa a JMV
+(\textit{Java Virtual Machine}), que é uma máquina virtual capaz de converter
+os \textit{Byte Codes}\footnote{Byte Codes – Código em Bytes } para a linguagem
+do sistema operacional utilizado pelo cliente, sem a necessidade de compila-lo
+para cada plataforma. Dessa maneira um \textit{software} que é executado no
+\textit{Windows}, funcionará normalmente em qualquer outro sistema.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+\section{\textit{Android}}
+
+	\par Segundo \citeonline{monteiro2012}, \textit{Android} é um sistema
+operacional baseado em \textit{Linux}, de código aberto e que utiliza a
+linguagem de programação \textit{Java} para o desenvolvimento de seus
+aplicativos. Criado especialmente para dispositivos móveis, começou a
+ser desenvolvido no ano de 2003 pela então empresa Android Inc, que em 2005 foi
+agregada ao Google. A partir de 2007 o projeto \textit{Android} uniu-se a
+\textit{Open Handset Alliance}, uma associação de empresas de
+\textit{softwares}, \textit{hardwares} e telecomunicações, que tem por
+finalidade desenvolver uma plataforma para dispositivos móveis que seja
+completa, aberta e gratuita.
+
+	\par \citeonline{krazit2009} publicou uma entrevista com Rubin, um dos
+idealizadores do \textit{Android}, o qual afirma que o sistema pode rodar em
+equipamentos de diversos fabricantes, evitando assim ficar limitado a poucos
+dispositivos. Conforme informações do site \citeonline{android1}, hoje em dia
+existe mais de um bilhão de aparelhos espalhados pelo mundo com esse sistema
+operacional.
+
+	\par De acordo com \citeonline{monteiro2012} as aplicações são executadas em
+uma máquina virtual Java denominada \textit{Dalvik}. Cada aplicativo, usa uma
+instância dessa máquina virtual tornando-a assim mais segura. Por outro lado os
+\textit{softwares} só podem acessar algum recurso do dispositivo, como uma
+lista de contatos, caso seja formalmente aceito pelo usuário nos termos de uso
+ao instalá-lo.
+
+	\par Dentre os muitos benefícios do Android, um recurso muito utilizado é a
+chamada \textit{Intents}, que de acordo com \citeonline[p.29]{k192012}, "são
+objetos responsáveis por passar informações, como se fossem mensagens, para os
+principais componentes da API do Android, como as \textit{Activities},
+\textit{Services} e \textit{BroadCast Receivers}". \citeonline{monteiro2012}
+diz que as \textit{Intents} são criadas quando se tem a intenção de realizar
+algo como por exemplo compartilhar uma imagem, utilizando os recursos já
+existentes no dispositivo. Existem dois tipos de \textit{Intents}:
+	
+	\begin{itemize}
+	  
+	  \item \textit{Intents} implícitas - Quando não é informada qual
+	  \textit{Activity} deve ser chamada, ficando assim por conta do sistema
+	  operacional verificar qual a melhor opção.
+	  
+	  \item \textit{Intents} explicitas - Quando é informada qual
+	  \textit{Activity} deve ser chamada. Usada normalmente para chamar
+	  \textit{activities} da mesma aplicação.
+	  
+	\end{itemize}
+	
+	\par Segundo \citeonline{k192012} uma aplicação Android pode ser construída com
+quatro tipos de componentes:
+
+	\begin{itemize}
+	  
+	  \item \textit{Activity} - São as telas com interface gráfica, com capacidade
+	  de interações com os usuários.
+	  
+	  \item \textit{Services} - São serviços executados em segundo plano, com
+	  tarefas que levam algum tempo sem comprometer a interação do usuário. 
+	  
+	  \item \textit{Content Providers} - São os provedores de conteúdo que permitem
+	  o acesso e a modificação de dados. 
+	  
+	  \item \textit{Broadcast Receivers} - São componentes capazes de receber e
+	  responder a eventos do sistema operacional. 
+	
+	\end{itemize}
+	  
+	\par Em uma aplicação, um elemento fundamental é a interface gráfica, que
+deverá ser organizada, simples e elegante. Conforme \citeonline{monteiro2012}
+esses são os principais \textit{Layouts} do sistema operacional Android:
+	\begin{itemize}
+	
+	 \item \textit{LinearLayout} - Permite posicionar os elementos em forma
+	 linear, dessa forma quando o dispositivo estiver em forma vertical os itens
+	 ficaram um abaixo do outro e quando estiver na posição horizontal eles
+	 ficaram um ao lado do outro.
+	
+	  \item \textit{RelativeLayout} - Permite posicionar elementos de forma
+	  relativa, ou seja um item com relação a outro.
+	
+	  \item \textit{TableLayout} - Permite criar \textit{layouts} em formato de
+	  tabelas. O elemento \textit{TableRow} representa uma linha da tabela e seus
+	  filhos as células.  Dessa maneira, caso um \textit{TableRow} possua dois
+	  itens significa que essa linha tem duas colunas.
+	
+	  \item \textit{DatePicker} - \textit{Widget} desenvolvido para a seleção de
+	  datas que podem ser usadas diretamente no \textit{layout} ou através de
+	  caixas de diálogo.
+
+	  \item \textit{Spinner} - \textit{Widget} que permite a seleção de itens. 
+	
+	  \item \textit{ListViews} - Permite exibir itens em uma listagem. Dessa
+	  forma, em uma lista de compras, clicando em uma venda é possível listar os
+	  itens dessa venda selecionada.
+	
+	  \item \textit{Menus} - Um item muito importante, pois apresenta aos usuários
+	  as opções existentes no aplicativo.
+	
+	  \item \textit{AlertDialog} - Apresenta informações aos usuários através de
+	  uma caixa de diálogo. Comumente utilizado para perguntar ao cliente o que
+	  deseja fazer quando seleciona algum elemento.
+	
+	  \item \textit{ProgressDialog} e \textit{ProgressBar} - Utilizado quando uma
+	  aplicação necessita de um recurso que será demorado, como por exemplo, fazer
+	  um \textit{download}, pode ser feito uma animação informando ao usuário o
+	  progresso da operação.
+	
+	\end{itemize}
+	
+	\par Para uma maior interação, as aplicações normalmente utilizam API’s de
+terceiros, como o Google \textit{Maps}, quando necessita encontrar alguma
+localização. Para \citeonline{monteiro2012} essa comunicação pode utilizar o
+REST, que envia requisições através da URL. Ao receber informações pedidas a um
+outro serviço, ela pode estar no padrão XML ou JSON. O REST será detalhado mais
+adiante.
+
+	\par Outra ferramenta importante e muito utilizada do Android é a Notificação.
+Segundo \citeonline{phillips2013} quando uma aplicação está sendo executada em
+segundo plano e necessita comunicar-se com o usuário, o aplicativo cria uma
+notificação. Normalmente as notificações aparecem na barra superior, o qual
+pode ser acessado arrastando para baixo a partir da parte superior da tela.
+Assim que o usuário clica na notificação ela cria uma \textit{activity} abrindo
+a aplicação em questão.
+
+	\par Com a ideia de desenvolver um aplicativo para dispositivos móveis, a
+plataforma Android foi escolhida devido ao seu destaque no mercado e pela
+facilidade que apresenta aos usuários.
+
+\section{Android Studio}
+
+	\par Umas das ferramentas mais utilizadas para o desenvolvimento em Android é o
+\textit{Eclipse IDE}, contudo a Google criou um \textit{software} especialmente
+para esse ambiente, chamado \textit{Android Studio}. Segundo
+\citeonline{gusmao2014}, \textit{Android Studio} é uma IDE baseado no ItelliJ
+\textit{Idea} e foi apresentado na Conferência para desenvolvedores I/O de 2013.
+
+	\par De acordo com \citeonline{hohensee2013} o \textit{Android Studio} tem um
+sistema de construção baseado em \textit{Gradle}, que permite aplicar
+diferentes configurações no código quando há necessidade de criar mais de uma
+versão, como por exemplo, um \textit{software} que terá uma versão gratuita e
+outra paga, melhorando a reutilização do código. Com o \textit{Gradle} também é
+possível fazer os \textit{downloads} de todas as dependências de uma forma
+automática sem a necessidade de importar bibliotecas.
+
+	\par \citeonline{hohensee2013} afirma que o \textit{Android Studio} é um editor
+de código poderoso, pois tem como característica a edição inteligente, pois ao
+digitar já completa as palavras reservadas do sistema operacional e fornece uma
+organização do código mais legível.
+
+	\par Segundo \citeonline{android2} a IDE tem suporte para a edição de
+interface, o que possibilita ao desenvolvedor arrastar os componentes que
+deseja. Ao testar o aplicativo permite o monitoramento do consumo de memória e
+de processador por parte do utilitário.
+
+	\par \citeonline{gusmao2014} diz que a plataforma tem uma ótima integração com
+o \textit{GitHub} e está disponível para \textit{Windows}, \textit{Mac} e
+\textit{Linux}. Além disso os programadores terão disponíveis uma versão
+estável e mais três versões que estarão em teste chamadas de \textit{Beta},
+\textit{Dev} e \textit{Canary}.
+
+	\par Devido ao \textit{Android Studio} ser uma ferramenta de fácil usabilidade
+e a IDE oficial para o desenvolvimento Android, esta foi escolhida como ambiente de
+construção do aplicativo.	
+	
+\section{\textit{Web Services}}
+	
+	\par Nos tempos atuais, com o grande fluxo de informação que percorre pelas
+redes da \textit{internet} é necessário um nível muito alto de integração entre
+as diversas plataformas, tecnologias e sistemas. Como uma provável solução para
+esse ponto, já existem as tecnologias de sistemas distribuídos. Porém essas
+tecnologias sofrem demasiadamente com o alto acoplamento de seus componentes e
+também com a grande dependência de uma plataforma para que possam funcionar. Com
+intuito de solucionar a estes problemas e proporcionar alta transparência entre
+as várias plataformas, foram criados as tecnologias \textit{web services}.
+	
+	\par De acordo com \citeonline{erl2015}:
+	\begin{citacao}
+		No ano de 2000, a W3C (\textit{World Wide Web Consortium}) aceitou a submissão
+		do \textit{Simple Object Access Protocol} (SOAP). Este formato de mensagem
+		baseado em XML estabeleceu uma estrutura de transmissão para comunicação entre
+		aplicações (ou entre serviços) via HTTP. Sendo uma tecnologia não amarrada a
+		fornecedor, o SOAP disponibilizou uma alternativa atrativa em relação aos
+		protocolos proprietários tradicionais, tais como CORBA e DCOM.
+	\end{citacao}
+	
+	\par Considera-se então a existência dos \textit{web services} a partir daí. De
+acordo com \citeonline{duraes2005}, \textit{Web Service} é um componente que
+tem por finalidade integrar serviços distintos. O que faz com que ele se torne
+melhor que seus concorrentes é a padronização do XML(\textit{Extensible Markup
+Language}) para as trocas de informações. A aplicação consegue conversar com o
+servidor através do WSDL que é documento que contém as regras de funcionamento
+do \textit{web service}.
+	
+	\par Os \textit{web services} além de fornecerem uma padronização de
+comunicação entre as várias tecnologias existentes, provê transparência na
+troca de informações. Isso contribui pelo fato de que as novas aplicações
+possam se comunicar com aplicações mais antigas ou aplicações contruídas sobre
+outras plataformas.
+
+	\par Além das tecnologias \textit{web services} tradicionais, existe também os
+\textit{web services} REST que também disponibilizam serviços, porém não
+necessitam de encapsulamento de suas mensagens assim como os \textit{web
+Services} SOAP. Este fato influencia diretamente na performance da aplicação
+como um todo, haja vista que não sendo necessário o encapsulamento da informação
+requisitada ao \textit{web service}, somente é necessário o processamento e
+tráfego da informação que realmente importa. As caracteristícas do padrão REST
+serão abordadas a seguir.
+
+	\subsection{REST}
+	
+	\par Segundo \citeonline{saudate2012}, REST é a sigla de
+\textit{Representational State Transfer}, ou em português Transferência de
+Estado Representativo, desenvolvido por Roy Fielding na defesa de sua tese de
+doutorado. Segundo o próprio \citeonline{fielding2000} REST é um estilo que
+deriva do vários estilos arquitectónicos baseados em rede e  que combinado
+com algumas restrições, fornecem uma interface simples e uniforme para
+fornecimento de serviços\footnote{Tradução e resumo de informações de
+responsabilidade do autor da pesquisa.}.
+	
+	\par \citeonline{rubbo2015}, afirma que os dados e funcionalidade de um sistema
+são considerados recursos e podem ser acessados através das URI's
+\textit{(Universal Resource Identifier)}, facilitando dessa forma a comunicação
+do servidor com o cliente.
+	 	
+	\par \citeonline{saudate2012}, explica ainda que os métodos do HTTP\footnote{
+ HTTP – Abreviação para \textit{HyperText Transfer Protocol}} podem fazer
+ modificações nos recursos através dos comandos:
+	 
+	 \begin{itemize}
+	   \item GET – Para recuperar algum dado. 
+	   \item POST – Para criar algum dado.
+	   \item PUT – Para alterar algum dado. 
+	   \item DELETE – Para excluir algum dado. 
+	 \end{itemize}
+	 
+	\par Segundo \citeonline{godinho2009}, não há um padrão de formato para as
+ trocas de informações, mas as que mais são utilizadas é o XML\footnote{XML –
+ Abreviação para \textit{Extensible Markup Language}.} e o JSON\footnote{JSON –
+ Abreviação para \textit{JavaScript Object Notation}.}. O REST\footnote{REST –
+ Abreviação para \textit{Representational State Transfer}.} é o mais indicado
+ para aplicações em dispositivos moveis, devido sua agilidade.
+	
+	
+\section{\textit{Apache Tomcat}}
+
+	\par De acordo com a \citeonline{tomcat2015}, \textit{Apache Tomcat} é uma
+implementação de código aberto das especificações \textit{Java Servlet} e
+\textit{JavaServer Pages}. O \textit{Apache Tomcat}  é um \textit{Servlet
+Container}, que disponibiliza serviços através de requisições e respostas.
+	
+	\par Segundo \citeonline{tomcat2015}, o projeto desse \textit{software} começou
+com a \textit{Sun Microsystems}, que em 1999 doou a base do código para
+\textit{Apache Software Foundation} onde foi lançada a versão 3.0.
+	
+	\par Desta forma, o cliente envia uma requisição através do seu navegador, o
+servidor por sua vez a recebe, executa o \textit{servlet} e devolve a resposta
+ao usuário.
+
+\section{Engenharia De \textit{Software}}
+
+	\par 
+	
+	\subsection{UML}
+		
+		\par 
+	
+	\subsection{Processos de Desenvolvimento de \textit{Software}}
+	

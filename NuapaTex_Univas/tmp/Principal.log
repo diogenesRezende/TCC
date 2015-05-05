@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  5 MAY 2015 01:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  5 MAY 2015 02:30
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1185,10 +1185,10 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ] [9
 
-] [10] [11] [12] [13])
-(./editaveis/12_QuadroMetodologico.tex [14] [15
+] [10] [11] [12] [13] [14] [15])
+(./editaveis/12_QuadroMetodologico.tex [16] [17
 
-] [16] [17]
+] [18] [19]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 137.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1200,15 +1200,15 @@ Overfull \hbox (19.47868pt too wide) in paragraph at lines 141--194
  [][][] 
  []
 
-[18]) (./Principal.bbl [19]
+[20]) (./Principal.bbl [21]
 bibitemlist
-[20
+[22
 
 ])
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[21]
+[23]
 
 Package caption Warning: Unused \captionsetup[Quadro] on input line 301.
 See the caption package documentation for explanation.
@@ -1241,22 +1241,22 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 14416 strings out of 493304
- 211654 string characters out of 6139871
- 353389 words of memory out of 5000000
- 17539 multiletter control sequences out of 15000+600000
+ 14448 strings out of 493304
+ 212198 string characters out of 6139871
+ 354082 words of memory out of 5000000
+ 17561 multiletter control sequences out of 15000+600000
  71256 words of font info for 69 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 46i,11n,40p,337b,582s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,12n,40p,337b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (22 pages, 114207 bytes).
+Output written on Principal.pdf (24 pages, 120562 bytes).
 PDF statistics:
- 402 PDF objects out of 1000 (max. 8388607)
- 369 compressed objects within 4 object streams
- 82 named destinations out of 1000 (max. 500000)
- 225 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 449 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 
