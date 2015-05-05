@@ -4,7 +4,170 @@
 das tecnologias a serem utilizadas para o desenvolvimento dos \textit{softwares}
 propostos nos objetivos dessa pesquisa.
 
+\section{\textit{Android}}
 
+	\par Segundo \citeonline{monteiro2012}, \textit{Android} é um sistema
+operacional baseado em \textit{Linux}, de código aberto e que utiliza a
+linguagem de programação \textit{Java} para o desenvolvimento de seus
+aplicativos. Criado especialmente para dispositivos móveis, começou a
+ser desenvolvido no ano de 2003 pela então empresa Android Inc, que em 2005 foi
+agregada ao Google. A partir de 2007 o projeto \textit{Android} uniu-se a
+\textit{Open Handset Alliance}, uma associação de empresas de
+\textit{softwares}, \textit{hardwares} e telecomunicações, que tem por
+finalidade desenvolver uma plataforma para dispositivos móveis que seja
+completa, aberta e gratuita.
+
+	\par \citeonline{krazit2009} publicou uma entrevista com Rubin, um dos
+idealizadores do \textit{Android}, o qual afirma que o sistema pode rodar em
+equipamentos de diversos fabricantes, evitando assim ficar limitado a poucos
+dispositivos. Conforme informações do site \citeonline{android1}, hoje em dia
+existe mais de um bilhão de aparelhos espalhados pelo mundo com esse sistema
+operacional.
+
+	\par De acordo com \citeonline{monteiro2012} as aplicações são executadas em
+uma máquina virtual Java denominada \textit{Dalvik}. Cada aplicativo, usa uma
+instância dessa máquina virtual tornando-a assim mais segura. Por outro lado os
+\textit{softwares} só podem acessar algum recurso do dispositivo, como uma
+lista de contatos, caso seja formalmente aceito pelo usuário nos termos de uso
+ao instalá-lo.
+
+	\par Dentre os muitos benefícios do Android, um recurso muito utilizado é a
+chamada \textit{Intents}, que de acordo com \citeonline[p.29]{k192012}, "são
+objetos responsáveis por passar informações, como se fossem mensagens, para os
+principais componentes da API do Android, como as \textit{Activities},
+\textit{Services} e \textit{BroadCast Receivers}". \citeonline{monteiro2012}
+diz que as \textit{Intents} são criadas quando se tem a intenção de realizar
+algo como por exemplo compartilhar uma imagem, utilizando os recursos já
+existentes no dispositivo. Existem dois tipos de \textit{Intents}:
+	
+	\begin{itemize}
+	  
+	  \item \textit{Intents} implícitas - Quando não é informada qual
+	  \textit{Activity} deve ser chamada, ficando assim por conta do sistema
+	  operacional verificar qual a melhor opção.
+	  
+	  \item \textit{Intents} explicitas - Quando é informada qual
+	  \textit{Activity} deve ser chamada. Usada normalmente para chamar
+	  \textit{activities} da mesma aplicação.
+	  
+	\end{itemize}
+	
+	\par Segundo \citeonline{k192012} uma aplicação Android pode ser construída com
+quatro tipos de componentes:
+
+	\begin{itemize}
+	  
+	  \item \textit{Activity} - São as telas com interface gráfica, com capacidade
+	  de interações com os usuários.
+	  
+	  \item \textit{Services} - São serviços executados em segundo plano, com
+	  tarefas que levam algum tempo sem comprometer a interação do usuário. 
+	  
+	  \item \textit{Content Providers} - São os provedores de conteúdo que permitem
+	  o acesso e a modificação de dados. 
+	  
+	  \item \textit{Broadcast Receivers} - São componentes capazes de receber e
+	  responder a eventos do sistema operacional. 
+	
+	\end{itemize}
+	  
+	\par Em uma aplicação, um elemento fundamental é a interface gráfica, que
+deverá ser organizada, simples e elegante. Conforme \citeonline{monteiro2012}
+esses são os principais \textit{Layouts} do sistema operacional Android:
+	\begin{itemize}
+	
+	 \item \textit{LinearLayout} - Permite posicionar os elementos em forma
+	 linear, dessa forma quando o dispositivo estiver em forma vertical os itens
+	 ficaram um abaixo do outro e quando estiver na posição horizontal eles
+	 ficaram um ao lado do outro.
+	
+	  \item \textit{RelativeLayout} - Permite posicionar elementos de forma
+	  relativa, ou seja um item com relação a outro.
+	
+	  \item \textit{TableLayout} - Permite criar \textit{layouts} em formato de
+	  tabelas. O elemento \textit{TableRow} representa uma linha da tabela e seus
+	  filhos as células.  Dessa maneira, caso um \textit{TableRow} possua dois
+	  itens significa que essa linha tem duas colunas.
+	
+	  \item \textit{DatePicker} - \textit{Widget} desenvolvido para a seleção de
+	  datas que podem ser usadas diretamente no \textit{layout} ou através de
+	  caixas de diálogo.
+
+	  \item \textit{Spinner} - \textit{Widget} que permite a seleção de itens. 
+	
+	  \item \textit{ListViews} - Permite exibir itens em uma listagem. Dessa
+	  forma, em uma lista de compras, clicando em uma venda é possível listar os
+	  itens dessa venda selecionada.
+	
+	  \item \textit{Menus} - Um item muito importante, pois apresenta aos usuários
+	  as opções existentes no aplicativo.
+	
+	  \item \textit{AlertDialog} - Apresenta informações aos usuários através de
+	  uma caixa de diálogo. Comumente utilizado para perguntar ao cliente o que
+	  deseja fazer quando seleciona algum elemento.
+	
+	  \item \textit{ProgressDialog} e \textit{ProgressBar} - Utilizado quando uma
+	  aplicação necessita de um recurso que será demorado, como por exemplo, fazer
+	  um \textit{download}, pode ser feito uma animação informando ao usuário o
+	  progresso da operação.
+	
+	\end{itemize}
+	
+	\par Para uma maior interação, as aplicações normalmente utilizam API’s de
+terceiros, como o Google \textit{Maps}, quando necessita encontrar alguma
+localização. Para \citeonline{monteiro2012} essa comunicação pode utilizar o
+REST, que envia requisições através da URL. Ao receber informações pedidas a um
+outro serviço, ela pode estar no padrão XML ou JSON. O REST será detalhado mais
+adiante.
+
+	\par Outra ferramenta importante e muito utilizada do Android é a Notificação.
+Segundo \citeonline{phillips2013} quando uma aplicação está sendo executada em
+segundo plano e necessita comunicar-se com o usuário, o aplicativo cria uma
+notificação. Normalmente as notificações aparecem na barra superior, o qual
+pode ser acessado arrastando para baixo a partir da parte superior da tela.
+Assim que o usuário clica na notificação ela cria uma \textit{activity} abrindo
+a aplicação em questão.
+
+	\par Com a ideia de desenvolver um aplicativo para dispositivos móveis, a
+plataforma Android foi escolhida devido ao seu destaque no mercado e pela
+facilidade que apresenta aos usuários.
+
+\section{Android Studio}
+
+	\par Umas das ferramentas mais utilizadas para o desenvolvimento em Android é o
+\textit{Eclipse IDE}, contudo a Google criou um \textit{software} especialmente
+para esse ambiente, chamado \textit{Android Studio}. Segundo
+\citeonline{gusmao2014}, \textit{Android Studio} é uma IDE baseado no ItelliJ
+\textit{Idea} e foi apresentado na Conferência para desenvolvedores I/O de 2013.
+
+	\par De acordo com \citeonline{hohensee2013} o \textit{Android Studio} tem um
+sistema de construção baseado em \textit{Gradle}, que permite aplicar
+diferentes configurações no código quando há necessidade de criar mais de uma
+versão, como por exemplo, um \textit{software} que terá uma versão gratuita e
+outra paga, melhorando a reutilização do código. Com o \textit{Gradle} também é
+possível fazer os \textit{downloads} de todas as dependências de uma forma
+automática sem a necessidade de importar bibliotecas.
+
+	\par \citeonline{hohensee2013} afirma que o \textit{Android Studio} é um editor
+de código poderoso, pois tem como característica a edição inteligente, pois ao
+digitar já completa as palavras reservadas do sistema operacional e fornece uma
+organização do código mais legível.
+
+	\par Segundo \citeonline{android2} a IDE tem suporte para a edição de
+interface, o que possibilita ao desenvolvedor arrastar os componentes que
+deseja. Ao testar o aplicativo permite o monitoramento do consumo de memória e
+de processador por parte do utilitário.
+
+	\par \citeonline{gusmao2014} diz que a plataforma tem uma ótima integração com
+o \textit{GitHub} e está disponível para \textit{Windows}, \textit{Mac} e
+\textit{Linux}. Além disso os programadores terão disponíveis uma versão
+estável e mais três versões que estarão em teste chamadas de \textit{Beta},
+\textit{Dev} e \textit{Canary}.
+
+	\par Devido ao \textit{Android Studio} ser uma ferramenta de fácil usabilidade
+e a IDE oficial para o desenvolvimento Android, esta foi escolhida como ambiente de
+construção do aplicativo.	
+	
 \section{\textit{Web Services}}
 	
 	\par Nos tempos atuais, com o grande fluxo de informação que percorre pelas

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  4 MAY 2015 18:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  5 MAY 2015 01:47
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -983,7 +983,8 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
-) (./Principal.aux)
+) (./Principal.aux
+(./fixos/01_Capa.aux))
 \openout1 = `Principal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1001,13 +1002,12 @@ LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 11.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 \AtBeginShipoutBox=\box33
 Package hyperref Info: Link coloring ON on input line 11.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1097,66 +1097,118 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 11.
- (./editaveis/11_QuadroTeorico.tex
-[1
+\openout2 = `fixos/01_Capa.aux'.
 
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 61.
+ (./fixos/01_Capa.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 42.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 42.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 42.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 61.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 42.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 61.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 42.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 61.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 42.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 61.
+(Font)              <12> on input line 42.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 61.
+(Font)              <8> on input line 42.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 61.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 61.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 61.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 61.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 73.
+(Font)              <6> on input line 42.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 42.
+ [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./fixos/0A_ListasAutomat
+icas.tex (./Principal.lof)pdfTeX warning (ext4): destination with the same iden
+tifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4 \cleardoublepage
+                     [1
+
+
+
+] (./editaveis/0B_Siglas.tex [2
+
+
+]) (./Principal.loq)
+[3
+
+] (./Principal.lot) [4
+
+]) (./fixos/0C_Sumario.tex (./Principal.toc
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 10.
+) [5
+
+])
+(./editaveis/10_Introducao.tex [6
+
+]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 62.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 73.
- [2])
-(./Principal.bbl [3]
-bibitemlist
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 10.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 10.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
+ [7
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 89.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 89.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 89.
 )
+(./editaveis/11_QuadroTeorico.tex [8
+
+] [9
+
+] [10] [11] [12] [13])
+(./editaveis/12_QuadroMetodologico.tex [14] [15
+
+] [16] [17]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 137.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 141.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 144.
+
+Overfull \hbox (19.47868pt too wide) in paragraph at lines 141--194
+ [][][] 
+ []
+
+[18]) (./Principal.bbl [19]
+bibitemlist
+[20
+
+])
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[4
-
-]
+[21]
 
 Package caption Warning: Unused \captionsetup[Quadro] on input line 301.
 See the caption package documentation for explanation.
@@ -1165,9 +1217,21 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[floatfoot] on input line 303.
 See the caption package documentation for explanation.
 
+\tf@lof=\write4
+\openout4 = `Principal.lof'.
+
+\tf@loq=\write5
+\openout5 = `Principal.loq'.
+
+\tf@lot=\write6
+\openout6 = `Principal.lot'.
+
+\tf@toc=\write7
+\openout7 = `Principal.toc'.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
-(./Principal.aux)
+(./Principal.aux (./fixos/01_Capa.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 52.
 
@@ -1177,22 +1241,22 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 14185 strings out of 493304
- 208261 string characters out of 6139871
- 343034 words of memory out of 5000000
- 17403 multiletter control sequences out of 15000+600000
- 52028 words of font info for 55 fonts, out of 8000000 for 9000
+ 14416 strings out of 493304
+ 211654 string characters out of 6139871
+ 353389 words of memory out of 5000000
+ 17539 multiletter control sequences out of 15000+600000
+ 71256 words of font info for 69 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 46i,11n,40p,337b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,11n,40p,337b,582s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (4 pages, 73348 bytes).
+Output written on Principal.pdf (22 pages, 114207 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
- 118 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 402 PDF objects out of 1000 (max. 8388607)
+ 369 compressed objects within 4 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 225 words of extra memory for PDF output out of 10000 (max. 10000000)
 

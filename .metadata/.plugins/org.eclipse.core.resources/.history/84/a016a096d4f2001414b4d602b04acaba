@@ -1,0 +1,142 @@
+\chapter{QUADRO TEÓRICO}
+
+	\par Neste capítulo serão descritos os principais conceitos e características
+das tecnologias a serem utilizadas para o desenvolvimento dos \textit{softwares}
+propostos nos objetivos dessa pesquisa.
+
+\section{\textit{Android}}
+
+	\par Segundo \citeonline{monteiro2012}, \textit{Android} é um sistema
+operacional baseado em \textit{Linux}, de código aberto e que utiliza a
+linguagem de programação \textit{Java} para o desenvolvimento de seus
+aplicativos. Criado especialmente para dispositivos móveis, começou a
+ser desenvolvido no ano de 2003 pela então empresa Android Inc, que em 2005 foi
+agregada ao Google. A partir de 2007 o projeto \textit{Android} uniu-se a
+\textit{Open Handset Alliance}, uma associação de empresas de
+\textit{softwares}, \textit{hardwares} e telecomunicações, que tem por
+finalidade desenvolver uma plataforma para dispositivos móveis que seja
+completa, aberta e gratuita.
+
+	\par \citeonline{krazit2009} publicou uma entrevista com Rubin, um dos
+idealizadores do \textit{Android}, o qual afirma que o sistema pode rodar em
+equipamentos de diversos fabricantes, evitando assim ficar limitado a poucos
+dispositivos. Conforme informações do site \citeonline{android1}, hoje em dia
+existe mais de um bilhão de aparelhos espalhados pelo mundo com esse sistema
+operacional.
+
+\par De acordo com \citeonline{monteiro2012} as aplicações são executadas em uma máquina
+virtual Java denominada Dalvik. Cada aplicativo, usa uma instância dessa máquina virtual
+tornando-a assim mais segura. Por outro lado os softwares só podem acessar algum
+recurso do dispositivo, como uma lista de contatos, caso seja formalmente aceito pelo
+usuário nos termos de uso ao instalá-lo.
+
+
+
+
+
+
+
+\section{\textit{Web Services}}
+	
+	\par Nos tempos atuais, com o grande fluxo de informação que percorre pelas
+redes da \textit{internet} é necessário um nível muito alto de integração entre
+as diversas plataformas, tecnologias e sistemas. Como uma provável solução para
+esse ponto, já existem as tecnologias de sistemas distribuídos. Porém essas
+tecnologias sofrem demasiadamente com o alto acoplamento de seus componentes e
+também com a grande dependência de uma plataforma para que possam funcionar. Com
+intuito de solucionar a estes problemas e proporcionar alta transparência entre
+as várias plataformas, foram criados as tecnologias \textit{web services}.
+	
+	\par De acordo com \citeonline{erl2015}:
+	\begin{citacao}
+		No ano de 2000, a W3C (\textit{World Wide Web Consortium}) aceitou a submissão
+		do \textit{Simple Object Access Protocol} (SOAP). Este formato de mensagem
+		baseado em XML estabeleceu uma estrutura de transmissão para comunicação entre
+		aplicações (ou entre serviços) via HTTP. Sendo uma tecnologia não amarrada a
+		fornecedor, o SOAP disponibilizou uma alternativa atrativa em relação aos
+		protocolos proprietários tradicionais, tais como CORBA e DCOM.
+	\end{citacao}
+	
+	\par Considera-se então a existência dos \textit{web services} a partir daí. De
+acordo com \citeonline{duraes2005}, \textit{Web Service} é um componente que
+tem por finalidade integrar serviços distintos. O que faz com que ele se torne
+melhor que seus concorrentes é a padronização do XML(\textit{Extensible Markup
+Language}) para as trocas de informações. A aplicação consegue conversar com o
+servidor através do WSDL que é documento que contém as regras de funcionamento
+do \textit{web service}.
+	
+	\par Os \textit{web services} além de fornecerem uma padronização de
+comunicação entre as várias tecnologias existentes, provê transparência na
+troca de informações. Isso contribui pelo fato de que as novas aplicações
+possam se comunicar com aplicações mais antigas ou aplicações contruídas sobre
+outras plataformas.
+
+	\par Além das tecnologias \textit{web services} tradicionais, existe também os
+\textit{web services} REST que também disponibilizam serviços, porém não
+necessitam de encapsulamento de suas mensagens assim como os \textit{web
+Services} SOAP. Este fato influencia diretamente na performance da aplicação
+como um todo, haja vista que não sendo necessário o encapsulamento da informação
+requisitada ao \textit{web service}, somente é necessário o processamento e
+tráfego da informação que realmente importa. As caracteristícas do padrão REST
+serão abordadas a seguir.
+
+	\subsection{REST}
+	
+	\par Segundo \citeonline{saudate2012}, REST é a sigla de
+\textit{Representational State Transfer}, ou em português Transferência de
+Estado Representativo, desenvolvido por Roy Fielding na defesa de sua tese de
+doutorado. Segundo o próprio \citeonline{fielding2000} REST é um estilo que
+deriva do vários estilos arquitectónicos baseados em rede e  que combinado
+com algumas restrições, fornecem uma interface simples e uniforme para
+fornecimento de serviços\footnote{Tradução e resumo de informações de
+responsabilidade do autor da pesquisa.}.
+	
+	\par \citeonline{rubbo2015}, afirma que os dados e funcionalidade de um sistema
+são considerados recursos e podem ser acessados através das URI's
+\textit{(Universal Resource Identifier)}, facilitando dessa forma a comunicação
+do servidor com o cliente.
+	 	
+	\par \citeonline{saudate2012}, explica ainda que os métodos do HTTP\footnote{
+ HTTP – Abreviação para \textit{HyperText Transfer Protocol}} podem fazer
+ modificações nos recursos através dos comandos:
+	 
+	 \begin{itemize}
+	   \item GET – Para recuperar algum dado. 
+	   \item POST – Para criar algum dado.
+	   \item PUT – Para alterar algum dado. 
+	   \item DELETE – Para excluir algum dado. 
+	 \end{itemize}
+	 
+	\par Segundo \citeonline{godinho2009}, não há um padrão de formato para as
+ trocas de informações, mas as que mais são utilizadas é o XML\footnote{XML –
+ Abreviação para \textit{Extensible Markup Language}.} e o JSON\footnote{JSON –
+ Abreviação para \textit{JavaScript Object Notation}.}. O REST\footnote{REST –
+ Abreviação para \textit{Representational State Transfer}.} é o mais indicado
+ para aplicações em dispositivos moveis, devido sua agilidade.
+	
+	
+\section{\textit{Apache Tomcat}}
+
+	\par De acordo com a \citeonline{tomcat2015}, \textit{Apache Tomcat} é uma
+implementação de código aberto das especificações \textit{Java Servlet} e
+\textit{JavaServer Pages}. O \textit{Apache Tomcat}  é um \textit{Servlet
+Container}, que disponibiliza serviços através de requisições e respostas.
+	
+	\par Segundo \citeonline{tomcat2015}, o projeto desse \textit{software} começou
+com a \textit{Sun Microsystems}, que em 1999 doou a base do código para
+\textit{Apache Software Foundation} onde foi lançada a versão 3.0.
+	
+	\par Desta forma, o cliente envia uma requisição através do seu navegador, o
+servidor por sua vez a recebe, executa o \textit{servlet} e devolve a resposta
+ao usuário.
+
+\section{Engenharia De \textit{Software}}
+
+	\par 
+	
+	\subsection{UML}
+		
+		\par 
+	
+	\subsection{Processos de Desenvolvimento de \textit{Software}}
+	

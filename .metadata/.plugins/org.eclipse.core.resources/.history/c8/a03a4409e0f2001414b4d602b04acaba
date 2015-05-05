@@ -1,0 +1,294 @@
+%bibliografias no formato bibtex
+@book{lacheta2013,
+title={\textbf{}},
+subtitle={\textbf{Google Android: Aprenda a criar aplicações para dispositivos móveis com o Android SDK.}},
+author={Lacheta, R. R.},
+address={São Paulo},
+year={2013},
+edition={3ª}, 
+publisher={Novatec}
+}
+@book{monteiro2012,
+title={\textbf{}},
+subtitle={\textbf{Google Android: Crie aplicações para celulares e tablets.}},
+author={Monteiro, J. B.},
+address={São Paulo},
+year={2012},
+publisher={Casa do Código}
+}
+@Misc{mendes2011,
+title={\textbf{}},
+subtitle={\textbf{Um aplicativo para Android visando proporcionar maior interação de uma banda musical e seus seguidores.}},
+author = {Mendes, E. V.},
+address={Pato Branco},
+year = {2011},
+publisher={Universidade Tecnológica Federal do Paraná}
+}
+@Misc{oglio2013,
+title={\textbf{}},
+subtitle={\textbf{Aplicativo Android para o ambiente UNIVATES Virtual.}},
+author = {Oglio, M. D.},
+address={Lajeado},
+year = {2013},
+publisher={Univates}
+}
+
+@Misc{caelum1,
+title={\textbf{}},
+url={http://www.caelum.com.br/apostila-java-orientacao-objetos/o-que-e-java/#2-2-uma-breve-historia-do-java},
+urlaccessdate = {11 de Fevereiro de 2015},
+subtitle={\textbf{Java e Orientação a Objetos}},
+author = {Caelum},
+year = {2015},
+}
+@Misc{caelum2,
+title={\textbf{}},
+url={https://www.caelum.com.br/apostila-java-web/o-que-e-java-ee/#3-4-servlet-container},
+urlaccessdate = {15 de Fevereiro de 2015},
+subtitle={\textbf{Java para Desenvolvimento Web.}},
+author = {Caelum},
+year = {2015}
+}
+@Misc{caelum3,
+title={\textbf{}},
+url={https://www.caelum.com.br/apostila-vraptor-hibernate/rest/#11-5-mudando-o-verbo-http-dos-seus-metodos},
+urlaccessdate = {12 de Fevereiro de 2015},
+subtitle={\textbf{Web ágil com VRaptor, Hibernate e Ajax.}},
+author = {Caelum},
+year = {2015}
+}
+@Misc{devMedia2015,
+title={\textbf{}},
+url={http://www.devmedia.com.br/conheca-o-apache-tomcat/4546},
+urlaccessdate = {08 de Março de 2015},
+subtitle={\textbf{Conheça o Apache Tomcat.}},
+author = {Devmedia},
+year = {2015}
+}
+@Misc{easyJavaMagazine2015,
+title={\textbf{}},
+url={http://www.devmedia.com.br/a-historia-da-tecnologia-java-easy-java-magazine-1/18446},
+urlaccessdate = {20 de Fevereiro de 2015},
+subtitle={\textbf{A história da tecnologia Java.}},
+author = {Devmedia},
+year = {2015}
+}
+
+@Misc{romanato2015,
+title={\textbf{}},
+url={http://www.devmedia.com.br/entenda-como-funciona-a-java-virtual-machine-jvm/27624},
+urlaccessdate = {08 de Março de 2015},
+subtitle={\textbf{Entenda como funciona a Java Virtual Machine (JVM).}},
+author = {Romanato, A.},
+year = {2015}
+}
+@Misc{android1,
+title={\textbf{}},
+url={https://www.android.com/history/},
+urlaccessdate = {25 de Fevereiro de 2015},
+subtitle={\textbf{A história do Android.}},
+author = {Android},
+year = {2015}
+}
+@Misc{android2,
+title={\textbf{}},
+url={https://www.android.com/versions/lollipop-5-0/},
+urlaccessdate = {25 de Fevereiro de 2015},
+subtitle={\textbf{Android 5.0, Lollipop:}A mais doce novidade do Android.},
+author = {Android},
+year = {2015}
+}
+@Misc{novato2015,
+title={\textbf{}},
+url={http://www.oficinadanet.com.br/post/13849-o-que-e-android},
+urlaccessdate = {28 de Fevereiro de 2015},
+subtitle={\textbf{O que é Android?}},
+author = {Novato, D.},
+year = {2015}
+}
+@Misc{graveheart2012,
+title={\textbf{}},
+url={https://tecnoblog.net/74900/comprar-android-ou-iphone/},
+urlaccessdate = {25 de Fevereiro de 2015},
+subtitle={\textbf{Por que eu comprei um Android em vez de um iPhone.}},
+author = {Graveheart, P.},
+year = {2012}
+}
+@Misc{barros2013,
+title={\textbf{}},
+url={http://www.techtudo.com.br/artigos/noticia/2013/06/qual-e-o-sistema-operacional-de-smartphone-mais-seguro-contra-virus.html},
+urlaccessdate = {02 de Março de 2015},
+subtitle={\textbf{Qual é o sistema operacional de smartphone mais seguro contra vírus?}},
+author = {Barros, T.},
+year = {2013}
+}
+@Misc{montenegro2014,
+title={\textbf{}},
+url={http://mobilexpert.com.br/apps/outros/materias/10269/android-44-kitkat-ja-e-a-versao-mais-usada-com-302},
+urlaccessdate = {03 de Março de 2015},
+subtitle={\textbf{Android 4.4 (KitKat) já é a versão mais usada com 30,2\%.}},
+author = {Montenegro, P.},
+year = {2014}
+}
+@Misc{gusmao2014,
+title={\textbf{}},
+url={http://info.abril.com.br/noticias/it-solutions/2014/12/google-lanca-versao-1-0-do-ide-de-codigo-aberto-android-studio.shtml},
+urlaccessdate = {03 de Março de 2015},
+subtitle={\textbf{Google lança versão 1.0 do IDE de código aberto Android Studio.}},
+author = {Gusmão, G.},
+year = {2014}
+}
+@Misc{carvalho2015,
+title={\textbf{}},
+url={http://imasters.com.br/mobile/android/android-studio-vantagens-e-desvantagens-com-relacao-ao-eclipse/},
+urlaccessdate = {03 de Março de 2015},
+subtitle={\textbf{Android Studio:} vantagens e desvantagens com relação ao Eclipse.},
+author = {Carvalho, S.},
+year = {2015}
+}
+@Misc{duraes2005,
+title={\textbf{}},
+url={http://imasters.com.br/artigo/3561/web-services/web-services-para-iniciantes/},
+urlaccessdate = {10 de Março de 2015},
+subtitle={\textbf{Web Services para iniciantes}},
+author = {Durães, R.},
+year = {2005}
+}
+@book{saudate2012,
+title={\textbf{}},
+subtitle={\textbf{REST:}Construa API’s inteligentes de maneira simples.},
+author={Saudate, A.},
+address={São Paulo},
+year={2012},
+publisher={Casa do Código}
+}
+
+@Misc{rubbo2015,
+title={\textbf{}},
+url={http://www.devmedia.com.br/construindo-restful-web-services-com-jax-rs-2-0/29468},
+urlaccessdate = {03 de Março de 2015},
+subtitle={\textbf{Construindo RESTful Web Services com JAX-RS 2.0.}},
+author = {Rubbo, F.},
+year = {2015}
+}
+@Misc{godinho2009,
+title={\textbf{}},
+url={https://msdn.microsoft.com/pt-br/library/dd941696.aspx},
+urlaccessdate = {01 de Março de 2015},
+subtitle={\textbf{Criando serviços REST com WCF.}},
+author = {Godinho, R.},
+year = {2009}
+}
+@Misc{tomcat2015,
+title={\textbf{}},
+url={http://tomcat.apache.org/heritage.html},
+urlaccessdate = {08 de Março de 2015},
+subtitle={\textbf{The Tomcat Story.}},
+author = {Tomcat, A.},
+year = {2015}
+}
+@Misc{sourceforge2015,
+title={\textbf{}},
+url={http://pgdocptbr.sourceforge.net/pg82/intro-whatis.html},
+urlaccessdate = {11 de Março de 2015},
+subtitle={\textbf{Documentação do PostgreSQL 8.2.0.}},
+author = {Sourceforge},
+year = {2015}
+}
+@book{milani2008,
+title={\textbf{}},
+subtitle={\textbf{PostgreSQL.}},
+author={Milani, A.},
+address={São Paulo},
+year={2008},
+publisher={Novatec}
+}
+
+@Misc{biazus2003,
+title={\textbf{}},
+url={https://wiki.postgresql.org/wiki/Introdu%C3%A7%C3%A3o_e_Hist%C3%B3rico},
+urlaccessdate = {11 de Março de 2015},
+subtitle={\textbf{PostgreSQL Wiki.}},
+author = {Biazus, D.O.},
+year = {2015}
+}
+
+@book{markoni2002,
+title={\textbf{}},
+subtitle={\textbf{Técnicas de pesquisas:}planejamento e execução de pesquisas, amostragens e técnicas de pesquisas, elaboração, análise e interpretação de dados.},
+author={Marconi, M. A. and Lakatos, E. M.},
+address={São Paulo},
+year={2002},
+edition={5ª},
+publisher={Atlas}
+}
+@Misc{celestino2013,
+title={\textbf{}},
+url={http://www.subrotina.com.br/voce-sabe-o-que-e-uma-reuniao-de-kick-off/},
+urlaccessdate = {15 de Abril de 2015},
+subtitle={\textbf{Você sabe o que é uma reunião de \textit{kick-off}?}},
+author = {Celestino, A. L.},
+year = {2013}
+}
+@Misc{gunther2003,
+title={\textbf{}},
+url={http://www.dcoms.unisc.br/portal/upload/com_arquivo/como_elaborar_um_questionario.pdf},
+urlaccessdate = {15 de Abril de 2015},
+subtitle={\textbf{Como Elaborar um Questionário.}},
+author = {Gunther, H.},
+year = {2003}
+}
+@book{abinader2006web,
+title={\textbf{}},
+subtitle={\textbf{Web Services em Java}},
+author={Abinader, J.A. and Lins, R.D.},
+address={Rio de Janeiro},
+year={2006},
+publisher={Brasport}
+}
+@Misc{erl2015,
+title={\textbf{}},
+url={http://www.devmedia.com.br/introducao-as-tecnologias-web-services-soa-soap-wsdl-e-uddi-parte1/2873},
+urlaccessdate = {26 de Abril de 2015},
+subtitle={\textbf{Introdução às tecnologias Web Services:} SOA, SOAP, WSDL e UDDI.},
+author = {Erl, T.},
+year = {2015}
+}
+@PHDTHESIS{fielding2000,
+  AUTHOR =       "Roy Thomas Fielding",
+  TITLE="\textbf",
+  SUBTITLE =        "\textbf{Architectural Styles and the Design of Network-based Software Architectures}",
+  SCHOOL =       "University of California",
+  YEAR =         "2000",
+  type =         "Doutorado",
+}
+@Misc{krazit2009,
+title={\textbf{}},
+url={http://www.cnet.com/news/googles-rubin-android-a-revolution/},
+urlaccessdate = {20 de Fevereiro de 2015},
+subtitle={\textbf{Google's Rubin: } Android 'a revolution'.},
+author = {Krazit, T.},
+year = {2009}
+}
+@Misc{k192012,
+title={\textbf{}},
+subtitle={\textbf{Desenvolvimento mobile com Android}},
+author = {K19},
+year = {2012}
+}
+@book{phillips2013,
+title={\textbf{}},
+subtitle={\textbf{Android Programming:}The Big Nerd Ranch Guide.},
+author={Phillips, B and Hardy, B.},
+address={Atlânta},
+year={2013},
+publisher={Big Nerd Ranch}
+}
+@Misc{hohensee2013,
+title={\textbf{}},
+subtitle={\textbf{Desenvolvimento mobile com Android}},
+author = {Hohensee, B.},
+year = {2013}
+}
+ Getting Started with Android Studio. Gothenburg, 2013.
+
