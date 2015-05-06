@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  6 MAY 2015 19:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  6 MAY 2015 19:43
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1138,8 +1138,13 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./fixos/02_FolhaRosto.te
-xpdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
+x
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.43 \imprimirfolhaderosto*{}
@@ -1256,7 +1261,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
 Here is how much of TeX's memory you used:
  14529 strings out of 493304
  213612 string characters out of 6139871
- 356743 words of memory out of 5000000
+ 356683 words of memory out of 5000000
  17619 multiletter control sequences out of 15000+600000
  71256 words of font info for 69 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1266,7 +1271,7 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (29 pages, 228681 bytes).
+Output written on Principal.pdf (29 pages, 228543 bytes).
 PDF statistics:
  530 PDF objects out of 1000 (max. 8388607)
  485 compressed objects within 5 object streams
