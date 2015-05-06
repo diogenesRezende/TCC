@@ -425,29 +425,20 @@ a serem seguidos.
 		
 			\par Segundo \citeonline[p.13]{booch2006uml} "A UML é apenas uma linguagem e, 
 		 portanto, é somente uma parte de um método para desenvolvimento de
-		 \textit{software}". Ainda de acordo com \citeonline[p.13]{booch2006uml} "A
-		 UML é independente de processo, apesar de ser perfeitamente utilizada em
-		 processo orientado a casos de usos, centrado na arquitetura, interativo e
-		 incremental". A linguagem de modelagem UML além de fornecer um vocabulário
-		 próprio, também provê uma série de diagramas que tem inúmeras finalidades
-		 diferentes. Tais finalidades e suas subdivisões estão descritas na figura
-		 \ref{fig:exemplo1}.
-				
+		 \textit{software}" \ref{fig:exemplo1}. Ainda de acordo com
+		 \citeonline[p.13]{booch2006uml} "A UML é independente de processo, apesar
+		 de ser perfeitamente utilizada em processo orientado a casos de usos,
+		 centrado na arquitetura, interativo e incremental.".
+		
+		
 		\begin{figure}[h!]
 			\centerline{\includegraphics[scale=0.8]{./imagens/imagem.png}}
 				\caption[Principais Diagramas definidos pela UML.]{Diagramas definidos pela
 				UML. \textbf{Fonte:}\citeonline{2015principios}}
 				\label{fig:exemplo1}
 		\end{figure}
-		
-		\pagebreak
-		\par A linguagem de modelagem UML não é um processo rígido e permite uma
-		adequação de acordo com a situação do projeto em que é aplicada. Por permitir
-		essa flexibilidade e prover suporte adequado para determinados casos de um
-		projeto, é que a linguagem de modelagem UML será usada na modelagem dos
-		\textit{softwares} propostos nos objetivo s dessa pesquisa.
 
-	
+	\pagebreak
 	\subsection{Processos de \textit{Software}}
 	
 	
