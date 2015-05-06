@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  6 MAY 2015 19:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  6 MAY 2015 19:32
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1188,14 +1188,14 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ] [10
 
 ] [11] [12] [13] [14] [15] [16]
-[17] <./imagens/imagem.png, id=286, 496.10344pt x 266.49562pt>
+[17] <./imagens/imagem.png, id=284, 496.10344pt x 266.49562pt>
 File: ./imagens/imagem.png Graphic file (type png)
 
 <use ./imagens/imagem.png>
-Package pdftex.def Info: ./imagens/imagem.png used on input line 437.
+Package pdftex.def Info: ./imagens/imagem.png used on input line 434.
 (pdftex.def)             Requested size: 396.88329pt x 213.19678pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 439.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 436.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1254,8 +1254,8 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 14530 strings out of 493304
- 213623 string characters out of 6139871
+ 14529 strings out of 493304
+ 213612 string characters out of 6139871
  356743 words of memory out of 5000000
  17619 multiletter control sequences out of 15000+600000
  71256 words of font info for 69 fonts, out of 8000000 for 9000
@@ -1266,10 +1266,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (29 pages, 228881 bytes).
+Output written on Principal.pdf (29 pages, 228681 bytes).
 PDF statistics:
- 532 PDF objects out of 1000 (max. 8388607)
- 487 compressed objects within 5 object streams
- 110 named destinations out of 1000 (max. 500000)
+ 530 PDF objects out of 1000 (max. 8388607)
+ 485 compressed objects within 5 object streams
+ 109 named destinations out of 1000 (max. 500000)
  254 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -160,9 +160,9 @@ esses são os principais \textit{Layouts} do sistema operacional Android:
 	\par Para uma maior interação, as aplicações normalmente utilizam API’s de
 terceiros, como o Google \textit{Maps}, quando necessita encontrar alguma
 localização. Para \citeonline{monteiro2012} essa comunicação pode utilizar o
-REST\footnote{REST - \textit{Representational State Transfer}.}, que envia
-requisições através da URL. Ao receber informações pedidas a um outro serviço,
-ela pode estar no padrão XML ou JSON. O REST será detalhado mais adiante.
+REST, que envia requisições através da URL. Ao receber informações pedidas a um
+outro serviço, ela pode estar no padrão XML ou JSON. O REST será detalhado mais
+adiante.
 
 	\par Outra ferramenta importante e muito utilizada do Android é a Notificação.
 Segundo \citeonline{phillips2013} quando uma aplicação está sendo executada em
@@ -284,7 +284,8 @@ do servidor com o cliente.
 	\par Segundo \citeonline{godinho2009}, não há um padrão de formato para as
  trocas de informações, mas as que mais são utilizadas é o XML\footnote{XML
  - \textit{Extensible Markup Language}.} e o JSON\footnote{JSON - 
- \textit{JavaScript Object Notation}.}. O REST é o mais indicado para aplicações
+ \textit{JavaScript Object Notation}.}. O REST\footnote{REST - Abreviação para
+ \textit{Representational State Transfer}.} é o mais indicado para aplicações
  em dispositivos moveis, devido sua agilidade.
 	
 	

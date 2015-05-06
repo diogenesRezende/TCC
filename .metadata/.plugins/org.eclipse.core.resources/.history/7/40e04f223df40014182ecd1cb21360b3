@@ -28,21 +28,21 @@ para computadores pessoais.
 	\par \citeonline{deitel2002} O \textit{java} será utilizado para codificar e
 criar regras para proteger o banco de dados , gerenciando a infraestrutura que
 o próprio java fornece como, Transação, Acesso remoto, Web services,
-Gerenciamento de threads, Gerenciamento de conexões http\footnote{HTTP -
+Gerenciamento de threads, Gerenciamento de conexões http\footnote{Http -
 HyperText Transfer Protocol.}.
 
 	\par Para acessar o servidor precisamos de um serviço \textit{web} (\textit{Web
 services}) que utilizara o \textit{java} para criar as regras e serviços de
 compilação de dados. Segundo \citeonline{deitel2002} existem cinco fases para
-que os dados cheguem em seu dispositivo que são, armazenamento em disco, o
-compilador cria os \textit{bytecodes}, transfere-os para memória, verifica a sua
-integridade, para que não haja nenhuma violação das restrições de segurança e
-por ultimo o interpretador(JMV\footnote{JVM - Java Virtual Machine}) lê os
-\textit{bytecodes} e os traduz para a linguagem que o computador entenda e possivelmente armazena os valores dos
-dados enquanto executa o programa.
+que os dados cheguem em seu dispositivo que são, armazenamento em disco, o compilador cria os
+\textit{bytecodes}, transferência dos \textit{bytecodes} para memória, verifica
+a integridade dos \textit{bytecodes} para que não haja nenhuma violação das
+restrições de segurança e por ultimo o interpretador(JMV) lê os
+\textit{bytecodes} e os traduz para a linguagem que o computador entenda e
+possivelmente armazena os valores dos dados enquanto executa o programa.
 
 	\par \citeonline{romanato2015} afirma, que o \textit{Java} usa a JMV
-, que é uma máquina virtual capaz de converter
+(\textit{Java Virtual Machine}), que é uma máquina virtual capaz de converter
 os \textit{bytecodes} para a linguagem do sistema operacional utilizado pelo
 cliente, sem a necessidade de compilá-lo para cada plataforma. Dessa maneira um
 \textit{software} que foi desenvolvido para um sistema operacional, funcionará
@@ -160,9 +160,9 @@ esses são os principais \textit{Layouts} do sistema operacional Android:
 	\par Para uma maior interação, as aplicações normalmente utilizam API’s de
 terceiros, como o Google \textit{Maps}, quando necessita encontrar alguma
 localização. Para \citeonline{monteiro2012} essa comunicação pode utilizar o
-REST\footnote{REST - \textit{Representational State Transfer}.}, que envia
-requisições através da URL. Ao receber informações pedidas a um outro serviço,
-ela pode estar no padrão XML ou JSON. O REST será detalhado mais adiante.
+REST, que envia requisições através da URL. Ao receber informações pedidas a um
+outro serviço, ela pode estar no padrão XML ou JSON. O REST será detalhado mais
+adiante.
 
 	\par Outra ferramenta importante e muito utilizada do Android é a Notificação.
 Segundo \citeonline{phillips2013} quando uma aplicação está sendo executada em
@@ -259,19 +259,21 @@ serão abordadas a seguir.
 	\subsection{REST}
 	
 	\par Segundo \citeonline{saudate2012}, REST é a sigla de
-\textit{Representational State Transfer}, desenvolvido por Roy Fielding na
-defesa de sua tese de doutorado. Segundo o próprio \citeonline{fielding2000}
-REST é um estilo que deriva do vários estilos arquitectónicos baseados em rede
-e  que combinado com algumas restrições, fornecem uma interface simples e
-uniforme para fornecimento de serviços\footnote{Tradução e resumo de
-informações de responsabilidade dos autores da pesquisa.}.
+\textit{Representational State Transfer}, ou em português Transferência de
+Estado Representativo, desenvolvido por Roy Fielding na defesa de sua tese de
+doutorado. Segundo o próprio \citeonline{fielding2000} REST é um estilo que
+deriva do vários estilos arquitectónicos baseados em rede e  que combinado
+com algumas restrições, fornecem uma interface simples e uniforme para
+fornecimento de serviços\footnote{Tradução e resumo de informações de
+responsabilidade do autor da pesquisa.}.
 	
 	\par \citeonline{rubbo2015}, afirma que os dados e funcionalidade de um sistema
 são considerados recursos e podem ser acessados através das URI's
 \textit{(Universal Resource Identifier)}, facilitando dessa forma a comunicação
 do servidor com o cliente.
 	 	
-	\par \citeonline{saudate2012}, explica ainda que os métodos do HTTP podem fazer
+	\par \citeonline{saudate2012}, explica ainda que os métodos do HTTP\footnote{
+ HTTP – Abreviação para \textit{HyperText Transfer Protocol}} podem fazer
  modificações nos recursos através dos métodos HTTP, da seguinte forma.:
 	 
 	 \begin{itemize}
@@ -284,7 +286,8 @@ do servidor com o cliente.
 	\par Segundo \citeonline{godinho2009}, não há um padrão de formato para as
  trocas de informações, mas as que mais são utilizadas é o XML\footnote{XML
  - \textit{Extensible Markup Language}.} e o JSON\footnote{JSON - 
- \textit{JavaScript Object Notation}.}. O REST é o mais indicado para aplicações
+ \textit{JavaScript Object Notation}.}. O REST\footnote{REST - Abreviação para
+ \textit{Representational State Transfer}.} é o mais indicado para aplicações
  em dispositivos moveis, devido sua agilidade.
 	
 	
