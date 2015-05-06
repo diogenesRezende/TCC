@@ -242,7 +242,7 @@ servidor através do  WSDL que é documento que contém as regras de
 funcionamento do \textit{web service}.
 	
 	\par Os \textit{web services} além de fornecerem uma padronização de
-comunicação entre as várias tecnologias existentes, provêem transparência na
+comunicação entre as várias tecnologias existentes, provê transparência na
 troca de informações. Isso contribui pelo fato de que as novas aplicações
 possam se comunicar com aplicações mais antigas ou aplicações contruídas sobre
 outras plataformas.
@@ -274,7 +274,7 @@ do servidor com o cliente.
 	 	
 	\par \citeonline{saudate2012}, explica ainda que os métodos do HTTP\footnote{
  HTTP – Abreviação para \textit{HyperText Transfer Protocol}} podem fazer
- modificações nos recursos através dos métodos HTTP, da seguinte forma.:
+ modificações nos recursos através dos comandos:
 	 
 	 \begin{itemize}
 	   \item GET – Para recuperar algum dado. 
@@ -330,7 +330,7 @@ Gerenciamento de Banco de Dados) que tem suporte para ACID(Atomicidade,
 consistência, isolamento e Durabilidade), que são serviços que garantem a
 qualidade que um banco de dados. A seguir algumas das principais
 características e recursos existentes no postgreSQL, que são, Replicação,
-Cluster(Alta disponibilidade), Multithreads, segurança ssl e criptografia.
+Cluster(Alta disponibilidade), Multithreads, segurança ssl e criptografia, sql.
 
 \par Segundo \citeonline{milani2008}:
 	\begin{itemize}
@@ -400,7 +400,7 @@ paradigmas:
 
 
 
-	\par De toda a engenharia de \textit{software}, o que mais será utilizado nesse
+	\par De toda a engenharia de \textit{software} o que mais será utilizado nesse
 projeto é a linguagem UML, que através dos seus diagramas norteará os caminhos
 a serem seguidos.
 	
