@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  6 MAY 2015 13:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  6 MAY 2015 13:26
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1137,31 +1137,33 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
  [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./fixos/0A_ListasAutomat
-icas.tex (./Principal.lof)pdfTeX warning (ext4): destination with the same iden
-tifier (name{page.1}) has been already used, duplicate ignored
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./fixos/02_FolhaRosto.te
+xpdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.4 \cleardoublepage
-                     [1
+l.43 \imprimirfolhaderosto*{}
+                              [1
 
 
 
-] (./editaveis/0B_Siglas.tex [2
+
+]) (./fixos/0A_ListasAutomaticas.tex
+(./Principal.lof) [2] (./editaveis/0B_Siglas.tex [3
 
 
 ]) (./Principal.loq)
-[3
+[4
 
-] (./Principal.lot) [4
+] (./Principal.lot) [5
 
 ]) (./fixos/0C_Sumario.tex (./Principal.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 10.
-) [5
+) [6
 
 ])
-(./editaveis/10_Introducao.tex [6
+(./editaveis/10_Introducao.tex [7
 
 ]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 62.
@@ -1171,7 +1173,7 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
- [7
+ [8
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1181,12 +1183,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 89.
 )
-(./editaveis/11_QuadroTeorico.tex [8
+(./editaveis/11_QuadroTeorico.tex [9
 
-] [9
+] [10
 
-] [10] [11] [12] [13] [14] [15]
-[16] <./imagens/imagem.png, id=280, 496.10344pt x 266.49562pt>
+] [11] [12] [13] [14] [15] [16]
+[17] <./imagens/imagem.png, id=286, 496.10344pt x 266.49562pt>
 File: ./imagens/imagem.png Graphic file (type png)
 
 <use ./imagens/imagem.png>
@@ -1198,10 +1200,10 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17] [18 <./imagens/imagem.png>]) (./editaveis/12_QuadroMetodologico.tex
-[19] [20
+[18] [19 <./imagens/imagem.png>]) (./editaveis/12_QuadroMetodologico.tex
+[20] [21
 
-] [21] [22]
+] [22] [23]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 150.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
@@ -1211,15 +1213,15 @@ Overfull \hbox (19.47868pt too wide) in paragraph at lines 150--203
  [][][] 
  []
 
-[23]) (./Principal.bbl [24]
+[24]) (./Principal.bbl [25]
 bibitemlist
-[25
+[26
 
-] [26])
+] [27])
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[27]
+[28]
 
 Package caption Warning: Unused \captionsetup[Quadro] on input line 301.
 See the caption package documentation for explanation.
@@ -1252,10 +1254,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 14521 strings out of 493304
- 213478 string characters out of 6139871
+ 14530 strings out of 493304
+ 213623 string characters out of 6139871
  356743 words of memory out of 5000000
- 17616 multiletter control sequences out of 15000+600000
+ 17619 multiletter control sequences out of 15000+600000
  71256 words of font info for 69 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  46i,12n,40p,337b,603s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1264,10 +1266,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (28 pages, 227963 bytes).
+Output written on Principal.pdf (29 pages, 228770 bytes).
 PDF statistics:
- 521 PDF objects out of 1000 (max. 8388607)
- 477 compressed objects within 5 object streams
- 107 named destinations out of 1000 (max. 500000)
- 246 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 532 PDF objects out of 1000 (max. 8388607)
+ 487 compressed objects within 5 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 254 words of extra memory for PDF output out of 10000 (max. 10000000)
 
