@@ -1,2 +1,0 @@
-> Pesquisar Engenharia de Software Mobile;
-> Henrique - Melhorar texto do Android. (Notificações, Intent, content
