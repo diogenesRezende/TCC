@@ -1,0 +1,18 @@
+Tempo Máximo de Apresentação 20 minutos.
+Cada um terá um tempo de 6 Minutos para a apresentação.
+
+Objetivos:
+	Apresentação, Objetivo geral, Objetivos especifico - Diego
+	Justificativa - Diogenes
+	Introdução - Henrique
+
+Quadro Teórico:
+	Android e Android Studio - Diego
+	Web Service, REST e Tomcat - Diogenes
+	Java e PostgreSql - Henrique
+	Engenharia de Software, UML e processos de Software - Henrique
+
+Quadro Metodológico
+	Tipo de pesquisa e Contexto de pesquisa - Diego
+	Procedimentos - henrique
+	Instrumentos e Cromograma - Diogenes
