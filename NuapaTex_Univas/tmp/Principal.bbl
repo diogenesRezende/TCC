@@ -39,13 +39,11 @@ Dispon{\'\i}vel em:
 {CARVALHO, A.; CHIOSSI, T. \emph{\textbf{}}: \textbf{Introdução à Engenharia
   de Software.} Campinas: Editora da Unicamp, 2001.}
 
-\bibitem[Celestino 2013]{celestino2013}
-\abntrefinfo{Celestino}{CELESTINO}{2013}
-{CELESTINO, A.~L. \emph{\textbf{}}: \textbf{Você sabe o que é uma reunião de
-  \textit{kick-off}?} 2013.
-Dispon{\'\i}vel em:
-  \url{http://www.subrotina.com.br/voce-sabe-o-que-e-uma-reuniao-de-kick-off/}.
-  Acesso em: 15 de Abril de 2015.}
+\bibitem[Coulouris et al. 2013]{coulouris2013}
+\abntrefinfo{Coulouris et al.}{COULOURIS et al.}{2013}
+{COULOURIS, G. et al. \emph{\textbf{}}: \textbf{Sistemas
+  Distribuídos}conceitos e projeto. 5ª. ed. Porto Alegre: Bookman Editora,
+  2013.}
 
 \bibitem[Deitel e Deitel 2003]{deitel2002}
 \abntrefinfo{Deitel e Deitel}{DEITEL; DEITEL}{2003}
@@ -94,13 +92,6 @@ Dispon{\'\i}vel em:
 {GUEDES, G. T.~A. \emph{\textbf{}}: \textbf{UML 2 :} uma abordagem prática.
   2ª. ed. São Paulo: Novatec, 2011.}
 
-\bibitem[Gunther 2003]{gunther2003}
-\abntrefinfo{Gunther}{GUNTHER}{2003}
-{GUNTHER, H. \emph{\textbf{}}: \textbf{Como Elaborar um Questionário.} 2003.
-Dispon{\'\i}vel em:
-  \url{http://www.dcoms.unisc.br/portal/upload/com\_arquivo/como\_elaborar\_um\_questionario.pdf}.
-  Acesso em: 15 de Abril de 2015.}
-
 \bibitem[Gusmão 2014]{gusmao2014}
 \abntrefinfo{Gusmão}{GUSMãO}{2014}
 {GUSMãO, G. \emph{\textbf{}}: \textbf{Google lança versão 1.0 do IDE de
@@ -126,24 +117,10 @@ Dispon{\'\i}vel em:
   \url{http://www.cnet.com/news/googles-rubin-android-a-revolution/}. Acesso
   em: 20 de Fevereiro de 2015.}
 
-\bibitem[Lacheta 2013]{lacheta2013}
-\abntrefinfo{Lacheta}{LACHETA}{2013}
-{LACHETA, R.~R. \emph{\textbf{}}: \textbf{Google Android: Aprenda a criar
-  aplicações para dispositivos móveis com o Android SDK.} 3ª. ed. São
-  Paulo: Novatec, 2013.}
-
-\bibitem[Marconi e Lakatos 2002]{markoni2002}
-\abntrefinfo{Marconi e Lakatos}{MARCONI; LAKATOS}{2002}
-{MARCONI, M.~A.; LAKATOS, E.~M. \emph{\textbf{}}: \textbf{Técnicas de
-  pesquisas:}planejamento e execução de pesquisas, amostragens e técnicas de
-  pesquisas, elaboração, análise e interpretação de dados. 5ª. ed. São
-  Paulo: Atlas, 2002.}
-
-\bibitem[Mendes 2011]{mendes2011}
-\abntrefinfo{Mendes}{MENDES}{2011}
-{MENDES, E.~V. \emph{\textbf{}}: \textbf{Um aplicativo para Android visando
-  proporcionar maior interação de uma banda musical e seus seguidores.} Pato
-  Branco: Universidade Tecnológica Federal do Paraná, 2011.}
+\bibitem[Leal 2014]{leal2014}
+\abntrefinfo{Leal}{LEAL}{2014}
+{LEAL, N. \emph{\textbf{}}: \textbf{Dominando o Android:} do básico ao
+  avançado. 1ª. ed. São Paulo: Novatec, 2014.}
 
 \bibitem[Milani 2008]{milani2008}
 \abntrefinfo{Milani}{MILANI}{2008}
@@ -154,11 +131,6 @@ Dispon{\'\i}vel em:
 {MONTEIRO, J.~B. \emph{\textbf{}}: \textbf{Google Android: Crie aplicações
   para celulares e tablets.} São Paulo: Casa do Código, 2012.}
 
-\bibitem[Oglio 2013]{oglio2013}
-\abntrefinfo{Oglio}{OGLIO}{2013}
-{OGLIO, M.~D. \emph{\textbf{}}: \textbf{Aplicativo Android para o ambiente
-  UNIVATES Virtual.} Lajeado: Univates, 2013.}
-
 \bibitem[Phillips e Hardy 2013]{phillips2013}
 \abntrefinfo{Phillips e Hardy}{PHILLIPS; HARDY}{2013}
 {PHILLIPS, B.; HARDY, B. \emph{\textbf{}}: \textbf{Android Programming:}the big
@@ -168,12 +140,6 @@ Dispon{\'\i}vel em:
 \abntrefinfo{Pressman}{PRESSMAN}{2011}
 {PRESSMAN, R. \emph{\textbf{}}: \textbf{Engenharia de software:} uma abordagem
   profissional. 7ª. ed. Porto Alegre: AMGH, 2011.}
-
-\bibitem[Prodanov e Freitas 2013]{prodanov2013}
-\abntrefinfo{Prodanov e Freitas}{PRODANOV; FREITAS}{2013}
-{PRODANOV, C.~C.; FREITAS, E.~C. \emph{\textbf{}}: \textbf{ Metodologia do
-  Trabalho.} métodos e técnicas da pesquisa e do trabalho acadêmico. 2ª.
-  ed. Novo Hamburgo: Feevale, 2013.}
 
 \bibitem[Romanato 2015]{romanato2015}
 \abntrefinfo{Romanato}{ROMANATO}{2015}
