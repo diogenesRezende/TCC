@@ -67,10 +67,12 @@
           <tags>persp.actionSet:org.eclipse.debug.ui.breakpointActionSet</tags>
           <tags>persp.newWizSC:org.eclipse.m2e.core.wizards.Maven2ProjectWizard</tags>
           <tags>persp.actionSet:org.eclipse.wst.ws.explorer.explorer</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_yUzP4fJ0EeSCL48s1HUSkw" selectedElement="_yUzP5_J0EeSCL48s1HUSkw" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_yUzP4fJ0EeSCL48s1HUSkw" selectedElement="_yUzP4vJ0EeSCL48s1HUSkw" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_yUzP4vJ0EeSCL48s1HUSkw" elementId="topLeft" visible="false" containerData="2500" selectedElement="_yUzP4_J0EeSCL48s1HUSkw">
               <tags>newtablook</tags>
               <tags>Minimized</tags>
+              <tags>active</tags>
+              <tags>noFocus</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_yUzP4_J0EeSCL48s1HUSkw" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_yGnp8PJ0EeSCL48s1HUSkw"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_yUzP5PJ0EeSCL48s1HUSkw" elementId="org.eclipse.ui.views.ResourceNavigator" toBeRendered="false" ref="_yGpfIPJ0EeSCL48s1HUSkw"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_yUzP5fJ0EeSCL48s1HUSkw" elementId="org.eclipse.jdt.ui.TypeHierarchy" toBeRendered="false" ref="_yGpfIfJ0EeSCL48s1HUSkw"/>
@@ -135,15 +137,11 @@
         <tags>newtablook</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <tags>active</tags>
-        <tags>noFocus</tags>
         <children xsi:type="basic:Part" xmi:id="_Meu9MBVTEeWD-tMwv2s8mw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="11_QuadroTeorico.tex" iconURI="platform:/plugin/net.sourceforge.texlipse/icons/texfile.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;net.sourceforge.texlipse.TexEditor&quot; name=&quot;11_QuadroTeorico.tex&quot; partName=&quot;11_QuadroTeorico.tex&quot; title=&quot;11_QuadroTeorico.tex&quot; tooltip=&quot;NuapaTex_Univas/editaveis/11_QuadroTeorico.tex&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/NuapaTex_Univas/editaveis/11_QuadroTeorico.tex&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;15032&quot; selectionTopPixel=&quot;4887&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;net.sourceforge.texlipse.TexEditor&quot; name=&quot;11_QuadroTeorico.tex&quot; partName=&quot;11_QuadroTeorico.tex&quot; title=&quot;11_QuadroTeorico.tex&quot; tooltip=&quot;NuapaTex_Univas/editaveis/11_QuadroTeorico.tex&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/NuapaTex_Univas/editaveis/11_QuadroTeorico.tex&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;15987&quot; selectionTopPixel=&quot;5160&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>net.sourceforge.texlipse.TexEditor</tags>
           <tags>removeOnHide</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_5xMzQD1jEeWTvfJKbnJ22w" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="biblio.bib" iconURI="platform:/plugin/net.sourceforge.texlipse/icons/bibfile.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;net.sourceforge.texlipse.bibeditor.BibEditor&quot; name=&quot;biblio.bib&quot; partName=&quot;biblio.bib&quot; title=&quot;biblio.bib&quot; tooltip=&quot;NuapaTex_Univas/biblio.bib&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/NuapaTex_Univas/biblio.bib&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;11676&quot; selectionTopPixel=&quot;6300&quot;/>&#xA;&lt;/editor>"/>
@@ -157,6 +155,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1430754513192&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_ycfMQPJ0EeSCL48s1HUSkw" elementId="org.eclipse.ui.navigator.ProjectExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -269,7 +269,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xvcgEPJ0EeSCL48s1HUSkw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ekXW4D1VEeWTvfJKbnJ22w" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_wXIpYfJ0EeSCL48s1HUSkw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_jlXdsD14EeWz0ZjY73rDKA" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_wXIpYfJ0EeSCL48s1HUSkw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xvdHIPJ0EeSCL48s1HUSkw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -299,7 +299,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xve8UPJ0EeSCL48s1HUSkw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_eki9ED1VEeWTvfJKbnJ22w" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_wXBUk_J0EeSCL48s1HUSkw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_jldkUT14EeWz0ZjY73rDKA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_wXBUk_J0EeSCL48s1HUSkw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xve8UfJ0EeSCL48s1HUSkw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
