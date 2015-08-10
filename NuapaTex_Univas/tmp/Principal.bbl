@@ -11,8 +11,15 @@
 Dispon{\'\i}vel em: \url{https://www.android.com/history/}. Acesso em: 25 de
   Fevereiro de 2015.}
 
-\bibitem[Android 2015]{android2}
+\bibitem[Android 2015]{android2015}
 \abntrefinfo{Android}{ANDROID}{2015b}
+{ANDROID. \emph{\textbf{}}: Creating a navigation drawer. 2015.
+Dispon{\'\i}vel em:
+  \url{https://developer.android.com/training/implementing-navigation/nav-drawer.html}.
+  Acesso em: 28 de julho de 2015.}
+
+\bibitem[Android 2015]{android2}
+\abntrefinfo{Android}{ANDROID}{2015c}
 {ANDROID. \emph{\textbf{}}: \textbf{Android Studio Overview.} 2015.
 Dispon{\'\i}vel em: \url{http://developer.android.com/tools/studio/index.html}.
   Acesso em: 12 de Março de 2015.}
@@ -117,10 +124,22 @@ Dispon{\'\i}vel em:
   \url{http://www.cnet.com/news/googles-rubin-android-a-revolution/}. Acesso
   em: 20 de Fevereiro de 2015.}
 
+\bibitem[Lacheta 2013]{lacheta2013}
+\abntrefinfo{Lacheta}{LACHETA}{2013}
+{LACHETA, R.~R. \emph{\textbf{}}: \textbf{Google Android: Aprenda a criar
+  aplicações para dispositivos móveis com o Android SDK.} 3ª. ed. São
+  Paulo: Novatec, 2013.}
+
 \bibitem[Leal 2014]{leal2014}
 \abntrefinfo{Leal}{LEAL}{2014}
 {LEAL, N. \emph{\textbf{}}: \textbf{Dominando o Android:} do básico ao
   avançado. 1ª. ed. São Paulo: Novatec, 2014.}
+
+\bibitem[Lecheta 2010]{lecheta2010}
+\abntrefinfo{Lecheta}{LECHETA}{2010}
+{LECHETA, R.~R. \emph{\textbf{}}: \textbf{Google Android:}aprenda a criar
+  aplicações para dispositivos móveis com android sdk. 2ª. ed. São Paulo:
+  Novatec, 2010.}
 
 \bibitem[Milani 2008]{milani2008}
 \abntrefinfo{Milani}{MILANI}{2008}
@@ -157,10 +176,20 @@ Dispon{\'\i}vel em:
   \url{http://www.devmedia.com.br/construindo-restful-web-services-com-jax-rs-2-0/29468}.
   Acesso em: 03 de Março de 2015.}
 
+\bibitem[Sampaio 2006]{sampaio2006}
+\abntrefinfo{Sampaio}{SAMPAIO}{2006}
+{SAMPAIO, C. \emph{\textbf{}}: \textbf{SOA e Web Services em Java}. 1ª. ed.
+  Rio de Janeiro: Brasport, 2006.}
+
 \bibitem[Saudate 2012]{saudate2012}
 \abntrefinfo{Saudate}{SAUDATE}{2012}
 {SAUDATE, A. \emph{\textbf{}}: \textbf{REST:}construa api’s inteligentes de
   maneira simples. São Paulo: Casa do Código, 2012.}
+
+\bibitem[Saudate 2013]{saudate2013}
+\abntrefinfo{Saudate}{SAUDATE}{2013}
+{SAUDATE, A. \emph{\textbf{}}: \textbf{SOA aplicado:}integrando com web
+  serviçes e além. 1ª. ed. São Paulo: Casa do Código, 2013.}
 
 \bibitem[Sommerville 2003]{sommerville2003}
 \abntrefinfo{Sommerville}{SOMMERVILLE}{2003}
