@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  9 AUG 2015 22:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  1 SEP 2015 00:18
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1138,11 +1138,8 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./fixos/0C_Sumario.tex (
-./Principal.toc
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 5.
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
+./Principal.toc)pdfTeX warning (ext4): destination with the same identifier (na
+me{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.7 \cleardoublepage
@@ -1150,75 +1147,69 @@ l.7 \cleardoublepage
 
 
 
-]) (./editaveis/11_QuadroTeorico.tex
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 20.
+]) (./editaveis/12_QuadroMetodologico.tex [2
+
+
+]
+<./imagens/imagem4.png, id=44, 462.72874pt x 647.41875pt>
+File: ./imagens/imagem4.png Graphic file (type png)
+
+<use ./imagens/imagem4.png>
+Package pdftex.def Info: ./imagens/imagem4.png used on input line 61.
+(pdftex.def)             Requested size: 231.3638pt x 323.70857pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 63.
+ [3 <./imagens/imagem4.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 102.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 32.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 32.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 32.
- [2
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
+ [4] [5]
+
+LaTeX Warning: File `./imagens/imagem5.png' not found on input line 175.
 
 
-] [3]
-<./imagens/imagem3.png, id=92, 749.80125pt x 519.9425pt>
-File: ./imagens/imagem3.png Graphic file (type png)
+! Package pdftex.def Error: File `./imagens/imagem5.png' not found.
 
-<use ./imagens/imagem3.png>
-Package pdftex.def Info: ./imagens/imagem3.png used on input line 124.
-(pdftex.def)             Requested size: 374.8997pt x 259.97061pt.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 127.
- [4 <./imagens/imagem3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 152--160
-\T1/ptm/m/n/12 essa ati-vi-dade de-ver· ser cha-mada ao ini-ciar a apli-ca-Á„o 
-e
- []
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175 ...aphics[scale=0.5]{./imagens/imagem5.png}}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-[5] [6] [7] [8] <./imagens/imagem1.png, id=168, 645.16031pt x 255.95625pt>
-File: ./imagens/imagem1.png Graphic file (type png)
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 175.
 
-<use ./imagens/imagem1.png>
-Package pdftex.def Info: ./imagens/imagem1.png used on input line 342.
-(pdftex.def)             Requested size: 516.12894pt x 204.76526pt.
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+! Undefined control sequence.
+l.182 ...ama foi poss√≠vel criar as classes \texit
+                                                  {java} que
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-<./imagens/imagem2.png, id=181, 599.99156pt x 325.96782pt>
-File: ./imagens/imagem2.png Graphic file (type png)
-
-<use ./imagens/imagem2.png>
-Package pdftex.def Info: ./imagens/imagem2.png used on input line 365.
-(pdftex.def)             Requested size: 479.9939pt x 260.7746pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[9 <./imagens/imagem1.png>] [10 <./imagens/imagem2.png>] [11] [12] [13]
-<./imagens/imagem.png, id=278, 496.10344pt x 266.49562pt>
-File: ./imagens/imagem.png Graphic file (type png)
-
-<use ./imagens/imagem.png>
-Package pdftex.def Info: ./imagens/imagem.png used on input line 582.
-(pdftex.def)             Requested size: 396.88329pt x 213.19678pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[14] [15 <./imagens/imagem.png>]) (./Principal.bbl [16]
+) (./Principal.bbl [6]
 bibitemlist
-[17
-
-])
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 10.
+)
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[18]
+[7
+
+]
 
 Package caption Warning: Unused \captionsetup[Quadro] on input line 301.
 See the caption package documentation for explanation.
@@ -1242,22 +1233,23 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 14457 strings out of 493304
- 212772 string characters out of 6139871
- 352788 words of memory out of 5000000
- 17597 multiletter control sequences out of 15000+600000
- 59278 words of font info for 60 fonts, out of 8000000 for 9000
+ 14227 strings out of 493304
+ 209006 string characters out of 6139871
+ 343623 words of memory out of 5000000
+ 17435 multiletter control sequences out of 15000+600000
+ 42145 words of font info for 47 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 46i,12n,40p,337b,584s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
-utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (19 pages, 388104 bytes).
+ 46i,12n,40p,337b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive/texmf-dist
+/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtl10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/times/utmri8a.pfb>
+Output written on Principal.pdf (8 pages, 259795 bytes).
 PDF statistics:
- 436 PDF objects out of 1000 (max. 8388607)
- 390 compressed objects within 4 object streams
- 83 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 134 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

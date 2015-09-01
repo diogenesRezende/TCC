@@ -1,0 +1,5 @@
+-Mer banco
+-Mapeamento objeto relacional com detalhes
+-criação do persistence.xml
+-criação do JpaUtil
+-criação e disponibilização do primeiro serviço
