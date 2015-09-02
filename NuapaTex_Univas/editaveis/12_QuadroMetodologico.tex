@@ -5,25 +5,25 @@ pesquisa, tais como tipo de pesquisa, contexto, procedimentos, entre outros.
 
 \section{Tipo de pesquisa}
 	
-	\par Uma pesquisa é ato de buscar e procurar pela resposta de algo.
+	\par Uma pesquisa é o ato de buscar e procurar pela resposta de algo.
 \citeonline[p. 15]{markoni2002} definem pesquisa como “uma indagação minuciosa
 ou exame crítico e exaustivo na procura de fatos e princípios”.
 
 	\par Existem diversos tipos de pesquisa, no entanto percebeu-se que para o
-propósito desta, a mais indicada foi a pesquisa aplicada, pois foi desenvolvido
-um projeto real que poderá ser utilizado por qualquer instituição de ensino,
-mas que não mudará a forma com que as pessoas recebam suas informações, apenas
-acrescenta mais uma forma de consultá-las.
+propósito desta, a mais indicada foi a pesquisa aplicada, pois está se
+desenvolvendo um projeto real que poderá ser utilizado por qualquer instituição
+de ensino, mas que não mudará a forma com que as pessoas recebam suas
+informações, apenas acrescenta mais uma forma de consultá-las.
 
 	\par Segundo \citeonline[p. 15]{markoni2002}, uma pesquisa do tipo aplicada
-“Caracteriza-se por seu interesse prático, isto é, que os resultados sejam
+“caracteriza-se por seu interesse prático, isto é, que os resultados sejam
 aplicados ou utilizados, imediatamente, na solução de problemas que ocorrem na
 realidade”.
 
-	\par Dessa maneira, percebeu-se que a pesquisa enquadra-se no tipo de
-	pesquisa aplicada, pois resolveria um problema específico, e para isso foi criado uma
-aplicativo para dispositivos móveis que facilitará aos graduandos acessarem o
-sistema \textit{web} de uma universidade.
+	\par Dessa maneira, percebeu-se que a pesquisa enquadra-se no tipo de pesquisa
+aplicada, pois resolveria um problema específico, e para isso está
+desenvolvendo-se um aplicativo para dispositivos móveis que facilitará aos
+graduandos acessarem o sistema \textit{web} de uma universidade.
 
 \section{Contexto de pesquisa}
 
@@ -31,14 +31,14 @@ sistema \textit{web} de uma universidade.
 um portal \textit{online}, pois facilitará o acesso dos discentes às suas
 informações escolares.
 
-	\par Foi criado um aplicativo para dispositivos móveis, porém inicialmente
-apenas para a plataforma \textit{Android}, o qual notifica os usuários quando
-há alguma mudança, como por exemplo, ao ser lançada uma nota.
+	\par Está em fase de criação um aplicativo para dispositivos móveis, porém
+inicialmente apenas para a plataforma \textit{Android}, o qual notifica os
+usuários quando há alguma mudança, como por exemplo, ao ser lançada uma nota.
 	
 	\par O aluno consegue acessar o aplicativo com o mesmo \textit{login} do
 sistema \textit{web}. O utilitário acessa o \textit{webservice} que é
-responsável por buscar as informações no banco de dados e apresenta-las no
-dispositivo móvel.
+responsável por buscar as informações no banco de dados e apresentá-las no
+dispositivo.
 	
 \section{Instrumentos}
 
@@ -76,7 +76,7 @@ qualquer assunto.
 objetivo de discutir o andamento das tarefas pela qual cada integrante ficou
 responsável. Além disso entravam em discussão, nessas reuniões, o cumprimento
 das metas propostas por cada participante e o estabelecimento de novas metas.
-Foi utilizada nessa pesquisa, referencias em livros, revistas, manuais e web
+Foi utilizada nessa pesquisa, referências de livros, revistas, manuais e web
 sites.
 
 
@@ -111,53 +111,6 @@ sites.
 	
 	\subsection{Resto}
 	
-		\par Para iniciar o desenvolvimento do aplicativo, primeiramente fez-se
-	necessária a instalação e configuração da plataforma \textit{Android Studio} e
-	\textit{Android SDK}. Ao concluir essa tarefa, deu-se o início ao aplicativo
-	\textit{Android}.
-
-		\par O primeiro passo foi a criação de uma \textit{activity} que é o
-	\textit{main}, ou seja a qual executará a aplicação quando for iniciada.
-	A \textit{activity} escolhida é denominada \textit{Navigation Drawer Layout}.
-	Com ela é possível criar, do lado esquerdo, uma lista que funcionará como um
-	menu, com as opções \textit{Home}, Notas, Faltas, Provas Agendadas e Sair.
-	Essas opções ficam escondidas e só apareceram quando clicado no canto superior
-	esquerdo.
-
-		\par Sempre que a aplicação é iniciada ou quando retorna-se para a
-	\textit{Home}, é mostrado ao usuário uma lista de \textit{links} uteis. Para
-	que essa lista aparecesse foi utilizada uma \textit{activity} chamada de
-	\textit{Master/ Deital Flow} que já traz consigo o \textit{widget} de
-	\textit{ListView}. Essa \textit{activity} mostrara as seguintes opções: Univás,
-	MEC, FIES, Prouni e Google Acadêmico. Ao clicar em um desses itens será chamada
-	uma atividade que mostrará os detalhes do item escolhido, nesse caso na
-	\textit{activity} que detalhará o item foi utilizada uma \textit{WebView} que
-	mostrará a página web no espaço reservado. Dessa maneira, quando for clicado na
-	opção Univas será carregada o site da universidade no aplicativo.
-
-		\par Logo após foram criadas três novas \textit{activities} chamadas de
-	\textit{Blank Activity}, as quais listarão as matérias. Nelas foram inseridas o
-	\textit{widget ExpandableListView}, para que quando clicado em um item listado,
-	ele expande e mostra mais informações, com isso quando se escolhe o menu notas,
-	será mostrada uma \textit{activity} que listará todas as matérias cursadas pelo
-	aluno e ao clicar em uma delas mostrará as notas dessa disciplina.
-
-		\par Foi criada uma classe chamada BuscaDados, ela tem por finalidade receber
-	os dados do \textit{webservice}, salva-los no banco de dados local do
-	aplicativo e os entregar para as classes que implementam o \textit{Adapter}
-	para listar as informações.
-
-		\par No arquivo \textit{AndroidManifest.xml} foi necessário alterar a opção
-	\textit{Android:icon}, que define qual será o ícone do aplicativo, por padrão
-	ele apresenta o mascote do \textit{Android}, no entanto foi definida uma imagem
-	do logo da universidade. Foi necessário também incluir uma \textit{tag} de
-	\textit{users-permission} para \textit{web}, que obriga o usuário a permitir o
-	uso da \textit{internet} pelo aplicativo.
-
-		\par O \textit{Android Studio} tem uma facilidade para se trabalhar com
-	controladores de versão, nesse caso foi escolhido o \textit{GitHub}. Nele foi
-	criado uma pasta e compartilhada entre os participantes e por fim configurado
-	no IDE para que cada um possa ter a versão mais atualizada do projeto.
 	
 		\par No que diz respeito à contrução do \textit{webservice}, foi necessário a
 	intalação e configuração de um ambiente de desenvolvimento compatível com as
@@ -257,7 +210,7 @@ sites.
 		
 			\par Em seguida à criação das entidades, foi necessário configurar o arquivo
 		\texttt{persistence.xml} que fica dentro do \textit{classpath} do projeto
-		\textit{Java} ou seja, dentro da mesma pasta onde estão contidas as classes do
+		\textit{Java} ou seja, dentro da mesma pasta onde estão contidos pacotes do
 		projeto. Esse arquivo é extremamente importante pois, é nele que estão todas
 		as configurações relativas à conexão com o banco de dados, configurações
 		referentes ao Dialeto SQL que vai ser usado para as consultas e configurações
