@@ -20,8 +20,8 @@ acrescenta mais uma forma de consultá-las.
 aplicados ou utilizados, imediatamente, na solução de problemas que ocorrem na
 realidade”.
 
-	\par Dessa maneira, percebeu-se que a pesquisa enquadra-se no tipo de pesquisa
-aplicada, pois resolveria um problema específico, e para isso foi criado uma
+	\par Dessa maneira, percebeu-se que a pesquisa enquadra-se no tipo de
+	pesquisa aplicada, pois resolveria um problema específico, e para isso foi criado uma
 aplicativo para dispositivos móveis que facilitará aos graduandos acessarem o
 sistema \textit{web} de uma universidade.
 
@@ -60,7 +60,7 @@ sistema web para consultar suas notas.
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.5]{./imagens/imagem4.png}}
 	\caption[Quetionário Aplicado]{Quetionário Aplicado.
-	 \textbf{Fonte:}Autores da Pesquisa}
+	 \textbf{Fonte:}Elaborado pelos autores.}
 	\label{fig:exemplo4}
 \end{figure}
 
@@ -103,7 +103,7 @@ sites.
 			  
 			  \item Diagrama de sequência;
 			  
-			  \item Diagrama de Entidade e Relacionamento (ou Modelode Entidade e
+			  \item Diagrama de Entidade e Relacionamento (ou Modelo de Entidade e
 			  Relacionamento )
 			
 			\end{itemize}
@@ -161,23 +161,135 @@ sites.
 	
 		\par No que diz respeito à contrução do \textit{webservice}, foi necessário a
 	intalação e configuração de um ambiente de desenvolvimento compatível com as
-	necessidades apresentadas pelo \textit{software}. 
-		
+	necessidades apresentadas pelo \textit{software} e que foram levantadas
+	através dos requisitos. Foi instalado o \textit{Servlet Container Apache
+	Tomcat} em sua versão de número 7. O \textit{Servlet Container} foi instalado
+	para que o \textit{Web Service} pudesse fornecer os serviços necessários para
+	o consumo de dados do Aplicativo \textit{Android}, haja vista que
+	\textit{Apache tomcat} faz uso amplo do protocolo HTTP\footnote{HTTP -
+	Hypertext Transfer Protocol} e da plataforma \textit{Java} de desenvolvimento.
+			
 		\par Para armazenar os dados gerados e/ou recebidos foi necessário fazer a
-	intalação do Sistema Gerenciador de Banco de Dados(SGBD) PostGreSql na sua
-	versão de número 9.2. Através de um levantamento de requisitos parciais e das
+	intalação do Sistema Gerenciador de Banco de Dados(SGBD) \textit{PostGreSql} na
+	sua versão de número 9.2. Através de um levantamento de requisitos parciais e das
 	reuniões entre os participantes foi possível construir um Diagrama de Entidade
 	e Relacionamento, no qual ficou definido a estrutura do banco de dados da
 	aplicação. A figura \ref{fig:exemplo5} mostra o Diagrama de Entidade e
-	Relacionamento concebido para esta pesquisa. 
+	Relacionamento concebido para esta pesquisa.
 
 		\begin{figure}[h!]
 			\centerline{\includegraphics[scale=0.5]{./imagens/imagem5.png}}
 			\caption[Diagrama de Entidade e Relacionamento]{Diagrama de Entidade e
 			Relacionamento.
-			\textbf{Fonte:}Autores da Pesquisa}
+			\textbf{Fonte:}Elaborado pelos autores.}
 			\label{fig:exemplo5}
 		\end{figure}
 
-		\par Fazendo uso desse diagrama foi possível criar as classes \texit{java} que
-	representam as entidades do mapeamento objeto-relacional 
+		\par Fazendo uso desse diagrama foi possível criar todas as classes
+	\textit{Java} que representam as entidades do mapeamento objeto-relacional. 
+	Essas classes foram criadas fazendo uso de anotações próprias do
+	\textit{Hibernate}, que é um \textit{framework} que implementa a especificação
+	JPA\footnote{JPA - \textit{Java Persistense API}}. Essas classes fazem parte
+	dos mecanismos de persistêcia de dados, e são simplesmente POJO's\footnote{POJO
+	- \textit{Plain Old Java Object }} ou seja objetos simples que contêm somente
+	atributos privados e os métodos \textit{getters} e \textit{setters} que servem
+	apenas para encapsular estes atributos. Uma das classes criadas, foi a classe
+	\texttt{Curso.java} que representa a tabela \texttt{cursos} no banco de dados e
+	está representada na figura \ref{fig:classecurso}.
+	
+	\pagebreak
+	
+	\begin{lstlisting} [style=custom_Java,caption={[Classe \texttt{Curso}]{Classe
+	\texttt{Curso}. \textbf{Fonte:} Elaborado pelos autores.}},
+	label=fig:classecurso] @Entity(name = "cursos") 
+	public class Curso {
+
+			private Long idCurso;
+			private String nome;
+			private String professor;
+		
+			@Id
+			@GeneratedValue
+			@Column(name = "id_curso")
+			public Long getIdCurso() {
+				return idCurso;
+			}
+		
+			public void setIdCurso(Long idCurso) {
+				this.idCurso = idCurso;
+			}
+		
+			@Column(length = 100, nullable = false)
+			public String getNome() {
+				return nome;
+			}
+		
+			public void setNome(String nome) {
+				this.nome = nome;
+			}
+		
+			@Column(length = 100, nullable = false)
+			public String getProfessor() {
+				return professor;
+			}
+		
+			public void setProfessor(String professor) {
+				this.professor = professor;
+			}
+			
+			/**
+			 *hashCode e Equals
+			 */
+		}
+	\end{lstlisting}
+	
+		\par Foram criadas outras classes \textit{Java} com a mesma finalidade da
+	anterior, porém com pequenas diferenças no que diz respeito à atributos,
+	metodos e anotações. Essas outras classes estão representadas na
+	figura \ref{fig:otherclass}.
+	
+		\begin{figure}[h!]
+			\centerline{\includegraphics[scale=0.5]{./imagens/imagem6.png}}
+			\caption[Classes que Representam Entidades]{Classes que Representam Entidades.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:otherclass}
+		\end{figure}
+		
+			\par Em seguida à criação das entidades, foi necessário configurar o arquivo
+		\texttt{persistence.xml} que fica dentro do \textit{classpath} do projeto
+		\textit{Java} ou seja, dentro da mesma pasta onde estão contidas as classes do
+		projeto. Esse arquivo é extremamente importante pois, é nele que estão todas
+		as configurações relativas à conexão com o banco de dados, configurações
+		referentes ao Dialeto SQL que vai ser usado para as consultas e configurações
+		referentes ao \textit{persistence unit} que é o responsável direto por
+		conversar com obanco de dados. O arquivo \texttt{persistence.xml} está exposto
+		na 
+	
+  \begin{lstlisting} [style=custom_XML]
+
+		<?xml version="1.0" encoding="UTF-8"?>
+		<persistence version="2.1"
+			xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+			http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+				<persistence-unit name="WsUnivas">
+					<provider>org.hibernate.ejb.HibernatePersistence</provider>
+					<properties>
+						<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/wsunivas" />
+						<property name="javax.persistence.jdbc.user" value="postgres" />
+						<property name="javax.persistence.jdbc.password" value="2289cpm22" />
+						<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+						<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+						<property name="hibernate.show_sql" value="true" />
+						<property name="hibernate.format_sql" value="true" />
+						<property name="hibernate.hbm2ddl.auto" value="update" />
+					</properties>
+				</persistence-unit>
+		</persistence>
+	\end{lstlisting}
+		
+		
+		\par criação do JpaUtil
+
+		\par criação e disponibilização do primeiro serviço
