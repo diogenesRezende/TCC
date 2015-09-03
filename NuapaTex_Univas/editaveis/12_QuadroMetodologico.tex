@@ -21,8 +21,8 @@ aplicados ou utilizados, imediatamente, na solução de problemas que ocorrem na
 realidade”.
 
 	\par Dessa maneira, percebeu-se que a pesquisa enquadra-se no tipo de pesquisa
-aplicada, pois resolveria um problema específico, e para isso está
-desenvolvendo-se um aplicativo para dispositivos móveis que facilitará aos
+aplicada, pois com a execução da mesma resolve-se um problema específico, e para
+isso está desenvolvendo-se um aplicativo para dispositivos móveis que facilitará aos
 graduandos acessarem o sistema \textit{web} de uma universidade.
 
 \section{Contexto de pesquisa}
@@ -92,8 +92,7 @@ atividade.
 	
 	\par Para a contrução do \textit{software} proposto por essa pesquisa além do
 levantamento de requisitos que é peculiar da contrução de qualquer
-\textit{software}, foram também utilizados alguns diagramas da UML. Entre os
-diagramas usado estão:
+\textit{software}, 
 
 	\begin{itemize}
 	  \item Diagrama de casos de uso; 
@@ -343,10 +342,15 @@ plataforma \textit{Java} de desenvolvimento.
 	\end{lstlisting}
 		
 			\par Em seguida à confecção do \texttt{persistence.xml} foi criada a
-		classe \texttt{JpaUtil}. Esta classe é responsável por criar uma
-		\texttt{EntityManagerFactory} que é uma  fabrica de instâncias de
-		\texttt{EntityManager} que nada mais é que um \textit{persistence unit} ou
-		unidade de persistência. Porém a classe \texttt{JpaUtil} cria uma instancia  
+		classe \texttt{JpaUtil} que está representada na \ref{fig:classejpautil}.
+		Esta classe é responsável por criar uma \texttt{EntityManagerFactory} que é
+		uma  fabrica de instâncias de \texttt{EntityManager} que nada mais é que um
+		\textit{persistence unit} ou unidade de persistência. Essa classe têm a
+		responsabilidade de prover um modo de comunicação entre a aplicação e o banco
+		de dados. Porém a classe \texttt{JpaUtil} cria uma única instancia de
+		\texttt{EntityManagerFactory}, que é responsável por disponibilizar e
+		gerenciar as instancias de \texttt{EntityManager} de acordo com a necessidade
+		da aplicação.
 		
 		\pagebreak
 		\begin{lstlisting} [style=custom_Java,caption={[Classe
@@ -372,6 +376,11 @@ plataforma \textit{Java} de desenvolvimento.
 
 
 
-		\par criação e disponibilização do primeiro serviço
+			\par Em seguida a construção das classes que fazem a parte da persistência de
+		dados, foi desenvolvido a parte de disponibilização de serviços
+		\textit{RESTful}, fazendo uso do \textit{framework} \textit{Jersey}. Foi
+		necessário, portanto fazer a configuração da aplicação para que fazendo uso
+		deste \textit framework a classe que representa o primeiro serviço do
+		\textit{webservice}, que é a classe \texttt{Alunos}. Essa classe representa um contexto
 		
 		
