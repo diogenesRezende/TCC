@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  2 SEP 2015 18:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  2 SEP 2015 21:16
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1151,7 +1151,7 @@ l.7 \cleardoublepage
 
 
 ]
-<./imagens/imagem4.png, id=44, 462.72874pt x 647.41875pt>
+<./imagens/imagem4.png, id=40, 462.72874pt x 647.41875pt>
 File: ./imagens/imagem4.png Graphic file (type png)
 
 <use ./imagens/imagem4.png>
@@ -1164,88 +1164,131 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3] [4 <./imagens/imagem4.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 102.
-
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 99.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 123.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 123.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 123.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 99.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 112.
 
-<./imagens/imagem5.png, id=60, 910.15031pt x 356.83313pt>
+
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (7.96593pt too wide) in paragraph at lines 111--117
+\T1/ptm/m/it/12 tion Drawer Layout\T1/ptm/m/n/12 . Na fi-gura [][]2[][] pode-se
+ ver o mé-todo \T1/lmtt/m/n/12 onNavigationDrawerItemSelected()\T1/ptm/m/n/12 ,
+
+ []
+
+<./imagens/imagem6.png, id=55, 711.65875pt x 580.1675pt>
+File: ./imagens/imagem6.png Graphic file (type png)
+
+<use ./imagens/imagem6.png>
+Package pdftex.def Info: ./imagens/imagem6.png used on input line 119.
+(pdftex.def)             Requested size: 355.8285pt x 290.08302pt.
+ [5 <./imagens/imagem6.png (PNG copy)>]
+<./imagens/imagem7.png, id=64, 307.1475pt x 492.84125pt>
+File: ./imagens/imagem7.png Graphic file (type png)
+
+<use ./imagens/imagem7.png>
+Package pdftex.def Info: ./imagens/imagem7.png used on input line 133.
+(pdftex.def)             Requested size: 153.57336pt x 246.42001pt.
+
+<./imagens/imagem8.png, id=67, 309.155pt x 487.8225pt>
+File: ./imagens/imagem8.png Graphic file (type png)
+
+<use ./imagens/imagem8.png>
+Package pdftex.def Info: ./imagens/imagem8.png used on input line 155.
+(pdftex.def)             Requested size: 154.57712pt x 243.91064pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6 <./imagens/imagem7.png>]
+<./imagens/imagem9.png, id=77, 309.155pt x 487.8225pt>
+File: ./imagens/imagem9.png Graphic file (type png)
+
+<use ./imagens/imagem9.png>
+Package pdftex.def Info: ./imagens/imagem9.png used on input line 173.
+(pdftex.def)             Requested size: 154.57712pt x 243.91064pt.
+
+! Undefined control sequence.
+l.181 ...para as classes que implementam o \textiy
+                                                  {Adapter}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[7 <./imagens/imagem8.png (PNG copy)> <./imagens/imagem9.png (PNG copy)>]
+<./imagens/imagem10.png, id=84, 575.14874pt x 564.1075pt>
+File: ./imagens/imagem10.png Graphic file (type png)
+
+<use ./imagens/imagem10.png>
+Package pdftex.def Info: ./imagens/imagem10.png used on input line 199.
+(pdftex.def)             Requested size: 287.57367pt x 282.05305pt.
+
+! Undefined control sequence.
+l.208 o \texit
+              {Git} com a IDE para que cada um possa ter a versÃ£o mais atua...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[8 <./imagens/imagem10.png (PNG copy)>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 219.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 219.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 219.
+
+<./imagens/imagem5.png, id=92, 910.15031pt x 356.83313pt>
 File: ./imagens/imagem5.png Graphic file (type png)
 
 <use ./imagens/imagem5.png>
-Package pdftex.def Info: ./imagens/imagem5.png used on input line 134.
+Package pdftex.def Info: ./imagens/imagem5.png used on input line 231.
 (pdftex.def)             Requested size: 455.07405pt x 178.41612pt.
- [5]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 150.
-
- (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-[6 <./imagens/imagem5.png>]
+ [9 <./imagens/imagem5.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 157.
-
-
-Package Listings Warning: Text dropped after begin of listing on input line 157
-.
-
+nput line 254.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 158.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 255.
 
-LaTeX Warning: File `./imagens/imagem6.png' not found on input line 205.
-
-
-! Package pdftex.def Error: File `./imagens/imagem6.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.205 ...aphics[scale=0.5]{./imagens/imagem6.png}}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (12.23485pt too wide) in paragraph at lines 211--220
+Overfull \hbox (12.23485pt too wide) in paragraph at lines 309--318
 [][]\T1/ptm/m/n/12 Em se-guida à cri-a-ção das en-ti-da-des, foi ne-ces-sá-rio 
 con-fi-gu-rar o ar-quivo \T1/lmtt/m/n/12 persistence.xml
  []
 
-[7]
-Overfull \hbox (105.45395pt too wide) in paragraph at lines 232--233
+[10]
+Overfull \hbox (105.45395pt too wide) in paragraph at lines 332--333
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
  
  []
 
 
-Overfull \hbox (16.20421pt too wide) in paragraph at lines 235--236
+Overfull \hbox (16.20421pt too wide) in paragraph at lines 335--336
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (47.70412pt too wide) in paragraph at lines 236--237
+Overfull \hbox (47.70412pt too wide) in paragraph at lines 336--337
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./Principal.bbl [8]
+[11]) (./Principal.bbl [12]
 bibitemlist
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 10.
@@ -1253,7 +1296,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[9
+[13
 
 ]
 
@@ -1279,13 +1322,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 14752 strings out of 493304
- 214557 string characters out of 6139871
- 406107 words of memory out of 5000000
- 17876 multiletter control sequences out of 15000+600000
+ 14813 strings out of 493304
+ 215722 string characters out of 6139871
+ 408923 words of memory out of 5000000
+ 17909 multiletter control sequences out of 15000+600000
  59138 words of font info for 62 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 46i,11n,49p,337b,1319s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,11n,49p,337b,1318s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive/texmf-dist
 /fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr
@@ -1293,10 +1336,10 @@ amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr
 nts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on Principal.pdf (10 pages, 375835 bytes).
+Output written on Principal.pdf (14 pages, 530627 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 212 compressed objects within 3 object streams
- 92 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 281 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
+ 116 named destinations out of 1000 (max. 500000)
+ 92 words of extra memory for PDF output out of 10000 (max. 10000000)
 

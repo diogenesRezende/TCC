@@ -5,8 +5,6 @@
 \contentsline {section}{\numberline {1.1}Tipo de pesquisa}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Contexto de pesquisa}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Instrumentos}{3}{section.1.3}
-\contentsline {section}{\numberline {1.4}Procedimentos}{5}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Uml}{5}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Resto}{5}{subsection.1.4.2}
+\contentsline {section}{\numberline {1.4}Procedimentos}{4}{section.1.4}
 \vspace {\cftbeforechapterskip }
-\contentsline {chapter}{REFER\IeC {\^E}NCIAS}{9}{section*.6}
+\contentsline {chapter}{REFER\IeC {\^E}NCIAS}{13}{section*.10}
