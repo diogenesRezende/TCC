@@ -376,11 +376,61 @@ plataforma \textit{Java} de desenvolvimento.
 
 
 
-			\par Em seguida a construção das classes que fazem a parte da persistência de
-		dados, foi desenvolvido a parte de disponibilização de serviços
-		\textit{RESTful}, fazendo uso do \textit{framework} \textit{Jersey}. Foi
-		necessário, portanto fazer a configuração da aplicação para que fazendo uso
-		deste \textit framework a classe que representa o primeiro serviço do
-		\textit{webservice}, que é a classe \texttt{Alunos}. Essa classe representa um contexto
+	\par Em seguida a construção das classes que fazem a parte da persistência de
+dados, foi desenvolvido a parte de disponibilização de serviços
+\textit{RESTful}, fazendo uso do \textit{framework} \textit{Jersey}. Com isso
+pode-se construir a classe que representa o primeiro serviço do
+\textit{webservice}, que é a classe \texttt{Alunos}. Essa classe representa um
+contexto REST, e portanto, dispõe de alguns recursos. Esses recursos fazem a
+recuperação e a transmissão dos dados do \textit{webservice} para o aplicativo
+\textit{Android}. Essa classe e seus respectivos métodos  estão representada no
+código \ref{cod:serviceAlunos}
+
+		\begin{lstlisting} [style=custom_Java,caption={[Classe
+		\texttt{Alunos}]{Classe \texttt{Alunos}. \textbf{Fonte:} Elaborado pelos
+		autores.}}, label=cod:serviceAlunos] 
+
+
+@Path("/alunos")
+public class Alunos {
+
+	@GET
+	@Path("/{$cod}")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getAlunoById(Long idAluno) {
+		/**
+		 * Implementacao
+		 */
+		return aluno;
+
+	}
+	
+	@GET
+	@Path("/")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getAllAluno(Long idAluno) {
+		/**
+		 * Implementacao
+		 */
+		return alunos;
+
+	}
+}
+	\end{lstlisting} 
 		
+		\par O \textit{webservice} pode fazer a busca de alunos pelo \texttt{id}
+passado ou retornar uma coleção de alunos, dependendo do recurso que é
+acessado. O tipo de dados que o \textit{webservice} consome e retorna é o
+JSON\footnote{JSON - \textit{Javascript Object Notation}}. Não foi necessário
+fazer nenhuma implementação adicional relativa a este formato, pois o próprio
+\textit{framework Jersey} faz o tratamento e a conversão dos tipos de entrada e
+saída de dados. No caso do saída de dados, faz a conversão de objetos 
+\textit{Java} para JSON. E no caso de entrada tranforma um JSON em objeto
+\textit{Java} já conhecido pelo \textit{webservice}. Com isso concluiu-se o
+desenvolvimento do \textit{webservice} que fornece os dados para o aplicativo.
+
+	\par Os procedimentos acima citados foram os passos até agora realizados com o
+propósito de se alcançar os resultados esperados para essa pesquisa.
 		
