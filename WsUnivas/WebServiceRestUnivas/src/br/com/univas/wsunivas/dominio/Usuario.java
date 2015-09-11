@@ -3,14 +3,24 @@ package br.com.univas.wsunivas.dominio;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
-@Entity(name = "usuarios")
+@XmlRootElement
+@Entity
+@Table(name = "usuarios")
 public class Usuario {
 
+	@XmlElement(name = "id")
 	private Long idUsuario;
+	@XmlElement
 	private String username;
+	@XmlElement
 	private String password;
 
 	private Aluno aluno;
@@ -20,7 +30,8 @@ public class Usuario {
 	 */
 
 	@Id
-	@GeneratedValue
+	@SequenceGenerator(name = "id_usuario", sequenceName = "seq_id_usuario", allocationSize = 1)
+	@GeneratedValue(generator = "id_usuario", strategy = GenerationType.SEQUENCE)
 	@Column(name = "id_usuario", nullable = false)
 	public Long getIdUsuario() {
 		return idUsuario;
@@ -92,6 +103,4 @@ public class Usuario {
 		return true;
 	}
 
-	
-	
 }

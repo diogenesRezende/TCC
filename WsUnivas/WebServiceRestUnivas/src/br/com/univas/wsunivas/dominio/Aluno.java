@@ -6,10 +6,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -19,8 +21,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "alunos")
 public class Aluno {
 
-	@XmlElement(name="id")
+	@XmlElement(name = "id")
 	private Long idAluno;
+	@XmlElement
 	private String nome;
 
 	private Curso curso;
@@ -37,7 +40,8 @@ public class Aluno {
 	 * Campo ID na table
 	 */
 	@Id
-	@GeneratedValue
+	@SequenceGenerator(name = "id_aluno", sequenceName = "seq_id_aluno", allocationSize = 1)
+	@GeneratedValue(generator = "id_aluno", strategy = GenerationType.SEQUENCE)
 	@Column(name = "id_aluno", nullable = false)
 	public Long getIdAluno() {
 		return idAluno;

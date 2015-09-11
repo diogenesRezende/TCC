@@ -5,16 +5,26 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
-@Entity(name = "provas_aplicadas")
+@XmlRootElement
+@Entity
+@Table(name = "provas_aplicadas")
 public class ProvaAplicada {
 
+	@XmlElement(name = "id")
 	private Long idProvaAplicada;
+	@XmlElement
 	private Date data;
+	@XmlElement
 	private String descricao;
 
 	private Nota nota;
@@ -23,8 +33,9 @@ public class ProvaAplicada {
 	 * ID
 	 */
 	@Id
-	@GeneratedValue
-	@Column(name = "id_prova_aplicada")
+	@SequenceGenerator(name = "id_prova_aplicada", sequenceName = "seq_id_prova_aplicada", allocationSize = 1)
+	@GeneratedValue(generator = "id_prova_aplicada", strategy = GenerationType.SEQUENCE)
+	@Column(name = "id_prova_aplicada", nullable = false)
 	public Long getIdProvaAplicada() {
 		return idProvaAplicada;
 	}

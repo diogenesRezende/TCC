@@ -5,15 +5,23 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
-@Entity(name = "faltas")
+@XmlRootElement
+@Entity
+@Table(name = "faltas")
 public class Falta {
-
+	@XmlElement(name = "id")
 	private Long idFaltas;
+	@XmlElement
 	private Date data;
 
 	private Disciplina disciplina;
@@ -22,7 +30,8 @@ public class Falta {
 	 * ID
 	 */
 	@Id
-	@GeneratedValue
+	@SequenceGenerator(name = "id_falta", sequenceName = "seq_id_falta", allocationSize = 1)
+	@GeneratedValue(generator = "id_falta", strategy = GenerationType.SEQUENCE)
 	@Column(name = "id_falta", nullable = false)
 	public Long getIdFaltas() {
 		return idFaltas;

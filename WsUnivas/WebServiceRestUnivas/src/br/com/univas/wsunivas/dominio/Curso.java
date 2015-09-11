@@ -20,7 +20,9 @@ public class Curso {
 
 	@XmlElement(name = "id")
 	private Long idCurso;
+	@XmlElement
 	private String nome;
+	@XmlElement
 	private String descricao;
 
 	private List<Aluno> alunos;

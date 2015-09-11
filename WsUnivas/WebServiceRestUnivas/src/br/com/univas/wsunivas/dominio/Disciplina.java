@@ -5,16 +5,27 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
-@Entity(name = "disciplinas")
+@XmlRootElement
+@Entity
+@Table(name = "disciplinas")
 public class Disciplina {
 
+	@XmlElement(name = "id")
 	private Long idDisciplina;
+	@XmlElement
 	private String professor;
+	@XmlElement
 	private String descricao;
+	@XmlElement
 	private String nome;
 
 	private Matricula matricula;
@@ -25,7 +36,8 @@ public class Disciplina {
 	 * ID
 	 */
 	@Id
-	@GeneratedValue
+	@SequenceGenerator(name = "id_disciplina", sequenceName = "seq_id_disciplina", allocationSize = 1)
+	@GeneratedValue(generator = "id_disciplina", strategy = GenerationType.SEQUENCE)
 	@Column(name = "id_disciplina", nullable = false)
 	public Long getIdDisciplina() {
 		return idDisciplina;

@@ -14,16 +14,18 @@ public class CreateTable {
 		EntityManager manager = JpaUtil.getEntityManager();
 		EntityTransaction tx = manager.getTransaction();
 
-		tx.begin();
-
-		Curso curso = new Curso();
-
-		curso.setDescricao("Sistemas de informação");
-		curso.setNome("Sistemas de informação");
-
-		manager.persist(curso);
-
-		tx.commit();
+		/**
+		 * tx.begin();
+		 * 
+		 * Curso curso = new Curso();
+		 * 
+		 * curso.setDescricao("Sistemas de informação");
+		 * curso.setNome("Sistemas de informação");
+		 * 
+		 * manager.persist(curso);
+		 * 
+		 * tx.commit();
+		 */
 		manager.clear();
 		JpaUtil.close();
 
