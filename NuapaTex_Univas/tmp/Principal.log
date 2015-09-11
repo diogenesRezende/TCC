@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  3 SEP 2015 18:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  10 SEP 2015 23:36
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1293,7 +1293,12 @@ Overfull \hbox (47.70412pt too wide) in paragraph at lines 335--336
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[11] [12]) (./Principal.bbl [13]
+[11]
+
+LaTeX Warning: Reference `cod:serviceAlunos' on page 12 undefined on input line
+ 387.
+
+[12]) (./Principal.bbl [13]
 bibitemlist
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 10.
@@ -1322,15 +1327,18 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 52.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 14858 strings out of 493304
- 216387 string characters out of 6139871
- 409001 words of memory out of 5000000
- 17922 multiletter control sequences out of 15000+600000
+ 14870 strings out of 493304
+ 216506 string characters out of 6139871
+ 415923 words of memory out of 5000000
+ 17932 multiletter control sequences out of 15000+600000
  59138 words of font info for 62 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  46i,12n,49p,337b,1318s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1341,10 +1349,10 @@ amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr
 nts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on Principal.pdf (15 pages, 534826 bytes).
+Output written on Principal.pdf (15 pages, 536073 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 290 compressed objects within 3 object streams
- 148 named destinations out of 1000 (max. 500000)
+ 326 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
+ 150 named destinations out of 1000 (max. 500000)
  92 words of extra memory for PDF output out of 10000 (max. 10000000)
 
