@@ -1,52 +1,51 @@
 \chapter{QUADRO TEÓRICO}
 
 	\par Neste capítulo serão descritos os principais conceitos e características
-das tecnologias a serem utilizadas para o desenvolvimento dos \textit{softwares}
-propostos nos objetivos dessa pesquisa.
+das tecnologias utilizadas para o desenvolvimento dos \textit{softwares}
+propostos nos objetivos deste trabalho.
 
 \section{\textit{Java}}
 
-	\par Segundo \citeonline{deitel2002} o java veio ao publico em 1995 pela
+	\par Segundo \citeonline{deitel2002} o \textit{java} veio ao público em 1995 pela
 \textit{Sun Microsystem}. Os criadores dessa nova tecnologia liderados por
 James Gosling basearam-se em duas linguagens muito utilizadas no mundo, C e C++.
 Isso deu ao java uma base para implementar em novos sistemas como, sistemas
 operacionais, sistemas de comunicações, sistema de banco de dados e aplicativos
 para computadores pessoais.
 
-	\par Entre as principais características pode – se dizer que o Java é:
+	\par Entre as principais características pode-se dizer que o Java é:
 	
 	\begin{itemize}
 
 	  \item Orientado a objeto.
 	  
-	  \item Seguro.
+	  \item Seguro.%explicar um pouco melhor
 	  
 	  \item Independente de plataforma. 
 
 	\end{itemize}
 	
-	\par \citeonline{deitel2002} O \textit{java} será utilizado para codificar e
-criar regras para proteger o banco de dados , gerenciando a infraestrutura que
+	\par \citeonline{deitel2002} o \textit{java} será utilizado para codificar e
+criar regras para proteger o banco de dados, gerenciando a infraestrutura que
 o próprio java fornece como, Transação, Acesso remoto, Web services,
 Gerenciamento de threads, Gerenciamento de conexões http\footnote{HTTP -
 HyperText Transfer Protocol.}.
 
 	\par Para acessar o servidor precisamos de um serviço \textit{web} (\textit{Web
-services}) que utilizara o \textit{java} para criar as regras e serviços de
+services}) que utilizará o \textit{java} para criar as regras e serviços de
 compilação de dados. Segundo \citeonline{deitel2002} existem cinco fases para
 que os dados cheguem em seu dispositivo que são, armazenamento em disco, o
 compilador cria os \textit{bytecodes}, transfere-os para memória, verifica a sua
 integridade, para que não haja nenhuma violação das restrições de segurança e
 por ultimo o interpretador(JMV\footnote{JVM - Java Virtual Machine}) lê os
-\textit{bytecodes} e os traduz para a linguagem que o computador entenda e possivelmente armazena os valores dos
-dados enquanto executa o programa.
+\textit{bytecodes} e os traduz para a linguagem que o computador entenda e
+possivelmente armazena os valores dos dados enquanto executa o programa.
 
-	\par \citeonline{romanato2015} afirma, que o \textit{Java} usa a JMV
-, que é uma máquina virtual capaz de converter
-os \textit{bytecodes} para a linguagem do sistema operacional utilizado pelo
-cliente, sem a necessidade de compilá-lo para cada plataforma. Dessa maneira um
-\textit{software} que foi desenvolvido para um sistema operacional, funcionará
-normalmente em qualquer outro.
+	\par \citeonline{romanato2015} afirma que o \textit{Java} usa a JMV, que é
+uma máquina virtual capaz de converter os \textit{bytecodes} para a linguagem
+do sistema operacional utilizado pelo cliente, sem a necessidade de compilá-lo
+para cada plataforma. Dessa maneira um \textit{software} que foi desenvolvido
+para um sistema operacional, funcionará normalmente em qualquer outro.
 
 \section{\textit{Android}}
 
@@ -68,10 +67,10 @@ dispositivos. Conforme informações do site \citeonline{android1}, hoje em dia
 existe mais de um bilhão de aparelhos espalhados pelo mundo com esse sistema
 operacional.
 
-	\par De acordo com \citeonline{monteiro2012} as aplicações são executadas em
+	\par De acordo com \citeonline{monteiro2012}, as aplicações são executadas em
 uma máquina virtual Java denominada \textit{Dalvik}. Cada aplicativo, usa uma
-instância dessa máquina virtual tornando-a assim mais segura. Por outro lado os
-\textit{softwares} só podem acessar algum recurso do dispositivo, como uma
+instância dessa máquina virtual tornando-o assim mais seguro. Por outro lado, os
+\textit{softwares} só podem acessar os recursos do dispositivo, como uma
 lista de contatos, caso seja formalmente aceito pelo usuário nos termos de uso
 ao instalá-lo.
 
@@ -83,7 +82,7 @@ correspondentes ao recurso. De forma, que o arquivo se inicie pela tag
 é preciso declarar a permissão da seguinte forma <uses-permission
 android:name="android.permission.internet" />.
 
-	\par \citeonline{lecheta2010}, diz que as \textit{intents} podem ser
+	\par \citeonline{lecheta2010} diz que as \textit{intents} podem ser
 consideradas como o coração do \textit{Android}, uma vez que essa classe está
 presente em todos os lugares de uma aplicação. De acordo com
 \citeonline[p.29]{k192012}, "são objetos responsáveis por passar informações,
@@ -106,7 +105,7 @@ dispositivo. Existem dois tipos de Intents:
 	  
 	\end{itemize}
 	
-	\par Segundo \citeonline{k192012} uma aplicação \textit{Android} pode ser
+	\par Segundo \citeonline{k192012}, uma aplicação \textit{Android} pode ser
 construída com quatro tipos de componentes: \textit{Activity},
 \textit{Services}, \textit{Content Providers} e \textit{Broadcast Receivers}.
 
@@ -128,7 +127,7 @@ informações ou ao menos voltar ao estágio a qual o usuário se encontrava.
 	\label{fig:exemplo1}
 \end{figure}
 
-	\par Na figura \ref{fig:exemplo1} é demostrado um exemplo de ciclo de
+	\par Na Figura \ref{fig:exemplo1} é demostrado um exemplo de ciclo de
 vida de uma \textit{activity}. Para que se possa entender melhor imagina- se o
 seguinte cenário: Um usuário entra no aplicativo de notas da Univás. Para que a
 \textit{activity} seja criada é chamado o método \textit{OnCreate()}, logo após
@@ -164,7 +163,7 @@ do lado esquerdo as principais funções do \textit{software}, semelhante a um
 menu. Fica normalmente escondida aparecendo apenas quando se clica no canto
 superior esquerdo.
 
-	\par Segundo \citeonline{lecheta2010} a classe \textit{Services} existe
+	\par Segundo \citeonline{lecheta2010}, a classe \textit{Services} existe
 com intuito em executar processos que levarão um tempo indeterminado para serem
 executados e que normalmente consomem um alto nível de memória e processamento.
 Esses processos são executadas em segundo plano enquanto o cliente realiza
@@ -241,12 +240,13 @@ esses são os principais \textit{Layouts} do sistema operacional Android:
 	\par Para uma maior interação, as aplicações normalmente utilizam API’s de
 terceiros, como o Google \textit{Maps}, quando necessita encontrar alguma
 localização. Para \citeonline{monteiro2012} essa comunicação pode utilizar o
-REST\footnote{REST - \textit{Representational State Transfer}.}, que envia
-requisições através da URL. Ao receber informações pedidas a um outro serviço,
-ela pode estar no padrão XML ou JSON. O REST será detalhado mais adiante.
+REST\footnote{REST - \textit{Representational State Transfer} ou Transferência
+de Estado Representativo.}, que envia requisições através da URL. Ao receber
+informações pedidas a um outro serviço, ela pode estar no padrão XML ou JSON. O
+REST será detalhado mais adiante.
 
 	\par Outra ferramenta importante e muito utilizada do Android é a Notificação.
-Segundo \citeonline{phillips2013} quando uma aplicação está sendo executada em
+Segundo \citeonline{phillips2013}, quando uma aplicação está sendo executada em
 segundo plano e necessita comunicar-se com o usuário, o aplicativo cria uma
 notificação. Normalmente as notificações aparecem na barra superior, o qual
 pode ser acessado arrastando para baixo a partir da parte superior da tela.
@@ -263,9 +263,9 @@ facilidade que apresenta aos usuários.
 \textit{Eclipse IDE}, contudo a Google criou um \textit{software} especialmente
 para esse ambiente, chamado \textit{Android Studio}. Segundo
 \citeonline{gusmao2014}, \textit{Android Studio} é uma IDE baseado no ItelliJ
-\textit{Idea} e foi apresentado na Conferência para desenvolvedores I/O de 2013.
+\textit{Idea} e foi apresentado na conferência para desenvolvedores I/O de 2013.
 
-	\par De acordo com \citeonline{hohensee2013} o \textit{Android Studio} tem um
+	\par De acordo com \citeonline{hohensee2013}, o \textit{Android Studio} tem um
 sistema de construção baseado em \textit{Gradle}, que permite aplicar
 diferentes configurações no código quando há necessidade de criar mais de uma
 versão, como por exemplo, um \textit{software} que terá uma versão gratuita e
@@ -278,7 +278,7 @@ de código poderoso, pois tem como característica a edição inteligente, pois 
 digitar já completa as palavras reservadas do sistema operacional e fornece uma
 organização do código mais legível.
 
-	\par Segundo \citeonline{android2} a IDE tem suporte para a edição de
+	\par Segundo \citeonline{android2}, a IDE tem suporte para a edição de
 interface, o que possibilita ao desenvolvedor arrastar os componentes que
 deseja. Ao testar o aplicativo permite o monitoramento do consumo de memória e
 de processador por parte do utilitário.
@@ -318,12 +318,12 @@ as várias plataformas, foram criados as tecnologias \textit{web services}.
 	\par Considera-se então a existência dos \textit{web services} a partir daí. De
 acordo com \citeonline{duraes2005}, \textit{Web Service} é um componente que
 tem por finalidade integrar serviços distintos. O que faz com que ele se torne
-melhor que seus concorrentes é a padronização do XML(\textit{Extensible Markup
+melhor que seus concorrentes é a padronização do XML (\textit{Extensible Markup
 Language}) para as trocas de informações. A aplicação consegue conversar com o
 servidor através do  WSDL que é documento que contém as regras de
 funcionamento do \textit{web service}.
 	
-	\par Segundo \citeonline{coulouris2013} “Um serviço \textit{Web}(\textit{Web
+	\par Segundo \citeonline{coulouris2013}, “Um serviço \textit{Web} (\textit{Web
 service}) fornece uma interface de serviço que permite aos clientes interagirem
 com servidores de uma maneira mais geral do que acontece com os navegadores
 \textit{Web}”. Ainda de acordo com \citeonline{coulouris2013} os clientes (que
@@ -331,15 +331,15 @@ podem ser desde um navegador até mesmo outro sistema) acessam serviços
 \textit{Web} fazendo uso de requisições e respostas formatadas em XML e sendo
 transmitidos pelo uso do protocolo HTTP. O uso dessas tecnologias tende a
 facilitar acomunicação entre as diversas plataformas, e atende de uma forma
-melhor que as técnologias já existentes. Porém para que haja uma interação
+melhor que as técnologias já existentes. Porém, para que haja uma interação
 transparente e eficaz, entre as diversas plataformas, é necessário uma
 infraestrutura um pouco mais complexa para integrar todas essas tecnologias.
 Essa infraestrutura é composta pelas tecnologias já citadas e por outros
 componentes essenciais para disponibilização de serviços \textit{web}, como
-mostra a figura \ref{fig:exemplo2}.
+mostra a Figura \ref{fig:exemplo2}.
 
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.8]{./imagens/imagem1.png}}
+	\centerline{\includegraphics[scale=0.6]{./imagens/imagem1.png}}
 	\caption[Infraestrutura e componentes dos serviços
 		\textit{web}. ]{Infraestrutura e componentes dos serviços
 		\textit{web}. \textbf{Fonte:}\citeonline{coulouris2013}}
@@ -348,21 +348,21 @@ mostra a figura \ref{fig:exemplo2}.
 	
 	\par Os \textit{web services} geralmente fazem uso do protocolo SOAP, para
 estruturar e encapsular as mensagens trocadas. De acordo com
-\citeonline[p.381]{coulouris2013} "O protocolo SOAP(\textit{Simple Object Access
+\citeonline[p.381]{coulouris2013}, "O protocolo SOAP(\textit{Simple Object Access
 Protocol}) é projetado para permitir tanto interação cliente-servidor como
-assícrona pela \textit{Internet}". Segundo \citeonline[p.27]{sampaio2006} "O
+assíncrona pela \textit{Internet}". Segundo \citeonline[p.27]{sampaio2006}, "O
 SOAP foi criado inicialmente, para possibilitar a invocação remota de métodos
 através da internet". As mensagens SOAP possuem um elemento Envelope. De acordo
-com \citeonline[p.19]{saudate2013} "O elemento Envelope é puramente um
+com \citeonline[p.19]{saudate2013}, "O elemento Envelope é puramente um
 \textit{container} para os elementos \textit{Header} e \textit{Body}". Ainda de
-acordo com \citeonline{saudate2013} o elemento \textit{header} transporta
+acordo com \citeonline{saudate2013}, o elemento \textit{header} transporta
 metadados relativos à requisição tais como autenticação, endereço de retorno da
 mensagem, etc. Já o elemento \textit{body} carrega o corpo da requisição, que
 nada mais é do que o nome da operação e paramêtro referentes à mesma. É valido
 que todas requisições do trocadas usando SOAP usam o XML com formato oficial.
 
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.8]{./imagens/imagem2.png}}
+	\centerline{\includegraphics[scale=0.6]{./imagens/imagem2.png}}
 	\caption[Esquema de envelope SOAP. ]{Esquema de envelope SOAP. 
 	 \textbf{Fonte:}\citeonline{coulouris2013}}
 	\label{fig:exemplo3}
@@ -389,17 +389,17 @@ serão abordadas a seguir.
 	\par Segundo \citeonline{saudate2012}, REST é a sigla de
 \textit{Representational State Transfer}, desenvolvido por Roy Fielding na
 defesa de sua tese de doutorado. Segundo o próprio \citeonline{fielding2000}
-REST é um estilo que deriva do vários estilos arquitectónicos baseados em rede
+REST é um estilo que deriva do vários estilos arquitetónicos baseados em rede
 e  que combinado com algumas restrições, fornecem uma interface simples e
 uniforme para fornecimento de serviços\footnote{Tradução e resumo de
 informações de responsabilidade dos autores da pesquisa.}.
 	
-	\par \citeonline{rubbo2015}, afirma que os dados e funcionalidade de um sistema
+	\par \citeonline{rubbo2015} afirma que os dados e funcionalidade de um sistema
 são considerados recursos e podem ser acessados através das URI's
 \textit{(Universal Resource Identifier)}, facilitando dessa forma a comunicação
-do servidor com o cliente. Um serviço baseado na arquitetura REST(ou RestFull)
+do servidor com o cliente. Um serviço baseado na arquitetura REST
 basea-se fortemente em recursos. Para exemplificar o que seria um recurso em
-REST têm-se o seguinte cenário: considera-se uma URL tal como\\
+REST têm-se o seguinte cenário: considera-se uma URL tal como 
 http://www.univas.edu.br/alunos/ onde pretende-se fazer a gerência dos dados
 de um ou de um conjunto de alunos. A recuperação de dados, bem como sua edição
 e/ou deleção fazendo uso pleno dos métodos HTTP, através dessa URL pode ser
@@ -438,7 +438,7 @@ sucesso da web. Essas caracteristicas são:
 	
 \section{\textit{Apache Tomcat}}
 
-	\par De acordo com \citeonline{tomcat2015} \textit{Apache Tomcat} é uma
+	\par De acordo com \citeonline{tomcat2015}, \textit{Apache Tomcat} é uma
 implementação de código aberto das especificações \textit{Java Servlet} e
 \textit{JavaServer Pages}. O \textit{Apache Tomcat} é um \textit{Servlet
 Container}, que disponibiliza serviços através de requisições e respostas.
@@ -470,12 +470,12 @@ ao usuário.
 
 \section{PostgreSQL}
 
-\par Segundo \citeonline{milani2008} O postgreSQL é um SGBD(Sistema de
-Gerenciamento de Banco de Dados) que tem suporte para ACID(Atomicidade,
+\par Segundo \citeonline{milani2008}, o postgreSQL é um SGBD (Sistema de
+Gerenciamento de Banco de Dados) que tem suporte para ACID (Atomicidade,
 consistência, isolamento e Durabilidade), que são serviços que garantem a
 qualidade que um banco de dados. A seguir algumas das principais
 características e recursos existentes no postgreSQL, que são, Replicação,
-Cluster(Alta disponibilidade), Multithreads, segurança ssl e criptografia.
+Cluster (Alta disponibilidade), Multithreads, segurança ssl e criptografia.
 
 \par Segundo \citeonline{milani2008}:
 	\begin{itemize}
@@ -492,17 +492,18 @@ Cluster(Alta disponibilidade), Multithreads, segurança ssl e criptografia.
 	  \item Multithreads: É a manipulação de dados de forma que mais de uma pessoa
 	  tenha acesso a mesma informação sem ocasionar atrasos ou filas de acessos.
 	  
-	  \item Segurança SSl e criptografia: Possibilita criar conexões seguras,
+	  \item Segurança SSL\footnote{SSL-\textit{Secure Socket Layer}}%mudar depois
+	   e criptografia: Possibilita criar conexões seguras,
 	  tanta para trafegar informações de login quando aquelas consideradas sigilosas.
    
 	\end{itemize}
 	
-	\par \citeonline{stones2005beginning}  diz que um dos pontos fortes do
+	\par \citeonline{stones2005beginning}  dizem que um dos pontos fortes do
 postgreSQL deriva-se de sua arquitetura onde pode ser usado em um ambiente
 cliente/servidor, beneficiando o usuário e o desenvolvedor.
 
-	\par Segundo \citeonline{stones2005beginning} postgreSQL é comparado com
-qualquer outro sgbd, contendo todas as características que encontraria em outro
+	\par Segundo \citeonline{stones2005beginning}, postgreSQL é comparado com
+qualquer outro SGBD, contendo todas as características que encontraria em outro
 banco de dados, e algumas características que não encontra em outro
 \textit{software} como, transações, subconsultas, chave estrangeira e regras de
 herança.
@@ -511,22 +512,21 @@ herança.
 o que leva a ser implantado em muitas empresas.
 
 
-\section{Engenharia De \textit{Software}}
+\section{Engenharia de \textit{Software}}
 
-	\par De acordo com \citeonline{carvalho2001} a engenharia de \textit{software}
+	\par De acordo com \citeonline{carvalho2001}, a engenharia de \textit{software}
 surgiu na década de 80, com intuito de melhorar o desenvolvimento de
 \textit{software}, produzindo sistemas de alta qualidade com a redução do custo
 e do tempo.
 
-	\par Segundo \citeonline[p.39]{pressman2011} engenharia de \textit{software} é
+	\par Segundo \citeonline[p.39]{pressman2011}, engenharia de \textit{software} é
 “o estabelecimento e o emprego de sólidos princípios da engenharia de modo a
 obter \textit{software} de maneira econômica, que seja confiável e funcione de
-forma eficiente em máquinas reais”.Lecheta (2010)
+forma eficiente em máquinas reais”.
 
-	\par Como afirma \citeonline{carvalho2001} a engenharia possui modelos de
+	\par Como afirmam \citeonline{carvalho2001}, a engenharia possui modelos de
 processos que possibilitam ao gerente controlar o desenvolvimento e aos
-programadores uma base para produzir. Abaixo serão citados alguns desses
-paradigmas:
+programadores uma base para produzir. Alguns desses paradigmas são:
 
 	\begin{itemize}
 	  
@@ -568,21 +568,19 @@ a serem seguidos.
 			\textit{Rational Software}, que a incentivou e financiou.
 		\end{citacao}
 		
-			\par Segundo \citeonline[p.13]{booch2006uml} "A UML é apenas uma linguagem e, 
-		 portanto, é somente uma parte de um método para desenvolvimento de
-		 \textit{software}". Ainda de acordo com \citeonline[p.13]{booch2006uml} "A
+			\par Segundo \citeonline[p.13]{booch2006uml} "A
 		 UML é independente de processo, apesar de ser perfeitamente utilizada em
 		 processo orientado a casos de usos, centrado na arquitetura, interativo e
 		 incremental". A linguagem de modelagem UML além de fornecer um vocabulário
 		 próprio, também provê uma série de diagramas que tem inúmeras finalidades
-		 diferentes. Tais finalidades e suas subdivisões estão descritas na figura
-		 \ref{fig:exemplo1}.
+		 diferentes. Tais finalidades e suas subdivisões estão descritas na Figura
+		 \ref{fig:uml}.
 				
 		\begin{figure}[h!]
 			\centerline{\includegraphics[scale=0.8]{./imagens/imagem.png}}
 				\caption[Principais Diagramas definidos pela UML.]{Diagramas definidos pela
 				UML. \textbf{Fonte:}\citeonline{2015principios}}
-				\label{fig:exemplo4}
+				\label{fig:uml}
 		\end{figure}
 		
 		\pagebreak
@@ -596,11 +594,11 @@ a serem seguidos.
 	\subsection{Processos de \textit{Software}}
 	
 	
-	\par Segundo \citeonline[p.52]{pressman2011} um processo de \textit{software} é
+	\par Segundo \citeonline[p.52]{pressman2011}, um processo de \textit{software} é
 “uma metodologia para as atividades, ações e tarefas necessárias para
 desenvolver um \textit{software} de alta qualidade”.
 
-	\par Para \citeonline{sommerville2003} não existe um processo ideal, pois isso
+	\par Para \citeonline{sommerville2003}, não existe um processo ideal, pois isso
 dependerá de cada projeto, possibilitando cada qual implementar algum modelo já
 existente. Contudo \citeonline{pressman2011} afirma que uma metodologia
 genérica tem cinco passos:

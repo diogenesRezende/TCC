@@ -13,7 +13,7 @@ Dispon{\'\i}vel em: \url{https://www.android.com/history/}. Acesso em: 25 de
 
 \bibitem[Android 2015]{android2015}
 \abntrefinfo{Android}{ANDROID}{2015b}
-{ANDROID. \emph{\textbf{}}: Creating a navigation drawer. 2015.
+{ANDROID. \emph{\textbf{}}: \textbf{Creating a Navigation Drawer}. 2015.
 Dispon{\'\i}vel em:
   \url{https://developer.android.com/training/implementing-navigation/nav-drawer.html}.
   Acesso em: 28 de julho de 2015.}
@@ -146,6 +146,12 @@ Dispon{\'\i}vel em:
 {LECHETA, R.~R. \emph{\textbf{}}: \textbf{Google Android:} aprenda a criar
   aplicações para dispositivos móveis com android sdk. 2ª. ed. São Paulo:
   Novatec, 2010.}
+
+\bibitem[Lecheta 2013]{lacheta2013}
+\abntrefinfo{Lecheta}{LECHETA}{2013}
+{LECHETA, R.~R. \emph{\textbf{}}: \textbf{Google Android:} aprenda a criar
+  aplicações para dispositivos móveis com o android sdk. 3ª. ed. São
+  Paulo: Novatec, 2013.}
 
 \bibitem[Marconi e Lakatos 2002]{markoni2002}
 \abntrefinfo{Marconi e Lakatos}{MARCONI; LAKATOS}{2002}

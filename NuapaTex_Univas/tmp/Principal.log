@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  10 SEP 2015 23:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.10)  11 SEP 2015 20:40
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -984,7 +984,11 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 ) (./Principal.aux
-(./fixos/01_Capa.aux))
+(./fixos/01_Capa.aux)
+
+LaTeX Warning: Label `fig:exemplo4' multiply defined.
+
+)
 \openout1 = `Principal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1007,7 +1011,8 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 \AtBeginShipoutBox=\box33
 Package hyperref Info: Link coloring ON on input line 11.
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1138,8 +1143,11 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./fixos/0C_Sumario.tex (
-./Principal.toc)pdfTeX warning (ext4): destination with the same identifier (na
-me{page.1}) has been already used, duplicate ignored
+./Principal.toc
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 5.
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.7 \cleardoublepage
@@ -1147,35 +1155,86 @@ l.7 \cleardoublepage
 
 
 
-]) (./editaveis/12_QuadroMetodologico.tex
-Overfull \hbox (10.92805pt too wide) in paragraph at lines 23--27
-\T1/ptm/m/n/12 pois com a exe-cu-ção da mesma resolve-se um pro-blema es-pe-cí-
-fico, e para isso está desenvolvendo-
- []
-
-[2
-
-
-] <./imagens/imagem4.png, id=40, 462.72874pt x 647.41875pt>
-File: ./imagens/imagem4.png Graphic file (type png)
-
-<use ./imagens/imagem4.png>
-Package pdftex.def Info: ./imagens/imagem4.png used on input line 61.
-(pdftex.def)             Requested size: 231.3638pt x 323.70857pt.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 63.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3] [4 <./imagens/imagem4.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 98.
+]) (./editaveis/11_QuadroTeorico.tex
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 20.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 98.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 32.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 32.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 32.
+ [2
+
+
+] [3]
+<./imagens/imagem3.png, id=102, 749.80125pt x 519.9425pt>
+File: ./imagens/imagem3.png Graphic file (type png)
+
+<use ./imagens/imagem3.png>
+Package pdftex.def Info: ./imagens/imagem3.png used on input line 123.
+(pdftex.def)             Requested size: 374.8997pt x 259.97061pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 126.
+ [4 <./imagens/imagem3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 151--159
+\T1/ptm/m/n/12 essa ati-vi-dade de-verá ser cha-mada ao ini-ciar a apli-ca-ção 
+e
+ []
+
+[5] [6] [7] [8] <./imagens/imagem1.png, id=178, 645.16031pt x 255.95625pt>
+File: ./imagens/imagem1.png Graphic file (type png)
+
+<use ./imagens/imagem1.png>
+Package pdftex.def Info: ./imagens/imagem1.png used on input line 342.
+(pdftex.def)             Requested size: 516.12894pt x 204.76526pt.
+
+<./imagens/imagem2.png, id=191, 599.99156pt x 325.96782pt>
+File: ./imagens/imagem2.png Graphic file (type png)
+
+<use ./imagens/imagem2.png>
+Package pdftex.def Info: ./imagens/imagem2.png used on input line 365.
+(pdftex.def)             Requested size: 479.9939pt x 260.7746pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9 <./imagens/imagem1.png>] [10 <./imagens/imagem2.png>] [11] [12] [13]
+<./imagens/imagem.png, id=289, 496.10344pt x 266.49562pt>
+File: ./imagens/imagem.png Graphic file (type png)
+
+<use ./imagens/imagem.png>
+Package pdftex.def Info: ./imagens/imagem.png used on input line 582.
+(pdftex.def)             Requested size: 396.88329pt x 213.19678pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14] [15 <./imagens/imagem.png>]) (./editaveis/12_QuadroMetodologico.tex
+[16]
+Overfull \hbox (10.92805pt too wide) in paragraph at lines 23--27
+\T1/ptm/m/n/12 pois com a exe-cu-ção da mesma resolve-se um pro-blema es-pe-cí-
+fico, e para isso está desenvolvendo-
+ []
+
+[17
+
+] <./imagens/imagem4.png, id=341, 462.72874pt x 647.41875pt>
+File: ./imagens/imagem4.png Graphic file (type png)
+
+<use ./imagens/imagem4.png>
+Package pdftex.def Info: ./imagens/imagem4.png used on input line 61.
+(pdftex.def)             Requested size: 231.3638pt x 323.70857pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18] [19 <./imagens/imagem4.png (PNG copy)>]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 111.
 
 
@@ -1183,26 +1242,26 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 111.
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Overfull \hbox (7.96593pt too wide) in paragraph at lines 110--116
-\T1/ptm/m/it/12 tion Drawer Layout\T1/ptm/m/n/12 . Na fi-gura [][]2[][] pode-se
+\T1/ptm/m/it/12 tion Drawer Layout\T1/ptm/m/n/12 . Na fi-gura [][]6[][] pode-se
  ver o mé-todo \T1/lmtt/m/n/12 onNavigationDrawerItemSelected()\T1/ptm/m/n/12 ,
 
  []
 
-<./imagens/imagem6.png, id=55, 711.65875pt x 580.1675pt>
+<./imagens/imagem6.png, id=357, 711.65875pt x 580.1675pt>
 File: ./imagens/imagem6.png Graphic file (type png)
 
 <use ./imagens/imagem6.png>
 Package pdftex.def Info: ./imagens/imagem6.png used on input line 118.
 (pdftex.def)             Requested size: 355.8285pt x 290.08302pt.
- [5 <./imagens/imagem6.png (PNG copy)>]
-<./imagens/imagem7.png, id=64, 307.1475pt x 492.84125pt>
+ [20 <./imagens/imagem6.png (PNG copy)>]
+<./imagens/imagem7.png, id=365, 307.1475pt x 492.84125pt>
 File: ./imagens/imagem7.png Graphic file (type png)
 
 <use ./imagens/imagem7.png>
 Package pdftex.def Info: ./imagens/imagem7.png used on input line 132.
 (pdftex.def)             Requested size: 153.57336pt x 246.42001pt.
 
-<./imagens/imagem8.png, id=67, 309.155pt x 487.8225pt>
+<./imagens/imagem8.png, id=367, 309.155pt x 487.8225pt>
 File: ./imagens/imagem8.png Graphic file (type png)
 
 <use ./imagens/imagem8.png>
@@ -1212,55 +1271,28 @@ Package pdftex.def Info: ./imagens/imagem8.png used on input line 154.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./imagens/imagem7.png>]
-<./imagens/imagem9.png, id=77, 309.155pt x 487.8225pt>
+[21 <./imagens/imagem7.png>]
+<./imagens/imagem9.png, id=376, 309.155pt x 487.8225pt>
 File: ./imagens/imagem9.png Graphic file (type png)
 
 <use ./imagens/imagem9.png>
 Package pdftex.def Info: ./imagens/imagem9.png used on input line 172.
 (pdftex.def)             Requested size: 154.57712pt x 243.91064pt.
-
-! Undefined control sequence.
-l.180 ...para as classes que implementam o \textiy
-                                                  {Adapter}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[7 <./imagens/imagem8.png (PNG copy)> <./imagens/imagem9.png (PNG copy)>]
-<./imagens/imagem10.png, id=84, 575.14874pt x 564.1075pt>
+ [22 <./imagens/imagem8.png (PNG copy)> <./imagens/imagem9.png (PNG copy)>]
+<./imagens/imagem10.png, id=383, 575.14874pt x 564.1075pt>
 File: ./imagens/imagem10.png Graphic file (type png)
 
 <use ./imagens/imagem10.png>
 Package pdftex.def Info: ./imagens/imagem10.png used on input line 198.
 (pdftex.def)             Requested size: 287.57367pt x 282.05305pt.
-
-! Undefined control sequence.
-l.207 o \texit
-              {Git} com a IDE para que cada um possa ter a versÃ£o mais atua...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[8 <./imagens/imagem10.png (PNG copy)>]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 218.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 218.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 218.
-
-<./imagens/imagem5.png, id=92, 910.15031pt x 356.83313pt>
+ [23 <./imagens/imagem10.png (PNG copy)>]
+<./imagens/imagem5.png, id=391, 910.15031pt x 356.83313pt>
 File: ./imagens/imagem5.png Graphic file (type png)
 
 <use ./imagens/imagem5.png>
 Package pdftex.def Info: ./imagens/imagem5.png used on input line 230.
 (pdftex.def)             Requested size: 455.07405pt x 178.41612pt.
- [9 <./imagens/imagem5.png>]
+ [24 <./imagens/imagem5.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
@@ -1274,7 +1306,7 @@ Overfull \hbox (12.23485pt too wide) in paragraph at lines 308--317
 con-fi-gu-rar o ar-quivo \T1/lmtt/m/n/12 persistence.xml
  []
 
-[10]
+[25]
 Overfull \hbox (105.45395pt too wide) in paragraph at lines 331--332
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -1293,22 +1325,20 @@ Overfull \hbox (47.70412pt too wide) in paragraph at lines 335--336
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[11]
+[26]
 
-LaTeX Warning: Reference `cod:serviceAlunos' on page 12 undefined on input line
+LaTeX Warning: Reference `cod:serviceAlunos' on page 27 undefined on input line
  387.
 
-[12]) (./Principal.bbl [13]
+[27]) (./Principal.bbl [28]
 bibitemlist
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 10.
-)
+[29
+
+] [30])
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[14
-
-]
+[31]
 
 Package caption Warning: Unused \captionsetup[Quadro] on input line 301.
 See the caption package documentation for explanation.
@@ -1330,16 +1360,16 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 52.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 14870 strings out of 493304
- 216506 string characters out of 6139871
- 415923 words of memory out of 5000000
- 17932 multiletter control sequences out of 15000+600000
- 59138 words of font info for 62 fonts, out of 8000000 for 9000
+ 15169 strings out of 493304
+ 221502 string characters out of 6139871
+ 423075 words of memory out of 5000000
+ 18146 multiletter control sequences out of 15000+600000
+ 60234 words of font info for 63 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  46i,12n,49p,337b,1318s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive/texmf-dist
@@ -1347,12 +1377,12 @@ Here is how much of TeX's memory you used:
 amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmtl10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
-imes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pf
-b>
-Output written on Principal.pdf (15 pages, 536073 bytes).
+imes/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Principal.pdf (32 pages, 866886 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
- 291 compressed objects within 3 object streams
- 150 named destinations out of 1000 (max. 500000)
- 92 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 716 PDF objects out of 1000 (max. 8388607)
+ 643 compressed objects within 7 object streams
+ 227 named destinations out of 1000 (max. 500000)
+ 208 words of extra memory for PDF output out of 10000 (max. 10000000)
 
