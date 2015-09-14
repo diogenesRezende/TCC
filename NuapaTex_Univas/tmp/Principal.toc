@@ -9,7 +9,7 @@
 \contentsline {subsection}{\numberline {1.4.1}REST}{10}{subsection.1.4.1}
 \contentsline {section}{\numberline {1.5}\textit {Apache Tomcat}}{12}{section.1.5}
 \contentsline {section}{\numberline {1.6}PostgreSQL}{12}{section.1.6}
-\contentsline {section}{\numberline {1.7}Engenharia De \textit {Software}}{13}{section.1.7}
+\contentsline {section}{\numberline {1.7}Engenharia de \textit {Software}}{13}{section.1.7}
 \contentsline {subsection}{\numberline {1.7.1}UML}{14}{subsection.1.7.1}
 \contentsline {subsection}{\numberline {1.7.2}Processos de \textit {Software}}{15}{subsection.1.7.2}
 \contentsline {section}{\numberline {1.8}\textbf {Google Cloud Messaging}}{16}{section.1.8}

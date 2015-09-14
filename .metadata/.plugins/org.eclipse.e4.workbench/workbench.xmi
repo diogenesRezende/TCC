@@ -290,7 +290,6 @@
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
-        <tags>noFocus</tags>
         <children xsi:type="advanced:Placeholder" xmi:id="_GeCFWkLVEeWkoeXhtxxFFA" elementId="org.eclipse.ui.console.ConsoleView" ref="_yUtJQfJ0EeSCL48s1HUSkw"/>
         <children xsi:type="basic:Part" xmi:id="_qkHNQEhUEeWFkKwSXbPSgg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Principal.tex" iconURI="platform:/plugin/net.sourceforge.texlipse/icons/texfile.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;net.sourceforge.texlipse.TexEditor&quot; name=&quot;Principal.tex&quot; partName=&quot;Principal.tex&quot; title=&quot;Principal.tex&quot; tooltip=&quot;NuapaTex_Univas/Principal.tex&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/NuapaTex_Univas/Principal.tex&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;803&quot; selectionTopPixel=&quot;316&quot;/>&#xA;&lt;/editor>"/>
@@ -317,7 +316,7 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_MdNREFjcEeWYH_XYBXO6-Q" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="11_QuadroTeorico.tex" iconURI="platform:/plugin/net.sourceforge.texlipse/icons/texfile.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;net.sourceforge.texlipse.TexEditor&quot; name=&quot;11_QuadroTeorico.tex&quot; partName=&quot;11_QuadroTeorico.tex&quot; title=&quot;11_QuadroTeorico.tex&quot; tooltip=&quot;NuapaTex_Univas/editaveis/11_QuadroTeorico.tex&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/NuapaTex_Univas/editaveis/11_QuadroTeorico.tex&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;13121&quot; selectionTopPixel=&quot;3921&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;net.sourceforge.texlipse.TexEditor&quot; name=&quot;11_QuadroTeorico.tex&quot; partName=&quot;11_QuadroTeorico.tex&quot; title=&quot;11_QuadroTeorico.tex&quot; tooltip=&quot;NuapaTex_Univas/editaveis/11_QuadroTeorico.tex&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/NuapaTex_Univas/editaveis/11_QuadroTeorico.tex&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;13121&quot; selectionTopPixel=&quot;3961&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>net.sourceforge.texlipse.TexEditor</tags>
           <tags>removeOnHide</tags>
@@ -509,7 +508,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xvcgEPJ0EeSCL48s1HUSkw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_yAI8YFjbEeWYH_XYBXO6-Q" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_wXIpYfJ0EeSCL48s1HUSkw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Tdr8UFj_EeWTed_XybmfyA" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_wXIpYfJ0EeSCL48s1HUSkw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xvdHIPJ0EeSCL48s1HUSkw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -542,7 +541,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xve8UPJ0EeSCL48s1HUSkw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_yARfQVjbEeWYH_XYBXO6-Q" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_wXBUk_J0EeSCL48s1HUSkw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_TdyC8Fj_EeWTed_XybmfyA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_wXBUk_J0EeSCL48s1HUSkw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xve8UfJ0EeSCL48s1HUSkw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

@@ -10,17 +10,16 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import br.com.univas.wsunivas.dominio.Aluno;
+import br.com.univas.wsunivas.dao.CursoDAO;
 import br.com.univas.wsunivas.dominio.Curso;
-import br.com.univas.wsunivas.repository.AlunosRepositorie;
-import br.com.univas.wsunivas.repository.CursosRepositorie;
+import br.com.univas.wsunivas.util.JpaUtil;
 
 @Path("/cursos")
 @Consumes({ MediaType.APPLICATION_JSON })
 @Produces({ MediaType.APPLICATION_JSON })
 public class CursosService {
 
-	private CursosRepositorie repo = new CursosRepositorie();
+	private CursoDAO dao = new CursoDAO(JpaUtil.getEntityManager());
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -29,23 +28,21 @@ public class CursosService {
 
 		Long idLong = Long.parseLong(id);
 
-		Curso cursos = this.repo.buscaCursoPeloId(idLong);
+		Curso curso = this.dao.obterPeloId(idLong);
 
-		return cursos;
+		return curso;
 	}
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Curso> cursosAll() {
-		return this.repo.getAllCursos();
+		return this.dao.obterTodos();
 	}
 
 	@POST
-	public Curso criarCuro(Curso curso) {
+	public Curso criarCurso(Curso curso) {
 
-		if (this.repo.inserirCurso(curso)) {
-			System.out.println(curso.toString());
-		}
+		this.dao.salvar(curso);
 		return curso;
 
 	}
