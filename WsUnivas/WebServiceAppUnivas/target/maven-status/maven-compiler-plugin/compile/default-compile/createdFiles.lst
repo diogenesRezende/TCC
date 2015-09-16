@@ -1,0 +1,9 @@
+br/edu/univas/restapiapp/controller/AlunoCtrl.class
+br/edu/univas/restapiapp/model/Aluno.class
+br/edu/univas/restapiapp/model/CreateTable.class
+br/edu/univas/restapiapp/entities/Alunos.class
+br/edu/univas/restapiapp/model/Disciplina.class
+br/edu/univas/restapiapp/model/TipoEvento.class
+br/edu/univas/restapiapp/util/JpaUtil.class
+br/edu/univas/restapiapp/services/AlunosService.class
+br/edu/univas/restapiapp/model/Evento.class

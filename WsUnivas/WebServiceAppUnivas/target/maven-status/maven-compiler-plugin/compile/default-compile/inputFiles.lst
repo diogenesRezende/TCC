@@ -1,0 +1,9 @@
+/home/diogenes/Documentos/TCC/WsUnivas/WebServiceAppUnivas/src/br/edu/univas/restapiapp/model/CreateTable.java
+/home/diogenes/Documentos/TCC/WsUnivas/WebServiceAppUnivas/src/br/edu/univas/restapiapp/entities/Alunos.java
+/home/diogenes/Documentos/TCC/WsUnivas/WebServiceAppUnivas/src/br/edu/univas/restapiapp/model/Disciplina.java
+/home/diogenes/Documentos/TCC/WsUnivas/WebServiceAppUnivas/src/br/edu/univas/restapiapp/util/JpaUtil.java
+/home/diogenes/Documentos/TCC/WsUnivas/WebServiceAppUnivas/src/br/edu/univas/restapiapp/model/Evento.java
+/home/diogenes/Documentos/TCC/WsUnivas/WebServiceAppUnivas/src/br/edu/univas/restapiapp/controller/AlunoCtrl.java
+/home/diogenes/Documentos/TCC/WsUnivas/WebServiceAppUnivas/src/br/edu/univas/restapiapp/model/Aluno.java
+/home/diogenes/Documentos/TCC/WsUnivas/WebServiceAppUnivas/src/br/edu/univas/restapiapp/services/AlunosService.java
+/home/diogenes/Documentos/TCC/WsUnivas/WebServiceAppUnivas/src/br/edu/univas/restapiapp/model/TipoEvento.java
