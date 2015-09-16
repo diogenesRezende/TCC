@@ -3,7 +3,7 @@ angular
 		.controller(
 				"univasAppController",
 				function($scope, $http) {
-
+$scope.alunos = 
 					$scope.adicionarAluno = function(aluno) {
 						console.info(aluno);
 						$http
