@@ -67,20 +67,16 @@ ExpadableListView}.
 	\label{fig:result2}
 \end{figure}
 
-	\par As informações que vem do \textit{web service} estão sendo salvas no banco
-de dados \textit{Sqlite} do aplicativo que mostra-se muito eficiente, uma vez
-que é rápido e leve. 
-
-	\par O aplicativo resultado desta pesquisa, tinha necessidade de consumir
-dados para posteriormente apresentá-los ao usuário. Era necessário que, os
-dados do sistema acadêmico da instituição de ensino que serviu como contexto
-para esta pesquisa, fossem transmitidos de alguma forma ao aplicativo. Era
-necessário também que os dados chegassem ao aplicativo respeitando as
-particularidades de cada usuário, trazendo somente informações relevantes aos
-mesmos. Com esse intuito de disponibilizar informações já citadas
-anteriormente, a quem quer que fosse necessário, inclusive aos usuários do
-aplicativo, foi criado um \textit{Web Service} REST.Este foi um dos resultados
-alcançados através desta pesquisa.
+	\par O aplicativo resultado desta pesquisa, tinha necessidade de
+consumir dados para posteriormente apresentá-los ao usuário. Era 
+necessário que, os dados do sistema acadêmico da instituição de ensino 
+que serviu como contexto para esta pesquisa, fossem transmitidos de alguma
+forma ao aplicativo. Era necessário também que os dados chegassem ao 
+aplicativo respeitando as particularidades de cada usuário, trazendo somente 
+informações relevantes aos mesmos. Com esse intuito de disponibilizar 
+informações já citadas anteriormente, a quem quer que fosse necessário, 
+inclusive aos usuários do aplicativo, foi criado um \textit{Web Service} REST.
+Este foi um dos resultados alcançados através desta pesquisa.
 	
 	\par A construção do \textit{web service}, de ínicio, mostrava-se um tanto
 quanto custosa, devido a restrições das tecnologias que foram escolhidas. Por se
