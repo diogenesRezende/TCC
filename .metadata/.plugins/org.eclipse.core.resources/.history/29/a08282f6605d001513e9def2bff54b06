@@ -82,6 +82,11 @@ anteriormente, a quem quer que fosse necessário, inclusive aos usuários do
 aplicativo, foi criado um \textit{Web Service} REST. Este foi um dos resultados
 alcançados através desta pesquisa.
 	
+	\par Para que houvesse dados para que o \textit{web service} transmitisse era
+necessário receber os dados do sistema acadêmico da referida instituição. Para
+esse propósito foi construído um módulo que era responsável por fazer a
+importação dos dados da
+	
 	\par A construção do \textit{web service}, de ínicio, mostrava-se um tanto
 quanto custosa, devido a restrições das tecnologias que foram escolhidas. Por se
 tratar de uma simples \textit{web service} que seria disponibilizado para suplir
@@ -99,44 +104,11 @@ inclusive tratamento de erros da aplicação, respostas as requisições e tipos
 dados. Esta etapa teve, portanto, um resultado não muito amigável do ponto de
 vista de sua construção. No entanto se for analizado do ponto de vista do
 conhecimento adquirido, obteve-se um resulatdo satisfatório, pois, foi na
-pesquisa e na busca melhores alternativas a estas técnologias, que se chegou ao
-resultado final.
-
-	\par O \textit{web service} foi desenvolvido com algumas técnolgias que
-facilitaram a sua construção. Foi usado o \textit{framework Jersey} para prover
-os serviços necessários. Este \textit{framework} usa \textit{servlets} para
-disponibilizar os serviços, porém com a facilidade de já ter embutido em si o
-tratamento para qualquer um dos tipos de dados que usado na implementação de um
-serviço REST, tanto para entrada ou saida de dados. Foi ainda usado o
-\textit{framework} de pesistência de dados \textit{Hibernate}. Este por sua vez
-desenpenhou papel notório, pois, ao mesmo tempo que facilitou o desenvolvimento
-do \textit{web service} com relação ao foco nas regras de negócio da aplicação e
-não tanto na implementação, pode-se dizer que se, por algum motivo for
-necessário migrar de banco de dados este será um fator facilitador. O resultado
-final foi extremamente satisfatório, pois era notório que era facíl tanto
-contruir e disponibilizar um novo serviço, quanto consumir o mesmo.
+pesquisa e na busca melhores alternativas a teoria que se chegou ao resultado
 
 	
-	\par Para que houvesse dados para que o \textit{web service} transmitisse para
-o aplicativo, era necessário receber os dados do sistema acadêmico da referida
-instituição, haja vista que o \textit{web service} é independente do sistema
-acadêmico desta instituição. Para esse propósito foi construído um módulo que
-era responsável por fazer a importação dos dados necessários para a base de
-dados do \textit{web service}. Este por sua vez tinha a responsabilidade de
-fazer a importação dos dados periodicamente, e ainda tratar os tipos de dados
-recebidos para tipos aplicáveis ao banco de dados local. Além disso era
-preciso notificar o módulo responsável por invocar o serviço \textit{Google
-Cloud Messaging} para que os dispositivos dos alunos aos quais houveram
-atualizações nos dados, fossem notificados e fizessem acesso ao \textit{web
-service} para solicitar esses dados atualizados. Pode-se dizer então, que este
-módulo desempenhou perfeitamente seu papel, pois, com ele era facil manter os
-discentes atualizados em relação aos seus dados e ao banco de dados do
-\textit{web service} também atualizado e com uma estrutura que fosse condizente
-com seus propósitos preestabelecido. 
-	
-	\par Portanto, conclui-se que se for analizado estes resultados citados de
-forma conjunta, pode-se dizer que o resultado geral foi satisfatório, pois, os
-discentes puderam obter as informações de que mais fazem uso de forma plática e
-rápida.
+	%facilidade de comunicação com web service
+	%rest
+	%Módulo de comunicação
 
 

@@ -41,8 +41,7 @@
 
 %\bibliography{nuapatex-options, biblio}			            % insere as REFERENCIAS
 % (arquivo biblio.bib)
-%\bibliography{biblio}			            % insere as REFERENCIAS (arquivo
-% biblio.bib)
+\bibliography{biblio}			            % insere as REFERENCIAS (arquivo biblio.bib)
 \addcontentsline{toc}{chapter}{REFERÊNCIAS} % adiciona o título no sumário
 
 %\input{editaveis/20_Apendices}

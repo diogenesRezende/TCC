@@ -106,15 +106,8 @@ resultado final.
 facilitaram a sua construção. Foi usado o \textit{framework Jersey} para prover
 os serviços necessários. Este \textit{framework} usa \textit{servlets} para
 disponibilizar os serviços, porém com a facilidade de já ter embutido em si o
-tratamento para qualquer um dos tipos de dados que usado na implementação de um
-serviço REST, tanto para entrada ou saida de dados. Foi ainda usado o
-\textit{framework} de pesistência de dados \textit{Hibernate}. Este por sua vez
-desenpenhou papel notório, pois, ao mesmo tempo que facilitou o desenvolvimento
-do \textit{web service} com relação ao foco nas regras de negócio da aplicação e
-não tanto na implementação, pode-se dizer que se, por algum motivo for
-necessário migrar de banco de dados este será um fator facilitador. O resultado
-final foi extremamente satisfatório, pois era notório que era facíl tanto
-contruir e disponibilizar um novo serviço, quanto consumir o mesmo.
+tratamento para qualquer um dos tipos de dados tanto para entrada ou saida de
+dados
 
 	
 	\par Para que houvesse dados para que o \textit{web service} transmitisse para
@@ -134,9 +127,5 @@ discentes atualizados em relação aos seus dados e ao banco de dados do
 \textit{web service} também atualizado e com uma estrutura que fosse condizente
 com seus propósitos preestabelecido. 
 	
-	\par Portanto, conclui-se que se for analizado estes resultados citados de
-forma conjunta, pode-se dizer que o resultado geral foi satisfatório, pois, os
-discentes puderam obter as informações de que mais fazem uso de forma plática e
-rápida.
 
 
