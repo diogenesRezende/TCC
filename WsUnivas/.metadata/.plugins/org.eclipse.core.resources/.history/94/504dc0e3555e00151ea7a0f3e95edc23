@@ -1,0 +1,8 @@
+package br.edu.univas.restapiapp.entities;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Eventos {
+
+}

@@ -14,7 +14,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: biblio.bib
-Warning--I didn't find a database entry for "lacheta2013"
 Warning--I didn't find a database entry for "ABNT-final"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
@@ -25,45 +24,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex2.googlecode.com                           |
 +---------------------------------------------------------+
-You've used 37 entries,
+You've used 5 entries,
             6711 wiz_defined-function locations,
-            1379 strings with 13886 characters,
-and the built_in function-call counts, 43616 in all, are:
-= -- 4963
-> -- 700
-< -- 1022
-+ -- 1297
-- -- 222
-* -- 2627
-:= -- 5528
-add.period$ -- 149
-call.type$ -- 37
-change.case$ -- 303
-chr.to.int$ -- 74
-cite$ -- 36
-duplicate$ -- 4206
-empty$ -- 2175
-format.name$ -- 1033
-if$ -- 8914
-int.to.chr$ -- 2
+            1224 strings with 9928 characters,
+and the built_in function-call counts, 3329 in all, are:
+= -- 356
+> -- 61
+< -- 1
++ -- 66
+- -- 20
+* -- 191
+:= -- 517
+add.period$ -- 13
+call.type$ -- 5
+change.case$ -- 32
+chr.to.int$ -- 8
+cite$ -- 4
+duplicate$ -- 134
+empty$ -- 287
+format.name$ -- 92
+if$ -- 790
+int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 665
-newline$ -- 168
-num.names$ -- 180
-pop$ -- 852
+missing$ -- 83
+newline$ -- 24
+num.names$ -- 20
+pop$ -- 122
 preamble$ -- 1
-purify$ -- 120
+purify$ -- 15
 quote$ -- 0
-skip$ -- 4314
+skip$ -- 218
 stack$ -- 1
-substring$ -- 1687
-swap$ -- 1553
-text.length$ -- 14
+substring$ -- 118
+swap$ -- 59
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2
+type$ -- 0
 warning$ -- 0
-while$ -- 232
+while$ -- 26
 width$ -- 0
-write$ -- 539
-(There were 2 warnings)
+write$ -- 65
+(There was 1 warning)

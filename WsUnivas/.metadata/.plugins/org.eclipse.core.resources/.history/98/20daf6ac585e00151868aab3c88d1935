@@ -1,0 +1,18 @@
+package br.edu.univas.restapiapp.controller;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import br.edu.univas.restapiapp.model.Evento;
+import br.edu.univas.restapiapp.util.JpaUtil;
+
+public class EventosCtrl {
+
+	public List<Evento> getAll() {
+		EntityManager em = JpaUtil.getEntityManager();
+		List<Evento> eventos = em.createQuery("from Evento where", Evento.class)
+				.getResultList();
+		return eventos;
+	}
+}

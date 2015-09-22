@@ -10,7 +10,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.xml.bind.annotation.XmlElement;
 
 import br.com.univas.wsunivas.dao.AlunoDAO;
 import br.com.univas.wsunivas.dominio.Aluno;
@@ -37,7 +36,7 @@ public class AlunosService {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@XmlElement(name = "alunos")
+	
 	public List<Aluno> alunoAll() {
 
 		/*

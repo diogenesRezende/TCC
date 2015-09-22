@@ -1,0 +1,17 @@
+package br.edu.univas.restapiapp.services;
+
+import javax.ws.rs.Path;
+
+import br.edu.univas.restapiapp.controller.EventosCtrl;
+import br.edu.univas.restapiapp.entities.Eventos;
+
+@Path("/eventos")
+public class EventosServices {
+
+	public Eventos getEventos() {
+		Eventos eventos = new Eventos();
+		EventosCtrl ctrl = new EventosCtrl();
+		eventos.setEventos(ctrl.getAll());
+		return eventos;
+	}
+}

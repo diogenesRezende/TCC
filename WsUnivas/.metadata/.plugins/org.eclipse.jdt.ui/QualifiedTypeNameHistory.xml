@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.websocket.server.PathParam"/>
+<fullyQualifiedTypeName name="java.lang.Long"/>
+<fullyQualifiedTypeName name="javax.ws.rs.QueryParam"/>
+<fullyQualifiedTypeName name="br.edu.univas.restapiapp.model.Aluno"/>
+<fullyQualifiedTypeName name="br.edu.univas.restapiapp.model.Disciplina"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+<fullyQualifiedTypeName name="br.edu.univas.restapiapp.model.TipoEvento"/>
+<fullyQualifiedTypeName name="javax.ws.rs.PathParam"/>
+<fullyQualifiedTypeName name="br.edu.univas.restapiapp.controller.AlunoCtrl"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="javax.swing.text.html.parser.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+<fullyQualifiedTypeName name="br.edu.univas.restapiapp.util.JpaUtil"/>
+<fullyQualifiedTypeName name="javax.management.Query"/>
+<fullyQualifiedTypeName name="javax.persistence.Query"/>
+<fullyQualifiedTypeName name="antlr.collections.List"/>
+<fullyQualifiedTypeName name="br.edu.univas.restapiapp.entities.Alunos"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
+<fullyQualifiedTypeName name="br.edu.univas.restapiapp.entities.Eventos"/>
+<fullyQualifiedTypeName name="br.edu.univas.restapiapp.controller.EventosCtrl"/>
+<fullyQualifiedTypeName name="javax.ws.rs.GET"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="br.edu.univas.restapiapp.model.Evento"/>
+</qualifiedTypeNameHistroy>
