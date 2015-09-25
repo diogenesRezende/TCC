@@ -6,46 +6,27 @@ propostos nos objetivos deste trabalho.
 
 \section{\textit{Java}}
 
-	\par Segundo \citeonline{deitel2002} o \textit{java} veio ao público em 1995 pela
-\textit{Sun Microsystem}. Os criadores dessa nova tecnologia liderados por
-James Gosling basearam-se em duas linguagens muito utilizadas no mundo, C e C++.
-Isso deu ao java uma base para implementar em novos sistemas como, sistemas
-operacionais, sistemas de comunicações, sistema de banco de dados e aplicativos
-para computadores pessoais.
+	\par Conforme \citeonline{deitel2010}, \textit{Java} é uma linguagem de
+programação orientada objetos, baseada na linguagem C++, desenvolvida pela
+empresa \textit{Sun Microsystem} no ano de 1995, por uma equipe sob liderança
+de James Gosling.
 
-	\par Entre as principais características pode-se dizer que o Java é:
-	
-	\begin{itemize}
+	\par Segundo Caelum (2015), para executar as aplicações, o \textit{Java}
+utiliza uma máquina virtual denominada JVM\footnote{JVM - Java Virtual
+Machine}, que liberta os softwares de ficarem presos a um único sistema
+operacional, uma vez que o programa conversa diretamente com a JMV e ficando
+por conta dela traduzir os \textit{bytecodes} gerados pelo compilador para
+linguagem de máquina.
 
-	  \item Orientado a objeto.
-	  
-	  \item Seguro.%explicar um pouco melhor
-	  
-	  \item Independente de plataforma. 
+	\par De acordo com Java (2015), o \textit{Java} está presente em mais de um
+bilhão de dispositivos como celulares, computadores, consoles de \textit{games}
+e pode ser considerado, seguro, rápido e confiável.
 
-	\end{itemize}
-	
-	\par \citeonline{deitel2002} o \textit{java} será utilizado para codificar e
-criar regras para proteger o banco de dados, gerenciando a infraestrutura que
-o próprio java fornece como, Transação, Acesso remoto, Web services,
-Gerenciamento de threads, Gerenciamento de conexões http\footnote{HTTP -
-HyperText Transfer Protocol.}.
-
-	\par Para acessar o servidor precisamos de um serviço \textit{web} (\textit{Web
-services}) que utilizará o \textit{java} para criar as regras e serviços de
-compilação de dados. Segundo \citeonline{deitel2002} existem cinco fases para
-que os dados cheguem em seu dispositivo que são, armazenamento em disco, o
-compilador cria os \textit{bytecodes}, transfere-os para memória, verifica a sua
-integridade, para que não haja nenhuma violação das restrições de segurança e
-por ultimo o interpretador(JMV\footnote{JVM - Java Virtual Machine}) lê os
-\textit{bytecodes} e os traduz para a linguagem que o computador entenda e
-possivelmente armazena os valores dos dados enquanto executa o programa.
-
-	\par \citeonline{romanato2015} afirma que o \textit{Java} usa a JMV, que é
-uma máquina virtual capaz de converter os \textit{bytecodes} para a linguagem
-do sistema operacional utilizado pelo cliente, sem a necessidade de compilá-lo
-para cada plataforma. Dessa maneira um \textit{software} que foi desenvolvido
-para um sistema operacional, funcionará normalmente em qualquer outro.
+	\par Hoje, com a acenção do \textit{Android}, a tendência é aumentar cada vez
+mais o desenvolvimento em \textit{Java}, uma vez que os aplicativos Android são
+desenvolvidos nessa linguagem. Nessa pesquisa a linguagem de programação
+\textit{Java} será utilizado no desenvolvimento tanto do aplicativo quanto do
+\textit{web service}.
 
 \section{\textit{Android}}
 
@@ -235,8 +216,19 @@ esses são os principais \textit{Layouts} do sistema operacional Android:
 	  aplicação necessita de um recurso que será demorado, como por exemplo, fazer
 	  um \textit{download}, pode ser feito uma animação informando ao usuário o
 	  progresso da operação.
-	
+	  
+	  \item SQLite – É um banco de dados embarcado na plataforma \textit{Android},
+	  que armazena tabelas, \textit{views}, índices, \textit{triggers} em apenas um
+	  arquivo em disco. Somente é possível acessa-lo pela aplicação a qual o criou
+	  e é deletado caso o aplicativo seja removido.
+
 	\end{itemize}
+	
+	\par Além dos recursos acima citados, um outro \textit{widget} que podemos
+destacar é o \textit{ExpandableListView}, que para \citeonline{android3}, exibe os
+itens em forma de uma lista da forma como o \textit{ListView}, o que
+diferencia-o é que ele mostra uma lista de dois níveis de rolagem vertical, em
+vez de abrir uma outra tela.
 	
 	\par Para uma maior interação, as aplicações normalmente utilizam API’s de
 terceiros, como o Google \textit{Maps}, quando necessita encontrar alguma

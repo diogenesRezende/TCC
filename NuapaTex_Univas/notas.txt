@@ -1,5 +1,21 @@
--Mer banco
--Mapeamento objeto relacional com detalhes
--criação do persistence.xml
--criação do JpaUtil
--criação e disponibilização do primeiro serviço
+Enviar Domingo 27/09/2015 até meia noite;
+
+	Diego:
+		->Reescrever Java
+		->Reescrever Postgres
+		->Diagrama de Classes
+	
+	Diógenes:		
+		->Escrever JPA
+		->Escrever Jersey
+		->Diagrama de componente
+	
+	Ambos:
+		->Correções textuais
+
+
+Enviar Domingo 04/09/2015 até meia noite;
+
+		-> Integração entre app e api;
+		-> Integração Google Cloud Menssaging
+		-> Listar as informações recebidas 
