@@ -41,8 +41,16 @@ Dispon{\'\i}vel em: \url{http://developer.android.com/tools/studio/index.html}.
 {BOOCH, G.; RUMBAUGH, J.; JACOBSON, I. \emph{\textbf{}}: \textbf{UML:} guia do
   usuário. 2ª. ed. Rio De Janeiro: CAMPUS, 2012.}
 
+\bibitem[Caelum 2015]{caelum3}
+\abntrefinfo{Caelum}{CAELUM}{2015a}
+{CAELUM. \emph{\textbf{}}: \textbf{Apostila Java e Orientação a Objetos.}
+  2015.
+Dispon{\'\i}vel em:
+  \url{http://www.caelum.com.br/apostila-java-orientacao-objetos/o-que-e-java/\#2-3-maquina-virtual}.
+  Acesso em: 18 de Setembro de 2015.}
+
 \bibitem[Caelum 2015]{caelum2}
-\abntrefinfo{Caelum}{CAELUM}{2015}
+\abntrefinfo{Caelum}{CAELUM}{2015b}
 {CAELUM. \emph{\textbf{}}: \textbf{Java para Desenvolvimento Web.} 2015.
 Dispon{\'\i}vel em:
   \url{https://www.caelum.com.br/apostila-java-web/o-que-e-java-ee/\#3-4-servlet-container}.
@@ -185,6 +193,14 @@ Dispon{\'\i}vel em:
 \abntrefinfo{Oglio}{OGLIO}{2013}
 {OGLIO, M.~D. \emph{\textbf{}}: \textbf{Aplicativo Android para o ambiente
   UNIVATES Virtual.} Lajeado: Univates, 2013.}
+
+\bibitem[Oracle 2015]{java}
+\abntrefinfo{Oracle}{ORACLE}{2015}
+{ORACLE. \emph{\textbf{}}: \textbf{O que é a Tecnologia Java e porque preciso
+  dela?} 2015.
+Dispon{\'\i}vel em:
+  \url{https://www.java.com/pt\_BR/download/faq/whatis\_java.xml}. Acesso em:
+  17 de Setembro de 2015.}
 
 \bibitem[Phillips e Hardy 2013]{phillips2013}
 \abntrefinfo{Phillips e Hardy}{PHILLIPS; HARDY}{2013}
