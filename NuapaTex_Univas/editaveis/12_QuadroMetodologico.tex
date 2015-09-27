@@ -56,7 +56,7 @@ pode-se perceber que a maioria dos entrevistados afirmam terem dificuldades
 para encontrar o que precisam e que o sistema não avisa quando ocorre alguma
 alteração. Sobre o motivo do acesso cem por cento respondeu que entram no
 sistema web para consultar suas notas.
-
+\pagebreak
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.5]{./imagens/2_q_metodologico/qm1.png}}
 	\caption[Quetionário Aplicado]{Quetionário Aplicado.
@@ -79,7 +79,7 @@ Foram utilizadas nesta pesquisa, referências de livros, revistas, manuais e
 \textit{web sites}.
 
 
-\section{Procedimentos}
+\section{Procedimentos e Resultados}
 	
 	\par O primeiro procedimento realizado para chegar à pesquisa proposta, foi
 planejar o software através da linguagem UML, onde foi necessário a instalação
@@ -92,7 +92,7 @@ do usuário foi criado o diagrama de casos de uso do aplicativo, como demostra
 na Figura \ref{fig:qm2}
 		
 		\begin{figure}[h!]
-			\centerline{\includegraphics[scale=0.5]{./imagens/2_q_metodologico/qm2.png}}
+			\centerline{\includegraphics[scale=0.4]{./imagens/2_q_metodologico/qm2.png}}
 			\caption[Diagrama de Casos de Uso]{Diagrama de Casos de Uso.
 			 \textbf{Fonte:}Elaborado pelos autores.}
 			\label{fig:qm2}
@@ -101,9 +101,9 @@ na Figura \ref{fig:qm2}
 	\par Logo após, foi projetado o diagrama de atividades para se ter uma visão
 da sequência do fluxo do sistema, conforme mostra a Figura \ref{fig:qm3}.
 		
-		\pagebreak
+		
 		\begin{figure}[h!]
-			\centerline{\includegraphics[scale=0.5]{./imagens/2_q_metodologico/qm3.png}}
+			\centerline{\includegraphics[scale=0.4]{./imagens/2_q_metodologico/qm3.png}}
 			\caption[Diagrama de atividades]{Diagrama de atividades.
 			 \textbf{Fonte:}Elaborado pelos autores.}
 			\label{fig:qm3}
@@ -125,14 +125,12 @@ exemplo, caso o usuário escolha o item Notas, o software executará o
 \textit{case} um, o qual criará uma \textit{intent} e chamará a classe
 \texttt{ListaNotasActivity}.
 	
-	\begin{figure}[h!]
-			\centerline{\includegraphics[scale=0.5]{./imagens/2_q_metodologico/qm4.png}}
+		\begin{figure}[h!]
+			\centerline{\includegraphics[scale=0.4]{./imagens/2_q_metodologico/qm4.png}}
 			\caption[\textit{MainActivity}]{\textit{MainActivity}.
 			 \textbf{Fonte:}Elaborado pelos autores.}
 			\label{fig:qm4}
-			
 		\end{figure}
-		\pagebreak
 		
 	\par O próximo passo, foi criar a \textit{activity Home}, o qual trará uma
 lista de \textit{sites} uteis, com as opções Univás, MEC, Fies, Prouni e
@@ -141,13 +139,12 @@ lista de \textit{sites} uteis, com as opções Univás, MEC, Fies, Prouni e
 \textit{widget} de \textit{ListView}. Na Figura \ref{fig:qm5}, pode-se ver a
 classe \texttt{DummyContent}, local onde é declarado a lista de sites.
 	
-		
+		\pagebreak
 		\begin{figure}[h!]
 			\centerline{\includegraphics[scale=0.5]{./imagens/2_q_metodologico/qm5.png}}
 			\caption[Classe \textit{DummyContent}]{Classe \textit{DummyContent}.
 			 \textbf{Fonte:}Elaborado pelos autores.}
 			\label{fig:qm5}
-			
 		\end{figure}
 
 	\par Quando clicado em algum item, é executada a classe
@@ -163,21 +160,32 @@ passar para o \textit{layout} o endereço do \textit{site}.
 			view}.
 			 \textbf{Fonte:}Elaborado pelos autores.}
 			\label{fig:qm6}
-			
 		\end{figure}
-		
+
 	\par Para que as informações possam aparecer, foram criadas
 \textit{activities} do tipo \textit{Blank Activity}. No \textit{layout} dessas
 \textit{activities} foram inseridas o \textit{widget ExpandableListView}, como
 	é mostrado na Figura \ref{fig:qm7}.
 	
-	\begin{figure}[h!]
-			\centerline{\includegraphics[scale=0.5]{./imagens/2_q_metodologico/qm7.png}}
+
+		\begin{figure}[h!]
+			\centerline{\includegraphics[scale=0.4]{./imagens/2_q_metodologico/qm7.png}}
 			\caption[\textit{Layout} com \textit{expandable}]{\textit{Layout} com
 			\textit{expandable}.
 			 \textbf{Fonte:}Elaborado pelos autores.}
 			\label{fig:qm7}
-		\end{figure}			
+		\end{figure}		
+		\pagebreak
+	\par A próxima etapa realizada foi o desenvolvimento do diagrama de classes do
+aplicativo \textit{Android}, o qual tem por objetivo mostrar todas as classes
+que o sistema necessita, como pode-se observar na Figura \ref{fig:qm7(1)}.
+		
+		\begin{figure}[h!]
+			\centerline{\includegraphics[scale=0.4]{./imagens/2_q_metodologico/qm7(1).png}}
+			\caption[Diagrama de classes do aplicativo Android]{Diagrama de classes do aplicativo Android.
+			 \textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:qm7(1)}
+		\end{figure}
 		
 %------------------------------------------------------------------------------
 %------------------------------------------------------------------------------
@@ -206,7 +214,7 @@ android:name="android.intent.category.LAUNCHER" />}}}, informando que ficará
 disponível junto aos outros aplicativos do dispositivo.
 	
 	\begin{figure}[h!]
-			\centerline{\includegraphics[scale=0.5]{./imagens/2_q_metodologico/qm8.png}}
+			\centerline{\includegraphics[scale=0.4]{./imagens/2_q_metodologico/qm8.png}}
 			\caption[\texttt{AndroidManifest.xml}]{\texttt{AndroidManifest.xml}.
 			 \textbf{Fonte:}Elaborado pelos autores.}
 			\label{fig:qm8}

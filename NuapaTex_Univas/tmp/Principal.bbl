@@ -207,12 +207,28 @@ Dispon{\'\i}vel em:
   UNIVATES Virtual.} Lajeado: Univates, 2013.}
 
 \bibitem[Oracle 2015]{java}
-\abntrefinfo{Oracle}{ORACLE}{2015}
+\abntrefinfo{Oracle}{ORACLE}{2015a}
 {ORACLE. \emph{\textbf{}}: \textbf{O que é a Tecnologia Java e porque preciso
   dela?} 2015.
 Dispon{\'\i}vel em:
   \url{https://www.java.com/pt\_BR/download/faq/whatis\_java.xml}. Acesso em:
   17 de Setembro de 2015.}
+
+\bibitem[Oracle 2015]{oracle22015}
+\abntrefinfo{Oracle}{ORACLE}{2015b}
+{ORACLE. \emph{\textbf{}}: \textbf{\textit{the java ee 6
+  tutorial}:}\textit{Creating a RESTful Root Resource Class}. 2015.
+Dispon{\'\i}vel em:
+  \url{http://docs.oracle.com/javaee/6/tutorial/doc/giepu.html}. Acesso em: 20
+  de Setembro de 2015.}
+
+\bibitem[Oracle 2015]{oracle2015}
+\abntrefinfo{Oracle}{ORACLE}{2015c}
+{ORACLE. \emph{\textbf{}}: \textbf{\textit{the java ee 6
+  tutorial}:}\textit{Building RESTful Web Services with JAX-RS}. 2015.
+Dispon{\'\i}vel em:
+  \url{http://docs.oracle.com/javaee/6/tutorial/doc/giepu.html}. Acesso em: 20
+  de Setembro de 2015.}
 
 \bibitem[Phillips e Hardy 2013]{phillips2013}
 \abntrefinfo{Phillips e Hardy}{PHILLIPS; HARDY}{2013}
