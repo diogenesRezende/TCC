@@ -138,9 +138,21 @@ Dispon{\'\i}vel em:
 {HOHENSEE, B. \emph{\textbf{}}: \textbf{Getting Started with Android Studio.}
   Gothenburg: [s.n.], 2013.}
 
+\bibitem[Jboss 2015]{hibernate2015}
+\abntrefinfo{Jboss}{JBOSS}{2015}
+{JBOSS. \emph{\textbf{}}: \textbf{Hibernate Getting Started Guide}. 2015.
+Dispon{\'\i}vel em:
+  \url{http://docs.jboss.org/hibernate/orm/5.0/quickstart/html/}. Acesso em: 20
+  de Setembro de 2015.}
+
 \bibitem[K19 2012]{k192012}
 \abntrefinfo{K19}{K19}{2012}
 {K19. \emph{\textbf{}}: \textbf{Desenvolvimento mobile com Android}. 2012.}
+
+\bibitem[Keith e Schincariol 2009]{keith2009pro}
+\abntrefinfo{Keith e Schincariol}{KEITH; SCHINCARIOL}{2009}
+{KEITH, M.; SCHINCARIOL, M. \emph{\textbf{}}: \textbf{Pro JPA 2:}
+  \textit{Mastering the Java Persistence API}. New York: Apress, 2009.}
 
 \bibitem[Krazit 2009]{krazit2009}
 \abntrefinfo{Krazit}{KRAZIT}{2009}
@@ -207,6 +219,19 @@ Dispon{\'\i}vel em:
 {PHILLIPS, B.; HARDY, B. \emph{\textbf{}}: \textbf{Android Programming:} the
   big nerd ranch guide. Atlânta: Big Nerd Ranch, 2013.}
 
+\bibitem[Postgresql 2015]{postgresWiki2015}
+\abntrefinfo{Postgresql}{POSTGRESQL}{2015a}
+{POSTGRESQL. \emph{\textbf{}}: \textbf{O que é PostgreSQL?} 2015.
+Dispon{\'\i}vel em:
+  \url{https://wiki.postgresql.org/wiki/Introdu\%C3\%A7\%C3\%A3o\_e\_Hist\%C3\%B3rico}.
+  Acesso em: 11 de de 2015.}
+
+\bibitem[Postgresql 2015]{postgres2015}
+\abntrefinfo{Postgresql}{POSTGRESQL}{2015b}
+{POSTGRESQL. \emph{\textbf{}}: \textbf{Sobre o PostgreSQL.} 2015.
+Dispon{\'\i}vel em: \url{http://www.postgresql.org.br/old/sobre}. Acesso em: 11
+  de de 2015.}
+
 \bibitem[Pressman 2011]{pressman2011}
 \abntrefinfo{Pressman}{PRESSMAN}{2011}
 {PRESSMAN, R. \emph{\textbf{}}: \textbf{Engenharia de software:} uma abordagem
@@ -240,10 +265,11 @@ Dispon{\'\i}vel em:
 {SOMMERVILLE, I. \emph{\textbf{}}: \textbf{Engenharia de Software.} 6ª. ed.
   São Paulo: Addison Wesley, 2003.}
 
-\bibitem[Stones e Matthew 2005]{stones2005beginning}
-\abntrefinfo{Stones e Matthew}{STONES; MATTHEW}{2005}
-{STONES, R.; MATTHEW, N. \emph{\textbf{}}: \textbf{Beginning Databases with
-  PostgreSQL:} from novice to professional. New York: Apress, 2005.}
+\bibitem[Sourceforge 2015]{sourceforgeHibernate2015}
+\abntrefinfo{Sourceforge}{SOURCEFORGE}{2015}
+{SOURCEFORGE. \emph{\textbf{}}: \textbf{Hibernate}. 2015.
+Dispon{\'\i}vel em: \url{http://sourceforge.net/projects/hibernate/}. Acesso
+  em: 20 de Setembro de 2015.}
 
 \bibitem[Tomcat 2015]{tomcat2015}
 \abntrefinfo{Tomcat}{TOMCAT}{2015}

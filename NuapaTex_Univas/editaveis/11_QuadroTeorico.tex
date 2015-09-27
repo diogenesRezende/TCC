@@ -132,10 +132,10 @@ será chamado o método \texttt{onDestroy()} encerrando-se assim o ciclo de vida
 	\par No arquivo \textit{AndroidManifest.xml} as \textit{activities} devem estar
 entre as tags \texttt{<activity> </activity>} e a \textit{activity} principal,
 ou seja, pela qual será iniciada a aplicação deve conter a tag
-\texttt{<intent-filter>} além de \small{\texttt{<action
+\texttt{<intent-filter>} além de {\tiny\texttt{<action
 android:name="android.intent.action.MAIN"/>}} indicando que essa atividade
-deverá ser chamada ao iniciar a aplicação e \small{\texttt{<category
-android:name="android.intent.category.LAUNCHER"/>}} que implica que esse
+deverá ser chamada ao iniciar a aplicação e {\tiny\texttt{<category
+android:name="android.intent.category\\.LAUNCHER"/>}} que implica que esse
 APP\footnote{APP - abreviação para \textit{aplication}} ficará disponível junto
 aos outros aplicativos no dispositivo.
 
@@ -299,7 +299,7 @@ intuito de solucionar estes problemas e proporcionar alta transparência entre
 as várias plataformas, foram criados as tecnologias \textit{web services}.
 	
 	
-	\par De acordo com \citeonline{erl2015}:
+	\par De acordo com \citeonline[s.p]{erl2015}:
 	\begin{citacao}
 		No ano de 2000, a W3C (\textit{World Wide Web Consortium}) aceitou a submissão
 		do \textit{Simple Object Access Protocol} (SOAP). Este formato de mensagem
@@ -402,10 +402,10 @@ considerado como um recurso.
 modificações nos recursos, da seguinte forma:
 	
 	 \begin{itemize}
-	   \item GET – Para recuperar algum dado. 
-	   \item POST – Para criar algum dado.
-	   \item PUT – Para alterar algum dado. 
-	   \item DELETE – Para excluir algum dado. 
+	   \item GET: para recuperar algum dado. 
+	   \item POST: para criar algum dado.
+	   \item PUT: para alterar algum dado. 
+	   \item DELETE: para excluir algum dado. 
 	 \end{itemize}
 	 	
 	\par Como o próprio \citeonline{fielding2000} também foi um dos criadores de um
@@ -446,13 +446,14 @@ começou com a \textit{Sun Microsystems}, que em 1999 doou a base do código par
 
 	\par Conforme \citeonline{devMedia2015}, para o desenvolvimento usando o código
 livre com \textit{Tomcat} é necessária a utilização das seguintes linguagens:
+	
 	\begin{itemize}
 	  
-	  \item JAVA - É utilizado em toda parte lógica da aplicação.
+	  \item JAVA: é utilizado em toda parte lógica da aplicação.
 	  
-	  \item HTML - É utilizado na parte de interação com o usuário.
+	  \item HTML: é utilizado na parte de interação com o usuário.
 	  
-	  \item XML - É utilizado para as configurações do software. 
+	  \item XML: é utilizado para as configurações do \textit{software}. 
 	
 	\end{itemize}
  
@@ -464,47 +465,54 @@ ao usuário.
 
 \section{PostgreSQL}
 
-\par Segundo \citeonline{milani2008}, o postgreSQL é um SGBD (Sistema de
-Gerenciamento de Banco de Dados) que tem suporte para ACID (Atomicidade,
-consistência, isolamento e Durabilidade), que são serviços que garantem a
-qualidade que um banco de dados. A seguir algumas das principais
-características e recursos existentes no postgreSQL, que são, Replicação,
-Cluster (Alta disponibilidade), Multithreads, segurança ssl e criptografia.
+	\par Para \citeonline{milani2008}, todas as aplicações que armazenam
+informações para o seu uso posterior devem estar integradas a um banco de
+dados, seja armazenando em arquivos de textos ou em tabelas. Por isso, o
+\textit{PostgreSql} tem por finalidade armazenar e administrar os dados em uma
+solução de informática.
+	
+	\par \citeonline[s.p]{postgresWiki2015} define que “o \textit{PostgreSql} é
+um SGBD (Sistema Gerenciador de Banco de Dados) objeto-relacional de código
+aberto, com mais de 15 anos de desenvolvimento. É extremamente robusto e
+confiável, além de ser extremamente flexível e rico em recursos.” 
 
-\par Segundo \citeonline{milani2008}:
+	\par Conforme afirma \citeonline{milani2008}, o PostgreSql é um
+SGDB\footnote{SGDB - Sistema Gerenciador de Banco de Dados } de código aberto
+originado na Universidade de \textit{Berkeley}, na Califórnia (EUA) no ano de
+1986, pelo projeto \textit{Postgres} desenvolvido por uma equipe sob liderança
+do professor Michael Stonebraker. Ele possui os principais recursos dos bancos
+de dados pagos e está disponível para os sistemas operacionais
+\textit{Windows}, \textit{Linux} e \textit{Mac}. Atualmente existem bibliotecas
+e \textit{drivers} para um grande número de linguagens de programação, entre as
+quais podemos citar: C/C++, PHP, \textit{Java}, ASP, \textit{Python} etc.
+
+	\par De acordo com \citeonline{postgres2015}, existem sistemas com o
+\textit{PostgreSql} que gerenciam até quatro \textit{terabytes} de dados. Seu
+banco não possui um tamanho máximo e nem um número máximo de linhas por tabela.
+Contudo, uma tabela pode chegar a ter um tamanho de trinta e dois
+\textit{terabytes} e cada campo a um \textit{gigabyte} de informação.
+
+	\par Segundo \citeonline{milani2008}, são características do
+\textit{PostgreSql}:
+
 	\begin{itemize}
 	  
-	  \item Replicação: É o compartilhamento de processos e distribuição das
-	  informações em diferentes bancos de dados. Ou seja as informações que serão
-	  armazenadas no servidor serão replicadas para um servidor secundário,
-	  mantendo os dados íntegros.
+	  \item Suporte a ACID (Atomicidade, Consistência, Isolamento e Durabilidade). 
 	  
-	  \item Cluster: É a interligação de dois ou mais computadores e a
-	  sincronização entre eles, assim aumentando a capacidade de demanda do banco
-	  de dados. 
+	  \item Replicação de dados entre servidores.
 	  
-	  \item Multithreads: É a manipulação de dados de forma que mais de uma pessoa
-	  tenha acesso a mesma informação sem ocasionar atrasos ou filas de acessos.
+	  \item Cluster.
 	  
-	  \item Segurança SSL\footnote{SSL-\textit{Secure Socket Layer}}%mudar depois
-	   e criptografia: Possibilita criar conexões seguras,
-	  tanta para trafegar informações de login quando aquelas consideradas sigilosas.
-   
+	  \item Multithreads.
+	  
+	  \item Segurança SSL\footnote{SSL -\textit{Secure Socket Layer}} e
+	  criptografia.
+	    
 	\end{itemize}
-	
-	\par \citeonline{stones2005beginning}  dizem que um dos pontos fortes do
-postgreSQL deriva-se de sua arquitetura onde pode ser usado em um ambiente
-cliente/servidor, beneficiando o usuário e o desenvolvedor.
 
-	\par Segundo \citeonline{stones2005beginning}, postgreSQL é comparado com
-qualquer outro SGBD, contendo todas as características que encontraria em outro
-banco de dados, e algumas características que não encontra em outro
-\textit{software} como, transações, subconsultas, chave estrangeira e regras de
-herança.
-
-	\par O PostgreSQL é um \textit{software} de fácil utilização e multiplataforma
-o que leva a ser implantado em muitas empresas.
-
+	\par É através do \textit{PostgreSql} que o \textit{webservice} armazenará e
+posteriormente retornará os dados dos discentes para o aplicativo
+\textit{Andorid}.
 
 \section{Engenharia de \textit{Software}}
 
@@ -524,16 +532,16 @@ programadores uma base para produzir. Alguns desses paradigmas são:
 
 	\begin{itemize}
 	  
-	  \item Ciclo de vida clássico - Utiliza o método sequencial, em que o final
+	  \item Ciclo de vida clássico: utiliza o método sequencial, em que o final
 	  de uma fase é o início da outra.
 	  
-	  \item O paradigma evolutivo - Baseia-se no desenvolvimento e implementação
+	  \item O paradigma evolutivo: baseia-se no desenvolvimento e implementação
 	  de um produto inicial. Esse produto passa por críticas dos usuários e vai
 	  recebendo melhorias e versões até chegar ao produto desejado.
 	  
-	  \item O paradigma espiral - Engloba as melhores características do ciclo de
-	  vida clássica e o paradigma evolutivo. Ele consiste em vários ciclos e cada
-	  ciclo representa uma fase do pesquisa.
+	  \item O paradigma espiral: engloba as melhores características do ciclo de
+	  vida clássica e o paradigma evolutivo. Ele consiste em vá - rios ciclos e
+	  cada ciclo representa uma fase do pesquisa.
 	
 	\end{itemize}
 
@@ -547,10 +555,10 @@ a serem seguidos.
 		
 		\par De acordo com \citeonline{booch2006uml} "A UML (\textit{Unified Modeling
 	Language}) é uma linguagem-padrão para a elaboração da estrutura de projetos
-	de \textit{software}". Na decada de 80 seguindo o surgimento e evolução das
-	linguagens de programação orientadas a objetos, foram surgindo as linguagens de
+	de \textit{software}". Na decada de 80 seguindo o surgimento e a evolução das
+	linguagens de programação orientadas a objetos, foram surgindo linguagens de
 	modelagens orientadas a objetos, como um modo alternativo de análise e projeto
-	de \textit{software} que era usada na época. De acordo com
+	de \textit{software} usadas na época. De acordo com
 	\citeonline[p.19]{guedes2011}:
 		\begin{citacao}
 			A UML surgiu da união de três métodos de modelagem: o método de Booch, o
@@ -581,8 +589,8 @@ a serem seguidos.
 		\par A linguagem de modelagem UML não é um processo rígido e permite uma
 		adequação de acordo com a situação do projeto em que é aplicada. Por permitir
 		essa flexibilidade e prover suporte adequado para determinados casos de um
-		projeto, é que a linguagem de modelagem UML será usada na modelagem dos
-		\textit{softwares} propostos nos objetivos dessa pesquisa.
+		projeto, será utilizada a linguagem de modelagem UML  para o desenvolvimento
+		desta pesquisa.
 
 	
 	\subsection{Processos de \textit{Software}}
@@ -595,22 +603,22 @@ desenvolver um \textit{software} de alta qualidade”.
 	\par Para \citeonline{sommerville2003}, não existe um processo ideal, pois isso
 dependerá de cada projeto, possibilitando cada qual implementar algum modelo já
 existente. Contudo \citeonline{pressman2011} afirma que uma metodologia
-genérica tem cinco passos:
+genérica possui cinco passos:
 	\begin{itemize}
 	  
-	  \item Comunicação - Antes de iniciar os trabalhos técnicos deve-se entender
+	  \item Comunicação: antes de iniciar os trabalhos técnicos deve-se entender
 	  os objetivos do sistema e levantar requisitos para o bom funcionamento do
 	  \textit{software}.
 	  
-	  \item Planejamento - Cria um plano de projeto, que conterá as tarefas a
+	  \item Planejamento: cria um plano de projeto, que conterá as tarefas a
 	  serem seguidas, riscos prováveis e recursos necessários.
 	  
-	  \item Modelagem - Esboça o sistema para que se tenha uma ideia de como ele
+	  \item Modelagem: esboça o sistema para que se tenha uma ideia de como ele
 	  deverá ficar e como encontrar a melhor solução para desenvolve-lo.
 	  
-	  \item Construção - É a etapa de desenvolvimento e teste.
+	  \item Construção: é a etapa de desenvolvimento e teste.
 	  
-	  \item Emprego - O \textit{software} pronto em sua totalidade ou parcialmente
+	  \item Emprego: o \textit{software} pronto em sua totalidade ou parcialmente
 	  é implantado no cliente e este retorna o seu \textit{feedback}.
 	 
 	 \end{itemize}
@@ -626,7 +634,7 @@ denominada \textit{Google Cloud Messaging} ou simplesmente
 GCM\footnote{\textit{Google Cloud Messaging}}, um recurso que tem por objetivo
 notificar as aplicações Android. Segundo \citeonline{leal2014} ele permite que
 aplicações servidoras possam enviar pequenas mensagens de até 4
-KB\footnote{\textit{Kilobytes}} para os aplicativos moveis, sem que esta
+KB\footnote{\textit{KB - Kilobytes}} para os aplicativos moveis, sem que esta
 necessite estar em execução, pois o sistema operacional envia mensagens em
 \textit{broadcast}, dessa forma a aplicação pode tratar as mensagens como bem
 preferir.
@@ -655,5 +663,52 @@ apresentado, são necessários os seguintes componentes:
 	\par De acordo com os componentes acima citados, quando uma aplicação servidora
 enviar uma mensagem para o aplicativo Android, na verdade está enviando para o
 servidor GCM que será encarregado de enviar a mensagem para a aplicação mobile.
+
 \section{\textit{Jersey}}
+
+
 \section{\textit{Hibernate}}
+
+	\par Com a evolução e popularização da linguagem \textit{Java}, e com o seu
+uso cada vez maior em ambientes corporativos, percebeu-se que, perdia-se muito
+tempo com a confecção de queries SQL\footnote{\textit{SQL - Structured Query
+Language}} usadas nas consultas em bancos de dados relacionais e com a
+construção do código JDBC\footnote{JDBC - \textit{Java Database Connectivity}}
+que era responsável por trabalhar com estas consultas. Além disso era notório
+que, mesmo a linguagem SQL sendo padronizada, ela apresentava diferenças
+significativas entre os diversos bancos de dados existentes. Isso fazia com que
+a implementação de um \textit{software} ficasse amarrada em um banco de dados
+específico e era extremamente custosa uma mudança poterior. Além disso havia o
+problema de lidar diretamente com dois paradigmas um pouco diferentes: o
+orientado a objeto e o relacional. Com o intuito de resolver esses problemas é
+que surgiram os \textit{frameworks} para ORM\footnote{ORM - Object-relational
+Mapping} tais como \textit{Hibernate}, \textit{EclipseLink}, \textit{Apache
+OpenJPA} entre outros.
+
+	\par Conforme surgiam novas alternativas e implementações para sanar esses
+problemas, surgia um novo problema: a falta de padronização entre os
+\textit{frameworks} de ORM. Para resolver esse problema foi criada o
+JPA\footnote{JPA - \textit{Java Persistence API}} que de acordo com
+\citeonline[p.12]{keith2009pro} "nasceu do reconhecimento das demandas dos
+profissionais e as existentes soluções proprietárias que eles estavam usando
+para resolver os seus problemas"\footnote{Tradução de responsabilidade dos
+autores da pesquisa.}. 
+	
+	\par A especificação JPA foi construída sendo a terceira parte da
+especificação EJB\footnote{EJB - \textit{Enterprise Java Bean}}, e deveria
+atender ao propósitos de persistêcia de dados desta especificação.
+De acordo com \citeonline[p.12]{keith2009pro} JPA é um \textit{framework} leve
+baseado em POJO's,\footnote{POJO - \textit{Plain Old Java Object }} para
+persistência de dados em \textit{Java}, e que embora o mapeamento objeto
+relacional seja seu principal componente, ele ainda oferece soluções de
+arquitetura para aplicações corporativas escaláveis\footnote{Tradução e resumo
+de informações de responsabilidade dos autores da pesquisa.}.
+
+	\par O \textit{framework Hibernate} é uma das implementações da especificação
+JPA. De acordo com \citeonline{sourceforgeHibernate2015} o \textit{Hibernate} é
+uma ferramenta de mapeamento relacional, muito popular entre aplicações
+\textit{Java} e implementa a \textit{Java Persistence API}. Foi criado por uma
+comunidade de desenvolvedores, do mundo todo que eram liderados por Gavin King.
+De acordo com \citeonline{hibernate2015} "\textit{Hibernate} cuida do
+mapeamento de classes \textit{Java} para tabelas de banco de dados, e de tipos
+de dados \textit{Java} para tipos de dados SQL". Este fato influi 

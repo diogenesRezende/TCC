@@ -3,26 +3,26 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="283" key="DIALOG_WIDTH"/>
 		<item value="121" key="DIALOG_Y_ORIGIN"/>
-		<item value="773" key="DIALOG_X_ORIGIN"/>
 		<item value="414" key="DIALOG_HEIGHT"/>
+		<item value="400" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="cae" key="selection"/>
+		<item value="PostgreS" key="selection"/>
 		<list key="findhistory">
-			<item value="cae"/>
-			<item value="erl"/>
+			<item value="postgres"/>
 			<item value="cael"/>
-			<item value="java"/>
-			<item value="caelum"/>
-			<item value="android2015"/>
-			<item value="android"/>
-			<item value="utili"/>
+			<item value="milani"/>
+			<item value="tradu"/>
+			<item value="pojo"/>
+			<item value="JDBC"/>
+			<item value="jdbc"/>
+			<item value="cae"/>
 		</list>
 		<list key="replacehistory">
 		</list>
