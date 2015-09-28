@@ -33,29 +33,28 @@ selecionada.
 \end{figure}
 \pagebreak
 
-\par Quanto a lista de sites que aparecem na \textit{Home}, a intenção era usar
-o \textit{widget webView}, que segundo \citeonline{monteiro2012}, permite a
-visualização de \textit{websites} no aplicativo, no entanto o resultado não
-ficou bom, pois os sites não tornaram-se responsivo, criando barras de rolagem
-e gerando desconforto ao usuário, que não conseguia ver todas as informações na
-tela, sendo necessário ficar deslizando a tela para direita e para esquerda
-conforme mostra a Figura \ref{fig:dr2}. Por isso, decidiu-se usar uma
-\textit{intent} implícita que como ressalta \citeonline{monteiro2012}, é criada
-para chamar uma outra \textit{activity}, a qual será responsável por executar
-uma determinada ação, no caso, abrir a página no navegador \textit{web}, como é
-ilustrado na Figura \ref{fig:dr3}
+	\par Na \textit{home} do aplicativo foi utilizado uma lista com \textit{links}
+ de \textit{sites} uteis aos alunos, como é visível na Figura \ref{fig:dr2}.
+ Anteriormente havia se pensado em abrir os sites através de uma
+ \textit{intent} implícita que como ressalta \citeonline{monteiro2012} é criada
+ para avisar o sistema operacional \textit{Android}, que é necessário abrir uma
+ outra \textit{activity}, a qual seria responsável por executar uma determinada
+ ação, no caso, abrir uma página \textit{web}. Porém, decidiu-se usar o
+ \textit{widget webView} que ainda segundo \citeonline{monteiro2012} permitirá
+ carregar o \textit{site} no próprio aplicativo. Portanto, ao clicar em alguma
+ dessas opções será aberta a \textit{activity} que detalhará o item, evitando
+ abrir o navegador nativo, conforme é mostrado na Figura \ref{fig:dr3}.
 
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.5]{./imagens/3_discussao_resultados/dr2.png}}
-	\caption[Navegador Interno Do Aplicativo]{Navegador Interno Do Aplicativo.
+	\centerline{\includegraphics[scale=0.4]{./imagens/3_discussao_resultados/dr2.png}}
+	\caption[\textit{Home} do Aplicativo]{\textit{Home} do Aplicativo.
 		\textbf{Fonte:}Elaborado pelos autores.}
 	\label{fig:dr2}
-\end{figure}
-\pagebreak	
+\end{figure}	
 
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.5]{./imagens/3_discussao_resultados/dr3.png}}
-	\caption[Navegador Interno Do Aplicativo]{Navegador Interno Do Aplicativo.
+	\centerline{\includegraphics[scale=0.4]{./imagens/3_discussao_resultados/dr3.png}}
+	\caption[\textit{Site} carregado no \texttt{webView}]{\textit{Site} carregado no \texttt{webView}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 	\label{fig:dr3}
 \end{figure}
@@ -80,7 +79,6 @@ ver a activity de notas, listando algumas informações com \textit{widget}
 		\textbf{Fonte:}Elaborado pelos autores.}
 	\label{fig:dr4}
 \end{figure}
-\pagebreak
 
 %----------------------------------------------------------------------------------
 
@@ -119,32 +117,16 @@ resultado final.
 facilitaram a sua construção. Foi usado o \textit{framework Jersey} para prover
 os serviços necessários. Este \textit{framework} usa \textit{servlets} para
 disponibilizar os serviços, porém com a facilidade de já ter embutido em si o
-tratamento para qualquer um dos tipos de dados que usado na implementação de um
-serviço REST, tanto para entrada ou saida de dados. Foi ainda usado o
-\textit{framework} de pesistência de dados \textit{Hibernate}. Este por sua vez
-desenpenhou papel notório, pois, ao mesmo tempo que facilitou o desenvolvimento
-do \textit{web service} com relação ao foco nas regras de negócio da aplicação e
-não tanto na implementação, pode-se dizer que se, por algum motivo for
-necessário migrar de banco de dados este será um fator facilitador. O resultado
-final foi extremamente satisfatório, pois era notório que era facíl tanto
-contruir e disponibilizar um novo serviço, quanto consumir o mesmo.
-
-	\par Para que houvesse dados para que o \textit{web service} transmitisse para
-o aplicativo, era necessário receber os dados do sistema acadêmico da referida
-instituição, haja vista que o \textit{web service} é independente do sistema
-acadêmico desta instituição. Para esse propósito foi construído um módulo que
-era responsável por fazer a importação dos dados necessários para a base de
-dados do \textit{web service}. Este por sua vez tinha a responsabilidade de
-fazer a importação dos dados periodicamente, e ainda tratar os tipos de dados
-recebidos para tipos aplicáveis ao banco de dados local. Além disso era
-preciso notificar o módulo responsável por invocar o serviço \textit{Google
-Cloud Messaging} para que os dispositivos dos alunos aos quais houveram
-atualizações nos dados, fossem notificados e fizessem acesso ao \textit{web
-service} para solicitar esses dados atualizados. Pode-se dizer então, que este
-módulo desempenhou perfeitamente seu papel, pois, com ele era facil manter os
-discentes atualizados em relação aos seus dados e ao banco de dados do
-\textit{web service} também atualizado e com uma estrutura que fosse condizente
-com seus propósitos preestabelecido. 
+tratamento para qualquer um dos tipos de midias que foram usadas na
+implementação de um serviço REST, tanto para entrada ou saida de dados. Foi
+ainda usado o \textit{framework} de pesistência de dados \textit{Hibernate}.
+Este por sua vez desenpenhou papel notório, pois, ao mesmo tempo que facilitou
+o desenvolvimento do \textit{web service} com relação ao foco nas regras de
+negócio da aplicação e não tanto na implementação, pode-se dizer que se, por
+algum motivo for necessário migrar de banco de dados este será um fator
+facilitador. O resultado final foi extremamente satisfatório, pois era notório
+que era facíl tanto contruir e disponibilizar um novo serviço, quanto consumir
+o mesmo.
 	
 	\par Portanto, conclui-se que se for analizado estes resultados citados de
 forma conjunta, pode-se dizer que o resultado geral foi satisfatório, pois, os

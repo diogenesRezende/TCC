@@ -364,70 +364,77 @@ Na Figura \ref{fig:qt3} está representado o esquema do Envelope SOAP.
 \end{figure}
 
 	\par Os \textit{web services} além de fornecerem uma padronização de
-comunicação entre as várias tecnologias existentes, provêem transparência na
-troca de informações. Isso contribui pelo fato de que as novas aplicações
-possam se comunicar com aplicações mais antigas ou aplicações contruídas sobre
+comunicação entre as várias tecnologias existentes, proveem transparência na
+troca de informações. Isso contribui pelo fato das novas aplicações
+poderem se comunicar com aplicações mais antigas ou aplicações contruídas sobre
 outras plataformas.
 
-	\par Além das tecnologias \textit{web services} tradicionais, existe também os
+	\par Além das tecnologias \textit{web services} tradicionais, existe os
 \textit{web services} REST que também disponibilizam serviços, porém não
 necessitam de encapsulamento de suas mensagens assim como os \textit{web
 Services} SOAP. Este fato influencia diretamente na performance da aplicação
 como um todo, haja vista que não sendo necessário o encapsulamento da informação
 requisitada ao \textit{web service}, somente é necessário o processamento e
 tráfego da informação que realmente importa. As caracteristícas do padrão REST
-serão abordadas a seguir.
+serão abordadas na próxima seção.
 
 	\subsection{REST}
 	
-	\par Segundo \citeonline{saudate2012}, REST é a sigla de
-\textit{Representational State Transfer}, desenvolvido por Roy Fielding na
-defesa de sua tese de doutorado. Segundo o próprio \citeonline{fielding2000}
-REST é um estilo que deriva do vários estilos arquitetónicos baseados em rede
-e  que combinado com algumas restrições, fornecem uma interface simples e
-uniforme para fornecimento de serviços\footnote{Tradução e resumo de
-informações de responsabilidade dos autores da pesquisa.}.
-	
-	\par \citeonline{rubbo2015} afirma que os dados e funcionalidade de um sistema
-são considerados recursos e podem ser acessados através das URI's
-\textit{(Universal Resource Identifier)}, facilitando dessa forma a comunicação
-do servidor com o cliente. Um serviço baseado na arquitetura REST
-basea-se fortemente em recursos. Para exemplificar o que seria um recurso em
-REST têm-se o seguinte cenário: considera-se uma URL tal como 
-http://www.univas.edu.br/alunos/ onde pretende-se fazer a gerência dos dados
-de um ou de um conjunto de alunos. A recuperação de dados, bem como sua edição
-e/ou deleção fazendo uso pleno dos métodos HTTP, através dessa URL pode ser
-considerado como um recurso.
-	\par \citeonline{saudate2012}, explica ainda que os métodos do HTTP podem fazer
-modificações nos recursos, da seguinte forma:
-	
-	 \begin{itemize}
-	   \item GET: para recuperar algum dado. 
-	   \item POST: para criar algum dado.
-	   \item PUT: para alterar algum dado. 
-	   \item DELETE: para excluir algum dado. 
-	 \end{itemize}
-	 	
-	\par Como o próprio \citeonline{fielding2000} também foi um dos criadores de um
-dos protocolos mais usados na web, o HTTP, pode-se dizer que o REST foi
-concebido para rodar sobre esse protocolo com a adição de mais algumas
-caracteristicas que segundo \citeonline{saudate2013} foram responsáveis pelo
-sucesso da web. Essas caracteristicas são:
-
-	\begin{itemize}
-	  \item URLs bem definidas para recursos;
-	  \item Utilização dos métodos HTTP de acordo com seus propósitos;
-	  \item Utilização de \textit{media types} efetiva;
-	  \item Utilização de \textit{headers} HTTP de maneira efetiva;
-	  \item Utilização de códigos de status HTTP;
-	  \item Utilização de Hipermídia como motor de estado da aplicação.
-	\end{itemize}
-	 
-	\par Segundo \citeonline{godinho2009}, não há um padrão de formato para as
- trocas de informações, mas as que mais são utilizadas é o XML\footnote{XML
- - \textit{Extensible Markup Language}.} e o JSON\footnote{JSON - 
- \textit{JavaScript Object Notation}.}. O REST é o mais indicado para aplicações
- em dispositivos moveis, devido sua agilidade.
+			\par Segundo \citeonline{saudate2012}, REST é a sigla de
+		\textit{Representational State Transfer}, desenvolvido por Roy Fielding na
+		defesa de sua tese de doutorado. Segundo o próprio \citeonline{fielding2000}
+		REST é um estilo que deriva dos vários estilos arquitetónicos baseados em rede
+		e  que combinado com algumas restrições, fornecem uma interface simples e
+		uniforme para fornecimento de serviços\footnote{Tradução e resumo de
+		informações de responsabilidade dos autores da pesquisa.}.
+			
+			\par \citeonline{rubbo2015} afirma que os dados e as funcionalidade de um
+			sistema são considerados recursos e podem ser acessados através das URI's
+		\textit{(Universal Resource Identifier)}, facilitando dessa forma a comunicação
+		do servidor com o cliente. Um serviço contruído na arquitetura REST
+		basea-se fortemente em recursos. Para exemplificar o que seria um recurso em
+		REST temos o seguinte cenário: considera-se uma URL tal como 
+		http://www.univas.edu.br/alunos/ onde pretende-se fazer a gerência dos dados
+		de um aluno ou de um conjunto de alunos. A recuperação de dados, bem como sua
+		edição e/ou deleção fazendo uso pleno dos métodos HTTP, através dessa URL,
+		pode ser considerado como um recurso.
+			\par \citeonline{saudate2012}, explica ainda que os métodos do HTTP podem fazer
+		modificações nos recursos, da seguinte forma:
+			
+			 \begin{itemize}
+			   \item GET: para recuperar algum dado. 
+			   \item POST: para criar algum dado.
+			   \item PUT: para alterar algum dado. 
+			   \item DELETE: para excluir algum dado. 
+			 \end{itemize}
+			 	
+			\par Como o próprio \citeonline{fielding2000} também foi um dos criadores de um
+		dos protocolos mais usados na web, o HTTP, pode-se dizer que o REST foi
+		concebido para rodar sobre esse protocolo com a adição de mais algumas
+		características que segundo \citeonline{saudate2013} foram responsáveis pelo
+		sucesso da web. Essas características são:
+		
+			\begin{itemize}
+			  
+			  \item URLs bem definidas para recursos;
+			  
+			  \item Utilização dos métodos HTTP de acordo com seus propósitos;
+			  
+			  \item Utilização de \textit{media types} efetiva;
+			  
+			  \item Utilização de \textit{headers} HTTP de maneira efetiva;
+			  
+			  \item Utilização de códigos de status HTTP;
+			  
+			  \item Utilização de hipermídia como motor de estado da aplicação.
+			
+			\end{itemize}
+			 
+			\par Segundo \citeonline{godinho2009}, não há um padrão de formato para as
+		 trocas de informações, mas as que mais são utilizadas é o XML\footnote{XML
+		 - \textit{Extensible Markup Language}.} e o JSON\footnote{JSON - 
+		 \textit{JavaScript Object Notation}.}. O REST é o mais indicado para aplicações
+		 em dispositivos moveis, devido a sua agilidade.
 	
 	
 \section{\textit{Apache Tomcat}}
@@ -444,8 +451,8 @@ edition}.
 começou com a \textit{Sun Microsystems}, que em 1999 doou a base do código para
 \textit{Apache Software Foundation}, e então seria lançada a versão 3.0.
 
-	\par Conforme \citeonline{devMedia2015}, para o desenvolvimento usando o código
-livre com \textit{Tomcat} é necessária a utilização das seguintes linguagens:
+	\par Conforme \citeonline{devMedia2015}, para o desenvolvimento com
+	\textit{Tomcat} é necessária a utilização das seguintes técnologias:
 	
 	\begin{itemize}
 	  
@@ -614,9 +621,9 @@ genérica possui cinco passos:
 	  serem seguidas, riscos prováveis e recursos necessários.
 	  
 	  \item Modelagem: esboça o sistema para que se tenha uma ideia de como ele
-	  deverá ficar e como encontrar a melhor solução para desenvolve-lo.
+	  deverá ficar e como encontrar a melhor solução para desenvolvê-lo.
 	  
-	  \item Construção: é a etapa de desenvolvimento e teste.
+	  \item Construção: é a etapa de desenvolvimento e testes.
 	  
 	  \item Emprego: o \textit{software} pronto em sua totalidade ou parcialmente
 	  é implantado no cliente e este retorna o seu \textit{feedback}.
@@ -632,14 +639,11 @@ evolutivo ou espiral) utilizaram os princípios das metodologias acima citadas.
 portal do aluno será utilizada uma API oferecida pela \textit{Google}
 denominada \textit{Google Cloud Messaging} ou simplesmente
 GCM\footnote{\textit{Google Cloud Messaging}}, um recurso que tem por objetivo
-notificar as aplicações Android. Segundo \citeonline{leal2014} ele permite que
+notificar as aplicações Android. Segundo \citeonline{leal2014}, ele permite que
 aplicações servidoras possam enviar pequenas mensagens de até 4
-KB\footnote{\textit{KB - Kilobytes}} para os aplicativos moveis, sem que esta
-necessite estar em execução, pois o sistema operacional envia mensagens em
-\textit{broadcast}, dessa forma a aplicação pode tratar as mensagens como bem
-preferir.
-	\par De acordo com \citeonline{leal2014} para o bom funcionamento do recurso
-apresentado, são necessários os seguintes componentes:
+KB\footnote{\textit{KB - Kilobytes}} para os aplicativos móveis, sem que este
+necessite estar em execução. Ainda de acordo com \citeonline{leal2014} para o
+bom funcionamento do recurso apresentado, são necessários os seguintes componentes:
 
 \begin{itemize}
 	
@@ -651,8 +655,8 @@ apresentado, são necessários os seguintes componentes:
 	identificador é o nome do pacote do projeto que consta no AndroidManifest.xml.
 	
 	\item \textit{Registration ID}: é o identificador gerado pelo servidor GCM
-	quando aplicação Android se conecta a ele. Deve ser enviado também a aplicação
-	servidora.
+	quando aplicação Android se conecta a ele. Este deve ser enviado também a
+	aplicação servidora.
 	
 	\item \textit{Sender Auth Token}: é uma chave que é incluída no cabeçalho
 	quando a mensagem é enviada da aplicação servidora para o GCM. Essa chave é
