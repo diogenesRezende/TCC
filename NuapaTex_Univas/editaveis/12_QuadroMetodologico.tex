@@ -109,6 +109,19 @@ da sequência do fluxo do sistema, conforme mostra a Figura \ref{fig:qm3}.
 			\label{fig:qm3}
 		\end{figure}
 		
+		\par A próxima etapa realizada foi o desenvolvimento do diagrama de classes do
+aplicativo \textit{Android}, o qual tem por objetivo mostrar todas as classes
+que o sistema necessita, como pode-se observar na Figura \ref{fig:qm7(1)}.
+		
+		\pagebreak
+		\begin{figure}[h!]
+			\centerline{\includegraphics[scale=0.4]{./imagens/2_q_metodologico/qm7(1).png}}
+			\caption[Diagrama de classes do aplicativo \textit{Android}]{Diagrama de
+			classes do aplicativo \textit{Android}.
+			 \textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:qm7(1)}
+		\end{figure}
+		
 	
 	\par Para iniciar o desenvolvimento do aplicativo, primeiramente fez-se
 necessária a instalação e configuração da plataforma \textit{Android Studio}
@@ -131,6 +144,7 @@ exemplo, caso o usuário escolha o item Notas, o software executará o
 			 \textbf{Fonte:}Elaborado pelos autores.}
 			\label{fig:qm4}
 		\end{figure}
+		\pagebreak
 		
 	\par O próximo passo, foi criar a \textit{activity Home}, o qual trará uma
 lista de \textit{sites} uteis, com as opções Univás, MEC, Fies, Prouni e
@@ -139,7 +153,7 @@ lista de \textit{sites} uteis, com as opções Univás, MEC, Fies, Prouni e
 \textit{widget} de \textit{ListView}. Na Figura \ref{fig:qm5}, pode-se ver a
 classe \texttt{DummyContent}, local onde é declarado a lista de sites.
 	
-		\pagebreak
+		
 		\begin{figure}[h!]
 			\centerline{\includegraphics[scale=0.5]{./imagens/2_q_metodologico/qm5.png}}
 			\caption[Classe \textit{DummyContent}]{Classe \textit{DummyContent}.
@@ -154,7 +168,7 @@ aplicativo. Abaixo, na Figura \ref{fig:qm6}, vê-se o método responsável por
 passar para o \textit{layout} o endereço do \textit{site}.
 				
 		\begin{figure}[h!]
-			\centerline{\includegraphics[scale=0.5]{./imagens/2_q_metodologico/qm6.png}}
+			\centerline{\includegraphics[scale=0.4]{./imagens/2_q_metodologico/qm6.png}}
 			\caption[Método para carregar o \textit{layout} com \textit{web
 			view}]{Método para carregar o \textit{layout} com \textit{web
 			view}.
@@ -175,17 +189,8 @@ passar para o \textit{layout} o endereço do \textit{site}.
 			 \textbf{Fonte:}Elaborado pelos autores.}
 			\label{fig:qm7}
 		\end{figure}		
-		\pagebreak
-	\par A próxima etapa realizada foi o desenvolvimento do diagrama de classes do
-aplicativo \textit{Android}, o qual tem por objetivo mostrar todas as classes
-que o sistema necessita, como pode-se observar na Figura \ref{fig:qm7(1)}.
 		
-		\begin{figure}[h!]
-			\centerline{\includegraphics[scale=0.4]{./imagens/2_q_metodologico/qm7(1).png}}
-			\caption[Diagrama de classes do aplicativo Android]{Diagrama de classes do aplicativo Android.
-			 \textbf{Fonte:}Elaborado pelos autores.}
-			\label{fig:qm7(1)}
-		\end{figure}
+	
 		
 %------------------------------------------------------------------------------
 %------------------------------------------------------------------------------
@@ -219,6 +224,7 @@ disponível junto aos outros aplicativos do dispositivo.
 			 \textbf{Fonte:}Elaborado pelos autores.}
 			\label{fig:qm8}
 		\end{figure}
+		\pagebreak
 
 	\par O \textit{Android Studio} tem uma facilidade de se trabalhar com
 controladores de versão, nesse caso foi escolhido o \textit{GitHub}. Nele foi
@@ -251,7 +257,7 @@ plataforma \textit{Java} de desenvolvimento.
 			\textbf{Fonte:}Elaborado pelos autores.}
 			\label{fig:qm9}
 		\end{figure}
-
+\pagebreak
 		\par Fazendo uso desse diagrama foi possível criar todas as classes 
 	\textit{Java} que representam as entidades do mapeamento objeto-relacional. 
 	Essas classes foram criadas fazendo uso de anotações próprias do
@@ -348,6 +354,18 @@ entrada e saída de dados. No caso do saída de dados, faz a conversão de objet
 \textit{Java} para JSON. E no caso de entrada tranforma um JSON em objeto
 \textit{Java} já conhecido pelo \textit{webservice}. Com isso concluiu-se o
 desenvolvimento do \textit{webservice} que fornece os dados para o aplicativo.
+
+	\par Para que fosse possível transmitir dados para o aplicativo, era
+necessário receber as informações do sistema acadêmico da referida instituição,
+haja vista que o \textit{web service} é independente do mesmo. Para esse
+propósito é necessário  contruir um módulo que faça a importação dos dados
+necessários para a base de dados do \textit{web service}. Este por sua vez
+terá a responsabilidade de fazer a importação dos dados periodicamente, e
+ainda tratar os tipos de dados recebidos para tipos aplicáveis ao banco de
+dados local. Além disso é preciso notificar o módulo responsável por invocar
+o serviço \textit{Google Cloud Messaging} para que os dispositivos dos alunos
+aos quais houveram atualizações nos dados, fossem notificados e fizessem acesso
+ao \textit{web service} para solicitar esses dados atualizados.
 
 	\par Os procedimentos acima citados foram os passos até agora realizados com o
 propósito de se alcançar os resultados esperados para essa pesquisa.

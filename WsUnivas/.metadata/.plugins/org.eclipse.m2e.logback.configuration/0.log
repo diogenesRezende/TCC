@@ -698,3 +698,7 @@
 2015-09-19 13:05:00,457 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/diogenes/TCC/WsUnivas/WebServiceRestUnivas/src/main/resources
 2015-09-19 13:05:00,459 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2015-09-19 13:05:00,460 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/diogenes/TCC/WsUnivas/WebServiceRestUnivas/src/test/resources
+2015-09-28 17:48:42,859 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-09-28 17:48:42,937 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/diogenes/TCC/WsUnivas/WebServiceRestUnivas/src/main/resources
+2015-09-28 17:48:42,944 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-09-28 17:48:42,944 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/diogenes/TCC/WsUnivas/WebServiceRestUnivas/src/test/resources

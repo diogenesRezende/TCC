@@ -1,8 +1,0 @@
-package br.edu.univas.restapiapp.services;
-
-import javax.ws.rs.Path;
-
-@Path("eventos")
-public class EventosServices {
-
-}
