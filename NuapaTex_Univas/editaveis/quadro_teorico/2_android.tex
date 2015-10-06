@@ -1,15 +1,14 @@
 \section{\textit{Android}}
 
 	\par Segundo \citeonline{monteiro2012}, \textit{Android} é um sistema
-operacional baseado em \textit{Linux}, de código aberto e que utiliza a
-linguagem de programação \textit{Java} para o desenvolvimento de seus
-aplicativos. Criado especialmente para dispositivos móveis, começou a
-ser desenvolvido no ano de 2003 pela então empresa Android Inc, que em 2005 foi
-agregada ao Google. A partir de 2007 o projeto \textit{Android} uniu-se a
-\textit{Open Handset Alliance}, uma associação de empresas de
-\textit{softwares}, \textit{hardwares} e telecomunicações, que tem por
-finalidade desenvolver uma plataforma para dispositivos móveis que seja
-completa, aberta e gratuita.
+operacional baseado em \textit{Linux} que utiliza a linguagem de programação
+\textit{Java} para o desenvolvimento de seus aplicativos. Criado especialmente
+para dispositivos móveis, começou a ser desenvolvido no ano de 2003 pela então
+empresa Android Inc, que em 2005 foi agregada ao Google. A partir de 2007 o
+projeto \textit{Android} uniu-se a \textit{Open Handset Alliance}, uma
+associação de empresas de \textit{softwares}, \textit{hardwares} e
+telecomunicações, que tem por finalidade desenvolver uma plataforma para
+dispositivos móveis que seja completa, aberta e gratuita.
 
 	\par \citeonline{krazit2009} afirma que o sistema pode rodar em equipamentos
 de diversos fabricantes, evitando assim ficar limitado a poucos dispositivos.
@@ -24,10 +23,9 @@ lista de contatos, caso seja formalmente aceito pelo usuário nos termos de uso
 ao instalá-lo.
 
 	\par As configurações de uma aplicação na plataforma \textit{Android} ficam
-salvas em um arquivo XML denominado \textit{AndroidManifest.xml} que se localiza
-na raiz do projeto. Para \citeonline{lecheta2010}, as informações devem estar
-entre tags correspondentes ao recurso, de forma, que o arquivo esteja entre a
-\textit{tag} \texttt{<manifest></manifest>}. Para ser possível acessar a
+salvas em um arquivo XML denominado \textit{AndroidManifest.xml}, que se
+localiza na pasta raiz do projeto. Para \citeonline{lecheta2010}, as informações
+devem estar entre \textit{tags} correspondentes ao recurso. Para ser possível acessar a
 \textit{internet} pelo aplicativo é preciso declarar a permissão de acesso da
 seguinte forma: \texttt{<uses-permission
 android:name="android.permission.internet" />}.
@@ -40,7 +38,7 @@ como se fossem mensagens, para os principais componentes da API do
 \textit{Android}, como as \textit{Activities}, \textit{Services} e
 \textit{BroadCast Receivers}". \citeonline{monteiro2012} diz que as
 \textit{Intents} são criadas quando se tem a intenção de realizar algo como por
-exemplo compartilhar uma imagem, utilizando os recursos já existentes no
+exemplo compartilhar uma imagem, utilizando os APP's já existentes no
 dispositivo. Existem dois tipos de Intents:
 	
 	\begin{itemize}
@@ -65,11 +63,10 @@ interações com os usuários. De acordo com \citeonline{lacheta2013}, cada
 executada, estar em segundo plano ou totalmente destruída.
 
 	\par Toda vez que é iniciada uma \textit{activity}, ela vai para o topo de uma
-pilha denominada \textit{activity stack}. O bom entendimento do ciclo de vida é
-importante, pois quando uma aplicação é interrompida, é possível salvar as
+pilha denominada \textit{activity stack}. O bom entendimento de seu ciclo de
+vida é importante, pois quando uma aplicação é interrompida, é possível salvar as
 informações ou ao menos voltar ao estágio a qual o usuário se encontrava. Na
-Figura \ref{fig:qt1} é demostrado um exemplo de ciclo de vida de uma
-\textit{activity}.
+Figura \ref{fig:qt1} é demostrado o ciclo de vida de uma \textit{activity}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.5]{./imagens/1_q_teorico/qt1.png}}
@@ -79,46 +76,45 @@ Figura \ref{fig:qt1} é demostrado um exemplo de ciclo de vida de uma
 	\label{fig:qt1}
 \end{figure}
 
-	\par Para que se possa entender melhor, imagina-se o seguinte cenário: Um
+	\par Para que se possa entender melhor, imagina-se o seguinte cenário: um
 usuário entra no aplicativo de notas da Univás. Para que a \textit{activity}
-seja criada é chamado o método \texttt{onCreate()}, logo após é executado o
+seja criada, é chamado o método \texttt{onCreate()}, logo após é executado o
 método \texttt{onStart()} e ao finalizar do ciclo anterior é chamado o
 \texttt{onResume()}, só a partir de então, a \textit{activity} é visualizada
-pelo discente. Contudo, durante a navegação o aluno recebe uma ligação. Nessa
-hora o sistema operacional chama o método \texttt{onPause()} para pausar a
-aplicação e abrir uma outra \textit{activity} para que o usuário possa atender
-a chamada telefônica. É possível nesse método salvar informações que o
-usuário está utilizando. Ao concluir o método de pausa, é executado o método
-\texttt{onStop()}, a partir de agora a \textit{activity} da Univás não será
-mais visível ao usuário. Ao encerrar a ligação, há dois caminhos possíveis de
-se percorrer, o primeiro, seria o caso do sistema operacional encerrar
+pelo discente. Contudo, durante a navegação, o aluno recebe uma ligação, então
+nessa hora o sistema operacional chama o método \texttt{onPause()} para
+interromper a aplicação e abrir uma outra \textit{activity} para que o usuário
+possa atender a chamada telefônica. É possível, nesse método, salvar informações
+que o usuário está utilizando. Ao concluir o método de pausa, é executado o
+método \texttt{onStop()}, a partir de agora a \textit{activity} da Univás não
+será mais visível ao usuário. Ao encerrar a ligação, há dois caminhos possíveis
+de se percorrer, o primeiro, seria o caso do sistema operacional encerrar
 completamente a aplicação, por necessidade de liberar espaço em memória. Dessa
 forma será necessário chamar o método \texttt{onCreate()} novamente seguindo o
-ciclo normal, porém senão for encerrada completamente, ao findar a ligação será
+ciclo normal, porém se não for encerrada completamente, ao findar a ligação será
 executado o método \texttt{onRestart()} e voltar para a \textit{activity} ao
-qual o usuário se encontrava. Por fim quando o aluno sair da \textit{activity}
-será chamado o método \texttt{onDestroy()} encerrando-se assim o ciclo de vida.
+qual o usuário se encontrava. Por fim ao encerrar uma \textit{activity} será
+chamado o método \texttt{onDestroy()} finalizando assim o ciclo de vida.
 
-	\par No arquivo \textit{AndroidManifest.xml} as \textit{activities} devem estar
-entre as tags \texttt{<activity> </activity>} e a \textit{activity} principal,
+	\par No arquivo \textit{AndroidManifest.xml}, as \textit{activities} devem
+	estar entre as tags \texttt{<activity> </activity>} e a \textit{activity} principal,
 ou seja, pela qual será iniciada a aplicação deve conter a tag
-\texttt{<intent-filter>} além de {\tiny\texttt{<action
-android:name="android.intent.action.MAIN"/>}} indicando que essa atividade
-deverá ser chamada ao iniciar a aplicação e {\tiny\texttt{<category
-android:name="android.intent.category\\.LAUNCHER"/>}} que implica que esse
-APP\footnote{APP - abreviação para \textit{aplication}} ficará disponível junto
-aos outros aplicativos no dispositivo.
+\texttt{<intent-filter>} além de \texttt{<action
+android:name="android.intent.action.MAIN"/>} indicando que essa atividade
+deverá ser chamada ao iniciar a aplicação e \texttt{<category
+android:name="android.intent.category.LAUNCHER"/>}, que implica que esse
+APP ficará disponível junto aos outros aplicativos no dispositivo.
 
 	\par A \textit{Activity} a ser utilizada para iniciar a aplicação é uma
-\textit{Navigation Drawer}. Segundo o site \citeonline{android2015}, ela exibe
-do lado esquerdo as principais funções do \textit{software}, semelhante a um
-menu, que fica normalmente escondida aparecendo apenas quando clicado no canto
+\textit{Navigation Drawer}, que segundo o site \citeonline{android2015}, que
+exibe do lado esquerdo as principais funções do \textit{software}, semelhante a um
+menu e fica normalmente escondida aparecendo apenas quando clicado no canto
 superior esquerdo.
 
 	\par Segundo \citeonline{lecheta2010}, a classe \textit{Service} existe
 com intuito em executar processos que levarão um tempo indeterminado para serem
 executados e que normalmente consomem um alto nível de memória e processamento.
-Esses processos são executadas em segundo plano enquanto o cliente realiza
+Esses processos são executados em segundo plano enquanto o cliente realiza
 outra tarefa. Assim um usuário pode navegar na internet enquanto é feito um
 \textit{download}. O serviço é geralmente iniciado pelo \textit{Broadcast
 Receiver} e quem o gerencia é o sistema operacional que só o finalizará ao
@@ -126,7 +122,7 @@ concluir a tarefa, salvo quando o espaço em memória é insuficiente.
 
 	\par Para \citeonline{lecheta2010}, a função da classe \textit{Content
 Provider} é prover conteúdos de forma pública para todas as aplicações, dessa
-forma usando-se essa classe possibilita às aplicações consultar, salvar,
+forma essa classe possibilita às aplicações consultar, salvar,
 deletar e alterar informações no \textit{smartphone}. Assim afirma
 \citeonline[p.413]{lecheta2010} “O \textit{Android} tem uma série de provedores
 de conteúdo nativos, como, por exemplo, consultar contatos da agenda,
@@ -154,8 +150,8 @@ esses são os principais \textit{Layouts} do sistema operacional Android:
 	
 	 \item \textit{LinearLayout}: permite posicionar os elementos em forma
 	 linear, dessa forma quando o dispositivo estiver em forma vertical os itens
-	 ficaram um abaixo do outro e quando estiver na horizontal eles
-	 ficaram um ao lado do outro.
+	 ficarão um abaixo do outro e quando estiver na horizontal eles
+	 ficarão um ao lado do outro.
 	
 	  \item \textit{RelativeLayout}: permite posicionar elementos de forma
 	  relativa, ou seja um \textit{widget} com relação a outro.
@@ -163,7 +159,7 @@ esses são os principais \textit{Layouts} do sistema operacional Android:
 	  \item \textit{TableLayout}: permite criar \textit{layouts} em formato de
 	  tabelas. O elemento \textit{TableRow} representa uma linha da tabela e seus
 	  filhos são as células.  Dessa maneira, caso um \textit{TableRow} possua dois
-	  itens significa que essa linha tem duas colunas.
+	  itens, significa que essa linha tem duas colunas.
 	
 	  \item \textit{DatePicker}: \textit{widget} desenvolvido para a seleção de
 	  datas que podem ser usadas diretamente no \textit{layout} ou através de
@@ -176,12 +172,12 @@ esses são os principais \textit{Layouts} do sistema operacional Android:
 	  forma, em uma lista de compras, clicando em uma venda é possível listar os
 	  itens dessa venda selecionada.
 	
-	  \item \textit{Action Bar}: um item muito importante, pois apresenta aos
-	  usuários as opções existentes no aplicativo.
+	  \item \textit{Action Bar}: um item muito importante, pois apresenta na
+	  parte superior aos usuários as opções existentes no aplicativo.
 	
 	  \item \textit{AlertDialog}: apresenta informações aos usuários através de
 	  uma caixa de diálogo. Comumente utilizado para perguntar ao cliente o que
-	  deseja fazer quando seleciona algum elemento.
+	  deseja fazer quando ele seleciona algum elemento.
 	
 	  \item \textit{ProgressDialog} e \textit{ProgressBar}: utilizado quando uma
 	  aplicação necessita de um recurso que levará um certo tempo para executar,
@@ -190,23 +186,21 @@ esses são os principais \textit{Layouts} do sistema operacional Android:
 	  
 	  \item \textit{SQLite}: é um banco de dados embarcado na plataforma
 	  \textit{Android}, que armazena tabelas, \textit{views}, índices,
-	  \textit{triggers} em apenas um arquivo em disco. Somente é possível
-	  acessa-lo pela aplicação a qual o criou e é deletado caso o aplicativo seja
-	  removido.
+	  \textit{triggers} em apenas um arquivo. Somente é possível acessá-lo pela
+	  aplicação a qual o criou e é excluído caso o aplicativo seja removido.
 
 	\end{itemize}
 	
-	\par Além dos recursos acima citados, um outro \textit{widget} que podemos
+	\par Além dos recursos acima citados, um outro \textit{widget} que pode-se
 destacar é o \textit{ExpandableListView}, que para \citeonline{android3}, exibe os
-itens em forma de uma lista da forma como o \textit{ListView}, o que
-diferencia-o é que ele mostra uma lista de dois níveis de rolagem vertical, em
-vez de abrir uma outra tela.
+itens em forma de uma lista, similar ao \textit{ListView}, o que diferencia-o é
+que ele mostra uma lista de dois níveis de rolagem vertical, em vez de abrir
+uma outra tela.
 	
 	\par Para uma maior interação, as aplicações normalmente utilizam API’s de
 terceiros, como o Google \textit{Maps}, quando necessita encontrar alguma
 localização. Para \citeonline{monteiro2012} essa comunicação pode utilizar o
-REST\footnote{REST - \textit{Representational State Transfer} ou Transferência
-de Estado Representativo.}, que envia requisições através da URL. Ao receber
+REST, que envia requisições através da URL. Ao receber
 informações pedidas a um outro serviço, que pode estar no padrão XML ou JSON. O
 REST será detalhado mais adiante.
 
@@ -219,5 +213,5 @@ superior da tela. Assim que o usuário clica na notificação, ela cria uma
 \textit{intent} abrindo a aplicação em questão.
 
 	\par Com a ideia de desenvolver um aplicativo para dispositivos móveis, a
-plataforma Android foi escolhida devido ao seu destaque no mercado e pela
-facilidade que apresenta aos usuários e deenvolvedores.
+plataforma \textit{Android} foi escolhida devido ao seu destaque no mercado e
+pela facilidade que apresenta aos usuários e desenvolvedores.

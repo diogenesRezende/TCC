@@ -25,8 +25,8 @@ acordo com \citeonline{duraes2005}, \textit{Web Service} é um componente que
 tem por finalidade integrar serviços distintos. O que faz com que ele se torne
 melhor que seus concorrentes é a padronização do XML (\textit{Extensible Markup
 Language}) para as trocas de informações. A aplicação consegue conversar com o
-servidor através do  WSDL que é o documento que contém as regras de
-funcionamento do \textit{web service}.
+servidor através do  WSDL que é o documento que contém a estrutura do 
+\textit{web service}.
 	
 	\par Segundo \citeonline{coulouris2013}, “Um serviço \textit{Web} (\textit{Web
 service}) fornece uma interface de serviço que permite aos clientes interagirem
@@ -54,37 +54,37 @@ mostra a Figura \ref{fig:qt2}.
 	\par Os \textit{web services} geralmente fazem uso do protocolo SOAP, para
 estruturar e encapsular as mensagens trocadas. De acordo com
 \citeonline[p.381]{coulouris2013}, "o protocolo SOAP é projetado para permitir
-tanto interação cliente-servidor como assíncrona pela \textit{Internet}".
+tanto interação cliente-servidor de forma assíncrona pela \textit{Internet}".
 Segundo \citeonline[p.27]{sampaio2006}, "o SOAP foi criado inicialmente, para
 possibilitar a invocação remota de métodos através da internet". As mensagens
 SOAP possuem um elemento envelope, que de acordo com
 \citeonline[p.19]{saudate2013}, "é puramente um \textit{container} para os
-elementos \textit{Header} e \textit{Body}". Ainda de acordo com
-\citeonline{saudate2013}, o elemento \textit{header} transporta metadados
-relativos à requisição tais como autenticação, endereço de retorno da mensagem,
-etc. Já o elemento \textit{body} carrega o corpo da requisição, que nada mais é
-do que o nome da operação e paramêtros referentes à mesma. É válido lembrar que
-todas requisições são trocadas usando SOAP, e usam o XML com formato oficial.
-Na Figura \ref{fig:qt3} está representado o esquema do Envelope SOAP.
+elementos \textit{Header} e \textit{Body}". O elemento \textit{header}
+transporta metadados relativos à requisição tais como autenticação, endereço de
+retorno da mensagem, etc. Já o elemento \textit{body} carrega o corpo da
+requisição, que nada mais é do que o nome da operação e paramêtros referentes à
+mesma. É válido lembrar que todas requisições são trocadas usando SOAP, e usam
+o XML com formato oficial. 
+%Na Figura \ref{fig:qt3} está representado o esquema do Envelope SOAP.
 	
-\begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.6]{./imagens/1_q_teorico/qt3.png}}
-	\caption[Esquema de envelope SOAP. ]{Esquema de envelope SOAP. 
-	 \textbf{Fonte:}\citeonline{coulouris2013}}
-	\label{fig:qt3}
-\end{figure}
+%\begin{figure}[h!]
+%	\centerline{\includegraphics[scale=0.6]{./imagens/1_q_teorico/qt3.png}}
+%	\caption[Esquema de envelope SOAP. ]{Esquema de envelope SOAP. 
+%	 \textbf{Fonte:}\citeonline{coulouris2013}}
+%	\label{fig:qt3}
+%\end{figure}
 
 	\par Os \textit{web services} além de fornecerem uma padronização de
 comunicação entre as várias tecnologias existentes, proveem transparência na
-troca de informações. Isso contribui pelo fato das novas aplicações
-poderem se comunicar com aplicações mais antigas ou aplicações contruídas sobre
-outras plataformas.
+troca de informações. Isso contribui para que as novas aplicações
+consigam se comunicar com aplicações mais antigas ou aplicações contruídas
+sobre outras plataformas.
 
-	\par Além das tecnologias \textit{web services} tradicionais, existe os
+	\par Além das tecnologias \textit{web services} tradicionais, existem os
 \textit{web services} REST que também disponibilizam serviços, porém não
 necessitam de encapsulamento de suas mensagens assim como os \textit{web
-Services} SOAP. Este fato influencia diretamente na performance da aplicação
-como um todo, haja vista que não sendo necessário o encapsulamento da informação
-requisitada ao \textit{web service}, somente é necessário o processamento e
-tráfego da informação que realmente importa. As caracteristícas do padrão REST
-serão abordadas na próxima seção.
+Services} SOAP. Este fato influencia diretamente na performance da aplicação,
+haja vista que não sendo necessário o encapsulamento da informação requisitada
+ao \textit{web service}, somente é necessário o processamento e tráfego da
+informação que realmente importa. As caracteristícas do padrão REST serão
+abordadas na próxima seção.
