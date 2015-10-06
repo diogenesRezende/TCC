@@ -1,0 +1,88 @@
+\section{\textit{Hibernate}}
+
+	\par Com a evolução e popularização da linguagem \textit{Java}, e com o seu
+uso cada vez maior em ambientes corporativos, percebeu-se que, perdia-se muito
+tempo com a confecção de queries SQL\footnote{\textit{SQL - Structured Query
+Language}} usadas nas consultas em bancos de dados relacionais e com a
+construção do código JDBC\footnote{JDBC - \textit{Java Database Connectivity}}
+que era responsável por trabalhar com estas consultas. Além disso era notório
+que, mesmo a linguagem SQL sendo padronizada, ela apresentava diferenças
+significativas entre os diversos bancos de dados existentes. Isso fazia com que
+a implementação de um \textit{software} ficasse amarrada em um banco de dados
+específico e era extremamente custosa uma mudança poterior. Além disso havia o
+problema de lidar diretamente com dois paradigmas um pouco diferentes: o
+orientado a objeto e o relacional. Com o intuito de resolver esses problemas é
+que surgiram os \textit{frameworks} para ORM\footnote{ORM - Object-relational
+Mapping} tais como \textit{Hibernate}, \textit{EclipseLink}, \textit{Apache
+OpenJPA} entre outros.
+
+	\par Conforme surgiam novas alternativas e implementações para sanar esses
+problemas, surgia um novo problema: a falta de padronização entre os
+\textit{frameworks} de ORM. Para resolver esse problema foi criada o
+JPA\footnote{JPA - \textit{Java Persistence API}} que de acordo com
+\citeonline[p.12]{keith2009pro} "nasceu do reconhecimento das demandas dos
+profissionais e as existentes soluções proprietárias que eles estavam usando
+para resolver os seus problemas"\footnote{Tradução de responsabilidade dos
+autores da pesquisa.}. 
+	
+	\par A especificação JPA foi concebida sendo a terceira parte da
+especificação EJB\footnote{EJB - \textit{Enterprise Java Bean}}, e deveria
+atender ao propósitos de persistêcia de dados desta especificação.
+De acordo com \citeonline[p.12]{keith2009pro} JPA é um \textit{framework} leve
+baseado em POJO's,\footnote{POJO - \textit{Plain Old Java Object }} para
+persistência de dados em \textit{Java}, e que embora o mapeamento objeto
+relacional seja seu principal componente, ele ainda oferece soluções de
+arquitetura para aplicações corporativas escaláveis\footnote{Tradução e resumo
+de informações de responsabilidade dos autores da pesquisa.}.
+
+	\par O \textit{framework Hibernate} é uma das implementações da especificação
+JPA. De acordo com \citeonline{sourceforgeHibernate2015} o \textit{Hibernate} é
+uma ferramenta de mapeamento relacional, muito popular entre aplicações
+\textit{Java} e implementa a \textit{Java Persistence API}. Foi criado por uma
+comunidade de desenvolvedores, do mundo todo, que eram liderados por Gavin King.
+De acordo com \citeonline{hibernate2015} "\textit{Hibernate} cuida do mapeamento
+de classes \textit{Java} para tabelas de banco de dados, e de tipos de dados
+\textit{Java} para tipos de dados SQL".
+
+	\par O \textit{Hibernate} está bastante difundido na comunidade de
+desenvolvedores \textit{Java} ao redor do mundo, pelo fato de ser simples de
+usar, e por evitar esforços desnecessários na parte de infraestrutura das
+aplicações onde é usado, mantendo assim o foco na lógica de negócio. A pricipais
+vantagens do uso do \textit{Hibernate} segundo
+\citeonline{sourceforgeHibernate2015} são:
+
+	\begin{itemize}
+	  
+	  		\item Provedor JPA: além de sua API nativa , o \textit{hibernate}
+	  	também é uma implentação da especificação JPA, podendo assim ser facilmente
+	  	usado em qualquer ambiente de apoio JPA.
+	  		
+	  		\item Persistência idiomática: permite que sejam construídas classes
+	  	persistentes orientadas a objetos, e que suportem herança e polimorfismo
+	  	entre outras estratégias, sem a necessidade da contrução de estruturas
+	  	especiais para tal fim.
+	  	
+	  		\item Performance e suporte: permite que sejam usadas várias estratégias de
+	  	 de inicialização. Além disso não necessita de tabelas especiais no banco de
+	  	 dados. Mostra-se vantajoso também por gerar a maior parte do SQL
+	  	 necessário e evitar esforço desnecessário por parte do desenvolvedor, além
+	  	 de ser mais rápido que o JDBC puro.
+	  
+	  		\item Escalável: o \textit{Hibernate} foi projetado para trabalhar em
+	  	\textit{clusters} de servidores de aplicações e oferecer uma estrutura
+	  	muito escalável, que se comporta bem tanto com um número muito baixo de
+	  	usuários até números muitos elevados de usuários.
+
+			\item Confiável: sua confiabilidade e estabilidade são comprovadas pelo
+		seu grande uso e aceitação atualmente.
+			
+			\item Extensível: Hibernate é altamente configurável e
+		extensível\footnote{Tradução e resumo de informações de responsabilidade dos
+		autores da pesquisa.}.
+	
+	\end{itemize}
+	
+	\par O \textit{Hibernate} será usado nesta pesquisa com o intuito de fazer a
+gerência dos dados coletados e que serão providos para o aplicativo
+\textit{Android} através do \textit{webservice}, em conjunto com o banco de
+dados.
