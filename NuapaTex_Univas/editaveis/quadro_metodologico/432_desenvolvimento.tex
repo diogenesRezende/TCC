@@ -1,0 +1,111 @@
+%\subsubsection{Desenvolvimento}
+
+	\par Essas classes foram criadas fazendo uso de anotações próprias do
+\textit{Hibernate}, que é um \textit{framework} que implementa a especificação
+JPA\footnote{JPA - \textit{Java Persistense API}}. Essas classes fazem parte
+dos mecanismos de persistêcia de dados e são simplesmente t ou seja, objetos
+simples que contêm somente atributos privados e os métodos \textit{getters} e
+\textit{setters} que servem apenas para encapsular estes atributos. Uma das
+classes criadas, foi a classe \texttt{Aluno.java} que representa a tabela
+\texttt{alunos} no banco de dados e está representada na Figura
+\ref{fig:qm10}.%mudar para figura
+	
+		\begin{figure}[h!]
+			\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/qm10.png}}
+			\caption[Classe \texttt{Aluno}]{Classe \texttt{Aluno}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:qm10} 
+		\end{figure}
+		
+		\pagebreak
+		
+	\par Foram criadas outras classes \textit{Java} com a mesma finalidade da
+anterior, porém com pequenas diferenças no que diz respeito à atributos,
+metodos e anotações. Estas classes representam, de maneira individual, as
+tabelas no banco de dados. Certos atributos dessas classes têm por finalidade
+representar as colunas de cada tabela. Já os atributos que armazenam instâncias
+de outras classes ou até mesmo conjuntos (coleções) de instâncias representam
+os relacionamentos entre as tabelas. E por fim, para cada classe que representa
+uma entidade, foi necessário implementar os métodos \texttt{hashCode} e
+\texttt{equals}, para que estas pudessem facilmente ser comparadas e
+diferenciadas em relação aos seus valores, haja visto que cada instância destas
+classes representa um registro no banco de dados.
+\overfullrule=2cm		
+	\par Em seguida à criação das entidades, foi necessário configurar o arquivo
+\texttt{persistence.\\xml} que fica dentro do \textit{classpath} do projeto
+\textit{Java} ou seja, dentro da mesma pasta onde estão contidos pacotes do
+projeto. Este arquivo é extremamente importante, pois é nele que estão todas as
+configurações relativas à conexão com o banco de dados, configurações
+referentes ao Dialeto SQL que vai ser usado para as consultas e configurações
+referentes ao \textit{persistence unit} que é o conjunto de classes mapeadas
+para o banco de dados.	O arquivo \texttt{persistence.xml} está exposto no
+código \ref{fig:qm11}.
+	
+ 		\begin{figure}[h!]
+			\centerline{\includegraphics[scale=0.6]{./imagens/2_q_metodologico/qm11.png}}
+			\caption[Arquivo \texttt{persistence.xml}]{Arquivo \texttt{persistence.xml}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:qm11}
+		\end{figure}
+		
+	\par Em seguida à confecção do \texttt{persistence.xml} foi criada a classe
+\texttt{JpaUtil} que está representada na Figura \ref{fig:qm12}.
+Esta classe é responsável por criar uma \texttt{EntityManagerFactory} que é
+uma  fábrica de instâncias de \texttt{EntityManager} que nada mais é que um
+\textit{persistence unit} ou unidade de persistência. Essa classe tem a
+responsabilidade de prover um modo de comunicação entre a aplicação e o banco
+de dados. No entanto a classe \texttt{JpaUtil} cria uma única instância de
+\texttt{EntityManagerFactory}, que é responsável por disponibilizar e
+gerenciar as instâncias de \texttt{EntityManager} de acordo com a necessidade
+da aplicação.
+		
+		\pagebreak
+		\begin{figure}[h!]
+			\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/qm12.png}}
+			\caption[Classe \texttt{JpaUtil}]{Classe \texttt{JpaUtil}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:qm12}
+		\end{figure}
+		
+	\par Em seguida à construção das classes que fazem a parte da persistência de
+dados, foi desenvolvido a parte de disponibilização de serviços
+\textit{RESTful}, fazendo uso do \textit{framework} \textit{Jersey}. Com isso
+pode-se construir a classe que representa o primeiro serviço do
+\textit{webservice}, que é a classe \texttt{Alunos}. Essa classe representa um
+contexto REST, e portanto, dispõe de alguns recursos. Esses recursos fazem a
+recuperação e a transmissão dos dados do \textit{webservice} para o aplicativo
+\textit{Android}. Essa classe e seus respectivos métodos  estão representada na
+Figura \ref{fig:qm13}.
+
+		\begin{figure}[h!]
+			\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/qm13.png}}
+			\caption[Classe \texttt{AlunosService}]{Classe \texttt{AlunosService}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:qm13}
+		\end{figure}
+		
+		\par O \textit{webservice} pode fazer a busca de alunos pelo \texttt{id}
+passado ou retornar uma coleção de eventos vinculados a um alunos, dependendo
+do recurso acessado. Os tipos de dados que o \textit{webservice} consome e
+retorna é o JSON\footnote{JSON - \textit{Javascript Object Notation}}. Não foi
+necessário fazer nenhuma implementação adicional relativa a este formato, pois
+o próprio \textit{framework Jersey} faz o tratamento e a conversão dos tipos de
+entrada e saída de dados. No caso do saída de dados, faz a conversão de objetos 
+\textit{Java} para JSON. E no caso de entrada tranforma um JSON em objeto
+\textit{Java} já conhecido pelo \textit{webservice}. Com isso concluiu-se o
+desenvolvimento do \textit{webservice} que fornece os dados para o aplicativo.
+
+	\par Para que fosse possível transmitir dados para o aplicativo, era
+necessário receber as informações do sistema acadêmico da referida instituição,
+haja vista que o \textit{web service} é independente do mesmo. Para esse
+propósito é necessário  contruir um módulo que faça a importação dos dados
+necessários para a base de dados do \textit{web service}. Este por sua vez
+terá a responsabilidade de fazer a importação dos dados periodicamente, e
+ainda tratar os tipos de dados recebidos para tipos aplicáveis ao banco de
+dados local. Além disso é preciso notificar o módulo responsável por invocar
+o serviço \textit{Google Cloud Messaging} para que os dispositivos dos alunos
+aos quais houveram atualizações nos dados, fossem notificados e fizessem acesso
+ao \textit{web service} para solicitar esses dados atualizados.
+
+	\par Os procedimentos acima citados foram os passos até agora realizados com o
+propósito de se alcançar os resultados esperados para essa pesquisa.
