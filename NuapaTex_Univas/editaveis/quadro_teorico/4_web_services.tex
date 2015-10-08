@@ -56,15 +56,16 @@ estruturar e encapsular as mensagens trocadas. De acordo com
 \citeonline[p.381]{coulouris2013}, "o protocolo SOAP é projetado para permitir
 tanto interação cliente-servidor de forma assíncrona pela \textit{Internet}".
 Segundo \citeonline[p.27]{sampaio2006}, "o SOAP foi criado inicialmente, para
-possibilitar a invocação remota de métodos através da internet". As mensagens
-SOAP possuem um elemento envelope, que de acordo com
+possibilitar a invocação remota de métodos através da internet". 
+
+	\par As mensagens SOAP possuem um elemento envelope, que de acordo com
 \citeonline[p.19]{saudate2013}, "é puramente um \textit{container} para os
 elementos \textit{Header} e \textit{Body}". O elemento \textit{header}
 transporta metadados relativos à requisição tais como autenticação, endereço de
 retorno da mensagem, etc. Já o elemento \textit{body} carrega o corpo da
 requisição, que nada mais é do que o nome da operação e paramêtros referentes à
 mesma. É válido lembrar que todas requisições são trocadas usando SOAP, e usam
-o XML com formato oficial. 
+o XML como formato oficial. 
 %Na Figura \ref{fig:qt3} está representado o esquema do Envelope SOAP.
 	
 %\begin{figure}[h!]
@@ -76,9 +77,9 @@ o XML com formato oficial.
 
 	\par Os \textit{web services} além de fornecerem uma padronização de
 comunicação entre as várias tecnologias existentes, proveem transparência na
-troca de informações. Isso contribui para que as novas aplicações
-consigam se comunicar com aplicações mais antigas ou aplicações contruídas
-sobre outras plataformas.
+troca de informações. Isso contribui para que as novas aplicações consigam se
+comunicar com aplicações mais antigas ou aplicações contruídas sobre outras
+plataformas.
 
 	\par Além das tecnologias \textit{web services} tradicionais, existem os
 \textit{web services} REST que também disponibilizam serviços, porém não

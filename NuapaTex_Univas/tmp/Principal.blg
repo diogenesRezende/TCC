@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Principal.aux
 A level-1 auxiliary file: fixos/01_Capa.aux
@@ -23,44 +23,44 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex2.googlecode.com                           |
 +---------------------------------------------------------+
-You've used 4 entries,
+You've used 45 entries,
             6711 wiz_defined-function locations,
-            1219 strings with 9888 characters,
-and the built_in function-call counts, 4588 in all, are:
-= -- 607
-> -- 64
-< -- 88
-+ -- 154
-- -- 20
-* -- 262
-:= -- 632
-add.period$ -- 13
-call.type$ -- 4
-change.case$ -- 30
-chr.to.int$ -- 10
-cite$ -- 3
-duplicate$ -- 367
-empty$ -- 221
-format.name$ -- 93
-if$ -- 961
-int.to.chr$ -- 0
+            1405 strings with 14923 characters,
+and the built_in function-call counts, 56955 in all, are:
+= -- 6685
+> -- 801
+< -- 1486
++ -- 1801
+- -- 257
+* -- 3380
+:= -- 7149
+add.period$ -- 187
+call.type$ -- 45
+change.case$ -- 353
+chr.to.int$ -- 71
+cite$ -- 44
+duplicate$ -- 5779
+empty$ -- 2642
+format.name$ -- 1193
+if$ -- 11413
+int.to.chr$ -- 7
 int.to.str$ -- 0
-missing$ -- 67
-newline$ -- 21
-num.names$ -- 15
-pop$ -- 104
+missing$ -- 786
+newline$ -- 208
+num.names$ -- 220
+pop$ -- 1008
 preamble$ -- 1
-purify$ -- 13
+purify$ -- 143
 quote$ -- 0
-skip$ -- 438
+skip$ -- 5934
 stack$ -- 1
-substring$ -- 188
-swap$ -- 136
-text.length$ -- 1
+substring$ -- 2289
+swap$ -- 2103
+text.length$ -- 22
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 2
 warning$ -- 0
-while$ -- 21
+while$ -- 288
 width$ -- 0
-write$ -- 53
+write$ -- 657
