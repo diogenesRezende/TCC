@@ -15,22 +15,34 @@ HTTP\footnote{HTTP - Hypertext Transfer Protocol} para troca de mensagens, pois
 além da funcionalidade com \textit{Servlets}, o \textit{Apache Tomcat} também é
 um servidor HTTP.
 	
-	\par O \textit{Apache Tomcat} foi instalado no ambiente de desenvovimento, por
-meio do \textit{download} de um pacote \texttt{.zip} no site oficial do mesmo.
+	\par O \textit{Apache Tomcat} foi instalado, por meio do \textit{download} de
+um arquivo \texttt{.zip} no site oficial do mesmo. A instalação consiste apenas
+em extrair os dados do arquivo em uma pasta da preferência do desenvolvedor.
 Esta abordagem permitiu a integração do \textit{Apache Tomcat} com o
 IDE\footnote{IDE - \textit{Integrated Development Environment}}
-\textit{Eclipse}.
+\textit{Eclipse}, além disso foi possível controlar e monitorar, o servidor de
+aplicações através da IDE. Além da configuração necessária para integrar o
+servidor à IDE, nem uma outra configuração foi necessária.
 
-	\par No ambiente de produção como está sendo usado um sistema operacional
-baseado em GNU/Linux, o mesmo foi instalado através do gerenciador de pacotes
-da distribuição. Em ambos os casos não foram necessárias configurações além do
-trivial de cada plataforma.
+	%\par No ambiente de produção como está sendo usado um sistema operacional
+%baseado em GNU/Linux, o mesmo foi instalado através do gerenciador de pacotes
+%da distribuição. Em ambos os casos não foram necessárias configurações além do
+%trivial de cada plataforma.
 			
 	\par Para armazenar os dados gerados e/ou recebidos, foi necessário fazer a
 intalação do Sistema Gerenciador de Banco de Dados(SGBD) \textit{PostGreSql} na
-sua versão de número 9.2.
+sua versão de número {9.4}. Como está sendo usado um sistema operacional
+baseado em GNU/Linux como ambiente de desenvolvimento, o mesmo foi instalado através do
+gerenciador de pacotes da distribuição. Além disso foi necessário criar um
+usuário no SGDB que tivesse permissão suficiente apenas para fazer as operações
+referentes ao banco de daodos do \textit{web service}, evitando assim a
+necessidade de se trabalhar diretamente com um usuário master do SGBD. 
+%Essa
+%medida foi tomada com intuito de prover maior segurança ao banco de dados do
+%\textit{web service} , pois um usuário master tem permissão total de acesso a
+%todos os bancos de dados gerenciados pelo SGBD.
 
 %eclipse
-	\par Eclipse ide 
+	\par Eclipse ide
 %maven 
 	\par Maven plugin
