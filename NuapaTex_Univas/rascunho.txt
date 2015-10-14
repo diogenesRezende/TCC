@@ -1,0 +1,27 @@
+Rascunho procedimentos e resultados
+
+
+01 - Criação do database
+02 - Início do projeto web com maven no eclipse;
+03 - Mapeamento orm;
+04 - HashCode e equals
+05 - Configuração do persistence.xml
+06 - Confecção JpaUtil.java
+07 - Explicar anotações dos pojos
+08 - Finalizando camada de persistência
+09 - Camada de serviço
+10 - Classes que disponibilizam serviços anotações
+11 - Explicar as entities criadas para disponibilizar os dados
+12 - Ctrls que fazem a busca dos dados
+13 - Problema do erro 500
+14 - Provedor de arquivos e contexto
+15 - Em todos citar o pom.xml
+16 - Configuração do web.xml
+17 - Módulo de varredura de atualizações com timerTask
+18 - Módulo de alerta de provas agendas no dia da prova
+19 - Configuração da conta no gcm
+20 - Módulo para disparar as mensagens para o gcm
+21 - Mostrar a estrutura do empacotamento depois de finalizado
+22 - Serviço que faz o registro de sender_id
+23 - Módulo que ira fazer a busca dos dados na base da instituição de ensino
+24 - Falar que vai ser simulado

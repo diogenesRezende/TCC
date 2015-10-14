@@ -1,5 +1,4 @@
 %\subsubsection{Montagem do Ambiente de Desenvolvimento}
-
 	\par No que diz respeito à contrução do \textit{webservice}, foi necessária a
 instalação e configuração de um ambiente de desenvolvimento compatível com as
 necessidades apresentadas pelo \textit{software}. 
@@ -16,33 +15,31 @@ além da funcionalidade com \textit{Servlets}, o \textit{Apache Tomcat} também 
 um servidor HTTP.
 	
 	\par O \textit{Apache Tomcat} foi instalado, por meio do \textit{download} de
-um arquivo \texttt{.zip} no site oficial do mesmo. A instalação consiste apenas
+um arquivo compactado no site oficial do mesmo. A instalação consiste apenas
 em extrair os dados do arquivo em uma pasta da preferência do desenvolvedor.
 Esta abordagem permitiu a integração do \textit{Apache Tomcat} com o
 IDE\footnote{IDE - \textit{Integrated Development Environment}}
-\textit{Eclipse}, além disso foi possível controlar e monitorar, o servidor de
-aplicações através da IDE. Além da configuração necessária para integrar o
-servidor à IDE, nem uma outra configuração foi necessária.
+\textit{Eclipse}, que foi usada para o desenvolvimento. Com isto foi possível
+controlar e monitorar, o servidor de aplicações através da IDE. Além da
+configuração necessária para integrar o servidor à IDE, nenhuma outra
+configuração foi necessária.
 
-	%\par No ambiente de produção como está sendo usado um sistema operacional
-%baseado em GNU/Linux, o mesmo foi instalado através do gerenciador de pacotes
-%da distribuição. Em ambos os casos não foram necessárias configurações além do
-%trivial de cada plataforma.
-			
+	\par Como ferramenta para desenvolvimento, foi usada a IDE \textit{Eclipse} na
+versão {4.4}, que é popularmente conhecida como Luna. O processo de instalação
+e configuração da IDE, se assemelha bastante ao processo de instalação do
+\textit{Apache Tomcat}, pois somente é necessário fazer o \textit{download} do
+arquivo compactado que é fornecido na página do projeto, e descompactá-lo no
+local preterido pelo desenvolvedor.
+
 	\par Para armazenar os dados gerados e/ou recebidos, foi necessário fazer a
 intalação do Sistema Gerenciador de Banco de Dados(SGBD) \textit{PostGreSql} na
 sua versão de número {9.4}. Como está sendo usado um sistema operacional
-baseado em GNU/Linux como ambiente de desenvolvimento, o mesmo foi instalado através do
-gerenciador de pacotes da distribuição. Além disso foi necessário criar um
-usuário no SGDB que tivesse permissão suficiente apenas para fazer as operações
-referentes ao banco de daodos do \textit{web service}, evitando assim a
-necessidade de se trabalhar diretamente com um usuário master do SGBD. 
-%Essa
-%medida foi tomada com intuito de prover maior segurança ao banco de dados do
-%\textit{web service} , pois um usuário master tem permissão total de acesso a
-%todos os bancos de dados gerenciados pelo SGBD.
-
-%eclipse
-	\par Eclipse ide
-%maven 
-	\par Maven plugin
+baseado em GNU/Linux como ambiente de desenvolvimento, o \textit{PostGreSql}
+foi instalado através do gerenciador de pacotes da distribuição. 
+ 
+	\par Foi necessário criar um usuário no SGDB que tivesse permissão suficiente
+apenas para fazer as operações referentes ao banco de daodos do \textit{web
+service}, evitando assim a necessidade de se trabalhar diretamente com um
+usuário master do SGBD. Esta medida foi tomada visando a segurança do banco de
+dados, pois com isto foi possível isolar e restringir as responsabilidades deste
+usuário.
