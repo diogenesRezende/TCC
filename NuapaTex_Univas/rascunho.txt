@@ -4,6 +4,8 @@ Rascunho procedimentos e resultados
 01 - Criação do database
 02 - Início do projeto web com maven no eclipse;
 03 - Mapeamento orm;
+	->Criação do pacote
+	->Criação das classe
 04 - HashCode e equals
 05 - Configuração do persistence.xml
 06 - Confecção JpaUtil.java
