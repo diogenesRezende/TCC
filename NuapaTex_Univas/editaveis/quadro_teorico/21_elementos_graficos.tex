@@ -1,0 +1,68 @@
+%\subsection{Elementos Gráficos}
+	
+	\par Em uma aplicação, um elemento fundamental é a interface gráfica, que
+deverá ser organizada, simples e elegante. O Android organiza os elementos
+gráficos (\textit{widgets}) através de \textit{layouts} Conforme
+\citeonline{monteiro2012} esses são os principais \textit{layouts} do sistema
+operacional Android:
+	
+		\begin{itemize}
+		
+			\item LinearLayout: permite posicionar os elementos em forma linear, dessa
+			forma quando o dispositivo estiver em forma vertical os itens ficarão um
+			abaixo do outro e quando estiver na horizontal eles ficarão um ao lado do
+			outro.
+			
+			\item RelativeLayout: permite posicionar elementos de forma relativa, ou
+			seja um \textit{widget} com relação a outro.
+			
+			\item TableLayout: permite criar \textit{layouts} em formato de tabelas. O
+			elemento TableRow representa uma linha da tabela e seus filhos são as
+			células.  Dessa maneira, caso um TableRow possua dois itens, significa que
+			essa linha tem duas colunas.
+			
+			\item DatePicker: \textit{widget} desenvolvido para a seleção de datas que
+			podem ser usadas diretamente no \textit{layout} ou através de caixas de
+			diálogo.
+		
+			\item Spinner: \textit{widget} que permite a seleção de itens, similar ao
+			\textit{combobox}.
+			
+			\item ListViews: permite exibir itens em uma listagem. Dessa forma, em uma
+			lista de compras, clicando em uma venda, é possível listar os detalhes dessa
+			venda selecionada.
+			
+			\item Action Bar: um item muito importante, pois apresenta na parte superior
+			aos usuários as opções existentes no aplicativo.
+			
+			\item AlertDialog: apresenta informações aos usuários através de uma caixa
+			de diálogo. Comumente utilizado para perguntar ao cliente o que deseja fazer
+			quando ele seleciona algum elemento.
+			
+			\item ProgressDialog e ProgressBar: utilizado quando uma aplicação necessita
+			de um recurso que levará um certo tempo para executar, como por exemplo,
+			fazer um \textit{download}, pode ser feito uma animação informando ao
+			usuário o progresso da operação.
+			 
+			\item SQLite: é um banco de dados embarcado na plataforma Android, que
+			armazena tabelas, \textit{views}, índices, \textit{triggers} em apenas um
+			arquivo. Somente é possível acessá-lo pela aplicação a qual o criou, e é
+			exluído caso o aplicativo seja removido.
+	
+		\end{itemize}
+	
+	\par Além dos recursos acima citados, um outro \textit{widget} que pode-se
+destacar é o ExpandableListView, que para \citeonline{android3}, exibe os itens
+em forma de uma lista similar ao ListView, o que diferencia-o é que ele mostra
+uma lista de dois níveis de rolagem vertical, em vez de abrir uma outra tela.
+
+	\par Outra ferramenta importante e muito utilizada do Android é a notificação.
+Segundo \citeonline{phillips2013}, quando uma aplicação está sendo executada em
+segundo plano e necessita comunicar-se com o usuário, o aplicativo cria uma
+notificação. Normalmente as notificações aparecem na barra superior, o qual
+pode ser acessado arrastando para baixo. Assim que o usuário clica na
+notificação, ela cria uma Intent para abrir a aplicação em questão.
+
+	\par Com a ideia de desenvolver um aplicativo para dispositivos móveis, a
+plataforma Android foi escolhida devido ao seu destaque no mercado e pela
+facilidade que apresenta aos usuários e desenvolvedores.
