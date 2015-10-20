@@ -44,7 +44,7 @@ que representam as entidades do ORM. O pacote recebeu o nome de
 classes que fazem parte do modelo de negócios da aplicação. Este pacote foi
 criado visando a divisão das responsabilidades internas no projeto, além de
 contribuir positivamente com a organização do mesmo. Tal pacote e as classes
-que a estão representandos na figura \ref{fig:desws1}.
+que o compõe estão representandos na figura \ref{fig:desws1}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws.png}}
@@ -58,8 +58,11 @@ que a estão representandos na figura \ref{fig:desws1}.
 criada primeiramente a classe \texttt{Student.java}. Para que esta classe
 pudesse ser reconhecida como um entidade e persistida ao banco de dados através
 do \textit{Hibernate}, é necessário que esta classe tivesse a anotação
-\texttt{@Entity}. Esta classe representa a tabela \texttt{students} no banco de
-dados.
+\texttt{@Entity}. Com isso esta classe ja poderia ser entendida como uma
+entidade e poderia ser persistida no banco de dados, porém além dessa anotação
+outras foram usadas para que a persistência pudesse ocorrer de forma
+consistente.
+
 
 
 
