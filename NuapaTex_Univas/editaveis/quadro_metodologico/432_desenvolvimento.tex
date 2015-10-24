@@ -2,13 +2,13 @@
 
 	%01 - Criação do database
 	
-	\par Com o ambiente de desenvolvimento pronto, podia-se começar de fato a
-desenvolver. Primeiramente foi necessário criar o banco de dados no SGDB. Este
-por sua vez foi criado com a ajuda do PgAdmin que é um software gráfico para
-administração do SGDB, e que fornece uma interface gráfica de apoio para o
-PotgreSql. Para criar era necessário ja estar com o PgAdmin aberto e conectado a
-um servidor de banco de dados que neste caso era em servidor local como pode ser
-visto na Figura \ref{fig:desws}.
+	\par Com o ambiente de desenvolvimento pronto, começou de fato o
+desenvolvimento. Primeiramente foi necessário criar o banco de dados no SGDB.
+Este por sua vez foi criado com a ajuda do PgAdmin que é um software gráfico
+para administração do SGDB, e que fornece uma interface gráfica de apoio para o
+PotgreSql. Para criar era necessário ja estar com o PgAdmin aberto e conectado
+a um servidor de banco de dados que neste caso era em servidor local como pode
+ser visto na Figura \ref{fig:desws}.
 
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=1]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws.png}}
@@ -18,27 +18,34 @@ visto na Figura \ref{fig:desws}.
 		\label{fig:desws}
 	\end{figure}
 	
+	\pagebreak
+	
 	\par Para a efetiva criação do banco de dados era necessário clicar com o botão
 direito do \textit{mouse}, sobre a opção \textit{Databases}>\textit{New
-Database..} no PgAdmin. Em seguida foi necessário preencher o dados da janela
+Database\ldots} no PgAdmin. Em seguida foi necessário preencher o dados da janela
 apresentada, como está apresentado na Figura \ref{fig:desws1}.
 
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=1]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws1.png}}
-		\caption[\texttt{pom.xml}]{\texttt{pom.xml}.
+		\caption[Tela \textit{New Database\ldots}]{Tela \textit{New Database\ldots}.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws1}
 	\end{figure}
+	
+	\pagebreak
 
-	\par O banco foi criado, porém sua estrutura não foi definida, pois como será
-visto mais adiante o Hibernate, possui um mecanismo, que com algumas
-configurações, permite a estruturação do banco de dados, de acordo com o
-mapeamento objeto relacional. Isto permitirá mudanças na estrutura do banco de
-dados e suas tabelas, e até mesmo eventuais correções.
-
+	\par Como pode ser visto foram preenchidos os campos nome e usuário . O campo
+nome se refere ao nome do banco de dados que foi definido com
+\texttt{wsappunivas}, e o usuário responsável pelo banco, que para este caso foi
+usuário padrão do SGDB, que é o \texttt{postgres}. Além destas configurações
+mais nenhuma foi necessária. O banco foi criado, porém sua estrutura não foi
+definida, pois como será visto mais adiante o Hibernate, possui um mecanismo,
+que com algumas configurações, permite a estruturação do banco de dados, de
+acordo com o mapeamento objeto-relacional. Isto permitirá mudanças na estrutura
+do banco de dados e suas tabelas, e até mesmo eventuais correções.
+	
 	%02 - Início do projeto web com maven no eclipse;
-
-	\par Em seguida foi criado um projeto do tipo \textit{web} no Eclipse
+	\par Em seguida foi criado um projeto do tipo Dynamic Web Project no Eclipse.
  
 
 	\par com a ajuda do plugin Maven. Esse Projeto foi criado usando o
@@ -49,15 +56,9 @@ de um projeto Java.
 	\par Para tal projeto foi necessário a configuração do \texttt{POM.xml} que é o
 arquivo utilizado pelo Maven. Nele estão contidas as configurações
 relativas à compilação do projeto bem como suas dependências.  Na figura
-\ref{fig:desws} a seguir pode ser visto o conteúdo do arquivo
+ a seguir pode ser visto o conteúdo do arquivo
 \texttt{POM.xml}.
 
-\begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws1.png}}
-	\caption[\texttt{pom.xml}]{\texttt{pom.xml}.
-		\textbf{Fonte:}Elaborado pelos autores.}
-	\label{fig:desws}
-\end{figure}
 
 	%03 - Mapeamento orm;
 	
@@ -71,14 +72,9 @@ que representam as entidades do ORM. O pacote recebeu o nome de
 classes que fazem parte do modelo de negócios da aplicação. Este pacote foi
 criado visando a divisão das responsabilidades internas no projeto, além de
 contribuir positivamente com a organização do mesmo. Tal pacote e as classes
-que o compõe estão representandos na figura \ref{fig:desws1}.
+que o compõe estão representandos na figura.
 
-\begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws2.png}}
-	\caption[Estrutura do Projeto]{Estrutura do Projeto.
-		\textbf{Fonte:}Elaborado pelos autores.}
-	\label{fig:desws1}
-\end{figure}
+
 		
 		%	->Criação das classes
 	\par Com este pacote criado, ja era possível criar as classes do ORM. Foi
