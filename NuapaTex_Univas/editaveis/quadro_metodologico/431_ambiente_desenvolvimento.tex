@@ -1,41 +1,41 @@
 %\subsubsection{Montagem do Ambiente de Desenvolvimento}
-	\par No que diz respeito à contrução do \textit{webservice}, foi necessária a
-instalação e configuração de um ambiente de desenvolvimento compatível com as
-necessidades apresentadas pelo \textit{software}. 
-
-	\par A princípio foi instalado o \textit{Servlet Container Apache Tomcat} em
-sua versão de número 7. Esse \textit{Servlet Container} foi instalado pois
-implementa a API da especificação \textit{Servlets} 3.0 do \textit{Java}. Isso
-era necessário pelo fato que o \textit{framework Jersey} usa \textit{servlets}
-para disponibilizar serviços REST. Além disso o \textit{Apache Tomcat} foi
-escolhido, para que o \textit{WebService} pudesse fornecer os serviços
-necessários para o consumo, na arquitetura REST, que sugere o uso do protocolo
-HTTP\footnote{HTTP - Hypertext Transfer Protocol} para troca de mensagens, pois
-além da funcionalidade com \textit{Servlets}, o \textit{Apache Tomcat} também é
-um servidor HTTP.
 	
-	\par O \textit{Apache Tomcat} foi instalado, por meio do \textit{download} de
-um arquivo compactado no site oficial do mesmo. A instalação consiste apenas
-em extrair os dados do arquivo em uma pasta da preferência do desenvolvedor.
-Esta abordagem permitiu a integração do \textit{Apache Tomcat} com o
-IDE\footnote{IDE - \textit{Integrated Development Environment}}
-\textit{Eclipse}, que foi usada para o desenvolvimento. Com isto foi possível
-controlar e monitorar, o servidor de aplicações através da IDE. Além da
-configuração necessária para integrar o servidor à IDE, nenhuma outra
-configuração foi necessária.
+	\par No que diz respeito à contrução do \textit{web service}, foi necessária a
+instalação e configuração de um ambiente de desenvolvimento compatível com as
+necessidades apresentadas pelo software.
 
-	\par Como ferramenta para desenvolvimento, foi usada a IDE \textit{Eclipse} na
-versão {4.4}, que é popularmente conhecida como Luna. O processo de instalação
-e configuração da IDE, se assemelha bastante ao processo de instalação do
-\textit{Apache Tomcat}, pois somente é necessário fazer o \textit{download} do
-arquivo compactado que é fornecido na página do projeto, e descompactá-lo no
-local preterido pelo desenvolvedor.
+	\par A princípio foi instalado o Servlet Container Apache Tomcat em sua versão
+de número {7}. Esse Servlet Container foi instalado pois implementa a API da
+especificação Servlets {3.0} do Java. Isso era necessário pelo fato que o
+\textit{framework} Jersey usa \textit{servlets} para disponibilizar serviços
+REST. Além disso o Apache Tomcat foi escolhido, para que o \textit{web service}
+pudesse fornecer os serviços necessários para o consumo, na arquitetura REST,
+que sugere o uso do protocolo HTTP\footnote{HTTP - Hypertext Transfer Protocol}
+para troca de mensagens, pois além da funcionalidade com Servlets, o Apache
+Tomcat também é um servidor HTTP.
+	
+	\par O Apache Tomcat foi instalado, por meio do \textit{download} de um
+arquivo compactado no site oficial do mesmo. A instalação consiste apenas em
+extrair os dados do arquivo em uma pasta da preferência do desenvolvedor.
+Esta abordagem permitiu a integração do Apache Tomcat com o
+IDE\footnote{IDE - Integrated Development Environment}
+Eclipse, que foi usada para o desenvolvimento. Com isto foi possível controlar
+e monitorar, o servidor de aplicações através da IDE. Além da configuração
+necessária para integrar o servidor à IDE, nenhuma outra configuração foi
+necessária.
+
+	\par Como ferramenta para desenvolvimento, foi usada a IDE Eclipse na versão
+{4.4}, que é popularmente conhecida como Luna. O processo de instalação e
+configuração da IDE, se assemelha bastante ao processo de instalação do Apache
+Tomcat, pois somente é necessário fazer o download do arquivo compactado que é
+fornecido na página do projeto, e descompactá-lo no local preterido pelo
+desenvolvedor.
 
 	\par Para armazenar os dados gerados e/ou recebidos, foi necessário fazer a
-intalação do Sistema Gerenciador de Banco de Dados(SGBD) \textit{PostGreSql} na
-sua versão de número {9.4}. Como está sendo usado um sistema operacional
-baseado em GNU/Linux como ambiente de desenvolvimento, o \textit{PostGreSql}
-foi instalado através do gerenciador de pacotes da distribuição. 
+intalação do Sistema Gerenciador de Banco de Dados(SGBD) PostGreSql na sua
+versão de número {9.4}. Como está sendo usado um sistema operacional baseado em
+GNU/Linux como ambiente de desenvolvimento, o PostGreSql foi instalado através
+do gerenciador de pacotes da distribuição.
  
 	\par Foi necessário criar um usuário no SGDB que tivesse permissão suficiente
 apenas para fazer as operações referentes ao banco de daodos do \textit{web

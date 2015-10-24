@@ -3,30 +3,57 @@
 	%01 - Criação do database
 	
 	\par Com o ambiente de desenvolvimento pronto, podia-se começar de fato a
-desenvolver. Primeiramente foi necessário criar o banco dedados no SGDB. O
-banco foi criado, porém sua estrutura não foi definida, pois como será
-visto mais adiante o \textit{Hibernate}, possui um mecanismo, que com algumas
+desenvolver. Primeiramente foi necessário criar o banco de dados no SGDB. Este
+por sua vez foi criado com a ajuda do PgAdmin que é um software gráfico para
+administração do SGDB, e que fornece uma interface gráfica de apoio para o
+PotgreSql. Para criar era necessário ja estar com o PgAdmin aberto e conectado a
+um servidor de banco de dados que neste caso era em servidor local como pode ser
+visto na Figura \ref{fig:desws}.
+
+	\begin{figure}[h!]
+		\centerline{\includegraphics[scale=1]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws.png}}
+		\caption[Servidor de banco de dados local no PgAdmin]{Servidor de banco de
+		dados local no PgAdmin.
+			\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws}
+	\end{figure}
+	
+	\par Para a efetiva criação do banco de dados era necessário clicar com o botão
+direito do \textit{mouse}, sobre a opção \textit{Databases}>\textit{New
+Database..} no PgAdmin. Em seguida foi necessário preencher o dados da janela
+apresentada, como está apresentado na Figura \ref{fig:desws1}.
+
+	\begin{figure}[h!]
+		\centerline{\includegraphics[scale=1]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws1.png}}
+		\caption[\texttt{pom.xml}]{\texttt{pom.xml}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws1}
+	\end{figure}
+
+	\par O banco foi criado, porém sua estrutura não foi definida, pois como será
+visto mais adiante o Hibernate, possui um mecanismo, que com algumas
 configurações, permite a estruturação do banco de dados, de acordo com o
 mapeamento objeto relacional. Isto permitirá mudanças na estrutura do banco de
 dados e suas tabelas, e até mesmo eventuais correções.
 
 	%02 - Início do projeto web com maven no eclipse;
 
-	\par Em seguida foi criado um projeto do tipo \textit{web} no \textit{Eclipse}
-com a ajuda do plugin \textit{Maven}. O \textit{archetype} usado foi
-\textit{Quick Star WebApp}. Esse Projeto foi criado usando o \textit{Maven}
-pois depende de uma quantidade considerável de \textit{frameworks}, e uma das
+	\par Em seguida foi criado um projeto do tipo \textit{web} no Eclipse
+ 
+
+	\par com a ajuda do plugin Maven. Esse Projeto foi criado usando o
+Maven pois depende de uma quantidade considerável de \textit{frameworks}, e uma das
 principais funcionalidades deste plugin, é ajudar na resolução das dependências
 de um projeto Java.
 
 	\par Para tal projeto foi necessário a configuração do \texttt{POM.xml} que é o
-arquivo utilizado pelo \textit{Maven}. Nele estão contidas as configurações
+arquivo utilizado pelo Maven. Nele estão contidas as configurações
 relativas à compilação do projeto bem como suas dependências.  Na figura
 \ref{fig:desws} a seguir pode ser visto o conteúdo do arquivo
 \texttt{POM.xml}.
 
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws.png}}
+	\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws1.png}}
 	\caption[\texttt{pom.xml}]{\texttt{pom.xml}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 	\label{fig:desws}
@@ -47,7 +74,7 @@ contribuir positivamente com a organização do mesmo. Tal pacote e as classes
 que o compõe estão representandos na figura \ref{fig:desws1}.
 
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws.png}}
+	\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws2.png}}
 	\caption[Estrutura do Projeto]{Estrutura do Projeto.
 		\textbf{Fonte:}Elaborado pelos autores.}
 	\label{fig:desws1}
@@ -57,7 +84,7 @@ que o compõe estão representandos na figura \ref{fig:desws1}.
 	\par Com este pacote criado, ja era possível criar as classes do ORM. Foi
 criada primeiramente a classe \texttt{Student.java}. Para que esta classe
 pudesse ser reconhecida como um entidade e persistida ao banco de dados através
-do \textit{Hibernate}, é necessário que esta classe tivesse a anotação
+do Hibernate, é necessário que esta classe tivesse a anotação
 \texttt{@Entity}. Com isso esta classe ja poderia ser entendida como uma
 entidade e poderia ser persistida no banco de dados, porém além dessa anotação
 outras foram usadas para que a persistência pudesse ocorrer de forma
@@ -72,17 +99,17 @@ consistente.
 			
 	
 		\par Fazendo uso desse diagrama foi possível criar todas as classes 
-	\textit{Java} que representam as entidades do mapeamento objeto-relacional. 
+	Java que representam as entidades do mapeamento objeto-relacional. 
 	Essas classes foram criadas fazendo uso de anotações próprias do
-	\textit{Hibernate}, que é um \textit{framework} que implementa a especificação
-	JPA\footnote{JPA - \textit{Java Persistense API}}. Essas classes fazem parte
+	Hibernate, que é um \textit{framework} que implementa a especificação
+	JPA\footnote{JPA - Java Persistense API}. Essas classes fazem parte
 	dos mecanismos de persistêcia de dados e são simplesmente t ou seja, objetos
 	simples que contêm somente atributos privados e os métodos \textit{getters} e
 	\textit{setters} que servem apenas para encapsular estes atributos. Uma das
 	classes criadas, foi a classe \texttt{Aluno.java} que representa a tabela
 	\texttt{alunos} no banco de dados e está representada.
 		
-		\par Foram criadas outras classes \textit{Java} com a mesma finalidade da
+		\par Foram criadas outras classes Java com a mesma finalidade da
 	anterior, porém com pequenas diferenças no que diz respeito à atributos,
 	metodos e anotações. Estas classes representam, de maneira individual, as
 	tabelas no banco de dados. Certos atributos dessas classes têm por finalidade
@@ -100,7 +127,7 @@ consistente.
 		%05 - Configuração do persistence.xml
 		\par Em seguida à criação das entidades, foi necessário configurar o arquivo
 	\texttt{persistence.xml} que fica dentro do \textit{classpath} do projeto
-	\textit{Java} ou seja, dentro da mesma pasta onde estão contidos pacotes do
+	Java ou seja, dentro da mesma pasta onde estão contidos pacotes do
 	projeto. Este arquivo é extremamente importante, pois é nele que estão todas
 	as configurações relativas à conexão com o banco de dados, configurações
 	referentes ao Dialeto SQL que vai ser usado para as consultas e configurações
@@ -137,12 +164,12 @@ consistente.
 		
 	\par Em seguida à construção das classes que fazem a parte da persistência de
 dados, foi desenvolvido a parte de disponibilização de serviços
-\textit{RESTful}, fazendo uso do \textit{framework} \textit{Jersey}. Com isso
+RESTful, fazendo uso do \textit{framework} Jersey. Com isso
 pode-se construir a classe que representa o primeiro serviço do
 \textit{webservice}, que é a classe \texttt{Alunos}. Essa classe representa um
 contexto REST, e portanto, dispõe de alguns recursos. Esses recursos fazem a
-recuperação e a transmissão dos dados do \textit{webservice} para o aplicativo
-\textit{Android}. Essa classe e seus respectivos métodos  estão representada na
+recuperação e a transmissão dos dados do \textit{web service} para o aplicativo
+Android. Essa classe e seus respectivos métodos  estão representada na
 Figura \ref{fig:qm13}.
 
 		\begin{figure}[h!]
@@ -155,13 +182,13 @@ Figura \ref{fig:qm13}.
 		\par O \textit{webservice} pode fazer a busca de alunos pelo \texttt{id}
 passado ou retornar uma coleção de eventos vinculados a um alunos, dependendo
 do recurso acessado. Os tipos de dados que o \textit{webservice} consome e
-retorna é o JSON\footnote{JSON - \textit{Javascript Object Notation}}. Não foi
+retorna é o JSON\footnote{JSON - Javascript Object Notation}. Não foi
 necessário fazer nenhuma implementação adicional relativa a este formato, pois
-o próprio \textit{framework Jersey} faz o tratamento e a conversão dos tipos de
+o próprio \textit{framework} Jersey faz o tratamento e a conversão dos tipos de
 entrada e saída de dados. No caso do saída de dados, faz a conversão de objetos 
-\textit{Java} para JSON. E no caso de entrada tranforma um JSON em objeto
-\textit{Java} já conhecido pelo \textit{webservice}. Com isso concluiu-se o
-desenvolvimento do \textit{webservice} que fornece os dados para o aplicativo.
+Java para JSON. E no caso de entrada tranforma um JSON em objeto
+Java já conhecido pelo \textit{web service}. Com isso concluiu-se o
+desenvolvimento do \textit{web service} que fornece os dados para o aplicativo.
 
 	%23 - Módulo que ira fazer a busca dos dados na base da instituição de ensino
 	%24 - Falar que vai ser simulado
@@ -174,7 +201,7 @@ necessários para a base de dados do \textit{web service}.
 	\par Este por sua vez terá a responsabilidade de fazer a importação dos dados
 periodicamente, e ainda tratar os tipos de dados recebidos para tipos
 aplicáveis ao banco de dados local. Além disso é preciso notificar o módulo
-responsável por invocar o serviço \textit{Google Cloud Messaging} para que os
+responsável por invocar o serviço Google Cloud Messaging para que os
 dispositivos dos alunos aos quais houveram atualizações nos dados, fossem
 notificados e fizessem acesso ao \textit{web service} para solicitar esses
 dados atualizados.
