@@ -1,0 +1,53 @@
+\begin{lstlisting} [style=custom_Java]	
+	package br.edu.univas.restapiapp.model;
+	/**
+	 *imports omitidos
+	 */
+	
+	@Entity
+	@Table(name = "student")
+	public class Student {
+	
+		@Id
+		@SequenceGenerator(name = "id_student", sequenceName = "seq_id_student",
+			allocationSize = 1) 
+		@GeneratedValue(generator = "id_student", strategy = GenerationType.IDENTITY)
+		@Column(name = "id_student", nullable = false)
+		private Long idStudent;
+	
+		@Column(name = "id_external", nullable = false)
+		private Long idDatabaseExternal;
+	
+		@Column(length = 100, nullable = false)
+		private String name;
+	
+		@Column(length = 100, nullable = false)
+		private String email;
+	
+		@OneToMany(mappedBy="student", fetch = FetchType.EAGER)
+		private List<Event> events;
+	
+		@OneToOne(optional = false, fetch = FetchType.LAZY)
+		@JoinColumn(name = "id_user")
+		private User user;
+	
+		/**
+		 * Omitidos todos Getters e Setters
+		 */
+	
+		@Override
+		public int hashCode() {
+			/**
+			 * Omitido
+			 */
+		}
+	
+		@Override
+		public boolean equals(Object obj) {
+			/**
+			 * Omitido
+			 */
+		}
+	
+	}
+\end{lstlisting}

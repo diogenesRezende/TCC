@@ -52,9 +52,9 @@ este caso foi usuário padrão do SGDB, que é o \texttt{postgres}. Além destas
 configurações mais nenhuma foi necessária. O banco de dados foi criado, porém
 sua estrutura não foi definida, pois como será visto mais adiante o Hibernate,
 possui um mecanismo, que com algumas configurações, permite a estruturação do
-banco de dados, de acordo com o mapeamento objeto-relacional. Isto permitirá
-mudanças na estrutura do banco de dados e suas tabelas, e até mesmo eventuais
-correções.
+banco de dados, de acordo com o mapeamento objeto-relacional e de acordo com a
+evolução do projeto. Isto permitirá mudanças na estrutura do banco de dados e
+suas tabelas, e até mesmo eventuais correções.
 	
 	%02 - Início do projeto web no eclipse;
 	\par Em seguida foi criado um projeto do tipo Dynamic Web Project no
@@ -101,13 +101,13 @@ a Figura \ref{fig:desws5}.
 	
 	\pagebreak
 	
-	\par Na sequencia, na tela que foi apresentada era necessário cadastrar
-preencher o campo \textbf{Context root:} com o contexto principal da aplicação
-web que acabou mantendo o próprio nome da aplicação. Além disso foi marcado a
-opção \textbf{Generate web.xml deployment descriptor}, para que ao criar o
-projeto, a própria IDE criasse o arquivo \texttt{web.xml}, arquivo responsável
-por algumas configurações da aplicação web. Esta tela esta apresentada na
-Figura \ref{fig:desws6}.
+	\par Na sequencia, na tela que foi apresentada era necessário preencher o
+campo \textbf{Context root:} com o contexto principal da aplicação web que
+acabou mantendo o próprio nome da aplicação. Além disso foi marcado a opção
+\textbf{Generate web.xml deployment descriptor}, para que ao criar o projeto, a
+própria IDE criasse o arquivo \texttt{web.xml}, arquivo responsável por algumas
+configurações da aplicação web. Esta tela esta apresentada na Figura
+\ref{fig:desws6}.
 
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws6.png}}
@@ -137,8 +137,8 @@ necessário clicar com o botão direito do mouse sobre o projeto e acessar a op�
 	
 	\pagebreak 
 	
-	\par Em seguida foi apresentado a tela para a criação de um novo pacote
-mostrada na Figura \ref{fig:desws8}. O pacote recebeu o nome de
+	\par Em seguida foi apresentada a janela New Java Package, para a criação de
+um novo pacote mostrada na Figura \ref{fig:desws8}. O pacote recebeu o nome de
 "\texttt{br.edu.univas.restapiappunivas.model}", pois nele estão contidas as
 classes que fazem parte do modelo de negócios da aplicação. Este pacote foi
 criado visando a divisão das responsabilidades internas no projeto, além de
@@ -152,90 +152,139 @@ contribuir positivamente com a organização do mesmo.
 	\end{figure}
 	
 	\pagebreak
-
-
 		
 		%	->Criação das classes
 	\par Com este pacote criado, ja era possível criar as classes do ORM. Foi
-criada primeiramente a classe \texttt{Student.java}. Para que esta classe
-pudesse ser reconhecida como um entidade e persistida ao banco de dados através
-do Hibernate, é necessário que esta classe tivesse a anotação
-\texttt{@Entity}. Com isso esta classe ja poderia ser entendida como uma
-entidade e poderia ser persistida no banco de dados, porém além dessa anotação
-outras foram usadas para que a persistência pudesse ocorrer de forma
-consistente.
+criada primeiramente a classe \texttt{Student.java}. Para a criação desta classe
+foi necesário clicar com o botão direito do \textit{mouse} sobre o projeto e
+navegar até a opção \textbf{New -> Class} como pode ser visto na Figura
+\ref{fig:desws9}. 
 
-
-
-
-
-	
-	
-			
-	
-		\par Fazendo uso desse diagrama foi possível criar todas as classes 
-	Java que representam as entidades do mapeamento objeto-relacional. 
-	Essas classes foram criadas fazendo uso de anotações próprias do
-	Hibernate, que é um \textit{framework} que implementa a especificação
-	JPA\footnote{JPA - Java Persistense API}. Essas classes fazem parte
-	dos mecanismos de persistêcia de dados e são simplesmente t ou seja, objetos
-	simples que contêm somente atributos privados e os métodos \textit{getters} e
-	\textit{setters} que servem apenas para encapsular estes atributos. Uma das
-	classes criadas, foi a classe \texttt{Aluno.java} que representa a tabela
-	\texttt{alunos} no banco de dados e está representada.
-		
-		\par Foram criadas outras classes Java com a mesma finalidade da
-	anterior, porém com pequenas diferenças no que diz respeito à atributos,
-	metodos e anotações. Estas classes representam, de maneira individual, as
-	tabelas no banco de dados. Certos atributos dessas classes têm por finalidade
-	representar as colunas de cada tabela. Já os atributos que armazenam instâncias
-	de outras classes ou até mesmo conjuntos (coleções) de instâncias representam os
-	relacionamentos entre as tabelas. 
-	
-		%04 - HashCode e equals
-		\par E por fim, para cada classe querepresenta uma 	entidade, foi necessário
-	implementar os métodos \texttt{hashCode} e \texttt{equals}, para que estas
-	pudessem facilmente ser comparadas e diferenciadas em relação aos seus
-	valores, haja visto que cada instância destas classes representa um registro
-	no banco de dados.
-		
-		%05 - Configuração do persistence.xml
-		\par Em seguida à criação das entidades, foi necessário configurar o arquivo
-	\texttt{persistence.xml} que fica dentro do \textit{classpath} do projeto
-	Java ou seja, dentro da mesma pasta onde estão contidos pacotes do
-	projeto. Este arquivo é extremamente importante, pois é nele que estão todas
-	as configurações relativas à conexão com o banco de dados, configurações
-	referentes ao Dialeto SQL que vai ser usado para as consultas e configurações
-	referentes ao \textit{persistence unit} que é o conjunto de classes mapeadas
-	para o banco de dados.	O arquivo \texttt{persistence.xml} está exposto no
-	código \ref{fig:qm11}.
-	
- 		\begin{figure}[h!]
-			\centerline{\includegraphics[scale=0.6]{./imagens/2_q_metodologico/qm11.png}}
-			\caption[Arquivo \texttt{persistence.xml}]{Arquivo \texttt{persistence.xml}.
+	\begin{figure}[h!]
+		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws9.png}}
+		\caption[Sem legenda]{Sem legenda.
 			\textbf{Fonte:}Elaborado pelos autores.}
-			\label{fig:qm11}
-		\end{figure}
-		
-			%06 - Confecção JpaUtil.java
-			\par Em seguida à confecção do \texttt{persistence.xml} foi criada a
-		classe \texttt{JpaUtil} que está representada na Figura \ref{fig:qm12}.
-		Esta classe é responsável por criar uma \texttt{EntityManagerFactory} que é
-		uma  fábrica de instâncias de \texttt{EntityManager} que nada mais é que um
-		\textit{persistence unit} ou unidade de persistência. Essa classe tem a
-		responsabilidade de prover um modo de comunicação entre a aplicação e o banco
-		de dados. No entanto a classe \texttt{JpaUtil} cria uma única instância de
-		\texttt{EntityManagerFactory}, que é responsável por disponibilizar e
-		gerenciar as instâncias de \texttt{EntityManager} de acordo com a necessidade
-		da aplicação.
-		
-		\pagebreak
-		\begin{figure}[h!]
-			\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/qm12.png}}
-			\caption[Classe \texttt{JpaUtil}]{Classe \texttt{JpaUtil}.
+		\label{fig:desws9}
+	\end{figure}
+	
+	\pagebreak
+
+
+	\par Em seguida foi apresentada uma janela chamada New Java Class. Nesta
+janela somente foi necessário preencher o campo \textbf{Name:} que representa o
+nome da classe que está sendo criada.
+	
+	
+	
+	 \begin{figure}[h!]
+		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws10.png}}
+		\caption[Sem legenda]{Sem legenda.
 			\textbf{Fonte:}Elaborado pelos autores.}
-			\label{fig:qm12}
-		\end{figure}
+		\label{fig:desws10}
+	\end{figure}
+	
+	\pagebreak
+
+	\par Esta classe foi definida para representar as informações referente aos
+alunos. o código da classe pode ser visto na Figura \ref{fig:desws11}. 
+	
+	
+	\begin{figure}[h!]
+		\input{code/student_java}
+		\caption[Sem legenda]{Sem legenda.
+			\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws11}
+	\end{figure}
+	
+	\pagebreak
+	
+	\par É válido lembrar esta classe possui anotações para que possa ser
+reconhecida como uma entidade do JPA, e assim persistida no banco de dados
+quando necessário. Além disso estas anotações possuem outras finalidades
+específica. A seguir estão listadas todas as anotações da classe
+\texttt{Student.java} e qual sua funcionalidade:
+
+	\begin{itemize}
+	  \item \texttt{@Entity}
+	  \item \texttt{@Table(name="student")} 
+	  \item \texttt{@Entity}
+	  \item \texttt{@Entity}
+	  \item \texttt{@Entity}
+	  \item \texttt{@Entity}
+	  \item \texttt{@Entity}
+	  \item \texttt{@Entity}
+	  \item \texttt{@Entity}
+\end{itemize}
+
+	
+	
+	
+	\par Com isso esta classe ja poderia ser entendida como uma entidade e
+poderia ser persistida no banco de dados, porém além dessa anotação outras
+foram usadas para que a persistência pudesse ocorrer de forma consistente.
+	
+ 
+	\par Estas classes foram criadas fazendo uso de anotações próprias do
+Hibernate, que é um \textit{framework} que implementa a especificação
+JPA\footnote{JPA - Java Persistense API}. Essas classes fazem parte dos
+mecanismos de persistêcia de dados e são simplesmente pojos ou seja, objetos
+simples que contêm somente atributos privados e os métodos \textit{getters} e
+\textit{setters} que servem apenas para encapsular estes atributos. Uma das
+classes criadas, foi a classe \texttt{Aluno.java} que representa a tabela
+\texttt{alunos} no banco de dados e está representada.
+	
+	\par Foram criadas outras classes Java com a mesma finalidade da
+anterior, porém com pequenas diferenças no que diz respeito à atributos,
+metodos e anotações. Estas classes representam, de maneira individual, as
+tabelas no banco de dados. Certos atributos dessas classes têm por finalidade
+representar as colunas de cada tabela. Já os atributos que armazenam instâncias
+de outras classes ou até mesmo conjuntos (coleções) de instâncias representam os
+relacionamentos entre as tabelas. 
+
+	%04 - HashCode e equals
+	\par E por fim, para cada classe querepresenta uma 	entidade, foi necessário
+implementar os métodos \texttt{hashCode} e \texttt{equals}, para que estas
+pudessem facilmente ser comparadas e diferenciadas em relação aos seus
+valores, haja visto que cada instância destas classes representa um registro
+no banco de dados.
+	
+	%05 - Configuração do persistence.xml
+	\par Em seguida à criação das entidades, foi necessário configurar o arquivo
+\texttt{persistence.xml} que fica dentro do \textit{classpath} do projeto
+Java ou seja, dentro da mesma pasta onde estão contidos pacotes do
+projeto. Este arquivo é extremamente importante, pois é nele que estão todas
+as configurações relativas à conexão com o banco de dados, configurações
+referentes ao Dialeto SQL que vai ser usado para as consultas e configurações
+referentes ao \textit{persistence unit} que é o conjunto de classes mapeadas
+para o banco de dados.	O arquivo \texttt{persistence.xml} está exposto na
+Figura \ref{fig:qm11}.
+
+	\begin{figure}[h!]
+		\input{code/persistence_xml}
+		\caption[Arquivo \texttt{persistence.xml}]{Arquivo \texttt{persistence.xml}.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:qm11}
+	\end{figure}
+	
+	%06 - Confecção JpaUtil.java
+	\par Em seguida à confecção do \texttt{persistence.xml} foi criada a
+classe \texttt{JpaUtil} que está representada na Figura \ref{fig:qm12}.
+Esta classe é responsável por criar uma \texttt{EntityManagerFactory} que é
+uma  fábrica de instâncias de \texttt{EntityManager} que nada mais é que um
+\textit{persistence unit} ou unidade de persistência. Essa classe tem a
+responsabilidade de prover um modo de comunicação entre a aplicação e o banco
+de dados. No entanto a classe \texttt{JpaUtil} cria uma única instância de
+\texttt{EntityManagerFactory}, que é responsável por disponibilizar e
+gerenciar as instâncias de \texttt{EntityManager} de acordo com a necessidade
+da aplicação.
+	
+	\pagebreak
+	\begin{figure}[h!]
+		\input{code/jpaUtil}
+		\caption[Classe \texttt{JpaUtil.java}]{Classe \texttt{JpaUtil.java}.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:qm12}
+	\end{figure}
 		
 	\par Em seguida à construção das classes que fazem a parte da persistência de
 dados, foi desenvolvido a parte de disponibilização de serviços
@@ -245,14 +294,7 @@ pode-se construir a classe que representa o primeiro serviço do
 contexto REST, e portanto, dispõe de alguns recursos. Esses recursos fazem a
 recuperação e a transmissão dos dados do \textit{web service} para o aplicativo
 Android. Essa classe e seus respectivos métodos  estão representada na
-Figura \ref{fig:qm13}.
-
-		\begin{figure}[h!]
-			\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/qm13.png}}
-			\caption[Classe \texttt{AlunosService}]{Classe \texttt{AlunosService}.
-			\textbf{Fonte:}Elaborado pelos autores.}
-			\label{fig:qm13}
-		\end{figure}
+Figura .
 		
 		\par O \textit{webservice} pode fazer a busca de alunos pelo \texttt{id}
 passado ou retornar uma coleção de eventos vinculados a um alunos, dependendo
@@ -286,20 +328,6 @@ propósito de se alcançar os resultados esperados para essa pesquisa.
 
 
 
-%pom.xml
-\par Com a ajuda do plugin Maven. Esse Projeto foi criado usando o
-Maven pois depende de uma quantidade considerável de \textit{frameworks}, e uma das
-principais funcionalidades deste plugin, é ajudar na resolução das dependências
-de um projeto Java.
-
-	\par Para tal projeto foi necessário a configuração do \texttt{POM.xml} que é o
-arquivo utilizado pelo Maven. Nele estão contidas as configurações
-relativas à compilação do projeto bem como suas dependências.  Na figura
- a seguir pode ser visto o conteúdo do arquivo
-\texttt{POM.xml}.
-
-
-
 
 
 
@@ -315,7 +343,6 @@ relativas à compilação do projeto bem como suas dependências.  Na figura
 %16 - Configuração do web.xml
 %17 - Módulo de varredura de atualizações com timerTask
 %18 - Módulo de alerta de provas agendas no dia da prova
-%19 - Configuração da conta no gcm
 %20 - Módulo para disparar as mensagens para o gcm
-%21 - Mostrar a estrutura do empacotamento depois de finalizado
-%22 - Serviço que faz o registro de sender_id
+%21 - Serviço que faz o registro de sender_id
+%22 - Mostrar a estrutura do empacotamento depois de finalizado
