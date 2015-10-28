@@ -201,48 +201,63 @@ alunos. o código da classe pode ser visto na Figura \ref{fig:desws11}.
 	\par É válido lembrar esta classe possui anotações para que possa ser
 reconhecida como uma entidade do JPA, e assim persistida no banco de dados
 quando necessário. Além disso estas anotações possuem outras finalidades
-específica. A seguir estão listadas todas as anotações da classe
-\texttt{Student.java} e qual sua funcionalidade:
+específicas. A seguir estão listadas todas as anotações  que foram usadas na
+classe \texttt{Student.java} e nas outras classes que fazem parte do mapeamento
+objeto relacional da aplicação.
 
 	\begin{itemize}
 	  \item \texttt{@Entity}: esta anotação foi necessária para que esta classe
 	  pudesse ser reconhecida como uma entidade do JPA e assim persistida no banco
 	  de dados;
-	  \item \texttt{@Table}: por padrão quando 
-	  \item \texttt{@Id}
-	  \item \texttt{@SequeneGenerator}
-	  \item \texttt{@Column}
-	  \item \texttt{@OneToMany}
-	  \item \texttt{OneToOne}
+	  \item \texttt{@Table}: anotação que possui algumas configurações relativas a
+	  tabela no banco de dados, a qual esta entidade representa, no caso da classe'
+	  mostrada anteriormente é configurado o nome da tabela;
+	  \item \texttt{@Id}: esta anotação fica sobre o atributo que representa a
+	  chave primária no banco de dados;
+	  \item \texttt{@SequenceGenerator}: esta anotação define qual será o modo com
+	  que a chave primaria será incrementada.
+	  \item \texttt{@Column}: define algumas propriedades do campo da tabela do
+	  banco de dados, o qual o atributo que ele anota representa. Estas
+	  configuraçãoes podem são:
+		  	\begin{itemize}
+		    	\item \texttt{name}: muda o nome do campo;
+		    	\item \texttt{length}: determina o tamanho em caracteres que o campo
+		    	aceitará;
+		    	\item \texttt{nullable}: define se o preenchimento do campo é obrigatório;
+		    	\item \texttt{unique}: este atributo define se o campo aceitará valores
+		    	únicos;
+		    \end{itemize}
+	  \item \texttt{@OneToMany}: representa um relacionamento um-para-muitos no
+	  banco de dados. Anotam coleções de outras entidades;
+	  \item \texttt{@ManyToOne}: representa um relacionamento
+	  muitos-para-um no banco de dados. Este é a contraparte da anotação
+	  um-para-muitos;
+	  \item \texttt{@OneToOne}: representa um relacionamento um-para-um no banco de
+	  dados.
 \end{itemize}
-
-	
-	
-	
-	\par Com isso esta classe ja poderia ser entendida como uma entidade e
-poderia ser persistida no banco de dados, porém além dessa anotação outras
-foram usadas para que a persistência pudesse ocorrer de forma consistente.
-	
  
-	\par Estas classes foram criadas fazendo uso de anotações próprias do
-Hibernate, que é um \textit{framework} que implementa a especificação
-JPA\footnote{JPA - Java Persistense API}. Essas classes fazem parte dos
-mecanismos de persistêcia de dados e são simplesmente pojos ou seja, objetos
-simples que contêm somente atributos privados e os métodos \textit{getters} e
-\textit{setters} que servem apenas para encapsular estes atributos. Uma das
-classes criadas, foi a classe \texttt{Aluno.java} que representa a tabela
-\texttt{alunos} no banco de dados e está representada.
+	\par Esta classe faz parte do mecanismo de persistêcia de dados e é
+simplesmente um  pojo ou seja, um objeto  simples que contêm somente atributos
+privados e os métodos \textit{getters} e \textit{setters} que servem apenas
+para encapsular estes atributos. Além desta classe, foram criadas outras com os
+mesmos propósitos. Estas classes podem ser vistas na Figura \ref{fig:desws12}. 
 	
-	\par Foram criadas outras classes Java com a mesma finalidade da
-anterior, porém com pequenas diferenças no que diz respeito à atributos,
-metodos e anotações. Estas classes representam, de maneira individual, as
-tabelas no banco de dados. Certos atributos dessas classes têm por finalidade
-representar as colunas de cada tabela. Já os atributos que armazenam instâncias
-de outras classes ou até mesmo conjuntos (coleções) de instâncias representam os
-relacionamentos entre as tabelas. 
+	
+	\begin{figure}[h!]
+		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws12.png}}
+		\caption[Sem legenda]{Sem legenda.
+			\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws12}
+	\end{figure}
+	
+	\pagebreak
+	
+	\par Estas classes tinham a mesma finalidade da anterior, porém com pequenas
+diferenças no que diz respeito à atributos, metodos e anotações. Estas classes
+representam, de maneira individual, as tabelas no banco de dados.
 
 	%04 - HashCode e equals
-	\par E por fim, para cada classe querepresenta uma 	entidade, foi necessário
+	\par E por fim, para cada classe que representa uma entidade, foi necessário
 implementar os métodos \texttt{hashCode} e \texttt{equals}, para que estas
 pudessem facilmente ser comparadas e diferenciadas em relação aos seus
 valores, haja visto que cada instância destas classes representa um registro
