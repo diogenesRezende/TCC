@@ -240,7 +240,10 @@ objeto relacional da aplicação.
 simplesmente um  pojo ou seja, um objeto  simples que contêm somente atributos
 privados e os métodos \textit{getters} e \textit{setters} que servem apenas
 para encapsular estes atributos. Além desta classe, foram criadas outras com os
-mesmos propósitos. Estas classes podem ser vistas na Figura \ref{fig:desws12}. 
+mesmos propósitos. Estas classes tinham a mesma finalidade da anterior, porém
+com pequenas diferenças no que diz respeito à atributos, metodos e anotações.
+Estas classes representam, de maneira individual, as tabelas no banco de dados.
+As classes podem ser vistas na Figura \ref{fig:desws12}.
 	
 	
 	\begin{figure}[h!]
@@ -251,17 +254,37 @@ mesmos propósitos. Estas classes podem ser vistas na Figura \ref{fig:desws12}.
 	\end{figure}
 	
 	\pagebreak
-	
-	\par Estas classes tinham a mesma finalidade da anterior, porém com pequenas
-diferenças no que diz respeito à atributos, metodos e anotações. Estas classes
-representam, de maneira individual, as tabelas no banco de dados.
 
 	%04 - HashCode e equals
 	\par E por fim, para cada classe que representa uma entidade, foi necessário
 implementar os métodos \texttt{hashCode} e \texttt{equals}, para que estas
 pudessem facilmente ser comparadas e diferenciadas em relação aos seus
 valores, haja visto que cada instância destas classes representa um registro
-no banco de dados.
+no banco de dados. A própria IDE provê uma forma facíl para criar este métodos,
+bastando para isso clicar com o botão direito do mouse sobre o código da classe
+e escolher a opção \textbf{Source -> Generate hashCode() and equals()\ldots}
+como pode ser visto na Figura \ref{fig:desws13}.
+
+	\begin{figure}[h!]
+		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws13.png}}
+		\caption[Sem legenda]{Sem legenda.
+			\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws13}
+	\end{figure}
+	
+	\pagebreak
+
+	\par Os métodos \texttt{hashCode} e \texttt{equals} da
+classe \texttt{Student.java} foram implementados usando o atributo id pode ser
+visto na imagem
+	
+	\begin{figure}[h!]
+		\input{code/hash}
+		\caption[Sem legenda]{Sem legenda.
+			\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws11}
+	\end{figure}
+	
 	
 	%05 - Configuração do persistence.xml
 	\par Em seguida à criação das entidades, foi necessário configurar o arquivo
@@ -284,22 +307,23 @@ Figura \ref{fig:qm11}.
 	%06 - Confecção JpaUtil.java
 	\par Em seguida à confecção do \texttt{persistence.xml} foi criada a
 classe \texttt{JpaUtil} que está representada na Figura \ref{fig:qm12}.
-Esta classe é responsável por criar uma \texttt{EntityManagerFactory} que é
-uma  fábrica de instâncias de \texttt{EntityManager} que nada mais é que um
+Esta classe é responsável por criar uma \texttt{EntityManagerFactory}. Este por
+sua vez é uma  fábrica de instâncias de \texttt{EntityManager} é que um
 \textit{persistence unit} ou unidade de persistência. Essa classe tem a
 responsabilidade de prover um modo de comunicação entre a aplicação e o banco
 de dados. No entanto a classe \texttt{JpaUtil} cria uma única instância de
-\texttt{EntityManagerFactory}, que é responsável por disponibilizar e
-gerenciar as instâncias de \texttt{EntityManager} de acordo com a necessidade
-da aplicação.
+\texttt{EntityManagerFactory}, que é responsável por disponibilizar e gerenciar
+as instâncias de \texttt{EntityManager} de acordo com a necessidade da
+aplicação.
 	
-	\pagebreak
 	\begin{figure}[h!]
 		\input{code/jpaUtil}
 		\caption[Classe \texttt{JpaUtil.java}]{Classe \texttt{JpaUtil.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:qm12}
 	\end{figure}
+
+	\pagebreak
 		
 	\par Em seguida à construção das classes que fazem a parte da persistência de
 dados, foi desenvolvido a parte de disponibilização de serviços
