@@ -20,18 +20,16 @@ no emulador as aplicações feitas no Android Studio.
 
 	\par Com o ambiente já configurado, foi criado um repositório no controlador de
 versão Github, o qual pode ser acessado através do endereço
-https://github.com/diegodnunes12/AppTCC e compartilhado entre os participantes
-do projeto.
+https://github.com/diegodnunes12/App-\\TCC e compartilhado entre os
+participantes do projeto.
 
 	\par A partir de então, passou-se a desenvolver o software. A princípio, foi
 construída uma \texttt{activity}, que é acessível ao aluno logo que a aplicação
 se inicia. Essa \texttt{activity} é do tipo Navigation Drawer Layout, ou seja,
 é um painel que permite inserir as opções de navegação do aplicativo,
-semelhante a um menu.
-
-	\par Ao criar essa \texttt{activity}, o Android Studio gera automaticamente
-a classe \texttt{NavigationDrawerFragment} e um arquivo XML na pasta
-\textit{layout}, chamado \texttt{fragment\_navigation\_drawer.xml}.
+semelhante a um menu.  Ao criar essa \texttt{activity}, o Android Studio gera
+automaticamente a classe \texttt{NavigationDrawerFragment} e um arquivo XML na
+pasta \textit{layout}, chamado \texttt{fragment\_navigation\_drawer.xml}.
 
 	\par No arquivo \texttt{fragment\_navigation\_drawer.xml} foram inseridos três
 \textit{widgets}, sendo dois do tipo \texttt{textView}, para o cabeçalho com a
@@ -42,7 +40,7 @@ com as opções que o software oferece ao aluno.
 	\par O \textit{layout} desta \textit{activity} chama-se o
 \texttt{relativeLayout}, o qual permite adicionar um elemento em relação ao
 outro. Desta forma o \textit{widget} \texttt{listView} utiliza o comando
-\texttt{android:layout\_below="@+id\/headerView} para se posicionar após o
+\texttt{android:\\layout\_below="@+id\/headerView} para se posicionar após o
 componente com id \textit{headerView} e a instrução
 \texttt{android:layout\_above="@+id\/footerView"} indicando que ela deve
 preceder o \textit{widget} com id \textit{footerView}. Na Figura \ref{fig:app},
@@ -145,7 +143,7 @@ Figura \ref{fig:app4} é apresentado o método \texttt{getResults()}.
 	\pagebreak
 	
 	\par Foram inseridos mais dois métodos semelhantes ao \texttt{getResults()},
-chamados de \texttt{getFouls()} e \texttt{getAgendas()} para recuperar as
+chamados de \\\texttt{getFouls()} e \texttt{getAgendas()} para recuperar as
 faltas e provas agendadas respectivamente. O que diferencia-os é a consulta
 SQL, já que no \texttt{getFouls()} foram buscados os dados onde o tipo\_evento
 = ‘FALTAS' e no \texttt{getAgendas()} onde o tipo\_evento = 'PROVA\_AGENDADA'.
@@ -156,9 +154,9 @@ service} foi preciso conceder a permissão de acesso à internet no arquivo
 android:name="android.permission.INTERNET" />}.
 
 	\par Logo após, criou-se uma classe chamada de \texttt{HttpUtil} para ler
-informações recebidas do \textit{web service}. Nela foram inseridos dois
-métodos, sendo um chamado \texttt{getJsonDisciplinas()} para receber as
-informações referentes as disciplinas cursadas e outro denominado
+informações recebidas do \textit{web service}. Nela foram implementados dois
+métodos diferentes, sendo um chamado \texttt{getJsonDisciplinas()} para receber
+as informações referentes as disciplinas cursadas e outro denominado
 \texttt{getJsonEventos()} para captar os dados de eventos como notas, faltas e
 provas agendadas.
 
@@ -258,7 +256,7 @@ palavras serão escritos em negrito.
 	\pagebreak
 	
 	\par O método \texttt{getChildView()} segue a mesma lógica do método
-getGroupView(), como ilustra a Fugura \ref{fig:app10}.
+\texttt{getGroupView()}, como ilustra a Fugura \ref{fig:app10}.
 
 		\begin{figure}[h!] 
 			\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app10.png}}
@@ -304,7 +302,7 @@ método \texttt{onCreate()} da classe \texttt{ListResultsActivity}.
 			\label{fig:app12}
 		\end{figure}
 	
-	\par Estes procedimentos realizados para as classes
+	\par Estes procedimentos que foram realizados para as classes
 \texttt{ListResultsActivity} e \texttt{ListResultsAdapter} foram necessários
 para apresentar as notas dos exercícios resolvidos. Desta mesma forma foi
 preciso criar uma \textit{activity} e um \textit{adapter} tanto para faltas
@@ -343,9 +341,9 @@ dispositivo. Para tratar essas ocorrências foi projetada uma classe para ser o
 estende da classe \texttt{WakefulBroadcastReceiver} nativa do Android e possui
 apenas um método chamado de \texttt{onReceive()}, o qual receberá a
 \textit{intent} a ser chamada quando chegar algum dado. Na Figura
-\ref{fig:app14}, vê-se a classe \texttt{GcmBroadcastReceiverUnivas}, que
-através do método \texttt{onReceive()} inicializará a classe
-\texttt{GcmIntentServiceUnivas}.
+\ref{fig:app14}, pode ser vista a implementação da classe
+\texttt{GcmBroadcastReceiverUnivas}, que através do método \texttt{onReceive()}
+inicializará a classe \texttt{GcmIntentServiceUnivas}.
 
 		\begin{figure}[h!] 
 			\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app14.png}}
