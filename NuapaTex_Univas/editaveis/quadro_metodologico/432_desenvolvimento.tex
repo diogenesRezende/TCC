@@ -18,8 +18,6 @@ ser visto na Figura \ref{fig:desws}.
 		\label{fig:desws}
 	\end{figure}
 	
-	\pagebreak
-	
 	\par Para a efetiva criação do banco de dados era necessário clicar com o
 botão direito do \textit{mouse}, sobre a opção \textbf{Databases -> New
 Database\ldots} no PgAdmin, apresentada na Figura \ref{fig:desws1}.
@@ -42,7 +40,6 @@ está apresentado na Figura \ref{fig:desws2}.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws2}
 	\end{figure}
-	
 	\pagebreak
 
 	\par Como pode ser visto foram preenchidos os campos nome e usuário . O campo
@@ -139,7 +136,7 @@ necessário clicar com o botão direito do mouse sobre o projeto e acessar a op�
 	
 	\par Em seguida foi apresentada a janela New Java Package, para a criação de
 um novo pacote mostrada na Figura \ref{fig:desws8}. O pacote recebeu o nome de
-"\texttt{br.edu.univas.restapiappunivas.model}", pois nele estão contidas as
+"\texttt{br.edu.univas.restapiappunivas.\\model}", pois nele estão contidas as
 classes que fazem parte do modelo de negócios da aplicação. Este pacote foi
 criado visando a divisão das responsabilidades internas no projeto, além de
 contribuir positivamente com a organização do mesmo.
@@ -162,7 +159,8 @@ navegar até a opção \textbf{New -> Class} como pode ser visto na Figura
 
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws9.png}}
-		\caption[Sem legenda]{Sem legenda.
+		\caption[Opção para Criação de nova classe java no Eclipse]{Opção para
+		Criação de nova classe java no Eclipse.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws9}
 	\end{figure}
@@ -178,7 +176,8 @@ nome da classe que está sendo criada.
 	
 	 \begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws10.png}}
-		\caption[Sem legenda]{Sem legenda.
+		\caption[Tela para Criação de nova classe java no Eclipse]{Tela para Criação
+		de nova classe java no Eclipse.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws10}
 	\end{figure}
@@ -191,7 +190,7 @@ alunos. o código da classe pode ser visto na Figura \ref{fig:desws11}.
 	
 	\begin{figure}[h!]
 		\input{code/student_java}
-		\caption[Sem legenda]{Sem legenda.
+		\caption[Classe Student.java]{Classe \texttt{Student.java}.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws11}
 	\end{figure}
@@ -248,7 +247,7 @@ As classes podem ser vistas na Figura \ref{fig:desws12}.
 	
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws12.png}}
-		\caption[Sem legenda]{Sem legenda.
+		\caption[Classes que fazem parte do ORM]{Classes que fazem parte do ORM.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws12}
 	\end{figure}
@@ -267,7 +266,8 @@ como pode ser visto na Figura \ref{fig:desws13}.
 
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws13.png}}
-		\caption[Sem legenda]{Sem legenda.
+		\caption[Opção Generate hashCode() and equals()\ldots]{Opção Generate
+		hashCode() and equals()\ldots .
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws13}
 	\end{figure}
@@ -275,20 +275,20 @@ como pode ser visto na Figura \ref{fig:desws13}.
 	\pagebreak
 
 	\par Os métodos \texttt{hashCode} e \texttt{equals} da
-classe \texttt{Student.java} foram implementados usando o atributo id pode ser
-visto na imagem
+classe \texttt{Student.java} foram implementados \\usando o atributo id pode ser
+visto na imagem 
 	
 	\begin{figure}[h!]
 		\input{code/hash}
-		\caption[Sem legenda]{Sem legenda.
+		\caption[Implementação os métodos hashCode() e equals()]{Implementação os
+		métodos \texttt{hashCode()} e \texttt{equals()}.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws11}
 	\end{figure}
 	
-	
 	%05 - Configuração do persistence.xml
 	\par Em seguida à criação das entidades, foi necessário configurar o arquivo
-\texttt{persistence.xml} que fica dentro do \textit{classpath} do projeto
+\texttt{persistence\\.xml} que fica dentro do \textit{classpath} do projeto
 Java ou seja, dentro da mesma pasta onde estão contidos pacotes do
 projeto. Este arquivo é extremamente importante, pois é nele que estão todas
 as configurações relativas à conexão com o banco de dados, configurações
@@ -303,6 +303,8 @@ Figura \ref{fig:qm11}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:qm11}
 	\end{figure}
+	
+	\pagebreak
 	
 	%06 - Confecção JpaUtil.java
 	\par Em seguida à confecção do \texttt{persistence.xml} foi criada a
@@ -325,33 +327,33 @@ aplicação.
 
 	\pagebreak
 		
-	\par Em seguida à construção das classes que fazem a parte da persistência de
-dados, foi desenvolvido a parte de disponibilização de serviços
-RESTful, fazendo uso do \textit{framework} Jersey. Com isso
-pode-se construir a classe que representa o primeiro serviço do
-\textit{webservice}, que é a classe \texttt{Alunos}. Essa classe representa um
-contexto REST, e portanto, dispõe de alguns recursos. Esses recursos fazem a
-recuperação e a transmissão dos dados do \textit{web service} para o aplicativo
-Android. Essa classe e seus respectivos métodos  estão representada na
-Figura .
+%	\par Em seguida à construção das classes que fazem a parte da persistência de
+%dados, foi desenvolvido a parte de disponibilização de serviços
+%RESTful, fazendo uso do \textit{framework} Jersey. Com isso
+%pode-se construir a classe que representa o primeiro serviço do
+%\textit{webservice}, que é a classe \texttt{Alunos}. Essa classe representa um
+%contexto REST, e portanto, dispõe de alguns recursos. Esses recursos fazem a
+%recuperação e a transmissão dos dados do \textit{web service} para o aplicativo
+%Android. Essa classe e seus respectivos métodos  estão representada na
+%Figura .
 		
-		\par O \textit{webservice} pode fazer a busca de alunos pelo \texttt{id}
-passado ou retornar uma coleção de eventos vinculados a um alunos, dependendo
-do recurso acessado. Os tipos de dados que o \textit{webservice} consome e
-retorna é o JSON\footnote{JSON - Javascript Object Notation}. Não foi
-necessário fazer nenhuma implementação adicional relativa a este formato, pois
-o próprio \textit{framework} Jersey faz o tratamento e a conversão dos tipos de
-entrada e saída de dados. No caso do saída de dados, faz a conversão de objetos 
-Java para JSON. E no caso de entrada tranforma um JSON em objeto
-Java já conhecido pelo \textit{web service}. Com isso concluiu-se o
-desenvolvimento do \textit{web service} que fornece os dados para o aplicativo.
+	%	\par O \textit{webservice} pode fazer a busca de alunos pelo \texttt{id}
+%passado ou retornar uma coleção de eventos vinculados a um alunos, dependendo
+%do recurso acessado. Os tipos de dados que o \textit{webservice} consome e
+%retorna é o JSON\footnote{JSON - Javascript Object Notation}. Não foi
+%necessário fazer nenhuma implementação adicional relativa a este formato, pois
+%o próprio \textit{framework} Jersey faz o tratamento e a conversão dos tipos de
+%entrada e saída de dados. No caso do saída de dados, faz a conversão de objetos 
+%Java para JSON. E no caso de entrada tranforma um JSON em objeto
+%Java já conhecido pelo \textit{web service}. Com isso concluiu-se o
+%desenvolvimento do \textit{web service} que fornece os dados para o aplicativo.
 
 	%23 - Módulo que ira fazer a busca dos dados na base da instituição de ensino
 	%24 - Falar que vai ser simulado
 	\par Para que fosse possível transmitir dados para o aplicativo, era
 necessário receber as informações do sistema acadêmico da referida instituição,
 haja vista que o \textit{web service} é independente do mesmo. Para esse
-propósito é necessário  contruir um módulo que faça a importação dos dados
+propósito é necessário  construir um módulo que faça a importação dos dados
 necessários para a base de dados do \textit{web service}. 
 
 	\par Este por sua vez terá a responsabilidade de fazer a importação dos dados

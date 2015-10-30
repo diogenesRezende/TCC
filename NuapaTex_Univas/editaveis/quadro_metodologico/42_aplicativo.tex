@@ -74,8 +74,6 @@ principal.
 		\label{fig:app1}
 	\end{figure}
 	
-	\pagebreak
-	
 	\par O próximo passo foi criar o banco de dados do aplicativo para salvar as
 informações recebidas do \textit{web service}. Para que isso fosse possível,
 elaborou-se uma classe denominada \texttt{DatabaseHelper} que estende da classe
@@ -217,5 +215,197 @@ mostra a Figura \ref{fig:app7}.
 			\textbf{Fonte:}Elaborado pelos autores.}
 			\label{fig:app7}
 		\end{figure}
+
+	\par Depois, fez-se necessário construir uma classe que faz a ligação e
+organização dos dados vindos do banco de dados com a interface que listará as
+informações ao usuários. Essa classe recebeu o nome de
+\texttt{ListResultsAdapter} e estende da classe nativa do Android denominada
+\texttt{BaseExpandableListAdapter}.
+
+	\par Nesta classe foi criado um construtor que recebe a lista de disciplinas
+cursadas pelo aluno e uma lista com as notas de cada matéria. O nome das
+disciplinas foram inseridos em um \textit{array} de \textit{Strings}, já as
+notas foram inseridas em uma matriz, como apresenta a Figura \ref{fig:app8}.
+
+
+		\begin{figure}[h!] 
+			\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app8.png}}
+			\caption[Construtor da classe ListResultsAdapter]{Construtor da classe
+			\texttt{ListResultsAdapter}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:app8}
+		\end{figure}
 	
 	\pagebreak
+	
+	\par Após adicionado os dados no \textit{array} e na matriz é preciso exibí-los
+ao estudante. Para realizar essa tarefa foi utilizado o método
+\texttt{getGroupView()} para apresentar os nomes das disciplinas e o método
+\texttt{getChildView()} para mostrar as notas de cada matéria.
+
+	\par Na Figura \ref{fig:app9}, pode se ver o método \texttt{getGroupView()}
+criando um \textit{widget} do tipo \textit{textView}  e inserindo nele o
+nome da matéria, os espaçamentos, o tamanho da fonte e informando que as
+palavras serão escritos em negrito.
+	
+		\begin{figure}[h!] 
+			\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app9.png}}
+			\caption[Método getGroupView()]{Método \texttt{getGroupView()}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:app9}
+		\end{figure}
+	
+	\pagebreak
+	
+	\par O método \texttt{getChildView()} segue a mesma lógica do método
+getGroupView(), como ilustra a Fugura \ref{fig:app10}.
+
+		\begin{figure}[h!] 
+			\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app10.png}}
+			\caption[Método getChildView()]{Método \texttt{getChildView()}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:app10}
+		\end{figure}
+	
+	\par O próximo passo, foi criação de uma \textit{activity} do tipo
+\textit{blank activity} com finalidade de listar as notas. Ao criá-la com o
+nome de \texttt{ListResultsActivity}, o Android Studio gerou dentro da pasta
+\textit{layout} o arquivo XML referente a ela, chamado de
+\texttt{activity\_list\_results.xml}. Neste, foi inserido apenas o
+\textit{widget}  \texttt{expandableListView}, que está incumbido de apresentar
+a lista de disciplinas cujo o discente está cursando e ao clicar em alguma
+dessas matérias serão apresentadas as notas referentes aos exercícios
+realizados desta disciplina. Na Figura \ref{fig:app11} é possível ver o código
+XML de uma lista do tipo \texttt{expandableListView}.
+
+		\begin{figure}[h!] 
+			\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app11.png}}
+			\caption[Código XML do layout que apresentará a lista de notas]{Código XML
+			do layout que apresentará a lista de notas.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:app11}
+		\end{figure}
+	
+	\pagebreak
+	
+	\par Na classe \texttt{ListResultsActivity}, é preciso informar ao sistema
+operacional o \textit{layout} a ser chamado através do método
+\texttt{setContentView()}. Também foi necessário passar para a classe
+\texttt{ListResultsAdapter} a lista de disciplinas que o discente está cursando
+e a lista com as notas referentes a cada matéria. Na Figura \ref{fig:app12} é exibido o
+método \texttt{onCreate()} da classe \texttt{ListResultsActivity}.
+
+
+		\begin{figure}[h!] 
+			\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app12.png}}
+			\caption[Método onCreate() da classe ListResultsActivity]{Método \texttt{onCreate()} da classe
+			\texttt{ListResultsActivity}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:app12}
+		\end{figure}
+	
+	\par Estes procedimentos realizados para as classes
+\texttt{ListResultsActivity} e \texttt{ListResultsAdapter} foram necessários
+para apresentar as notas dos exercícios resolvidos. Desta mesma forma foi
+preciso criar uma \textit{activity} e um \textit{adapter} tanto para faltas
+quanto para provas agendadas seguindo a mesma lógica.
+
+	\par No momento em que algum professor lançar notas, faltas ou provas agendadas
+no portal do aluno, é indispensável notificar ao estudante. Com esse intuito
+desenvolveu-se uma classe chamada de \texttt{GcmIntentServiceUnivas} que
+estende \texttt{IntentService}.
+
+	\par Esta classe recebe os dados em formato JSON, por isso ela transfere estas
+informações para o método \texttt{getJsonEventos()} da classe
+\texttt{HttpUtil}, o qual será responsável por ler os dados e realizar os
+procedimentos de gravação no banco de dados.
+
+	\par Ao salvar o evento é chamado o método \texttt{sendNotification()}, que
+receberá um objeto da classe \texttt{EventTO}. Ele realiza uma analise do tipo
+de evento, para saber qual \textit{activity} deve ser executada quando o
+usuário clicar na notificação. Logo após foi adicionado os atributos da
+notificação, como o ícone, o título e a mensagem que irá aparecer ao usuário.
+Na Figura \ref{fig:app13} é visível o método \texttt{sendNotification()}.
+
+
+		\begin{figure}[h!] 
+			\centerline{\includegraphics[scale=0.55]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app13.png}}
+			\caption[Método sendNotification()]{Método \texttt{sendNotification()}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:app13}
+		\end{figure}
+	
+	\pagebreak
+	
+	\par A notificação acontece toda vez que o GCM envia uma informação ao
+dispositivo. Para tratar essas ocorrências foi projetada uma classe para ser o
+\texttt{BroadcastReceiver} chamada de \texttt{GcmBroadcastReceiverUnivas}. Ela
+estende da classe \texttt{WakefulBroadcastReceiver} nativa do Android e possui
+apenas um método chamado de \texttt{onReceive()}, o qual receberá a
+\textit{intent} a ser chamada quando chegar algum dado. Na Figura
+\ref{fig:app14}, vê-se a classe \texttt{GcmBroadcastReceiverUnivas}, que
+através do método \texttt{onReceive()} inicializará a classe
+\texttt{GcmIntentServiceUnivas}.
+
+		\begin{figure}[h!] 
+			\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app14.png}}
+			\caption[Classe GcmBroadcastReceiverUnivas]{Classe \texttt{GcmBroadcastReceiverUnivas}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:app14}
+		\end{figure}
+	
+	\par No entanto para configurar esta classe como um \texttt{BroadcastReceiver},
+foi preciso adicioná-la na \textit{tag} \texttt{<receiver>} do arquivo
+\texttt{AndroidManifest.xml}, como mostra a Figura \ref{fig:app15}.
+
+		\begin{figure}[h!] 
+			\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app15.png}}
+			\caption[Configuração do BroadcastReceiver no
+			AndroidManifest.xml]{Configuração do \texttt{BroadcastReceiver} no
+			\texttt{AndroidManifest.xml}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:app15}
+		\end{figure}
+	
+	\par Por fim, foi construída uma classe chamada de \texttt{GcmControllerUnivas}
+que tem por objetivo configurar o dispositivo para trabalhar com o GCM.
+
+	\par Nesta classe existe um método denominado \texttt{checkPlayServices()} como
+intuito de verificar se o dispositivo possui os requisitos necessários para o
+GCM. Na Figura \ref{fig:app16}, é apresentado o método
+\texttt{checkPlayServices()}.
+
+		\begin{figure}[h!] 
+			\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app16.png}}
+			\caption[Método checkPlayServices()]{Método \texttt{checkPlayServices()}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:app16}
+		\end{figure}
+	
+	\pagebreak
+	
+	\par Logo após é chamado o método \texttt{getRegistrationId()}, que é incumbido
+de retornar o \textit{Registration ID}. Na Figura \ref{fig:app17} é possível ver
+o método \texttt{getRegistrationId()}. No entanto, se o registro retornado for nulo,
+isso significa que o aparelho não está cadastrado nos servidores da Google,
+então é executado o método \texttt{registerInBackground()} que fará esse
+cadastro, como demostra a Figura \ref{fig:app18}.
+
+		\begin{figure}[h!] 
+			\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app17.png}}
+			\caption[Método getRegistrationId()]{Método \texttt{getRegistrationId()}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:app17}
+		\end{figure}
+	
+		\begin{figure}[h!] 
+			\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app18.png}}
+			\caption[Método registerInBackground()]{Método \texttt{registerInBackground()}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+			\label{fig:app18}
+		\end{figure}
+	
+	\par Desta forma, quando o \textit{web service} envia uma informação ao GCM, é
+transmitido junto aos dados o \textit{Registration ID}, gerado pelo método
+\texttt{registerInBackground()}, possibilitando ao serviço da Google identificar
+a qual dispositivo deve conduzir a mensagem.
