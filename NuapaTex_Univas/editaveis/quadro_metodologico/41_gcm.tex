@@ -1,36 +1,152 @@
-%\subsection{\textit{Google Cloud Messaging}}
+%\subsection{Google Cloud Messaging}
 
-	\par O envio dos dados do \textit{web service} para o aplicativo
-\textit{Android}, é feito através de um serviço da \textit{Google} conhecido
-como GCM.
+	\par No momento em que é lançada alguma nota, falta ou prova agendada, o
+\textit{web service} precisa transmitir esta informação para o aplicativo
+Android. Para que esta comunicação aconteça foi utilizado o serviço da Google
+chamado de Google Cloud Messaging (GCM).
 
-	\par Para que o serviço apresente o resultado esperado, foi preciso acessar o
-\textit{site} da \textit{Google Developers Console} e criar um novo projeto. Ao
-criá-lo, foi necessário ir na aba API's e ativar a opção \textit{Google Cloud
-Messaging for Android}.
+	\par Neste contexto, o servidor \textit{web} envia uma mensagem para o GCM com
+os elementos que precisa passar para a aplicação \textit{mobile}. A partir daí,
+a entrega dos dados para os dispositivos móveis fica por conta da Google.
 
- 	\par Com a criação do projeto, a \textit{Google} oferece um número que
-identificará o \textit{software}, também chamado de \texttt{Sender ID},
-conforme mostra a Figura \ref{fig:gcm}.
-
-
+	\par Para que o GCM apresentasse o resultado esperado, foi preciso acessar o
+\textit{site} Google Developers Console através do endereço
+https://console.developers.google.com e construir um novo projeto. Para
+criá-lo, bastou clicar no botão \textbf{\textit{Create Project}} que está na
+página inicial, conforme pode se ver na Figura \ref{fig:gcm}. Logo após, foi
+adicionado um nome ao projeto e clicado no botão Criar, como mostra a Figura
+\ref{fig:gcm1}.
+	
+	%figura 1
 	\begin{figure}[h!] 
 		\centerline{\includegraphics[scale=1]{./imagens/2_q_metodologico/4_procedimentos_resultados/41_gcm/gcm.png}}
-		\caption[\texttt{Sender ID} do GCM]{\texttt{Sender ID} do GCM.
+		\caption[Criando um novo projeto]{Criando um novo projeto.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:gcm}
 	\end{figure}
+	
 	\pagebreak
 	
-	\par Por fim, acessou-se a aba Credenciais para indicar o IP do servidor. Ao
-informa-lo, o serviço gerou uma chave pública a qual foi inserida no
-\textit{web service}. Na Figura \ref{fig:gcm1}, é possível ver o código de
-acesso criado.
 
-
+	%figura 2
 	\begin{figure}[h!] 
-		\centerline{\includegraphics[scale=0.5]{./imagens/2_q_metodologico/4_procedimentos_resultados/41_gcm/gcm1.png}}
-		\caption[Geração da credencial do GCM]{Geração da credencial do GCM.
+		\centerline{\includegraphics[scale=1]{./imagens/2_q_metodologico/4_procedimentos_resultados/41_gcm/gcm1.png}}
+		\caption[Inserindo o nome do projeto.]{Inserindo o nome do projeto.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:gcm1}
 	\end{figure}
+	
+	\par Ao criar o projeto foi aberta uma tela para sua configuração, visível na
+Figura \ref{fig:gcm2}.
+
+	%figura 3
+	\begin{figure}[h!] 
+		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/41_gcm/gcm2.png}}
+		\caption[Tela de configuração do projeto]{Tela de configuração do projeto.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:gcm2}
+	\end{figure}
+	
+	\pagebreak
+	
+	\par O primeiro dado que se obteve foi o número do projeto, também chamado de
+\textit{Sender ID}. Este código serve para que a Google reconheça a aplicação
+que enviou a mensagem. Para visualizar este identificador, foi preciso clicar
+nos detalhes do projeto na página inicial, como se vê na Figura \ref{fig:gcm3}.
+	
+	%figura 4
+	\begin{figure}[h!] 
+		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/41_gcm/gcm3.png}}
+		\caption[Número do projeto]{Número do projeto.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:gcm3}
+	\end{figure}
+	
+	\pagebreak
+	
+	
+	\par O próximo passo, foi habilitar a API GCM para trabalhar com o projeto.
+Para essa etapa, foi necessário navegar até a aba API's e autenticação,
+selecionando a opção APIs, conforme indica a Figura \ref{fig:gcm4}. Na tela
+presente aparecem os serviços fornecidos pela Google. Neste caso optou-se por
+Cloud Messaging for Android, também ilustrado na Figura \ref{fig:gcm4}.
+	
+	%figura 5
+	\begin{figure}[h!] 
+		\centerline{\includegraphics[scale=0.4]{./imagens/2_q_metodologico/4_procedimentos_resultados/41_gcm/gcm4.png}}
+		\caption[Habilitando GCM para Android]{Habilitando GCM para Android.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:gcm4}
+	\end{figure}
+	
+	\pagebreak
+	
+	\par Ao selecionar Cloud Messaging for Android, foi apresentada a tela com a
+opção de ativar o GCM ao projeto, como é visível na Figura \ref{fig:gcm5}.
+	
+	%figura 6
+	\begin{figure}[h!] 
+		\centerline{\includegraphics[scale=0.75]{./imagens/2_q_metodologico/4_procedimentos_resultados/41_gcm/gcm5.png}}
+		\caption[Botão para ativar o GCM ao projeto]{Botão para ativar o GCM ao projeto.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:gcm5}
+	\end{figure}
+	
+	\pagebreak
+	
+	\par Para concluir a configuração foi preciso acessar a aba APIs e
+autenticação, escolhendo a alternativa Credenciais, como mostra a Figura
+\ref{fig:gcm6}. Na página apresentada, foi selecionado a opção Chave de API,
+igualmente exibido na Figura \ref{fig:gcm6}.
+	
+	%figura 7
+	\begin{figure}[h!] 
+		\centerline{\includegraphics[scale=0.4]{./imagens/2_q_metodologico/4_procedimentos_resultados/41_gcm/gcm6.png}}
+		\caption[Criando as credenciais]{Criando as credenciais.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:gcm6}
+	\end{figure}
+	
+	\pagebreak
+	
+	\par Ao escolher Chave de API, foi exibida uma tela ao qual se escolheu a opção
+Chave de Servidor, demostrado na Figura \ref{fig:gcm7}.
+	
+	%figura 8
+	\begin{figure}[h!] 
+		\centerline{\includegraphics[scale=.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/41_gcm/gcm7.png}}
+		\caption[Escolhendo a opção Chave de Servidor]{Escolhendo a opção Chave de
+		Servidor.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:gcm7}
+	\end{figure}
+	
+	\pagebreak
+	
+	\par Ao decidir-se por Chave de Servidor, foi apresentada uma tela onde é
+criada a chave pública, também conhecida por \textit{Sender Auth Token}. Esta
+identificação é transmitida no cabeçalho das mensagens enviadas do servidor ao
+GCM. Para que esse código fosse gerado foi fundamental adicionar um nome e o IP
+do web service, como mostra a Figura \ref{fig:gcm8}. Ao clicar no botão Criar, a
+Google apresentou a chave gerada, como ilustra a Figura \ref{fig:gcm9}.
+	
+	%figura 9
+	\begin{figure}[h!] 
+		\centerline{\includegraphics[scale=0.6]{./imagens/2_q_metodologico/4_procedimentos_resultados/41_gcm/gcm8.png}}
+		\caption[Inserindo dados do servidor]{Inserindo dados do servidor.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:gcm8}
+	\end{figure}
+	
+	\pagebreak
+	
+	%figura 10
+	\begin{figure}[h!] 
+		\centerline{\includegraphics[scale=1]{./imagens/2_q_metodologico/4_procedimentos_resultados/41_gcm/gcm9.png}}
+		\caption[Chave de API gerada]{Chave de API gerada.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:gcm9}
+	\end{figure}
+	
+	\pagebreak
+	
