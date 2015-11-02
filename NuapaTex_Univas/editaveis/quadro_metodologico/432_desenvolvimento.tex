@@ -119,11 +119,62 @@ configurações da aplicação web. Esta tela esta apresentada na Figura
 		%	->Criação do pacote
 
 	\par Após este passo foi concluído a criação do projeto, e já era possível
-iniciar os trabalhos com a camada de persistência de dados do projeto. Para
-este propósito, primeiramente foi criado um pacote, onde ficaram contidas as
-classes que representam as entidades do ORM. Para a criação do pacote foi
-necessário clicar com o botão direito do mouse sobre o projeto e acessar a opção
-\textbf{New -> Package}, como pode ser visto na Figura \ref{fig:desws7}.
+iniciar os trabalhos com a camada de persistência de dados do projeto. Antes de
+começar o desenvolvimento foi necessário ainda criar uma pasta a qual foi a
+responsável pos conter todos os arquivos \texttt{.jar} das bibliotecas que foram
+usadas para o desenvolvimento do \textit{web service}. Para criar uma nova pasta dentro
+do projeto foi necessário clicar com o botão direito do mouse sobre o projeto e
+navegar sobre a opção \textbf{New -> Folder}, como pode ser visto na Figura
+\ref{fig:desws6_1}.
+
+	\begin{figure}[h!]
+		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws6_1.png}}
+		\caption[Tela para criação de um novo projeto no Eclipse]{Tela para criação de um novo projeto no Eclipse.
+			\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws6_1}
+	\end{figure}
+
+	\pagebreak 
+	
+	\par Em seguida na janela apresentada, foi definido o nome da nova pasta como
+\texttt{libs}. A tela e o nome preenchido podem ser vistos na Figura
+\ref{fig:desws6_2}.
+
+	\begin{figure}[h!]
+		\centerline{\includegraphics[scale=0.60]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws6_2.png}}
+		\caption[Tela para criação de um novo projeto no Eclipse]{Tela para criação de um novo projeto no Eclipse.
+			\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws6_2}
+	\end{figure}
+
+	\pagebreak
+	
+	\par Em seguida foram copiados todos os arquivos \texttt{.jar} da biblioteca
+Hibernate que eram necessários ao projeto, para dentro desta pasta e também o
+\texttt{jar} do \textit{driver} JDBC do PostGreSql, que seria responsável por
+fazer a comunicação entre o banco de dados e a aplicação. Além disso era
+necessário mais uma configuração para que as bibliotecas pudessem ser
+reconhecidas como parte do projeto. Era necessário fazer a inclusão destas
+bibliotecas para dentro do \textit{build path} do projeto. Para isso foi
+necessário selecionar todos os arquivos \texttt{.jar} que estavam dentro da
+pasta \texttt{libs}, clicar com o botão direito do mouse sobre eles e escolher
+a opção \textbf{Build Path -> Add to Build Path}. A pasta \texttt{libs} que foi
+criada, os arquivos \texttt{.jar} das bibliotecas usadas e a configuração do
+\textit{build path}  do projeto, podem ser visto na Figura \ref{fig:desws6_3}.
+
+	\begin{figure}[h!]
+		\centerline{\includegraphics[scale=0.60]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws6_3.png}}
+		\caption[Tela para criação de um novo projeto no Eclipse]{Tela para criação de um novo projeto no Eclipse.
+			\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws6_3}
+	\end{figure}
+
+	\par Com o projeto devidamente configurado, começou-se de fato a desenvolver a
+camada de persistência da aplicação. Para este propósito, primeiramente foi
+criado um pacote, onde ficaram contidas as classes que representam as entidades
+do ORM. Para a criação do pacote foi necessário clicar com o botão direito do
+mouse sobre o projeto e acessar a opção \textbf{New -> Package}, como pode ser
+visto na Figura \ref{fig:desws7}.
 
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws7.png}}
@@ -299,7 +350,7 @@ na imagem \ref{fig:desws15}.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws15}
 	\end{figure}
-
+	
 	\pagebreak
 	
 	
@@ -327,7 +378,7 @@ eventos definidos foram três:
 	  atividade avaliativa;
 	  \item \texttt{PROVA\_APLICADA}: que define um evento como, a efetiva
 	  realização de uma atividade avaliativa;
-	  \item \texttt{FALTAS}: lançamento de uma falta;
+	  \item \texttt{FALTAS}: representa o lançamento de uma falta;
 	\end{itemize}
 	
 	\par A implementação da enumeração pode ser vista na Figura \ref{fig:desws15}.
@@ -341,20 +392,27 @@ eventos definidos foram três:
 	\end{figure}
 
 	%05 - Configuração do persistence.xml
-	\par Em seguida à criação das entidades, foi necessário configurar o arquivo
-\texttt{persistence\\.xml} que fica dentro da pasta de códigos fontes do
-projeto que também é conhecido como \textit{classpath}. Este arquivo é extremamente importante, pois é nele que estão todas
-as configurações relativas à conexão com o banco de dados, configurações
-referentes ao Dialeto SQL que vai ser usado para as consultas e configurações
-referentes ao \textit{persistence unit} que é o conjunto de classes mapeadas
-para o banco de dados. Além disso 	O arquivo \texttt{persistence.xml} está
-exposto na Figura \ref{fig:qm15}.
+	\par Após a criação das entidades, foi necessário configurar o arquivo
+\texttt{persistence.xml}. Foi necessário criar a pasta META-INF dentro da pasta
+de de códigos fontes do projeto que também é conhecida como \textit{classpath},
+com a finalidade de abrigar este arquivo. Em seguida foi criado o arquivo
+dentro da pasta criada. Este arquivo é extremamente importante, pois é nele que
+estão todas as configurações relativas à conexão com o banco de dados,
+configurações referentes ao Dialeto SQL que vai ser usado para as consultas e
+configurações referentes ao \textit{persistence unit} que é o conjunto de
+classes mapeadas para o banco de dados. Este por sua vez recebeu o nome de
+\texttt{WsAppUnivas}. Uma destas configurações merece uma atenção especial
+trata-se da configuração \texttt{<property name="hibernate.hbm2ddl.auto"
+value="create" />} que é a responsável por definir que o próprio Hibernate irá
+criar a estrutura do banco de dados (tabelas, sequences, etc.) através do
+mapeamento objeto relacional das classes. O arquivo \texttt{persistence.xml}
+está exposto na Figura \ref{fig:desws16}.
 
 	\begin{figure}[h!]
 		\input{code/persistence_xml}
 		\caption[Arquivo \texttt{persistence.xml}]{Arquivo \texttt{persistence.xml}.
 		\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:qm15}
+		\label{fig:desws16}
 	\end{figure}
 	
 	\pagebreak
@@ -363,7 +421,7 @@ exposto na Figura \ref{fig:qm15}.
 	\par Em seguida à confecção do \texttt{persistence.xml} foi criada a
 classe \texttt{JpaUtil} que está representada na Figura \ref{fig:qm12}.
 Esta classe é responsável por criar uma \texttt{EntityManagerFactory}. Este por
-sua vez é uma  fábrica de instâncias de \texttt{EntityManager} é que um
+sua vez é uma  fábrica de instâncias de \texttt{EntityManager} que é um
 \textit{persistence unit} ou unidade de persistência. Essa classe tem a
 responsabilidade de prover um modo de comunicação entre a aplicação e o banco
 de dados. No entanto a classe \texttt{JpaUtil} cria uma única instância de
@@ -379,35 +437,35 @@ aplicação.
 	\end{figure}
 
 	\pagebreak
-		
-%	\par Em seguida à construção das classes que fazem a parte da persistência de
-%dados, foi desenvolvido a parte de disponibilização de serviços
-%RESTful, fazendo uso do \textit{framework} Jersey. Com isso
-%pode-se construir a classe que representa o primeiro serviço do
-%\textit{webservice}, que é a classe \texttt{Alunos}. Essa classe representa um
-%contexto REST, e portanto, dispõe de alguns recursos. Esses recursos fazem a
-%recuperação e a transmissão dos dados do \textit{web service} para o aplicativo
-%Android. Essa classe e seus respectivos métodos  estão representada na
-%Figura .
-		
-	%	\par O \textit{webservice} pode fazer a busca de alunos pelo \texttt{id}
-%passado ou retornar uma coleção de eventos vinculados a um alunos, dependendo
-%do recurso acessado. Os tipos de dados que o \textit{webservice} consome e
-%retorna é o JSON\footnote{JSON - Javascript Object Notation}. Não foi
-%necessário fazer nenhuma implementação adicional relativa a este formato, pois
-%o próprio \textit{framework} Jersey faz o tratamento e a conversão dos tipos de
-%entrada e saída de dados. No caso do saída de dados, faz a conversão de objetos 
-%Java para JSON. E no caso de entrada tranforma um JSON em objeto
-%Java já conhecido pelo \textit{web service}. Com isso concluiu-se o
-%desenvolvimento do \textit{web service} que fornece os dados para o aplicativo.
+	
+	\par Depois de finalizada a criação da camada de persistência do projeto foi
+necessário uma configuração adicional. Percebeu-se que além das bibliotecas já
+usadas seriam necessárias mais algumas bibliotecas para que se pudesse chegar
+ao resultado final esperado. Por esse motivo tornava-se inviável ficar
+controlando as bibliotecas de maneira manual no projeto. Foi necessário então,
+fazer a conversão do projeto 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	%23 - Módulo que ira fazer a busca dos dados na base da instituição de ensino
 	%24 - Falar que vai ser simulado
 	\par Para que fosse possível transmitir dados para o aplicativo, era
 necessário receber as informações do sistema acadêmico da referida instituição,
 haja vista que o \textit{web service} é independente do mesmo. Para esse
-propósito é necessário  construir um módulo que faça a importação dos dados
-necessários para a base de dados do \textit{web service}. 
+propósito é necessário um módulo que faça a importação dos dados necessários
+para a base de dados do \textit{web service}.
 
 	\par Este por sua vez terá a responsabilidade de fazer a importação dos dados
 periodicamente, e ainda tratar os tipos de dados recebidos para tipos
