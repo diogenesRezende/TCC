@@ -185,7 +185,7 @@ nome da classe que está sendo criada.
 	\pagebreak
 
 	\par Esta classe foi definida para representar as informações referente aos
-alunos. o código da classe pode ser visto na Figura \ref{fig:desws11}. 
+alunos. O código fonte desta classe pode ser visto na Figura \ref{fig:desws11}. 
 	
 	
 	\begin{figure}[h!]
@@ -197,7 +197,8 @@ alunos. o código da classe pode ser visto na Figura \ref{fig:desws11}.
 	
 	\pagebreak
 	
-	\par É válido lembrar esta classe possui anotações para que possa ser
+	%07 - Explicar anotações dos pojos
+	\par É válido lembrar que esta classe possui anotações para que possa ser
 reconhecida como uma entidade do JPA, e assim persistida no banco de dados
 quando necessário. Além disso estas anotações possuem outras finalidades
 específicas. A seguir estão listadas todas as anotações  que foram usadas na
@@ -209,7 +210,7 @@ objeto relacional da aplicação.
 	  pudesse ser reconhecida como uma entidade do JPA e assim persistida no banco
 	  de dados;
 	  \item \texttt{@Table}: anotação que possui algumas configurações relativas a
-	  tabela no banco de dados, a qual esta entidade representa, no caso da classe'
+	  tabela no banco de dados, a qual esta entidade representa, no caso da classe
 	  mostrada anteriormente é configurado o nome da tabela;
 	  \item \texttt{@Id}: esta anotação fica sobre o atributo que representa a
 	  chave primária no banco de dados;
@@ -238,11 +239,12 @@ objeto relacional da aplicação.
 	\par Esta classe faz parte do mecanismo de persistêcia de dados e é
 simplesmente um  pojo ou seja, um objeto  simples que contêm somente atributos
 privados e os métodos \textit{getters} e \textit{setters} que servem apenas
-para encapsular estes atributos. Além desta classe, foram criadas outras com os
-mesmos propósitos. Estas classes tinham a mesma finalidade da anterior, porém
-com pequenas diferenças no que diz respeito à atributos, metodos e anotações.
-Estas classes representam, de maneira individual, as tabelas no banco de dados.
-As classes podem ser vistas na Figura \ref{fig:desws12}.
+para encapsular estes atributos, e não possue nenhuma lógica de negócios. Além
+desta classe, foram criadas outras com os mesmos propósitos. Estas classes
+tinham a mesma finalidade da anterior, porém com pequenas diferenças no que diz
+respeito à atributos, metodos e anotações. Estas classes representam, de
+maneira individual, as tabelas no banco de dados. As classes podem ser vistas
+na Figura \ref{fig:desws12}.
 	
 	
 	\begin{figure}[h!]
@@ -257,12 +259,12 @@ As classes podem ser vistas na Figura \ref{fig:desws12}.
 	%04 - HashCode e equals
 	\par E por fim, para cada classe que representa uma entidade, foi necessário
 implementar os métodos \texttt{hashCode} e \texttt{equals}, para que estas
-pudessem facilmente ser comparadas e diferenciadas em relação aos seus
-valores, haja visto que cada instância destas classes representa um registro
-no banco de dados. A própria IDE provê uma forma facíl para criar este métodos,
-bastando para isso clicar com o botão direito do mouse sobre o código da classe
-e escolher a opção \textbf{Source -> Generate hashCode() and equals()\ldots}
-como pode ser visto na Figura \ref{fig:desws13}.
+pudessem facilmente ser comparadas e diferenciadas em relação aos seus valores,
+haja visto que cada instância destas classes representa um registro no banco de
+dados. A própria IDE provê uma forma facíl para criar este métodos, bastando
+para isso clicar com o botão direito do mouse sobre o código da classe e
+escolher a opção \textbf{Source -> Generate hashCode() and equals()\ldots} como
+pode ser visto na Figura \ref{fig:desws13}.
 
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws13.png}}
@@ -273,35 +275,86 @@ como pode ser visto na Figura \ref{fig:desws13}.
 	\end{figure}
 	
 	\pagebreak
-
-	\par Os métodos \texttt{hashCode} e \texttt{equals} da
-classe \texttt{Student.java} foram implementados \\usando o atributo id pode ser
-visto na imagem 
 	
+	\par Em seguida na janela que foi apresentada foi necessário escolher qual
+atributo seria usado para a comparação dentro dos métodos, como esta
+apresentado na Figura \ref{fig:desws14} .
+	
+	\begin{figure}[h!]
+		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws14.png}}
+		\caption[Opção Generate hashCode() and equals()\ldots]{Opção Generate
+		hashCode() and equals()\ldots .
+			\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws14}
+	\end{figure}
+	
+	\par Os métodos \texttt{hashCode} e \texttt{equals} da classe \texttt{Student.java}
+foram implementados\\ usando o atributo \texttt{idStudent} como pode ser visto
+na imagem \ref{fig:desws15}.
+
 	\begin{figure}[h!]
 		\input{code/hash}
 		\caption[Implementação os métodos hashCode() e equals()]{Implementação os
 		métodos \texttt{hashCode()} e \texttt{equals()}.
 			\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws11}
+		\label{fig:desws15}
 	\end{figure}
+
+	\pagebreak
 	
+	
+	\par Além destas classes, foi necessário criar um tipo enumerado (ou enum),
+para definir quais seriam os tipos dos eventos, haja vista que estes teriam um
+numero limitado de possibilidades. Para a criação desta, foi necesário clicar
+com o botão direito do \textit{mouse} sobre o projeto e navegar até a opção
+\textbf{New -> Enum} como pode ser visto na Figura \ref{fig:desws16}.
+	
+	\begin{figure}[h!]
+		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws16.png}}
+		\caption[Opção Generate hashCode() and equals()\ldots]{Opção Generate
+		hashCode() and equals()\ldots .
+			\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws16}
+	\end{figure}
+
+	\pagebreak
+	
+	\par Para esta enumeração foi definido o nome \texttt{EventType}. Os tipos de
+eventos definidos foram três:
+
+	\begin{itemize}
+	  \item \texttt{PROVA\_AGENDADA}: que define um evento como agendamento de uma
+	  atividade avaliativa;
+	  \item \texttt{PROVA\_APLICADA}: que define um evento como, a efetiva
+	  realização de uma atividade avaliativa;
+	  \item \texttt{FALTAS}: lançamento de uma falta;
+	\end{itemize}
+	
+	\par A implementação da enumeração pode ser vista na Figura \ref{fig:desws15}.
+
+	\begin{figure}[h!]
+		\input{code/event_type}
+		\caption[Implementação os métodos hashCode() e equals()]{Implementação os
+		métodos \texttt{hashCode()} e \texttt{equals()}.
+			\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws15}
+	\end{figure}
+
 	%05 - Configuração do persistence.xml
 	\par Em seguida à criação das entidades, foi necessário configurar o arquivo
-\texttt{persistence\\.xml} que fica dentro do \textit{classpath} do projeto
-Java ou seja, dentro da mesma pasta onde estão contidos pacotes do
-projeto. Este arquivo é extremamente importante, pois é nele que estão todas
+\texttt{persistence\\.xml} que fica dentro da pasta de códigos fontes do
+projeto que também é conhecido como \textit{classpath}. Este arquivo é extremamente importante, pois é nele que estão todas
 as configurações relativas à conexão com o banco de dados, configurações
 referentes ao Dialeto SQL que vai ser usado para as consultas e configurações
 referentes ao \textit{persistence unit} que é o conjunto de classes mapeadas
-para o banco de dados.	O arquivo \texttt{persistence.xml} está exposto na
-Figura \ref{fig:qm11}.
+para o banco de dados. Além disso 	O arquivo \texttt{persistence.xml} está
+exposto na Figura \ref{fig:qm15}.
 
 	\begin{figure}[h!]
 		\input{code/persistence_xml}
 		\caption[Arquivo \texttt{persistence.xml}]{Arquivo \texttt{persistence.xml}.
 		\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:qm11}
+		\label{fig:qm15}
 	\end{figure}
 	
 	\pagebreak
@@ -372,7 +425,6 @@ propósito de se alcançar os resultados esperados para essa pesquisa.
 
 
 
-%07 - Explicar anotações dos pojos
 %08 - Finalizando camada de persistência
 %09 - Camada de serviço
 %10 - Classes que disponibilizam serviços anotações
