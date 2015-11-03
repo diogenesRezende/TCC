@@ -1,0 +1,54 @@
+\begin{lstlisting} [style=custom_Java]
+package br.edu.univas.restapiapp.controller;
+/**
+ * Imports omitidos
+ */
+public class StudentEventCtrl {
+
+	public StudentEvent getEventsByRegistration(Long idStudent) {
+		
+		EntityManager em = JpaUtil.getEntityManager();
+		
+		String jpql = "select distinct e.idEvent, e.date, e.value, e.note,";
+		jpql += " e.description, e.eventType, d.idDiscipline, d.idDatabaseExternal from  Discipline d "; 
+		jpql += " right outer join d.events e right outer join e.student s where s.idDatabaseExternal = :id ";
+
+		try {
+			Query query = em.createQuery(jpql);
+			query.setParameter("id", idStudent);
+
+			List<Object[]> resultSet = query.getResultList();
+			List<StudentEvent> studentEvents = new ArrayList<StudentEvent>();
+
+			for (Object[] obj : resultSet) {
+				StudentEvent se = new StudentEvent();
+				se.setIdEvent((Long) obj[0]);
+				se.setDate((Date) obj[1]);
+				se.setValue((int) obj[2]);
+				se.setNote((int) obj[3]);
+				se.setDescription((String) obj[4]);
+				se.seteventType((TipoEvento) obj[5]);
+				se.setIdDiscipline((Long) obj[6]);
+				se.setidDatabaseExternal((Long) obj[7]);
+
+				studentEvents.add(se);
+			}
+
+			StudentEvents students = new StudentEvents;
+			students.setEvents(studentEvents);
+
+			return students;
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+			throw new WebApplicationException(Status.NOT_FOUND);
+		} finally {
+
+			em.close();
+
+		}
+	}
+}
+	
+\end{lstlisting}

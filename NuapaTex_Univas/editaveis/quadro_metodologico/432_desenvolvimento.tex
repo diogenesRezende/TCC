@@ -1,7 +1,5 @@
 %\subsubsection{Desenvolvimento}
 
-	%01 - Criação do database
-	
 	\par Com o ambiente de desenvolvimento pronto, começou de fato o
 desenvolvimento. Primeiramente foi necessário criar o banco de dados no SGDB.
 Este por sua vez foi criado com a ajuda do PgAdmin que é um software gráfico
@@ -201,7 +199,6 @@ contribuir positivamente com a organização do mesmo.
 	
 	\pagebreak
 		
-		%	->Criação das classes
 	\par Com este pacote criado, ja era possível criar as classes do ORM. Foi
 criada primeiramente a classe \texttt{Student.java}. Para a criação desta classe
 foi necesário clicar com o botão direito do \textit{mouse} sobre o projeto e
@@ -248,7 +245,6 @@ alunos. O código fonte desta classe pode ser visto na Figura \ref{fig:desws11}.
 	
 	\pagebreak
 	
-	%07 - Explicar anotações dos pojos
 	\par É válido lembrar que esta classe possui anotações para que possa ser
 reconhecida como uma entidade do JPA, e assim persistida no banco de dados
 quando necessário. Além disso estas anotações possuem outras finalidades
@@ -307,7 +303,6 @@ na Figura \ref{fig:desws12}.
 	
 	\pagebreak
 
-	%04 - HashCode e equals
 	\par E por fim, para cada classe que representa uma entidade, foi necessário
 implementar os métodos \texttt{hashCode} e \texttt{equals}, para que estas
 pudessem facilmente ser comparadas e diferenciadas em relação aos seus valores,
@@ -391,7 +386,6 @@ eventos definidos foram três:
 		\label{fig:desws15}
 	\end{figure}
 
-	%05 - Configuração do persistence.xml
 	\par Após a criação das entidades, foi necessário configurar o arquivo
 \texttt{persistence.xml}. Foi necessário criar a pasta META-INF dentro da pasta
 de de códigos fontes do projeto que também é conhecida como \textit{classpath},
@@ -417,14 +411,21 @@ está exposto na Figura \ref{fig:desws16}.
 	
 	\pagebreak
 	
-	%06 - Confecção JpaUtil.java
 	\par Em seguida à confecção do \texttt{persistence.xml} foi criada a
-classe \texttt{JpaUtil} que está representada na Figura \ref{fig:desws17}.
-Esta classe é responsável por criar uma \texttt{EntityManagerFactory}. Este por
-sua vez é uma  fábrica de instâncias de \texttt{EntityManager} que é um
-\textit{persistence unit} ou unidade de persistência. Essa classe tem a
+classe \texttt{JpaUtil.java} que está representada na Figura \ref{fig:desws17}.
+Para isso foi necessário criar um pacote que seria responsável por armazená-la para
+que a organização do projeto pudesse ser mantida. Tal pacote recebeu o nome de
+de "\texttt{br.edu.univas.restapiappunivas.util}" e poderia se neceessário
+abrigar outras classes de utilidades do projeto assim como a classe
+\texttt{JpaUtil.java}.
+	
+	\par A classe \texttt{JpaUtil.java} é responsável por criar uma
+\texttt{EntityManagerFactory}. Este por sua vez é uma  fábrica de instâncias de
+\texttt{EntityManager} que é um \textit{persistence unit} ou unidade de
+persistência. O \textit{persistence unit} foi configurado através do arquivo
+\texttt{persistence.xml} mostrado anteriormente. Este por sua vez tem a
 responsabilidade de prover um modo de comunicação entre a aplicação e o banco
-de dados. No entanto a classe \texttt{JpaUtil} cria uma única instância de
+de dados. No entanto a classe \texttt{JpaUtil.java} cria uma única instância de
 \texttt{EntityManagerFactory}, que é responsável por disponibilizar e gerenciar
 as instâncias de \texttt{EntityManager} de acordo com a necessidade da
 aplicação.
@@ -457,12 +458,24 @@ como pode ser visto na Figura \ref{fig:desws18}
 	\end{figure}
 	
 	\par Na janela que foi apresentada na sequência, foi necessário preencher os
-campos \textbf{Group id:} e \textbf{Artifact id:}, \textbf{Version:} e
-\textbf{Packaging}. O campo \textbf{Group id:} representa id do grupo(ou
-empresa) a qual pertence o projeto. Este recebeue \textbf{Artifact id:},
-\textbf{Version:} e
-\textbf{Packaging} 
-\ref{fig:desws19}
+campos \textbf{Group id}, \textbf{Artifact id}, \textbf{Version} e
+\textbf{Packaging}, da seguinte forma:
+
+	\begin{itemize}
+	  \item \textbf{Group id} representa id do grupo a qual pertence o projeto,
+	  que recebeu o nome de "\texttt{br.edu.univas}".
+	  \item \textbf{Artifact id:} foi preenchido como o nome do próprio projeto já
+	  criado anteriormente pois, este seria o nome do artefato final do gerado pelo
+	  projeto.
+	  \item \textbf{Version} versão a qual está o projeto. Neste caso manteve-se
+	  o que já veio por padrão.
+	  \item \textbf{Packaging} a forma como o projeto seria empacotado após a
+	  compilação do mesmo. Foi escolhido ao empacotamento do tipo \texttt{war} por
+	  se tratar de um projeto Java para \textit{web}.
+	\end{itemize}
+	
+	\par A janela apresentada com as informações preenchidas podem
+	ser vistas na Figura \ref{fig:desws19}.
 
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws19.png}}
@@ -473,18 +486,64 @@ empresa) a qual pertence o projeto. Este recebeue \textbf{Artifact id:},
 	\end{figure}
 	
 	\pagebreak
+	
+	\par Com a conclusão da conversão do projeto, foi gerado o arquivo
+\texttt{pom.xml}. Este arquivo provê as informações necessárias para que o Maven
+faça a gerência do projeto. Este arquivo possui, além das informações
+apresentadas anteriormente (\textbf{Group id}, \textbf{Artifact id},
+\textbf{Version} e \textbf{Packaging}), algumas informações a respeito da
+compilação do projeto e o principal que é a gerência das dependências do
+projeto. Inicialmente foi incluída somente as dependências referentes ao
+\textit{driver} JDBC do PostGreSql e a biblioteca hibernate como pode ser visto
+na Figura \ref{fig:desws18}.
+	
+	\begin{figure}[h!]
+		\input{code/pom_xml}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws18}
+	\end{figure}
+
+	\pagebreak
+	
+	\par Em seguida a essa configuração foi necessário apagar a pasta \texttt{libs}
+do projeto, pois esta já não era mais necessária, haja vista que as bibliotecas
+usadas no projeto ja estavam sendo gerenciadas pelo Maven. A partir daí foi
+necessário criar a parte de disponibilização dos serviços REST. Para isto foram
+criados três novos pacotes para abrigar as classes que formaram a parte de
+serviços do \textit{web service}, são eles:
+	
+	\begin{itemize}
+	  \item \texttt{br.edu.univas.restapiappunivas.controllers}: pacote responsável
+	  por agrupar as classes responsaveis por realizar as consultas na camada de
+	  persistência do projeto e prover o resultados para publicação nos serviços.
+	  \item \texttt{br.edu.univas.restapiappunivas.entities}: pacote responsável
+	  por agrupar as classes que serviriam para abrigar os dados retonados nas
+	  consultas dos \textit{controllers} e servir como retorno aos métodos das
+	  classes de serviços.
+	  \item \texttt{br.edu.univas.restapiappunivas.resources}: pacote responsável
+	  por agrupar as classes responsaveis por prover os serviços REST.
+	\end{itemize}
+
+
+	\par Foi necessário criar algumas classes que eram responsáveis por fazer as
+consultas no banco de dados usando o Hibernate. Estas classes tinham alguns
+métodos que tinham a responsabilidade de fazer a consulta e retornar os dados
+que seriam usados pelas classes que iam tornar disponíveis os serviços do
+\textit{web service}. Uma destas classes é a classe \texttt{StudentCtrl.java},
+que pode ser vista na Figura \ref{fig:desws19}.
+	
+	\begin{figure}[h!]
+		\input{code/student_event}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws19}
+	\end{figure}
+
+	\pagebreak
 
 
 
-
-
-
-
-
-
-
-	%23 - Módulo que ira fazer a busca dos dados na base da instituição de ensino
-	%24 - Falar que vai ser simulado
 	\par Para que fosse possível transmitir dados para o aplicativo, era
 necessário receber as informações do sistema acadêmico da referida instituição,
 haja vista que o \textit{web service} é independente do mesmo. Para esse
@@ -502,22 +561,3 @@ dados atualizados.
 	\par Os procedimentos acima citados foram os passos até agora realizados com o
 propósito de se alcançar os resultados esperados para essa pesquisa.
 
-
-
-
-
-
-%08 - Finalizando camada de persistência
-%09 - Camada de serviço
-%10 - Classes que disponibilizam serviços anotações
-%11 - Explicar as entities criadas para disponibilizar os dados
-%12 - Ctrls que fazem a busca dos dados
-%13 - Problema do erro 500
-%14 - Provedor de arquivos e contexto
-%15 - Em todos citar o pom.xml
-%16 - Configuração do web.xml
-%17 - Módulo de varredura de atualizações com timerTask
-%18 - Módulo de alerta de provas agendas no dia da prova
-%20 - Módulo para disparar as mensagens para o gcm
-%21 - Serviço que faz o registro de sender_id
-%22 - Mostrar a estrutura do empacotamento depois de finalizado
