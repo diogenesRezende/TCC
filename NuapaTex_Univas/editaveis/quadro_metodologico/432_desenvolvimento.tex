@@ -9,7 +9,7 @@ conectado a um servidor de banco de dados que neste caso era em servidor local c
 ser visto na Figura \ref{fig:desws}.
 
 	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=1]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws.png}}
+		\centerline{\includegraphics[scale=0.5]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws.png}}
 		\caption[Servidor de banco de dados local no PgAdmin]{Servidor de banco de
 		dados local no PgAdmin.
 			\textbf{Fonte:}Elaborado pelos autores.}
@@ -21,7 +21,7 @@ botão direito do \textit{mouse}, sobre a opção \textbf{Databases -> New
 Database\ldots} no PgAdmin, apresentada na Figura \ref{fig:desws1}.
 
 	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws1.png}}
+		\centerline{\includegraphics[scale=0.5]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws1.png}}
 		\caption[Opção \textit{New Database\ldots}]{Opção \textit{New Database\ldots}.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws1}
@@ -33,12 +33,11 @@ Database\ldots} no PgAdmin, apresentada na Figura \ref{fig:desws1}.
 está apresentado na Figura \ref{fig:desws2}.
 	
 	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=1]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws2.png}}
+		\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws2.png}}
 		\caption[Tela \textit{New Database\ldots}]{Tela \textit{New Database\ldots}.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws2}
 	\end{figure}
-	\pagebreak
 
 	\par Como pode ser visto foram preenchidos os campos \textbf{Name} e
 \textbf{Owner}. O campo \textbf{Name} se refere ao nome do banco de dados que
@@ -55,7 +54,7 @@ eventuais correções.
 	%02 - Início do projeto web no eclipse;
 	\par Em seguida foi criado um projeto do tipo Dynamic Web Project no
 Eclipse conforme Apêndice I. Antes de começar o desenvolvimento foi necessário
-ainda criar uma pasta a qual foi a responsável pos conter todos os arquivos
+ainda criar uma pasta a qual foi a responsável por conter todos os arquivos
 \texttt{.jar} das bibliotecas que foram usadas para o desenvolvimento do
 \textit{web service}. Para criar uma nova pasta dentro do projeto foi necessário
 clicar com o botão direito do mouse sobre o projeto e navegar sobre a opção
@@ -482,7 +481,7 @@ que seriam usados pelas classes que iam tornar disponíveis os serviços do
 que pode ser vista na Figura \ref{fig:desws19}.
 	
 	\begin{figure}[h!]
-		\input{code/student_event}
+		\input{code/student_event_ctrl}
 		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws19}
@@ -492,9 +491,41 @@ que pode ser vista na Figura \ref{fig:desws19}.
 	
 	\par Esta classe é composta unicamente pelo método
 \texttt{getEventsByRegistration()} o qual era responsável por fazer a busca de
-todos os eventos de um determinado aluno pela sua matrícula.
+todos os eventos de um determinado aluno pela sua matrícula. Ainda na Figura
+\ref{fig:desws19} é perceptível que dentro deste método são usadas instancias
+das classes \texttt{StudentEvent} e\texttt{StudentEvents}. A classe
+\texttt{StudentEvent} foi criada apenas para servir como como um simples POJO
+que conteria os retorno da consulta JPQL\footnote{JPQL - \textit{Java
+Persistence Query Language}}. O código desta classe pode ser visto na Figura
+\ref{fig:desws20}.
+	
+	\begin{figure}[h!]
+		\input{code/student_event}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws20}
+	\end{figure}
+
+	\pagebreak
+
+	\par Por outro lado a classe \texttt{StudentEvents} recebe uma coleção de
+\texttt{StudentEvent} para que a mesma pudesse ser convertida corretamente para
+JSON, nas classes que disponibilizam o serviço. O código fonte desta classe pode
+ser visto na Figura \ref{fig:desws21}.
+	
+	\begin{figure}[h!]
+		\input{code/student_events}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws21}
+	\end{figure}
+	
+	\par Nas duas classes mostradas anteriormente nas Figuras \ref{fig:desws20} e
+\ref{fig:desws21} são usadas algumas anotações.
 
 
+
+	\pagebreak
 	\par Era necessário também que  de tempos em tempos o próprio \textit{web
 service} fizesse uma busca internamente, fazendo o levantamento de novos eventos
 lançados para os alunos para que os os mesmos pudessem ser enviados ao GCM para

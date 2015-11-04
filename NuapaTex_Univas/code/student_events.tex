@@ -1,0 +1,22 @@
+\begin{lstlisting} [style=custom_Java]
+package br.edu.univas.restapiappunivas.entities;
+/**
+ *Imports omitidos
+ */
+
+@XmlRootElement
+public class StudentEvents {
+
+	@XmlElement
+	private List<StudentEvent> events = new ArrayList<StudentEvent>();
+
+	public List<StudentEvent> getEvents() {
+		return events;
+	}
+
+	public void setEvents(List<StudentEvent> events) {
+		this.events = events;
+	}
+
+}
+\end{lstlisting}
