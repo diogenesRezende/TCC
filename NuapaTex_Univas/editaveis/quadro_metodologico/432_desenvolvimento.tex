@@ -3,9 +3,9 @@
 	\par Com o ambiente de desenvolvimento pronto, começou de fato o
 desenvolvimento. Primeiramente foi necessário criar o banco de dados no SGDB.
 Este por sua vez foi criado com a ajuda do PgAdmin que é um software gráfico
-para administração do SGDB, e que fornece uma interface gráfica de apoio para o
-PotgreSql. Para criar era necessário ja estar com o PgAdmin aberto e conectado
-a um servidor de banco de dados que neste caso era em servidor local como pode
+para administração do SGDB, e que fornece uma interface visual de apoio para o
+PotgreSql. Para criar o banco era necessário ja estar com o PgAdmin aberto e
+conectado a um servidor de banco de dados que neste caso era em servidor local como pode
 ser visto na Figura \ref{fig:desws}.
 
 	\begin{figure}[h!]
@@ -40,90 +40,26 @@ está apresentado na Figura \ref{fig:desws2}.
 	\end{figure}
 	\pagebreak
 
-	\par Como pode ser visto foram preenchidos os campos nome e usuário . O campo
-nome se refere ao nome do banco de dados que foi definido com
-\texttt{wsappunivas}, e usuário, o responsável pelo banco de dados, que para
-este caso foi usuário padrão do SGDB, que é o \texttt{postgres}. Além destas
-configurações mais nenhuma foi necessária. O banco de dados foi criado, porém
-sua estrutura não foi definida, pois como será visto mais adiante o Hibernate,
-possui um mecanismo, que com algumas configurações, permite a estruturação do
-banco de dados, de acordo com o mapeamento objeto-relacional e de acordo com a
-evolução do projeto. Isto permitirá mudanças na estrutura do banco de dados e
-suas tabelas, e até mesmo eventuais correções.
+	\par Como pode ser visto foram preenchidos os campos \textbf{Name} e
+\textbf{Owner}. O campo \textbf{Name} se refere ao nome do banco de dados que
+foi definido com \texttt{wsappunivas}, e o campo \textbf{Owner}, o responsável
+pelo banco de dados, que para este caso foi usuário padrão do SGDB, que é o
+\texttt{postgres}. Além destas configurações mais nenhuma opção foi necessária.
+O banco de dados foi criado, porém sua estrutura não está definida, pois como
+será visto mais adiante o Hibernate, possui um mecanismo, que com algumas
+configurações, permite a estruturação do banco de dados, de acordo com o
+mapeamento objeto-relacional e de acordo com a evolução do projeto. Isto
+permitirá mudanças na estrutura do banco de dados e suas tabelas, e até mesmo
+eventuais correções.
 	
 	%02 - Início do projeto web no eclipse;
 	\par Em seguida foi criado um projeto do tipo Dynamic Web Project no
-Eclipse. Para proceder com a criação de um novo projeto deste tipo no Eclipse, é
-necessário acessar na IDE, a opção \textbf{File -> New-> Dynamic Web Project}
-como pode ser visto na figura \ref{fig:desws3}.
-
-	
-	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws3.png}}
-		\caption[Tela \textit{New Database\ldots}]{Tela \textit{New Database\ldots}.
-			\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws3}
-	\end{figure}
-	
-	\pagebreak
-	
- 	\par Em seguida foi apresentada uma tela para o preenchimento de alguns dados
- requeridos para a criação do projeto. Destas informações somente foi preenchido
- o nome do projeto. As outras informações continuaram sendo as que vem por
- padrão da IDE. A janela apresentada e as informações preenchidas podem ser
- vistas na Figura \ref{fig:desws4}.
-
-	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws4.png}}
-		\caption[Tela para criação de um novo projeto no Eclipse]{Tela para criação de um novo projeto no Eclipse.
-			\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws4}
-	\end{figure}
-	
-	\pagebreak
-	
-	
-	\par Na próxima janela apresentada, que têm por função configurar a pasta de
-códigos do projeto manteve-se a configuração apresentada pela IDE, como mostra
-a Figura \ref{fig:desws5}.
-
-	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws5.png}}
-		\caption[Tela para criação de um novo projeto no Eclipse]{Tela para criação de um novo projeto no Eclipse.
-			\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws5}
-	\end{figure}
-	
-	\pagebreak
-	
-	\par Na sequencia, na tela que foi apresentada era necessário preencher o
-campo \textbf{Context root:} com o contexto principal da aplicação web que
-acabou mantendo o próprio nome da aplicação. Além disso foi marcado a opção
-\textbf{Generate web.xml deployment descriptor}, para que ao criar o projeto, a
-própria IDE criasse o arquivo \texttt{web.xml}, arquivo responsável por algumas
-configurações da aplicação web. Esta tela esta apresentada na Figura
-\ref{fig:desws6}.
-
-	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws6.png}}
-		\caption[Tela para criação de um novo projeto no Eclipse]{Tela para criação de um novo projeto no Eclipse.
-			\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws6}
-	\end{figure}
-	
-	\pagebreak
-
-	%03 - Mapeamento orm;	
-		%	->Criação do pacote
-
-	\par Após este passo foi concluído a criação do projeto, e já era possível
-iniciar os trabalhos com a camada de persistência de dados do projeto. Antes de
-começar o desenvolvimento foi necessário ainda criar uma pasta a qual foi a
-responsável pos conter todos os arquivos \texttt{.jar} das bibliotecas que foram
-usadas para o desenvolvimento do \textit{web service}. Para criar uma nova pasta dentro
-do projeto foi necessário clicar com o botão direito do mouse sobre o projeto e
-navegar sobre a opção \textbf{New -> Folder}, como pode ser visto na Figura
-\ref{fig:desws6_1}.
+Eclipse conforme Apêndice I. Antes de começar o desenvolvimento foi necessário
+ainda criar uma pasta a qual foi a responsável pos conter todos os arquivos
+\texttt{.jar} das bibliotecas que foram usadas para o desenvolvimento do
+\textit{web service}. Para criar uma nova pasta dentro do projeto foi necessário
+clicar com o botão direito do mouse sobre o projeto e navegar sobre a opção
+\textbf{New -> Folder}, como pode ser visto na Figura \ref{fig:desws6_1}.
 
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws6_1.png}}
@@ -217,8 +153,8 @@ navegar até a opção \textbf{New -> Class} como pode ser visto na Figura
 
 
 	\par Em seguida foi apresentada uma janela chamada New Java Class. Nesta
-janela somente foi necessário preencher o campo \textbf{Name:} que representa o
-nome da classe que está sendo criada.
+janela somente foi necessário preencher o campo \textbf{Name} que representa o
+nome da classe que está sendo criada e ainda pode ser definido o pacote.
 	
 	
 	
@@ -257,17 +193,19 @@ objeto relacional da aplicação.
 	  pudesse ser reconhecida como uma entidade do JPA e assim persistida no banco
 	  de dados;
 	  \item \texttt{@Table}: anotação que possui algumas configurações relativas a
-	  tabela no banco de dados, a qual esta entidade representa, no caso da classe
-	  mostrada anteriormente é configurado o nome da tabela;
+	  uma tabela no banco de dados, a qual esta entidade representa, no caso da
+	  classe mostrada anteriormente é configurado o nome da tabela;
 	  \item \texttt{@Id}: esta anotação fica sobre o atributo que representa a
 	  chave primária no banco de dados;
-	  \item \texttt{@SequenceGenerator}: esta anotação define qual será o modo com
-	  que a chave primaria será incrementada.
+	  \item \texttt{@GeneratedValue}: esta anotaçõe indica qual será a estratégia
+	  usada para incrementar a chave primária da tabela.
+	  \item \texttt{@SequenceGenerator}: esta anotação define o mecanismo com que
+	  a chave primária será incrementada.
 	  \item \texttt{@Column}: define algumas propriedades do campo da tabela do
 	  banco de dados, o qual o atributo que ele anota representa. Estas
 	  configuraçãoes podem são:
 		  	\begin{itemize}
-		    	\item \texttt{name}: muda o nome do campo;
+		    	\item \texttt{name}: mapeia o nome do campo;
 		    	\item \texttt{length}: determina o tamanho em caracteres que o campo
 		    	aceitará;
 		    	\item \texttt{nullable}: define se o preenchimento do campo é obrigatório;
@@ -283,22 +221,34 @@ objeto relacional da aplicação.
 	  dados.
 \end{itemize}
  
-	\par Esta classe faz parte do mecanismo de persistêcia de dados e é
-simplesmente um  pojo ou seja, um objeto  simples que contêm somente atributos
+	\par Esta classe faz parte do mecanismo de persistência de dados e é
+simplesmente um  POJO ou seja, um objeto  simples que contêm somente atributos
 privados e os métodos \textit{getters} e \textit{setters} que servem apenas
 para encapsular estes atributos, e não possue nenhuma lógica de negócios. Além
-desta classe, foram criadas outras com os mesmos propósitos. Estas classes
-tinham a mesma finalidade da anterior, porém com pequenas diferenças no que diz
-respeito à atributos, metodos e anotações. Estas classes representam, de
-maneira individual, as tabelas no banco de dados. As classes podem ser vistas
-na Figura \ref{fig:desws12}.
+desta classe, foram criadas outras com os mesmos propósitos, que podem ser
+vista no diagrama da Figura \ref{fig:desws12}.
 	
 	
 	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws12.png}}
-		\caption[Classes que fazem parte do ORM]{Classes que fazem parte do ORM.
+		\centerline{\includegraphics[scale=0.55]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws12.png}}
+		\caption[Modelo fisíco do banco de dados]{Modelo fisíco do banco de dados.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws12}
+	\end{figure}
+	
+	\pagebreak
+	
+	\par Estas classes tinham a mesma finalidade da anterior, porém com pequenas
+diferenças no que diz respeito aos atributos, metodos e anotações. Estas classes
+representam, de maneira individual, as tabelas no banco de dados. O modelo
+fisíco do banco de dados pode ser visto na Figura \ref{fig:desws12_1}.
+	
+	
+	\begin{figure}[h!]
+		\centerline{\includegraphics[scale=0.55]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/mer_ws.pdf}}
+		\caption[Modelo fisíco do banco de dados]{Modelo fisíco do banco de dados.
+			\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws12_1}
 	\end{figure}
 	
 	\pagebreak
@@ -307,7 +257,7 @@ na Figura \ref{fig:desws12}.
 implementar os métodos \texttt{hashCode} e \texttt{equals}, para que estas
 pudessem facilmente ser comparadas e diferenciadas em relação aos seus valores,
 haja visto que cada instância destas classes representa um registro no banco de
-dados. A própria IDE provê uma forma facíl para criar este métodos, bastando
+dados. A própria IDE provê uma forma fácil para criar este métodos, bastando
 para isso clicar com o botão direito do mouse sobre o código da classe e
 escolher a opção \textbf{Source -> Generate hashCode() and equals()\ldots} como
 pode ser visto na Figura \ref{fig:desws13}.
@@ -334,9 +284,9 @@ apresentado na Figura \ref{fig:desws14} .
 		\label{fig:desws14}
 	\end{figure}
 	
-	\par Os métodos \texttt{hashCode} e \texttt{equals} da classe \texttt{Student.java}
-foram implementados\\ usando o atributo \texttt{idStudent} como pode ser visto
-na imagem \ref{fig:desws15}.
+	\par Os métodos \texttt{hashCode} e \texttt{equals} da classe
+\texttt{Student.java} foram implementados\\ usando o atributo \texttt{idStudent}
+e podem ser vistos na Figura \ref{fig:desws15}.
 
 	\begin{figure}[h!]
 		\input{code/hash}
@@ -485,8 +435,6 @@ campos \textbf{Group id}, \textbf{Artifact id}, \textbf{Version} e
 		\label{fig:desws19}
 	\end{figure}
 	
-	\pagebreak
-	
 	\par Com a conclusão da conversão do projeto, foi gerado o arquivo
 \texttt{pom.xml}. Este arquivo provê as informações necessárias para que o Maven
 faça a gerência do projeto. Este arquivo possui, além das informações
@@ -494,7 +442,7 @@ apresentadas anteriormente (\textbf{Group id}, \textbf{Artifact id},
 \textbf{Version} e \textbf{Packaging}), algumas informações a respeito da
 compilação do projeto e o principal que é a gerência das dependências do
 projeto. Inicialmente foi incluída somente as dependências referentes ao
-\textit{driver} JDBC do PostGreSql e a biblioteca hibernate como pode ser visto
+\textit{driver} JDBC do PostGreSql e a biblioteca Hibernate como pode ser visto
 na Figura \ref{fig:desws18}.
 	
 	\begin{figure}[h!]
@@ -530,7 +478,7 @@ serviços do \textit{web service}, são eles:
 consultas no banco de dados usando o Hibernate. Estas classes tinham alguns
 métodos que tinham a responsabilidade de fazer a consulta e retornar os dados
 que seriam usados pelas classes que iam tornar disponíveis os serviços do
-\textit{web service}. Uma destas classes é a classe \texttt{StudentCtrl.java},
+\textit{web service}. Uma destas classes é a \texttt{StudentEventsCtrl.java},
 que pode ser vista na Figura \ref{fig:desws19}.
 	
 	\begin{figure}[h!]
@@ -541,7 +489,16 @@ que pode ser vista na Figura \ref{fig:desws19}.
 	\end{figure}
 
 	\pagebreak
+	
+	\par Esta classe é composta unicamente pelo método
+\texttt{getEventsByRegistration()} o qual era responsável por fazer a busca de
+todos os eventos de um determinado aluno pela sua matrícula.
 
+
+	\par Era necessário também que  de tempos em tempos o próprio \textit{web
+service} fizesse uma busca internamente, fazendo o levantamento de novos eventos
+lançados para os alunos para que os os mesmos pudessem ser enviados ao GCM para
+que este pudesse notificar os dispositivos cadastrados.
 
 
 	\par Para que fosse possível transmitir dados para o aplicativo, era
@@ -556,7 +513,7 @@ aplicáveis ao banco de dados local. Além disso é preciso notificar o módulo
 responsável por invocar o serviço Google Cloud Messaging para que os
 dispositivos dos alunos aos quais houveram atualizações nos dados, fossem
 notificados e fizessem acesso ao \textit{web service} para solicitar esses
-dados atualizados.
+dados atualizados. Para esta pesquisa o módulo foi simulado.
 
 	\par Os procedimentos acima citados foram os passos até agora realizados com o
 propósito de se alcançar os resultados esperados para essa pesquisa.
