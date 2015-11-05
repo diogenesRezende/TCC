@@ -1,0 +1,60 @@
+\begin{lstlisting} [style=custom_Java]
+package br.edu.univas.restapiappunivas.gcm;
+/**
+ *Imports omitidos
+ */
+
+public class PostToGCM {
+
+	public static void post(String apiKey, ConteudoMensagemGCM content) {
+
+		try {
+
+			URL url = new URL("https://android.googleapis.com/gcm/send");
+
+			HttpURLConnection conn = 
+				(HttpURLConnection) url.openConnection();
+
+			conn.setRequestMethod("POST");
+
+			conn.setRequestProperty("Content-Type", "application/json");
+			conn.setRequestProperty("Authorization", "key=" + apiKey);
+
+			conn.setDoOutput(true);
+
+			ObjectMapper mapper = new ObjectMapper();
+
+			DataOutputStream wr = new DataOutputStream(conn.getOutputStream());
+
+			mapper.writeValue(wr, content);
+
+			wr.flush();
+
+			wr.close();
+
+			int responseCode = conn.getResponseCode();
+			System.out.println("\nSending 'POST' request to URL : " + url);
+			System.out.println("Response Code : " + responseCode);
+
+			BufferedReader in = new BufferedReader(new InputStreamReader(
+					conn.getInputStream()));
+			String inputLine;
+			StringBuffer response = new StringBuffer();
+
+			while ((inputLine = in.readLine()) != null) {
+				response.append(inputLine);
+			}
+			in.close();
+
+			System.out.println(response.toString());
+
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+
+\end{lstlisting}

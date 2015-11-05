@@ -49,51 +49,25 @@ será visto mais adiante o Hibernate, possui um mecanismo, que com algumas
 configurações, permite a estruturação do banco de dados, de acordo com o
 mapeamento objeto-relacional e de acordo com a evolução do projeto. Isto
 permitirá mudanças na estrutura do banco de dados e suas tabelas, e até mesmo
-eventuais correções.
+eventuais correções, no decorrer do desenvolvimento da aplicação.
 	
 	%02 - Início do projeto web no eclipse;
 	\par Em seguida foi criado um projeto do tipo Dynamic Web Project no
 Eclipse conforme Apêndice I. Antes de começar o desenvolvimento foi necessário
 ainda criar uma pasta a qual foi a responsável por conter todos os arquivos
 \texttt{.jar} das bibliotecas que foram usadas para o desenvolvimento do
-\textit{web service}. Para criar uma nova pasta dentro do projeto foi necessário
-clicar com o botão direito do mouse sobre o projeto e navegar sobre a opção
-\textbf{New -> Folder}, como pode ser visto na Figura \ref{fig:desws6_1}.
-
-	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws6_1.png}}
-		\caption[Tela para criação de um novo projeto no Eclipse]{Tela para criação de um novo projeto no Eclipse.
-			\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws6_1}
-	\end{figure}
-
-	\pagebreak 
+\textit{web service}. Em seguida foram copiados todos os arquivos \texttt{.jar}
+da biblioteca Hibernate que eram necessários ao projeto, para dentro desta
+pasta e também o \texttt{jar} do \textit{driver} JDBC do PostGreSql, que seria
+responsável por fazer a comunicação entre o banco de dados e a aplicação.
 	
-	\par Em seguida na janela apresentada, foi definido o nome da nova pasta como
-\texttt{libs}. A tela e o nome preenchido podem ser vistos na Figura
-\ref{fig:desws6_2}.
-
-	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.60]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws6_2.png}}
-		\caption[Tela para criação de um novo projeto no Eclipse]{Tela para criação de um novo projeto no Eclipse.
-			\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws6_2}
-	\end{figure}
-
-	\pagebreak
-	
-	\par Em seguida foram copiados todos os arquivos \texttt{.jar} da biblioteca
-Hibernate que eram necessários ao projeto, para dentro desta pasta e também o
-\texttt{jar} do \textit{driver} JDBC do PostGreSql, que seria responsável por
-fazer a comunicação entre o banco de dados e a aplicação. Além disso era
-necessário mais uma configuração para que as bibliotecas pudessem ser
-reconhecidas como parte do projeto. Era necessário fazer a inclusão destas
-bibliotecas para dentro do \textit{build path} do projeto. Para isso foi
-necessário selecionar todos os arquivos \texttt{.jar} que estavam dentro da
-pasta \texttt{libs}, clicar com o botão direito do mouse sobre eles e escolher
-a opção \textbf{Build Path -> Add to Build Path}. A pasta \texttt{libs} que foi
-criada, os arquivos \texttt{.jar} das bibliotecas usadas e a configuração do
-\textit{build path}  do projeto, podem ser visto na Figura \ref{fig:desws6_3}.
+	\par Além disso era necessário mais uma configuração para que as bibliotecas
+pudessem ser reconhecidas como parte do projeto. Era necessário fazer a
+inclusão destas bibliotecas para dentro do \textit{build path} do projeto. Para
+isso foi necessário selecionar todos os arquivos \texttt{.jar} que estavam
+dentro da pasta \texttt{libs}, clicar com o botão direito do mouse sobre eles e
+escolher a opção \textbf{Build Path -> Add to Build Path}, que pode ser visto
+na Figura \ref{fig:desws6_3}.
 
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.60]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws6_3.png}}
@@ -101,38 +75,17 @@ criada, os arquivos \texttt{.jar} das bibliotecas usadas e a configuração do
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws6_3}
 	\end{figure}
-
+	
+	\pagebreak
+	
 	\par Com o projeto devidamente configurado, começou-se de fato a desenvolver a
 camada de persistência da aplicação. Para este propósito, primeiramente foi
 criado um pacote, onde ficaram contidas as classes que representam as entidades
-do ORM. Para a criação do pacote foi necessário clicar com o botão direito do
-mouse sobre o projeto e acessar a opção \textbf{New -> Package}, como pode ser
-visto na Figura \ref{fig:desws7}.
-
-	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws7.png}}
-		\caption[Tela para criação de um novo projeto no Eclipse]{Tela para criação de um novo projeto no Eclipse.
-			\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws7}
-	\end{figure}
-	
-	\pagebreak 
-	
-	\par Em seguida foi apresentada a janela New Java Package, para a criação de
-um novo pacote mostrada na Figura \ref{fig:desws8}. O pacote recebeu o nome de
-"\texttt{br.edu.univas.restapiappunivas.\\model}", pois nele estão contidas as
+do ORM. Este pacote recebeu o nome de
+\texttt{br.edu.univas.restapiappunivas.model},  pois nele estão contidas as
 classes que fazem parte do modelo de negócios da aplicação. Este pacote foi
 criado visando a divisão das responsabilidades internas no projeto, além de
 contribuir positivamente com a organização do mesmo.
-
-	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws8.png}}
-		\caption[Tela para criação de um novo projeto no Eclipse]{Tela para criação de um novo projeto no Eclipse.
-			\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws8}
-	\end{figure}
-	
-	\pagebreak
 		
 	\par Com este pacote criado, ja era possível criar as classes do ORM. Foi
 criada primeiramente a classe \texttt{Student.java}. Para a criação desta classe
@@ -536,17 +489,78 @@ Figura \ref{fig:desws22}.
 	\end{figure}
 	
 	
+	\par Era necessário também, que a cada novo evento lançado no banco de dados do
+\textit{web service}, estes eventos fossem enviados ao GCM para que este pudesse
+comunicar aos dispositivos dos alunos. Com a finalidade de sanar esta
+necessidade foram construídas três classes, que eram responsáveis por tratar as
+mensagens a serem enviadas e posteriormente enviá-las ao GCM. Estas classes
+ficaram contidas no pacote \texttt{br.edu.univas.restapiappunivas.gcm}.
+
+	\par A primeira classe a ser criada foi \texttt{ContentMessageGCM.java}. Esta
+classe tinha por finalidade estruturar o conteúdo da mensagem que seria
+entregue ao GCM. Dentre os conteúdos da mensagem estão os
+\texttt{registration\_ids}, que são os id's dos dispositivos dos alunos, que
+foram registrados nos servidores do GCM e \texttt{data} que é o conteúdo da
+mensagem. O código fonte desta classe pode ser visto na Figura
+\ref{fig:desws30}.
+
+	\begin{figure}[h!]
+		\input{code/ContentMessageGCM}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws30}
+	\end{figure}
+
 	
-	
-	
-	
+	\par Além disso foi criada a classe estática \texttt{PostToGCM.java}, a qual
+foi responsável por, converter o conteúdo da menssagem para o formato aceito
+pelo GCM e enviá-lo através do método POST do HTTP. Para que a mensagem pudesse
+ser convertida em JSON um objeto do tipo \texttt{ObjectMapper} foi usado, e
+para enviar a mensagem para o GCM é usado um objeto do tipo
+\texttt{HttpURLConnection}, em conjunto com o \texttt{ObjectMapper}. Esta classe
+está apresentada na Figura \ref{fig:desws31}.
+
+	\begin{figure}[h!]
+		\input{code/PostToGCM}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws31}
+	\end{figure}
 	
 	\pagebreak
-	\par Era necessário também que  de tempos em tempos o próprio \textit{web
-service} fizesse uma busca internamente, fazendo o levantamento de novos eventos
-lançados para os alunos para que os os mesmos pudessem ser enviados ao GCM para
-que este pudesse notificar os dispositivos cadastrados.
+	
+	\par Além disso esta classe coleta a resposta retornada pelo GCM e lança este
+retorno nos \textit{log's} da aplicação. E por fim para que estas duas classes
+pudessem trabalhar conjuntamente foi necessário necessário criar a classe
+\texttt{SendMessageGCM.java} que foi responsável por receber o conteúdo a ser
+enviado e os ids dos dispositivos aos quais seriam enviadas estas mensagens, e
+invocar o método \texttt{post} da classe \texttt{PostToGCM.java} para que os
+mesmos pudessem ser enviados. Foi nessa classe também que estava contida a
+chave de autorização de envio de mensagens ao GCM,que atribuída ao atributo
+\texttt{apiKey}. Esta classe pode ser vista na Figura \ref{fig:desws32}.
 
+	\begin{figure}[h!]
+		\input{code/SendMessageGCM}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws32}
+	\end{figure}
+		
+	\par Era necessário também que  de tempos em tempos o próprio \textit{web
+service} fizesse uma varredura, buscando por novos eventos lançados para os
+alunos, para que as classes reponsáveis por enviar as mensagens ao GCM, pudessem
+enviar tais notificações. Para isto primeiramente foi criada a classe
+\texttt{ListenerAtualizations.java} que pode ser vista na Figura
+\ref{fig:desws33}.
+
+	\begin{figure}[h!]
+		\input{code/ListenerAtualizations}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws33}
+	\end{figure}
+
+	\par Para que esta classe pudesse funcionar
 
 	\par Para que fosse possível transmitir dados para o aplicativo, era
 necessário receber as informações do sistema acadêmico da referida instituição,

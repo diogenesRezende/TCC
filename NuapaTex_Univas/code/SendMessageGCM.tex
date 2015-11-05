@@ -1,0 +1,46 @@
+\begin{lstlisting} [style=custom_Java]
+package br.edu.univas.restapiappunivas.gcm;
+/**
+ * Imports omitidos
+ */
+public class SendMessageGCM {
+
+	private void sendMessage(List<Users> users) {
+
+		String apiKey = "AIzaSyC58w1R-0DzfpTzZx3e4WUKSXwE_VoDvqU";
+		ContentMessageGCM content = createContent(users);
+		
+		if (!content.equals(null)) {
+			POST2GCM.post(apiKey, content);
+		} else {
+			System.out.println("Nenhum usuario registrado!");
+		}
+	}
+	
+	private ContentMessageGCM createContent(List<users> users) {
+
+		ContentMessageGCM c = new ContentMessageGCM();
+
+		for (Users user : user) {
+			if (user.getIdGCM() == null) {
+				System.out.println("User -" + usuario.getUsername()
+						+ " id not have the registered gcm");
+			} else {
+				c.addRegId(usuario.getIdGCM());
+				System.out.println("Usuario - " + usuario.getUsername()
+						+ " added to the batch shipping!");
+			}
+
+		}
+		if (c.getRegistration_ids().size() == 0) {
+			return null;
+		} else {
+			c.createData("event", user.event);
+			return c;
+		}
+	}
+}
+
+
+	
+\end{lstlisting}

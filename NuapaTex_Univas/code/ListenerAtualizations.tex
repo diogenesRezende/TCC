@@ -1,0 +1,40 @@
+\begin{lstlisting} [style=custom_Java] 	
+/**
+ *Imports Omitidos
+ */
+
+public class ListenerAtualizations implements ServletContextListener {
+
+	public static final SimpleDateFormat sdf = new SimpleDateFormat(
+			"yyyy-MM-dd_HH:mm:ss");
+
+	public void contextInitialized(ServletContextEvent arg0) {
+		ServletContext servletContext = arg0.getServletContext();
+
+		int delay = 1000;
+		Timer timer = new Timer();
+		timer.scheduleAtFixedRate(
+			new TimerTask() {
+				public void run() {
+					Date agora = new Date();
+
+						Atualizations at = new Atualizations();
+						at.start();
+				}
+			}, delay, 5000);
+		servletContext.setAttribute("timer", timer);
+	}
+
+	public void contextDestroyed(ServletContextEvent arg0) {
+		ServletContext servletContext = arg0.getServletContext();
+		Timer timer = (Timer) servletContext.getAttribute("timer");
+		if (timer != null)
+			timer.cancel();
+		servletContext.removeAttribute("timer");
+
+	}
+
+}
+	
+\end{lstlisting}
+
