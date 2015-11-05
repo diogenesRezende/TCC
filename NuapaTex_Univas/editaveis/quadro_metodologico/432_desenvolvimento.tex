@@ -520,11 +520,27 @@ ser visto na Figura \ref{fig:desws21}.
 		\label{fig:desws21}
 	\end{figure}
 	
-	\par Nas duas classes mostradas anteriormente nas Figuras \ref{fig:desws20} e
-\ref{fig:desws21} são usadas algumas anotações.
+	\par Estas duas classes mostradas nas Figuras \ref{fig:desws20} e 
+\ref{fig:desws21} foram criadas dentro do pacote\\ 
+\texttt{br.edu.univas.restapiappunivas.entities}. Além delas foi criada também
+a classe \texttt{StudentDiscipline} no mesmo pacote. Esta classe foi usada com o
+mesmo propósito da \texttt{StudentEvents}, que era encpsular um resultado e
+posterior conversão para JSON. O código fonte desta classe pode ser visto na
+Figura \ref{fig:desws22}.
 
-
-
+	\begin{figure}[h!]
+		\input{code/student_disciplines}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws22}
+	\end{figure}
+	
+	
+	
+	
+	
+	
+	
 	\pagebreak
 	\par Era necessário também que  de tempos em tempos o próprio \textit{web
 service} fizesse uma busca internamente, fazendo o levantamento de novos eventos
