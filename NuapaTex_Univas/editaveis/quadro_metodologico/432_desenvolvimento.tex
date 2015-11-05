@@ -85,43 +85,12 @@ do ORM. Este pacote recebeu o nome de
 \texttt{br.edu.univas.restapiappunivas.model},  pois nele estão contidas as
 classes que fazem parte do modelo de negócios da aplicação. Este pacote foi
 criado visando a divisão das responsabilidades internas no projeto, além de
-contribuir positivamente com a organização do mesmo.
-		
+contribuir positivamente com a organização do mesmo. 
+	
 	\par Com este pacote criado, ja era possível criar as classes do ORM. Foi
-criada primeiramente a classe \texttt{Student.java}. Para a criação desta classe
-foi necesário clicar com o botão direito do \textit{mouse} sobre o projeto e
-navegar até a opção \textbf{New -> Class} como pode ser visto na Figura
-\ref{fig:desws9}. 
-
-	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws9.png}}
-		\caption[Opção para Criação de nova classe java no Eclipse]{Opção para
-		Criação de nova classe java no Eclipse.
-			\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws9}
-	\end{figure}
-	
-	\pagebreak
-
-
-	\par Em seguida foi apresentada uma janela chamada New Java Class. Nesta
-janela somente foi necessário preencher o campo \textbf{Name} que representa o
-nome da classe que está sendo criada e ainda pode ser definido o pacote.
-	
-	
-	
-	 \begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws10.png}}
-		\caption[Tela para Criação de nova classe java no Eclipse]{Tela para Criação
-		de nova classe java no Eclipse.
-			\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws10}
-	\end{figure}
-	
-	\pagebreak
-
-	\par Esta classe foi definida para representar as informações referente aos
-alunos. O código fonte desta classe pode ser visto na Figura \ref{fig:desws11}. 
+criada primeiramente a classe \texttt{Student.java}. Esta classe foi definida
+para representar as informações referente aos alunos. O código fonte desta
+classe pode ser visto na Figura \ref{fig:desws11}.
 	
 	
 	\begin{figure}[h!]
@@ -138,7 +107,7 @@ reconhecida como uma entidade do JPA, e assim persistida no banco de dados
 quando necessário. Além disso estas anotações possuem outras finalidades
 específicas. A seguir estão listadas todas as anotações  que foram usadas na
 classe \texttt{Student.java} e nas outras classes que fazem parte do mapeamento
-objeto relacional da aplicação.
+objeto relacional da aplicação e definidas suas funcionalidades.
 
 	\begin{itemize}
 	  \item \texttt{@Entity}: esta anotação foi necessária para que esta classe
@@ -147,9 +116,9 @@ objeto relacional da aplicação.
 	  \item \texttt{@Table}: anotação que possui algumas configurações relativas a
 	  uma tabela no banco de dados, a qual esta entidade representa, no caso da
 	  classe mostrada anteriormente é configurado o nome da tabela;
-	  \item \texttt{@Id}: esta anotação fica sobre o atributo que representa a
-	  chave primária no banco de dados;
-	  \item \texttt{@GeneratedValue}: esta anotaçõe indica qual será a estratégia
+	  \item \texttt{@Id}: esta anotação fica sobre o atributo da entidades, o qual
+	  representa a chave primária no banco de dados;
+	  \item \texttt{@GeneratedValue}: esta anotação indica qual será a estratégia
 	  usada para incrementar a chave primária da tabela.
 	  \item \texttt{@SequenceGenerator}: esta anotação define o mecanismo com que
 	  a chave primária será incrementada.
@@ -165,7 +134,8 @@ objeto relacional da aplicação.
 		    	únicos;
 		    \end{itemize}
 	  \item \texttt{@OneToMany}: representa um relacionamento um-para-muitos no
-	  banco de dados. Anotam coleções de outras entidades;
+	  banco de dados. Anotam coleções de outras entidades as quais esta entidade
+	  possui relacionamento;
 	  \item \texttt{@ManyToOne}: representa um relacionamento
 	  muitos-para-um no banco de dados. Este é a contraparte da anotação
 	  um-para-muitos;
@@ -178,11 +148,11 @@ simplesmente um  POJO ou seja, um objeto  simples que contêm somente atributos
 privados e os métodos \textit{getters} e \textit{setters} que servem apenas
 para encapsular estes atributos, e não possue nenhuma lógica de negócios. Além
 desta classe, foram criadas outras com os mesmos propósitos, que podem ser
-vista no diagrama da Figura \ref{fig:desws12}.
+vista no diagrama de classes que esta apresentado na Figura \ref{fig:desws12}.
 	
 	
 	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.55]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws12.png}}
+		\centerline{\includegraphics[scale=0.55]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/diagrama.png}}
 		\caption[Modelo fisíco do banco de dados]{Modelo fisíco do banco de dados.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws12}
@@ -208,7 +178,7 @@ fisíco do banco de dados pode ser visto na Figura \ref{fig:desws12_1}.
 	\par E por fim, para cada classe que representa uma entidade, foi necessário
 implementar os métodos \texttt{hashCode} e \texttt{equals}, para que estas
 pudessem facilmente ser comparadas e diferenciadas em relação aos seus valores,
-haja visto que cada instância destas classes representa um registro no banco de
+haja vista que cada instância destas classes representa um registro no banco de
 dados. A própria IDE provê uma forma fácil para criar este métodos, bastando
 para isso clicar com o botão direito do mouse sobre o código da classe e
 escolher a opção \textbf{Source -> Generate hashCode() and equals()\ldots} como
@@ -220,20 +190,6 @@ pode ser visto na Figura \ref{fig:desws13}.
 		hashCode() and equals()\ldots .
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws13}
-	\end{figure}
-	
-	\pagebreak
-	
-	\par Em seguida na janela que foi apresentada foi necessário escolher qual
-atributo seria usado para a comparação dentro dos métodos, como esta
-apresentado na Figura \ref{fig:desws14} .
-	
-	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws14.png}}
-		\caption[Opção Generate hashCode() and equals()\ldots]{Opção Generate
-		hashCode() and equals()\ldots .
-			\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws14}
 	\end{figure}
 	
 	\par Os métodos \texttt{hashCode} e \texttt{equals} da classe
@@ -253,29 +209,15 @@ e podem ser vistos na Figura \ref{fig:desws15}.
 	
 	\par Além destas classes, foi necessário criar um tipo enumerado (ou enum),
 para definir quais seriam os tipos dos eventos, haja vista que estes teriam um
-numero limitado de possibilidades. Para a criação desta, foi necesário clicar
-com o botão direito do \textit{mouse} sobre o projeto e navegar até a opção
-\textbf{New -> Enum} como pode ser visto na Figura \ref{fig:desws16}.
-	
-	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws16.png}}
-		\caption[Opção Generate hashCode() and equals()\ldots]{Opção Generate
-		hashCode() and equals()\ldots .
-			\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws16}
-	\end{figure}
-
-	\pagebreak
-	
-	\par Para esta enumeração foi definido o nome \texttt{EventType}. Os tipos de
-eventos definidos foram três:
+numero limitado de possibilidades. Para esta enumeração foi definido o nome
+\texttt{EventType}. Os tipos de eventos definidos foram três:
 
 	\begin{itemize}
 	  \item \texttt{PROVA\_AGENDADA}: que define um evento como agendamento de uma
 	  atividade avaliativa;
 	  \item \texttt{PROVA\_APLICADA}: que define um evento como, a efetiva
 	  realização de uma atividade avaliativa;
-	  \item \texttt{FALTAS}: representa o lançamento de uma falta;
+	  \item \texttt{FALTAS}: representa o lançamento de faltas;
 	\end{itemize}
 	
 	\par A implementação da enumeração pode ser vista na Figura \ref{fig:desws15}.
@@ -292,17 +234,17 @@ eventos definidos foram três:
 \texttt{persistence.xml}. Foi necessário criar a pasta META-INF dentro da pasta
 de de códigos fontes do projeto que também é conhecida como \textit{classpath},
 com a finalidade de abrigar este arquivo. Em seguida foi criado o arquivo
-dentro da pasta criada. Este arquivo é extremamente importante, pois é nele que
-estão todas as configurações relativas à conexão com o banco de dados,
+dentro desta pasta. Este arquivo é extremamente importante, pois é nele
+que estão todas as configurações relativas à conexão com o banco de dados,
 configurações referentes ao Dialeto SQL que vai ser usado para as consultas e
 configurações referentes ao \textit{persistence unit} que é o conjunto de
 classes mapeadas para o banco de dados. Este por sua vez recebeu o nome de
-\texttt{WsAppUnivas}. Uma destas configurações merece uma atenção especial
-trata-se da configuração \texttt{<property name="hibernate.hbm2ddl.auto"
-value="create" />} que é a responsável por definir que o próprio Hibernate irá
-criar a estrutura do banco de dados (tabelas, sequences, etc.) através do
-mapeamento objeto relacional das classes. O arquivo \texttt{persistence.xml}
-está exposto na Figura \ref{fig:desws16}.
+\texttt{WsAppUnivas}. Uma destas configurações merece uma atenção
+especial. Trata-se da configuração \texttt{<property
+name="hibernate.hbm2ddl.auto" value="create" />} que é a responsável por
+definir que o próprio Hibernate irá criar a estrutura do banco de dados
+(tabelas, sequences, etc.) através do mapeamento objeto relacional das classes.
+O arquivo \texttt{persistence.xml} está exposto na Figura \ref{fig:desws16}.
 
 	\begin{figure}[h!]
 		\input{code/persistence_xml}
@@ -315,17 +257,17 @@ está exposto na Figura \ref{fig:desws16}.
 	
 	\par Em seguida à confecção do \texttt{persistence.xml} foi criada a
 classe \texttt{JpaUtil.java} que está representada na Figura \ref{fig:desws17}.
-Para isso foi necessário criar um pacote que seria responsável por armazená-la para
-que a organização do projeto pudesse ser mantida. Tal pacote recebeu o nome de
-de "\texttt{br.edu.univas.restapiappunivas.util}" e poderia se neceessário
+Para isso foi necessário criar um pacote que seria responsável por armazená-la,
+para que a organização do projeto pudesse ser mantida. Tal pacote recebeu o nome de
+de \texttt{br.edu.univas.restapiappunivas.util} e poderia se neceessário
 abrigar outras classes de utilidades do projeto assim como a classe
 \texttt{JpaUtil.java}.
 	
 	\par A classe \texttt{JpaUtil.java} é responsável por criar uma
 \texttt{EntityManagerFactory}. Este por sua vez é uma  fábrica de instâncias de
-\texttt{EntityManager} que é um \textit{persistence unit} ou unidade de
-persistência. O \textit{persistence unit} foi configurado através do arquivo
-\texttt{persistence.xml} mostrado anteriormente. Este por sua vez tem a
+\texttt{EntityManager} que é quem cria a \textit{persistence unit} ou unidade
+de persistência. O \textit{persistence unit} desta aplicação foi configurado
+através do arquivo \texttt{persistence.xml}. Este por sua vez tem a
 responsabilidade de prover um modo de comunicação entre a aplicação e o banco
 de dados. No entanto a classe \texttt{JpaUtil.java} cria uma única instância de
 \texttt{EntityManagerFactory}, que é responsável por disponibilizar e gerenciar
@@ -364,29 +306,18 @@ campos \textbf{Group id}, \textbf{Artifact id}, \textbf{Version} e
 \textbf{Packaging}, da seguinte forma:
 
 	\begin{itemize}
-	  \item \textbf{Group id} representa id do grupo a qual pertence o projeto,
+	  \item \textbf{Group id:} representa id do grupo a qual pertence o projeto,
 	  que recebeu o nome de "\texttt{br.edu.univas}".
-	  \item \textbf{Artifact id:} foi preenchido como o nome do próprio projeto já
+	  \item \textbf{Artifact id:} foi preenchido com o nome do próprio projeto já
 	  criado anteriormente pois, este seria o nome do artefato final do gerado pelo
 	  projeto.
-	  \item \textbf{Version} versão a qual está o projeto. Neste caso manteve-se
+	  \item \textbf{Version:} versão a qual está o projeto. Neste caso manteve-se
 	  o que já veio por padrão.
-	  \item \textbf{Packaging} a forma como o projeto seria empacotado após a
+	  \item \textbf{Packaging:} a forma como o projeto seria empacotado após a
 	  compilação do mesmo. Foi escolhido ao empacotamento do tipo \texttt{war} por
 	  se tratar de um projeto Java para \textit{web}.
 	\end{itemize}
-	
-	\par A janela apresentada com as informações preenchidas podem
-	ser vistas na Figura \ref{fig:desws19}.
-
-	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws19.png}}
-		\caption[Opção Generate hashCode() and equals()\ldots]{Opção Generate
-		hashCode() and equals()\ldots .
-			\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws19}
-	\end{figure}
-	
+		
 	\par Com a conclusão da conversão do projeto, foi gerado o arquivo
 \texttt{pom.xml}. Este arquivo provê as informações necessárias para que o Maven
 faça a gerência do projeto. Este arquivo possui, além das informações
@@ -408,7 +339,7 @@ na Figura \ref{fig:desws18}.
 	
 	\par Em seguida a essa configuração foi necessário apagar a pasta \texttt{libs}
 do projeto, pois esta já não era mais necessária, haja vista que as bibliotecas
-usadas no projeto ja estavam sendo gerenciadas pelo Maven. A partir daí foi
+usadas no projeto já estavam sendo gerenciadas pelo Maven. A partir daí foi
 necessário criar a parte de disponibilização dos serviços REST. Para isto foram
 criados três novos pacotes para abrigar as classes que formaram a parte de
 serviços do \textit{web service}, são eles:
@@ -446,7 +377,7 @@ que pode ser vista na Figura \ref{fig:desws19}.
 \texttt{getEventsByRegistration()} o qual era responsável por fazer a busca de
 todos os eventos de um determinado aluno pela sua matrícula. Ainda na Figura
 \ref{fig:desws19} é perceptível que dentro deste método são usadas instancias
-das classes \texttt{StudentEvent} e\texttt{StudentEvents}. A classe
+das classes \texttt{StudentEvent} e \texttt{StudentEvents}. A classe
 \texttt{StudentEvent} foi criada apenas para servir como como um simples POJO
 que conteria os retorno da consulta JPQL\footnote{JPQL - \textit{Java
 Persistence Query Language}}. O código desta classe pode ser visto na Figura
@@ -488,7 +419,49 @@ Figura \ref{fig:desws22}.
 		\label{fig:desws22}
 	\end{figure}
 	
+	\par Ainda foi criada mais uma classe que tinha basicamente a mesma função da
+classe \texttt{StudentEventsCtrl.java} que era de fazer a consulta e retornar
+os dados que seriam usados pelas classes que iam tornar disponíveis os serviços
+do \textit{web service}. Esta classe foi chmada de
+\texttt{StudentDisciplinesCtrl.java} e seu código fonte pode ser visto na
+Figura \ref{fig:desws23}.
+
+	\begin{figure}[h!]
+		\input{code/student_disciplines_ctrl}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws23}
+	\end{figure}
 	
+	\par Em seguida à construção das classes que fazem a busca e retorno dos dados
+na camada de persistência, foi desenvolvido a parte de disponibilização de
+serviços \textit{RESTful}, fazendo uso do \textit{framework} Jersey. Com isso
+pode-se construir a classe que representa o primeiro serviço do \textit{web
+service}, que é a classe \texttt{Student.java}. Essa classe representa um
+contexto REST, e portanto, dispõe de alguns recursos. Esses recursos fazem a
+recuperação e a transmissão dos dados do \textit{web service} para o aplicativo
+Android. Essa classe e seus respectivos métodos  estão representada na
+Figura \ref{fig:desws24}.
+
+	\begin{figure}[h!]
+		\input{code/student_disciplines_ctrl}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws24}
+	\end{figure}
+
+		
+		\par O \textit{web service} pode fazer a busca de alunos pelo \texttt{id}
+passado ou retornar uma coleção de eventos vinculados a um alunos, dependendo
+do recurso acessado. Os tipos de dados que o \textit{web service} consome e
+retorna é o JSON. Não foi necessário fazer nenhuma implementação adicional
+relativa a este formato, pois o próprio \textit{framework} Jersey faz o
+tratamento e a conversão dos tipos de entrada e saída de dados. No caso do
+saída de dados, faz a conversão de objetos \textit{Java} para JSON. E no caso
+de entrada tranforma um JSON em objeto \textit{Java} já conhecido pelo
+\textit{web service}.
+	
+		
 	\par Era necessário também, que a cada novo evento lançado no banco de dados do
 \textit{web service}, estes eventos fossem enviados ao GCM para que este pudesse
 comunicar aos dispositivos dos alunos. Com a finalidade de sanar esta
@@ -536,8 +509,9 @@ pudessem trabalhar conjuntamente foi necessário necessário criar a classe
 enviado e os ids dos dispositivos aos quais seriam enviadas estas mensagens, e
 invocar o método \texttt{post} da classe \texttt{PostToGCM.java} para que os
 mesmos pudessem ser enviados. Foi nessa classe também que estava contida a
-chave de autorização de envio de mensagens ao GCM,que atribuída ao atributo
-\texttt{apiKey}. Esta classe pode ser vista na Figura \ref{fig:desws32}.
+chave de autorização de envio de mensagens ao GCM, que foi atribuída ao
+atributo \texttt{apiKey}. Esta classe pode ser vista na Figura
+\ref{fig:desws32}.
 
 	\begin{figure}[h!]
 		\input{code/SendMessageGCM}

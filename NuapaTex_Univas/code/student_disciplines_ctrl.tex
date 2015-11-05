@@ -1,0 +1,40 @@
+\begin{lstlisting} [style=custom_Java]
+package br.edu.univas.restapiappunivas.controller;
+/**
+ *Imports omitidos
+ */
+public class StudentDisciplinesCtrl {
+	
+	public AlunoDisciplinas getDisciplineByRegistrationStudent(Long idStudent) {
+		EntityManager em = JpaUtil.getEntityManager();
+
+		String jpql = "select distinct d.idDiscipline, d.idExternal, d.name from Period p "; 
+		jpql += "inner join p.disciplines d inner join p.studentss a where a.idExternal=:id";
+
+		try {
+			Query query = em.createQuery(jpql);
+			query.setParameter("id", idStudent);
+
+			List<Object[]> resultSet = query.getResultList();
+			List<Discipline> disciplines = new ArrayList<Discipline>();
+			for (Object[] obj : resultSet) {
+				Discipline d = new Discipline();
+				d.setIdDiscipline((Long) obj[0]);
+				d.setIdExternal((Long) obj[1]);
+				d.setName((String) obj[2]);
+				disciplines.add(d);
+			}
+			StudentDisciplines studentDisciplines = new StudentDisciplines();
+			studentDisciplines.setDisciplines(disciplines);
+			return studentDisciplines;
+		} catch (Exception e) {
+				e.printStackTrace();
+		} finally {
+			em.close();
+		}
+
+	}
+}
+
+
+\end{lstlisting}
