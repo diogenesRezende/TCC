@@ -1,0 +1,30 @@
+\begin{lstlisting} [style=custom_Java]
+package br.edu.univas.restapiappunivas.resources;
+/**
+ *Imports Omitidos
+ */
+@Path("/students")
+@Produces({ MediaType.APPLICATION_JSON })
+@Consumes({ MediaType.APPLICATION_JSON })
+public class StudentsResource {
+
+	@GET
+	@Path("events/{registration}")
+	public StudentEvents getEventsByStudentRegistration(@PathParam("registration") Long registration) {
+
+		StudentEventsCtrl ctrl = new StudentEventsCtrl();
+		return ctrl.getEventsByRegistration(registration);
+	}
+
+	@GET
+	@Path("disciplinas/{id}")
+	public StudentDisciplines getDisciplinesByStudentRegistration(@PathParam("id") Long id) {
+	
+		StudentDisciplinesCtrl ctrl = new StudentDisciplinesCtrl();
+		return ctrl.getDisciplineByRegistration(idStudent);
+	}
+
+}
+
+
+\end{lstlisting}

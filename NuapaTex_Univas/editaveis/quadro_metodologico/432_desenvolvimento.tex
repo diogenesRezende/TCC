@@ -234,12 +234,15 @@ numero limitado de possibilidades. Para esta enumeração foi definido o nome
 \texttt{persistence.xml}. Foi necessário criar a pasta META-INF dentro da pasta
 de de códigos fontes do projeto que também é conhecida como \textit{classpath},
 com a finalidade de abrigar este arquivo. Em seguida foi criado o arquivo
-dentro desta pasta. Este arquivo é extremamente importante, pois é nele
+dentro desta pasta. 
+
+	\par O arquivo \texttt{persistence.xml} é extremamente importante, pois é nele
 que estão todas as configurações relativas à conexão com o banco de dados,
 configurações referentes ao Dialeto SQL que vai ser usado para as consultas e
 configurações referentes ao \textit{persistence unit} que é o conjunto de
 classes mapeadas para o banco de dados. Este por sua vez recebeu o nome de
-\texttt{WsAppUnivas}. Uma destas configurações merece uma atenção
+\texttt{WsAppUnivas}. 
+	\par Uma das configurações do \texttt{persistence.xml}, merece uma atenção
 especial. Trata-se da configuração \texttt{<property
 name="hibernate.hbm2ddl.auto" value="create" />} que é a responsável por
 definir que o próprio Hibernate irá criar a estrutura do banco de dados
@@ -435,33 +438,61 @@ Figura \ref{fig:desws23}.
 	
 	\par Em seguida à construção das classes que fazem a busca e retorno dos dados
 na camada de persistência, foi desenvolvido a parte de disponibilização de
-serviços \textit{RESTful}, fazendo uso do \textit{framework} Jersey. Com isso
-pode-se construir a classe que representa o primeiro serviço do \textit{web
-service}, que é a classe \texttt{Student.java}. Essa classe representa um
-contexto REST, e portanto, dispõe de alguns recursos. Esses recursos fazem a
-recuperação e a transmissão dos dados do \textit{web service} para o aplicativo
-Android. Essa classe e seus respectivos métodos  estão representada na
-Figura \ref{fig:desws24}.
+serviços \textit{RESTful}, fazendo uso do \textit{framework} Jersey em sua
+versão de numero {1.19}. Para isso primeiramente foi necessário incluir no
+arquivo \texttt{pom.xml}, a dependência referente ao \texttt{framework} Jersey
+no arquivo \texttt{pom.xml} como pode ser visto na Figura \ref{fig:desws24}.
 
 	\begin{figure}[h!]
-		\input{code/student_disciplines_ctrl}
+		\input{code/pom_xml}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws24}
+	\end{figure}
+	
+	\pagebreak
+
+	\par Além desta configuração outras foram necessárias. Foi necessário apontar
+no arquivo \texttt{web.xml} da aplicação, que pode ser encontardo dentro da
+pasta \texttt{WebContent -> WEB-INF} do projeto, qual seria o \textit{servlet}
+que seria responsável por prover os serviços, que para esta aplicação foi a
+classe \texttt{com.sun.jersey.spi.container.servlet.ServletContainer}. Mais uma
+configuração foi acrescentada no \textit{web.xml}, que foi a definição de em
+que pacotes se encontrariam as classes que representam os serviços REST da
+aplicação, que no caso foi o pacote
+\texttt{br.edu.univas.restapiappunivas.resources}. Estas duas configurações
+podem ser vistas na Figura \ref{fig:desws25}.
+
+	\begin{figure}[h!]
+		\input{code/web_xml_jersey}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws25}
+	\end{figure}
+	
+	\par Com isso pode-se construir as classes que representam de fato os serviços
+do \textit{web service}, que são as classes \texttt{StudentResouce.java} e
+\texttt{UserResource.java}. Estas classes representam contextos REST desta
+aplicação que segundo \citeonline[p.6]{saudate2012}, são "a raiz pela qual a
+aplicação está sendo fornecida para o cliente". Dentro de um contexto pode haver
+inumeros recursos que ainda segundo \citeonline[p.5]{saudate2012} podem ser
+definidos como "conjuntos de dados que são trafegados pelo protocolo".
+
+	\par Inicialmente foi contruída a classe \texttt{StudentResouce.java}, que
+representa o contexto \texttt{students} desta aplicação. Esta classe está
+representada na Figura \ref{fig:desws24}.
+
+	\begin{figure}[h!]
+		\input{code/students_resouces}
 		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws24}
 	\end{figure}
 
+	\pagebreak
 		
-		\par O \textit{web service} pode fazer a busca de alunos pelo \texttt{id}
-passado ou retornar uma coleção de eventos vinculados a um alunos, dependendo
-do recurso acessado. Os tipos de dados que o \textit{web service} consome e
-retorna é o JSON. Não foi necessário fazer nenhuma implementação adicional
-relativa a este formato, pois o próprio \textit{framework} Jersey faz o
-tratamento e a conversão dos tipos de entrada e saída de dados. No caso do
-saída de dados, faz a conversão de objetos \textit{Java} para JSON. E no caso
-de entrada tranforma um JSON em objeto \textit{Java} já conhecido pelo
-\textit{web service}.
-	
-		
+		\par A classe \texttt{StudentResouce.java} possui dois métodos
+				
 	\par Era necessário também, que a cada novo evento lançado no banco de dados do
 \textit{web service}, estes eventos fossem enviados ao GCM para que este pudesse
 comunicar aos dispositivos dos alunos. Com a finalidade de sanar esta
