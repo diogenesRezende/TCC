@@ -176,7 +176,7 @@ fisíco do banco de dados pode ser visto na Figura \ref{fig:desws12_1}.
 	\pagebreak
 
 	\par E por fim, para cada classe que representa uma entidade, foi necessário
-implementar os métodos \texttt{hashCode} e \texttt{equals}, para que estas
+implementar os métodos \texttt{hashCode()} e \texttt{equals()}, para que estas
 pudessem facilmente ser comparadas e diferenciadas em relação aos seus valores,
 haja vista que cada instância destas classes representa um registro no banco de
 dados. A própria IDE provê uma forma fácil para criar este métodos, bastando
@@ -192,7 +192,7 @@ pode ser visto na Figura \ref{fig:desws13}.
 		\label{fig:desws13}
 	\end{figure}
 	
-	\par Os métodos \texttt{hashCode} e \texttt{equals} da classe
+	\par Os métodos \texttt{hashCode()} e \texttt{equals()} da classe
 \texttt{Student.java} foram implementados\\ usando o atributo \texttt{idStudent}
 e podem ser vistos na Figura \ref{fig:desws15}.
 
@@ -488,17 +488,48 @@ representada na Figura \ref{fig:desws24}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws24}
 	\end{figure}
-
-	\pagebreak
 		
-		\par A classe \texttt{StudentResouce.java} possui dois métodos
-				
+	\par A classe \texttt{StudentResouce.java}, representa o contexto
+\texttt{Students}, e possui dois métodos que representam recursos REST. O
+primeiro deles é \texttt{getEventsByStudentRegistration()} que representa o
+recurso \texttt{events} e faz o retorno de todos o eventos de um determinado
+aluno através de sua matrícula. Já o método
+\texttt{getDisciplinesByStudentRegistration()} representa o recurso
+\texttt{disciplines} tem por responsabilidade de retornar todas as disciplinas
+cursadas por um aluno em determinado periodo. A url para acessar o método
+\texttt{getEventsByStudentRegistration()} usando REST ficaria da seguinte
+forma:\\
+\url{http://localhost:8080/WebServiceAppUnivas/students/events/{registration}}
+	
+	\par Esta pode ser dividida da seguinte forma:
+
+	\begin{itemize}
+	  \item http:// : mostra qual protocolo está sendo usado para troca de
+	  mensagenes que no caso é o HTTP;
+	  \item localhost:8080 : indica o endereço e porta do servidor que fornece este
+	  serviço;
+	  \item WebServiceAppUnivas: representa o contexto universal da aplicação; 
+	  \item students :representa um contexto específico dentro da aplicação;
+	  \item events : representa um recurso;
+	  \item registration: representa um parametro passado para o serviço;
+	\end{itemize}
+
+	\par Além da classe \texttt{StudentResouce.java}, foi desenvolvida
+a classe também a classe \texttt{UserResources.java}. Esta por sua vez
+represente o serviço mais importante do \textit{web service} que é responsável
+por receber os \texttt{registration\_id} do dispositivo gerado pelo GCM. Sem
+este não é possível enviar as mensagens aos servidores do GCM e
+consequentemente não seria possível manter os aplicativos  dos alunos
+constantemente atualizados. ò código fonte desta classe
+	
 	\par Era necessário também, que a cada novo evento lançado no banco de dados do
 \textit{web service}, estes eventos fossem enviados ao GCM para que este pudesse
 comunicar aos dispositivos dos alunos. Com a finalidade de sanar esta
 necessidade foram construídas três classes, que eram responsáveis por tratar as
 mensagens a serem enviadas e posteriormente enviá-las ao GCM. Estas classes
-ficaram contidas no pacote \texttt{br.edu.univas.restapiappunivas.gcm}.
+ficaram contidas no pacote \texttt{br.edu.univas.restapiappunivas.gcm}. 
+
+
 
 	\par A primeira classe a ser criada foi \texttt{ContentMessageGCM.java}. Esta
 classe tinha por finalidade estruturar o conteúdo da mensagem que seria
@@ -538,7 +569,7 @@ retorno nos \textit{log's} da aplicação. E por fim para que estas duas classes
 pudessem trabalhar conjuntamente foi necessário necessário criar a classe
 \texttt{SendMessageGCM.java} que foi responsável por receber o conteúdo a ser
 enviado e os ids dos dispositivos aos quais seriam enviadas estas mensagens, e
-invocar o método \texttt{post} da classe \texttt{PostToGCM.java} para que os
+invocar o método \texttt{post()} da classe \texttt{PostToGCM.java} para que os
 mesmos pudessem ser enviados. Foi nessa classe também que estava contida a
 chave de autorização de envio de mensagens ao GCM, que foi atribuída ao
 atributo \texttt{apiKey}. Esta classe pode ser vista na Figura
