@@ -490,15 +490,14 @@ representada na Figura \ref{fig:desws24}.
 	\end{figure}
 		
 	\par A classe \texttt{StudentResouce.java}, representa o contexto
-\texttt{Students}, e possui dois métodos que representam recursos REST. O
-primeiro deles é \texttt{getEventsByStudentRegistration()} que representa o
-recurso \texttt{events} e faz o retorno de todos o eventos de um determinado
-aluno através de sua matrícula. Já o método
+\texttt{Students}. O primeiro deles é \texttt{getEventsByStudentRegistration()}
+que representa o recurso \texttt{events} e faz o retorno de todos o eventos de
+um determinado aluno através de sua matrícula. Já o método
 \texttt{getDisciplinesByStudentRegistration()} representa o recurso
-\texttt{disciplines} tem por responsabilidade de retornar todas as disciplinas
-cursadas por um aluno em determinado periodo. A url para acessar o método
-\texttt{getEventsByStudentRegistration()} usando REST ficaria da seguinte
-forma:\\
+\texttt{disciplines}, que tem por responsabilidade retornar todas as
+disciplinas cursadas por um aluno em determinado periodo. A url para acessar o recurso
+relativo ao método \texttt{getEventsByStudentRegistration()} usando REST
+tomaria o seguinte formato:\\
 \url{http://localhost:8080/WebServiceAppUnivas/students/events/{registration}}
 	
 	\par Esta pode ser dividida da seguinte forma:
@@ -511,7 +510,8 @@ forma:\\
 	  \item WebServiceAppUnivas: representa o contexto universal da aplicação; 
 	  \item students :representa um contexto específico dentro da aplicação;
 	  \item events : representa um recurso;
-	  \item registration: representa um parametro passado para o serviço;
+	  \item registration: representa um parametro passado para o serviço, que
+	  neste caso é o número da matricula do aluno;
 	\end{itemize}
 
 	\par Além da classe \texttt{StudentResouce.java}, foi desenvolvida
@@ -520,7 +520,81 @@ represente o serviço mais importante do \textit{web service} que é responsáve
 por receber os \texttt{registration\_id} do dispositivo gerado pelo GCM. Sem
 este não é possível enviar as mensagens aos servidores do GCM e
 consequentemente não seria possível manter os aplicativos  dos alunos
-constantemente atualizados. ò código fonte desta classe
+constantemente atualizados. O código fonte desta classe pode ser visto na
+Figura \ref{fig:desws25}.
+
+	\begin{figure}[h!]
+		\input{code/user_res}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws25}
+	\end{figure}
+	
+	\par A classe \texttt{UserResources.java} recebe um objeto do tipo
+\texttt{User.java} que tem em seu conteúdo o id gerado pelo GCM preenchido e
+usa um objeto da classe \texttt{UserCtrl.java} para buscar o usuario que é o
+dono do id recebido e em seguida persiste o mesmo no banco de dados para o
+posterior uso. A classe \texttt{UserCtrl.java} está apresentada na Figura
+\ref{fig:desws26}.
+
+	\begin{figure}[h!]
+		\input{code/user_ctrl}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws26}
+	\end{figure}
+	
+	\pagebreak
+	
+	\par Nas classes que foram mostradas anteriormente e que fazem parte da
+disponibilização dos serviços REST, é perceptível o uso de algumas anotações.
+Estas anotações são parte do \textit{framework} Jersey e são, geralmente, a forma que
+este usa para identificar e disponibilizar o serviços. A seguir será fieta uma
+lista com as principais anotações usadas nessa aplicação e suas funcionalidades.
+
+	\begin{itemize}
+	  \item \texttt{@Path}: mapeia para qual URL\footnote{URL - \textit{Uniform
+	  Resource Locator}} um recurso ou contexto deve responder. Foi usado tanto em
+	  classes quanto em métodos;
+	  \item \texttt{@PathParam}: permite o recebimento de parâmetros através URL de
+	  chamada do serviço;
+	  \item \texttt{@Produces}: determina qual o tipo de conteúdo é aceito pela
+	  classe ou método que ele anota, no momento da chamada do serviço. Aceita
+	  variados tipos sendo os principais XML e JSON;
+	  \item \texttt{@Consumes}: determina qual o tipo de conteúdo é produzido pela
+	  classe ou método que ele anota. 
+	  \item \texttt{@GET}: Representa que método anotado, deverá responder somente
+	  ao método HTTP GET;
+	  \item \texttt{@PUT}: Representa que método anotado, deverá responder somente
+	  ao método HTTP PUT;
+	\end{itemize}
+	
+	\par De acordo com o desenvolvimento destes serviços, percebeu-se que com certa
+frequência ocorria um situação que se mostrava um tanto quanto estranha.
+Trata-se do seguinte caso, muitas das vezes em que um serviço era invocado,
+todas as consultas eram realizadas pela camada de persistência da aplicação,
+porém os resultados não eram apresentados. Além disso o \textit{servlet}
+responsável por este serviço retornava um cabeçalho com um erro HTTP {500}, que
+trata-se de um código genérico de erro e que representa a ocorrência de um erro
+interno da aplicação servidora. Isto acontecia, porém ao examinar os
+\textit{log's} de execução da aplicação não era possível  encontrar nem um tipo
+erro e nem mesmo algum tipo de \texttt{Exception} lançada pela aplicação. 
+	
+	\par Porém após algum tempo de pesquisa, descobriu-se que era necessário
+contruir uma classe seria responsável por disponibilizar em tempo de execução,
+uma forma de converter corretamente os objetos  usados na aplicação por um
+formato ao qual a aplicação usava como resposta, que no caso é o JSON. Esta
+classe. A classe contruída foi \texttt{StudentProvider.java}. Esta pode ser
+vista na Figura \ref{fig:desws27}.
+
+	\begin{figure}[h!]
+		\input{code/JerseyProvider}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws27}
+	\end{figure}
+	
+	\pagebreak
 	
 	\par Era necessário também, que a cada novo evento lançado no banco de dados do
 \textit{web service}, estes eventos fossem enviados ao GCM para que este pudesse

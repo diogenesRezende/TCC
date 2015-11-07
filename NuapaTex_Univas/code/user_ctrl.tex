@@ -1,0 +1,28 @@
+\begin{lstlisting}[style=custom_JAVA]
+package br.edu.univas.restapiappunivas.controller;
+/**
+ *Imports Omitidos
+ */
+public class UserCtrl {
+	public void receiveGCMId(Usuario user) {
+		EntityManager em = JpaUtil.getEntityManager();		
+		try {
+			String jpql = "select u from User u where u.username=:id";
+			TypedQuery<User> query = em.createQuery(jpql, User.class)
+					.setParameter("id", user.getUsername());
+			Usuario userNew = query.getSingleResult();
+			userNew.setIdGCM(user.getIdGCM());
+			em.getTransaction().begin();
+			em.persist(userNew);
+			em.getTransaction().commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			em.close();
+		}
+	}
+}
+\end{lstlisting}
+
+
+
