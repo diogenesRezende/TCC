@@ -584,7 +584,7 @@ erro e nem mesmo algum tipo de \texttt{Exception} lançada pela aplicação.
 contruir uma classe seria responsável por disponibilizar em tempo de execução,
 uma forma de converter corretamente os objetos  usados na aplicação por um
 formato ao qual a aplicação usava como resposta, que no caso é o JSON. Esta
-classe. A classe contruída foi \texttt{StudentProvider.java}. Esta pode ser
+classe. A classe construída foi \texttt{StudentProvider.java}. Esta pode ser
 vista na Figura \ref{fig:desws27}.
 
 	\begin{figure}[h!]
@@ -594,7 +594,11 @@ vista na Figura \ref{fig:desws27}.
 		\label{fig:desws27}
 	\end{figure}
 	
-	\pagebreak
+	
+	\par A principal função desta classe, era a de ser uma provedora de um contexto
+para que se pudesse ocorrer a serialização de objetos e a conversão dos mesmos
+para JSON que é o o formato usado no \textit{web service}. E com isso foi
+concluída a parte de fornecimento de serviços da aplicação.
 	
 	\par Era necessário também, que a cada novo evento lançado no banco de dados do
 \textit{web service}, estes eventos fossem enviados ao GCM para que este pudesse
@@ -602,8 +606,6 @@ comunicar aos dispositivos dos alunos. Com a finalidade de sanar esta
 necessidade foram construídas três classes, que eram responsáveis por tratar as
 mensagens a serem enviadas e posteriormente enviá-las ao GCM. Estas classes
 ficaram contidas no pacote \texttt{br.edu.univas.restapiappunivas.gcm}. 
-
-
 
 	\par A primeira classe a ser criada foi \texttt{ContentMessageGCM.java}. Esta
 classe tinha por finalidade estruturar o conteúdo da mensagem que seria
@@ -620,6 +622,7 @@ mensagem. O código fonte desta classe pode ser visto na Figura
 		\label{fig:desws30}
 	\end{figure}
 
+	\pagebreak
 	
 	\par Além disso foi criada a classe estática \texttt{PostToGCM.java}, a qual
 foi responsável por, converter o conteúdo da menssagem para o formato aceito
@@ -655,7 +658,9 @@ atributo \texttt{apiKey}. Esta classe pode ser vista na Figura
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws32}
 	\end{figure}
-		
+	
+	\pagebreak		
+	
 	\par Era necessário também que  de tempos em tempos o próprio \textit{web
 service} fizesse uma varredura, buscando por novos eventos lançados para os
 alunos, para que as classes reponsáveis por enviar as mensagens ao GCM, pudessem
@@ -669,10 +674,31 @@ enviar tais notificações. Para isto primeiramente foi criada a classe
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws33}
 	\end{figure}
+	
+	\pagebreak
 
-	\par Para que esta classe pudesse funcionar
+	\par Para que esta classe pudesse funcionar como um \textit{timer} que
+dispara uma rotina de tempos foram necessárias dois detalhes. O primeiro detalhe
+era fazê-la implementar a \textit{interface} \texttt{ServletContextListener}, para
+que esta pudesse funcionar como um \textit{listener} que inicializa-se essa
+classe, assim que aplicação fosse ativada. O segundo foi acrescentar no arquivo
+\texttt{web.xml} a configuração refente ao \textit{listener} que pode ser visto
+na Figura \ref{fig:desws34}.
 
-	\par Para que fosse possível transmitir dados para o aplicativo, era
+	\begin{figure}[h!]
+		\input{code/listenerwebxml}
+		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\textbf{Fonte:}Elaborado pelos autores.}
+		\label{fig:desws34}
+	\end{figure}
+	
+	\par Além disso essa classe internamente acionava um \textit{timer} que era
+atualizado a cada 5000 milisegundos. Dentro deste \textit{timer} era criado um
+objeto do tipo \texttt{TimerTask} que era o criador de um nova \textit{thread}
+para a execução das tarefas realtivas a busca por novos eventos lançados e a
+notificações pelo GCM.
+	
+	\par E ainda, para que fosse possível transmitir dados para o aplicativo, era
 necessário receber as informações do sistema acadêmico da referida instituição,
 haja vista que o \textit{web service} é independente do mesmo. Para esse
 propósito é necessário um módulo que faça a importação dos dados necessários
@@ -680,12 +706,8 @@ para a base de dados do \textit{web service}.
 
 	\par Este por sua vez terá a responsabilidade de fazer a importação dos dados
 periodicamente, e ainda tratar os tipos de dados recebidos para tipos
-aplicáveis ao banco de dados local. Além disso é preciso notificar o módulo
-responsável por invocar o serviço Google Cloud Messaging para que os
-dispositivos dos alunos aos quais houveram atualizações nos dados, fossem
-notificados e fizessem acesso ao \textit{web service} para solicitar esses
-dados atualizados. Para esta pesquisa o módulo foi simulado.
+aplicáveis ao banco de dados local. Para esta pesquisa o módulo foi simulado.
 
-	\par Os procedimentos acima citados foram os passos até agora realizados com o
+	\par Estes procedimentos acima citados foram os passos realizados com o
 propósito de se alcançar os resultados esperados para essa pesquisa.
 

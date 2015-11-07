@@ -5,9 +5,6 @@
 
 public class ListenerAtualizations implements ServletContextListener {
 
-	public static final SimpleDateFormat sdf = new SimpleDateFormat(
-			"yyyy-MM-dd_HH:mm:ss");
-
 	public void contextInitialized(ServletContextEvent arg0) {
 		ServletContext servletContext = arg0.getServletContext();
 
@@ -16,10 +13,9 @@ public class ListenerAtualizations implements ServletContextListener {
 		timer.scheduleAtFixedRate(
 			new TimerTask() {
 				public void run() {
-					Date agora = new Date();
-
-						Atualizations at = new Atualizations();
-						at.start();
+					/**
+					 * Tarefas a serem executadas
+					 */
 				}
 			}, delay, 5000);
 		servletContext.setAttribute("timer", timer);

@@ -8,11 +8,11 @@ public class JerseyProvider implements ContextResolver<JAXBContext> {
 	private JAXBContext context;
 
 	@SuppressWarnings("rawtypes")
-	private Class[] types = { AlunoDisciplinas.class, AlunoEventos.class };
+	private Class[] types = {StudentDisciplinas.class, StudentEventos.class };
 
 	public AlunosProvider() throws Exception {
 		this.context = new JSONJAXBContext(JSONConfiguration.mapped()
-				.arrays("events").build(), types);
+				.arrays("events","disciplines").build(), types);
 	}
 
 	@SuppressWarnings("rawtypes")
