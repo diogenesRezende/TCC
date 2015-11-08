@@ -22,7 +22,7 @@ Database\ldots} no PgAdmin, apresentada na Figura \ref{fig:desws1}.
 
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.5]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws1.png}}
-		\caption[Opção \textit{New Database\ldots}]{Opção \textit{New Database\ldots}.
+		\caption[Opção New Database]{Opção \textit{New Database\ldots}.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws1}
 	\end{figure}
@@ -34,7 +34,7 @@ está apresentado na Figura \ref{fig:desws2}.
 	
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws2.png}}
-		\caption[Tela \textit{New Database\ldots}]{Tela \textit{New Database\ldots}.
+		\caption[Tela New Database]{Tela \textit{New Database\ldots}.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws2}
 	\end{figure}
@@ -70,13 +70,12 @@ escolher a opção \textbf{Build Path -> Add to Build Path}, que pode ser visto
 na Figura \ref{fig:desws6_3}.
 
 	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.60]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws6_3.png}}
-		\caption[Tela para criação de um novo projeto no Eclipse]{Tela para criação de um novo projeto no Eclipse.
+		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws6_3.png}}
+		\caption[Opção para geração dos metodos hashCode e equals no Eclipse]{Opção
+		para geração dos metodos hashCode e equals no eclipse.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws6_3}
 	\end{figure}
-	
-	\pagebreak
 	
 	\par Com o projeto devidamente configurado, começou-se de fato a desenvolver a
 camada de persistência da aplicação. Para este propósito, primeiramente foi
@@ -153,7 +152,8 @@ vista no diagrama de classes que esta apresentado na Figura \ref{fig:desws12}.
 	
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.55]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/diagrama.png}}
-		\caption[Modelo fisíco do banco de dados]{Modelo fisíco do banco de dados.
+		\caption[Diagrama de classes do pacote model]{Diagrama de classes do pacote
+		model.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws12}
 	\end{figure}
@@ -224,9 +224,8 @@ numero limitado de possibilidades. Para esta enumeração foi definido o nome
 
 	\begin{figure}[h!]
 		\input{code/event_type}
-		\caption[Implementação os métodos hashCode() e equals()]{Implementação os
-		métodos \texttt{hashCode()} e \texttt{equals()}.
-			\textbf{Fonte:}Elaborado pelos autores.}
+		\caption[Implementação da enumeração EventType]{Implementação da enumeração
+		\texttt{EventType}.\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws15}
 	\end{figure}
 
@@ -251,7 +250,7 @@ O arquivo \texttt{persistence.xml} está exposto na Figura \ref{fig:desws16}.
 
 	\begin{figure}[h!]
 		\input{code/persistence_xml}
-		\caption[Arquivo \texttt{persistence.xml}]{Arquivo \texttt{persistence.xml}.
+		\caption[Arquivo persistence.xml]{Arquivo \texttt{persistence.xml}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws16}
 	\end{figure}
@@ -279,7 +278,7 @@ aplicação.
 	
 	\begin{figure}[h!]
 		\input{code/jpaUtil}
-		\caption[Classe \texttt{JpaUtil.java}]{Classe \texttt{JpaUtil.java}.
+		\caption[Classe JpaUtil.java]{Classe \texttt{JpaUtil.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws17}
 	\end{figure}
@@ -298,8 +297,7 @@ como pode ser visto na Figura \ref{fig:desws18}
 
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws18.png}}
-		\caption[Opção Generate hashCode() and equals()\ldots]{Opção Generate
-		hashCode() and equals()\ldots .
+		\caption[Opção para conversão projeto web par projeto Maven]{Opção para conversão projeto web par projeto Maven.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws18}
 	\end{figure}
@@ -332,14 +330,12 @@ projeto. Inicialmente foi incluída somente as dependências referentes ao
 na Figura \ref{fig:desws18}.
 	
 	\begin{figure}[h!]
-		\input{code/pom_xml}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\input{code/pom_xml_hibernate}
+		\caption[Arquivo pom.xml]{Arquivo \texttt{pom.xml}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws18}
 	\end{figure}
 
-	\pagebreak
-	
 	\par Em seguida a essa configuração foi necessário apagar a pasta \texttt{libs}
 do projeto, pois esta já não era mais necessária, haja vista que as bibliotecas
 usadas no projeto já estavam sendo gerenciadas pelo Maven. A partir daí foi
@@ -369,7 +365,8 @@ que pode ser vista na Figura \ref{fig:desws19}.
 	
 	\begin{figure}[h!]
 		\input{code/student_event_ctrl}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Classe StudentEventsCtrl.java]{Classe
+		\texttt{StudentEventsCtrl.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws19}
 	\end{figure}
@@ -388,7 +385,7 @@ Persistence Query Language}}. O código desta classe pode ser visto na Figura
 	
 	\begin{figure}[h!]
 		\input{code/student_event}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Classe StudentEvent.java]{Classe \texttt{StudentEvent.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws20}
 	\end{figure}
@@ -402,7 +399,7 @@ ser visto na Figura \ref{fig:desws21}.
 	
 	\begin{figure}[h!]
 		\input{code/student_events}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Classe StudentEvents.java]{Classe \texttt{StudentEvents.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws21}
 	\end{figure}
@@ -410,14 +407,15 @@ ser visto na Figura \ref{fig:desws21}.
 	\par Estas duas classes mostradas nas Figuras \ref{fig:desws20} e 
 \ref{fig:desws21} foram criadas dentro do pacote\\ 
 \texttt{br.edu.univas.restapiappunivas.entities}. Além delas foi criada também
-a classe \texttt{StudentDiscipline} no mesmo pacote. Esta classe foi usada com o
-mesmo propósito da \texttt{StudentEvents}, que era encpsular um resultado e
+a classe \texttt{StudentDisciplines} no mesmo pacote. Esta classe foi usada com
+o mesmo propósito da \texttt{StudentEvents}, que era encpsular um resultado e
 posterior conversão para JSON. O código fonte desta classe pode ser visto na
 Figura \ref{fig:desws22}.
 
 	\begin{figure}[h!]
 		\input{code/student_disciplines}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Classe StudentDisciplines.java]{Classe
+		\texttt{StudentDisciplines.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws22}
 	\end{figure}
@@ -431,7 +429,8 @@ Figura \ref{fig:desws23}.
 
 	\begin{figure}[h!]
 		\input{code/student_disciplines_ctrl}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Classe StudentDisciplinesCtrl.java]{Classe
+		\texttt{StudentDisciplinesCtrl.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws23}
 	\end{figure}
@@ -445,7 +444,9 @@ no arquivo \texttt{pom.xml} como pode ser visto na Figura \ref{fig:desws24}.
 
 	\begin{figure}[h!]
 		\input{code/pom_xml}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Trecho do rquivo pom.xml com a configuração do
+		Jersey]{Trecho do rquivo \texttt{pom.xml} com a configuração do
+		Jersey.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws24}
 	\end{figure}
@@ -465,7 +466,9 @@ podem ser vistas na Figura \ref{fig:desws25}.
 
 	\begin{figure}[h!]
 		\input{code/web_xml_jersey}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Trecho do arquivo web.xml com a configuração do
+		Jersey]{Trecho do arquivo \texttt{web.xml} com a configuração do
+		Jersey.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws25}
 	\end{figure}
@@ -480,13 +483,13 @@ definidos como "conjuntos de dados que são trafegados pelo protocolo".
 
 	\par Inicialmente foi contruída a classe \texttt{StudentResouce.java}, que
 representa o contexto \texttt{students} desta aplicação. Esta classe está
-representada na Figura \ref{fig:desws24}.
+representada na Figura \ref{fig:desws25_1}.
 
 	\begin{figure}[h!]
 		\input{code/students_resouces}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Classe StudentResouce.java]{Classe \texttt{StudentResouce.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws24}
+		\label{fig:desws25_1}
 	\end{figure}
 		
 	\par A classe \texttt{StudentResouce.java}, representa o contexto
@@ -521,13 +524,13 @@ por receber os \texttt{registration\_id} do dispositivo gerado pelo GCM. Sem
 este não é possível enviar as mensagens aos servidores do GCM e
 consequentemente não seria possível manter os aplicativos  dos alunos
 constantemente atualizados. O código fonte desta classe pode ser visto na
-Figura \ref{fig:desws25}.
+Figura \ref{fig:desws26}.
 
 	\begin{figure}[h!]
 		\input{code/user_res}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Classe UserResouce.java]{Classe \texttt{UserResouce.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws25}
+		\label{fig:desws26}
 	\end{figure}
 	
 	\par A classe \texttt{UserResources.java} recebe um objeto do tipo
@@ -535,13 +538,13 @@ Figura \ref{fig:desws25}.
 usa um objeto da classe \texttt{UserCtrl.java} para buscar o usuario que é o
 dono do id recebido e em seguida persiste o mesmo no banco de dados para o
 posterior uso. A classe \texttt{UserCtrl.java} está apresentada na Figura
-\ref{fig:desws26}.
+\ref{fig:desws27}.
 
 	\begin{figure}[h!]
 		\input{code/user_ctrl}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Classe UserCtrl.java]{Classe \texttt{UserCtrl.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws26}
+		\label{fig:desws27}
 	\end{figure}
 	
 	\pagebreak
@@ -584,14 +587,14 @@ erro e nem mesmo algum tipo de \texttt{Exception} lançada pela aplicação.
 contruir uma classe seria responsável por disponibilizar em tempo de execução,
 uma forma de converter corretamente os objetos  usados na aplicação por um
 formato ao qual a aplicação usava como resposta, que no caso é o JSON. Esta
-classe. A classe construída foi \texttt{StudentProvider.java}. Esta pode ser
-vista na Figura \ref{fig:desws27}.
+classe. A classe construída foi \texttt{JerseyProvider.java}. Esta pode ser
+vista na Figura \ref{fig:desws27_1}.
 
 	\begin{figure}[h!]
 		\input{code/JerseyProvider}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Classe JerseyProvider.java]{Classe \texttt{JerseyProvider.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws27}
+		\label{fig:desws27_1}
 	\end{figure}
 	
 	
@@ -617,7 +620,8 @@ mensagem. O código fonte desta classe pode ser visto na Figura
 
 	\begin{figure}[h!]
 		\input{code/ContentMessageGCM}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Classe ContentMessageGCM.java]{Classe
+		\texttt{ContentMessageGCM.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws30}
 	\end{figure}
@@ -634,7 +638,7 @@ está apresentada na Figura \ref{fig:desws31}.
 
 	\begin{figure}[h!]
 		\input{code/PostToGCM}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Classe PostToGCM.java]{Classe \texttt{PostToGCM.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws31}
 	\end{figure}
@@ -654,7 +658,7 @@ atributo \texttt{apiKey}. Esta classe pode ser vista na Figura
 
 	\begin{figure}[h!]
 		\input{code/SendMessageGCM}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Classe SendMessageGCM.java]{Classe \texttt{SendMessageGCM.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws32}
 	\end{figure}
@@ -670,13 +674,12 @@ enviar tais notificações. Para isto primeiramente foi criada a classe
 
 	\begin{figure}[h!]
 		\input{code/ListenerAtualizations}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Classe ListenerAtualizations.java]{Classe
+		\texttt{ListenerAtualizations.java}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws33}
 	\end{figure}
 	
-	\pagebreak
-
 	\par Para que esta classe pudesse funcionar como um \textit{timer} que
 dispara uma rotina de tempos foram necessárias dois detalhes. O primeiro detalhe
 era fazê-la implementar a \textit{interface} \texttt{ServletContextListener}, para
@@ -687,7 +690,8 @@ na Figura \ref{fig:desws34}.
 
 	\begin{figure}[h!]
 		\input{code/listenerwebxml}
-		\caption[Arquivo \texttt{pom.xml}]{Arquivo pom.xml.
+		\caption[Configuração do  Listener no arquivo web.xml]{Configuração do 
+		\textit{Listener} no arquivo \texttt{web.xml}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws34}
 	\end{figure}
@@ -709,5 +713,4 @@ periodicamente, e ainda tratar os tipos de dados recebidos para tipos
 aplicáveis ao banco de dados local. Para esta pesquisa o módulo foi simulado.
 
 	\par Estes procedimentos acima citados foram os passos realizados com o
-propósito de se alcançar os resultados esperados para essa pesquisa.
-
+propósito de se alcançar os resultados esperados para essa pesquisa. 

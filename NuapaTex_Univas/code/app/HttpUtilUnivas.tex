@@ -1,0 +1,46 @@
+\begin{lstlisting}[style=custom_JAVA]
+try{
+        HttpClient httpClient = new DefaultHttpClient();
+        HttpGet request = new HttpGet();
+        request.setURI(new URI(urlEvents));
+
+        HttpResponse response = null;
+        try {
+            response = httpClient.execute(request);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        InputStream content = null;
+        try {
+            content = response.getEntity().getContent();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Reader reader = new InputStreamReader(content);
+        Gson gson = new Gson();
+        returnEvents = gson.fromJson(reader, Events.class);
+
+        for (int i = 0; i< returnEvents.getEventos().size(); i++){
+            DatabaseExecute execute = new DatabaseExecute(helper);
+            EventTO to = new EventTO();
+            to.set_id((long) returnEvents.getEventos().get(i).getId_evento());
+            to.setValue_event(returnEvents.getEventos().get(i).getValor());
+            to.setDescription_event(returnEvents.getEventos().get(i).getDescricao());
+            to.setId_discipline(returnEvents.getEventos().get(i).getId_disciplina());
+            to.setDate_event(returnEvents.getEventos().get(i).getData());
+            to.setResult(returnEvents.getEventos().get(i).getNota());
+            to.setType_event(returnEvents.getEventos().get(i).getTipoEvento());
+
+            if(execute.existingEvent(to.get_id()) == false){
+                execute.insertEvents(to);
+            }else{
+                execute.updateEvent(to);
+            }
+        }
+        content.close();
+    } catch (URISyntaxException e) {
+        e.printStackTrace();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+\end{lstlisting}

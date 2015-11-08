@@ -1,0 +1,13 @@
+\begin{lstlisting}[style=custom_JAVA]
+@Override
+    public View getChildView(int groupPosition, int childPosition,
+                             boolean isLastChild, View convertView, ViewGroup parent) {
+
+        TextView textViewSubList = new TextView(context);
+        textViewSubList.setText(EventsDisciplines[groupPosition][childPosition]);
+        textViewSubList.setPadding(10, 10, 10, 5);
+        textViewSubList.setTextSize(15);
+
+        return textViewSubList;
+    }
+\end{lstlisting}

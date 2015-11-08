@@ -1,0 +1,22 @@
+\begin{lstlisting}[style=custom_JAVA]
+public void insertEvents(EventTO to){
+        SQLiteDatabase db = helper.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("_id", to.get_id());
+        values.put("id_disciplina", to.getId_discipline());
+        values.put("tipo_evento", to.getType_event());
+        values.put("descricao_evento", to.getDescription_event());
+        values.put("data_evento", to.getDate_event());
+        values.put("valor_evento", to.getValue_event());
+        values.put("nota", to.getResult());
+
+        long result = db.insert("eventos", null, values);
+
+        if(result != -1 ){
+            Log.d(TAG, " Evento salvo com sucesso!");
+        }else{
+            Log.d(TAG, " Erro ao salvar o Evento!");
+        }
+    }
+\end{lstlisting}

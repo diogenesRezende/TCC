@@ -1,0 +1,10 @@
+\begin{lstlisting}[style=custom_XML]
+<receiver
+	android:name=".model.GcmBroadcastReceiverUnivas"
+	android:permission="com.google.android.c2dm.permission.SEND" >
+		<intent-filter>
+		    <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+		    <category android:name="univas.edu.com.university.model" />
+		</intent-filter>
+</receiver>
+\end{lstlisting}

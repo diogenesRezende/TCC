@@ -68,19 +68,54 @@
 
 %ver site: http://tex.stackexchange.com/questions/10255/xml-syntax-highlighting
 %lstdefinelanguage
-\lstdefinestyle{custom_XML}
-{
+%\lstdefinestyle{custom_XML}
+%{
+%  captionpos=t,
+%  tabsize=2,
+%  basicstyle=\footnotesize\ttfamily,
+%  columns=fullflexible,
+%  showstringspaces=false,
+%  commentstyle=\color{gray}\upshape,
+%  morestring=[b]",
+%  morestring=[s]{>}{<},
+%  morecomment=[s]{<?}{?>},
+%  stringstyle=\color{blue},
+%  identifierstyle=\color{darkgreen},
+%  keywordstyle=\color{purple},
+%  morekeywords={xmlns, version, type, name, value, transaction}% list your
+  % attributes here
+%}
+%\lstdefinestyle{custom_XML_android} {
+\lstdefinestyle{custom_XML}{
   captionpos=t,
+%inputencoding=utf8/latin1,
+literate=%
+{á}{{\'{a}}}1
+{é}{{\'{e}}}1
+{í}{{\'{i}}}1
+{ó}{{\'{o}}}1
+{ú}{{\'{u}}}1
+{â}{{\^{a}}}1
+{ê}{{\^{e}}}1
+{ô}{{\^{o}}}1
+{ã}{{\~{a}}}1
+{õ}{{\~{o}}}1
+{ç}{{\c{c}}}1
+{-}{-}1,
   tabsize=2,
   basicstyle=\footnotesize\ttfamily,
   columns=fullflexible,
   showstringspaces=false,
-  commentstyle=\color{gray}\upshape,
-  morestring=[b]",
-  morestring=[s]{>}{<},
-  morecomment=[s]{<?}{?>},
-  stringstyle=\color{blue},
-  identifierstyle=\color{darkgreen},
-  keywordstyle=\color{purple},
-  morekeywords={xmlns, version, type, name, value, transaction}% list your attributes here
+    alsoletter=-,
+    morestring=[b]",
+    moredelim=*[s][\color{cyan}]{<}{\ },
+    moredelim=[s][\color{cyan}]{</}{>},
+    moredelim=[l][\color{cyan}]{/>},
+    moredelim=[l][\color{cyan}]{>},
+    morecomment=[s]{<?}{?>},
+    morecomment=[s]{<!--}{-->},
+    morecomment=[s]{<!}{>},
+    commentstyle=\color{gray},
+    stringstyle=\color{blue},
+    identifierstyle=\color{purple}
 }

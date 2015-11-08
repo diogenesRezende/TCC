@@ -1,0 +1,23 @@
+\begin{lstlisting}[style=custom_JAVA]
+public boolean checkPlayServices() {
+
+        int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(context);
+
+        if (resultCode != ConnectionResult.SUCCESS) {
+
+            if (GooglePlayServicesUtil.isUserRecoverableError(resultCode)) {
+
+                GooglePlayServicesUtil.getErrorDialog(
+                	resultCode, 
+                	new MainActivity(), 
+                	PLAY_SERVICES_RESOLUTION_REQUEST
+                ).show();
+
+            } else {
+                Log.i(TAG, "Este dispositivo nao suporta o GCM.");
+            }
+            return false;
+        }
+        return true;
+    }
+\end{lstlisting}

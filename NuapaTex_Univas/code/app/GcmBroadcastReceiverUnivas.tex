@@ -1,0 +1,11 @@
+\begin{lstlisting}[style=custom_JAVA]
+public class GcmBroadcastReceiverUnivas extends WakefulBroadcastReceiver {
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        ComponentName comp = new ComponentName(context.getPackageName(),  GcmIntentServiceUnivas.class.getName());
+        startWakefulService(context, (intent.setComponent(comp)));
+        setResultCode(Activity.RESULT_OK);
+    }
+}
+\end{lstlisting}

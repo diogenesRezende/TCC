@@ -1,0 +1,19 @@
+\begin{lstlisting}[style=custom_JAVA]
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_list_results);
+    helper = new DatabaseHelper(this);
+
+    execute = new DatabaseExecute(helper);
+
+    ExpandableListView listView = 
+    		(ExpandableListView) findViewById(R.id.expandableListView2);
+    listView.setAdapter(
+    	new ListResultsAdapter(
+        	this, 
+        	execute.getDisciplines(),
+        	execute.getResults())
+    	); 
+}
+\end{lstlisting}

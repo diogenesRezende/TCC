@@ -1,0 +1,27 @@
+\begin{lstlisting}[style=custom_JAVA]
+public List<EventTO> getResults(){
+        List<EventTO> notasTO = new ArrayList<>();
+
+        SQLiteDatabase db = helper.getReadableDatabase();
+        Cursor cursor =
+                db.rawQuery("SELECT _id, id_disciplina, descricao_evento, valor_evento, nota  FROM" +
+                                " eventos WHERE tipo_evento = 'PROVA_APLICADA'",
+                        null);
+        cursor.moveToFirst();
+
+        for(int i = 0; i<cursor.getCount();i++){
+            EventTO nota = new EventTO();
+
+            nota.set_id(cursor.getLong(0));
+            nota.setId_discipline(cursor.getLong(1));
+            nota.setDescription_event(cursor.getString(2));
+            nota.setValue_event(cursor.getInt(3));
+            nota.setResult(cursor.getInt(4));
+
+            notasTO.add(nota);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return notasTO;
+    }
+\end{lstlisting}

@@ -1,0 +1,31 @@
+\begin{lstlisting}[style=custom_JAVA]
+public ListResultsAdapter(Context context, List<DisciplineTO> disciplines, List<EventTO> results){
+    this.context = context;
+    this.disciplines = disciplines;
+    this.results = results;
+    namesDisciplines = new String[disciplines.size()];
+    EventsDisciplines = new String[disciplines.size()][results.size()];
+
+    for (int i = 0; i < disciplines.size(); i++){
+        Long idDiscipline = disciplines.get(i).get_id();
+        String nameDiscipline = disciplines.get(i).getName();
+        namesDisciplines[i] = nameDiscipline;
+        int position = 0;
+        int totalResults = 0;
+        for (int y = 0; y < results.size(); y++) {
+            String description = results.get(y).getDescription_event();
+            int value = results.get(y).getValue_event();
+            int result = results.get(y).getResult();
+            Long disciplineId = results.get(y).getId_discipline();
+
+            if (idDiscipline == disciplineId){
+                EventsDisciplines [i][position] = "Descricao: " + description +
+                " Valor: " + value + " Nota: " + result;
+                position++;
+                totalResults += result;
+            }
+        }
+        EventsDisciplines [i][position] = "SOMA DAS NOTAS: " + totalResults;
+    }
+}
+\end{lstlisting}

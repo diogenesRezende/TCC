@@ -1,0 +1,64 @@
+\begin{lstlisting}[style=custom_JAVA]
+private void sendNotification(EventTO to) {
+        String msg;
+        DisciplineTO disciplineTO = execute.getDispline(to.getId_discipline());
+        String nameDispline = disciplineTO.getName();
+        mNotificationManager = (NotificationManager)
+                this.getSystemService(Context.NOTIFICATION_SERVICE);
+        PendingIntent contentIntent;
+        if(to.getType_event().equals("PROVA_AGENDADA")){
+            List<String> data = new ArrayList<String>();
+            data.add(nameDispline);
+            data.add(to.getDescription_event());
+            data.add(String.valueOf(to.getValue_event()));
+            data.add(to.getDate_event());
+            Intent intent = new Intent(this, NotificationAgendasActivity.class);
+            intent.putExtra("dados", (ArrayList<String>)data);
+            contentIntent = PendingIntent.getActivity(this, 0, intent, 0);
+
+            msg = "Prova agendada dia" + to.getDate_event();
+        }else{
+            if(to.getType_event().equals("FALTAS")){
+                List<String> data = new ArrayList<String>();
+                data.add(nameDispline);
+                data.add(to.getDate_event());
+                data.add(String.valueOf(to.getValue_event()));
+                Intent intent = new Intent(this, NotificationFoulsActivity.class);
+                intent.putExtra("dados", (ArrayList<String>)data);
+
+                contentIntent = PendingIntent.getActivity(this, 0, intent, 0);
+
+                msg = to.getValue_event() + " falta(s) recebidas";
+            }else{
+                List<String> data = new ArrayList<String>();
+                data.add(nameDispline);
+                data.add(to.getDescription_event());
+                data.add(String.valueOf(to.getValue_event()));
+                data.add(String.valueOf(to.getResult()));
+                Intent intent = new Intent(this, NotificationResultsActivity.class);
+                intent.putExtra("dados", (ArrayList<String>)data);
+
+                contentIntent = PendingIntent.getActivity(this, 0, intent, 0);
+               msg = "Nova nota " + to.getResult();
+            }
+        }
+
+        Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
+        .setSmallIcon(R.drawable.notification_univas)
+        .setContentTitle("Univas informa")
+        .setAutoCancel(true)
+        .setStyle(new NotificationCompat.BigTextStyle()
+        .bigText(msg))
+        .setContentText(msg)
+        .setSound(soundUri);
+        
+        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        long milliseconds = 30;
+        vibrator.vibrate(milliseconds);
+
+        mBuilder.setContentIntent(contentIntent);
+        mNotificationManager.notify(NOTIFICATION_ID, mBuilder.build());
+}
+\end{lstlisting}

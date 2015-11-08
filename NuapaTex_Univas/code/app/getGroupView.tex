@@ -1,0 +1,14 @@
+\begin{lstlisting}[style=custom_JAVA]
+@Override
+    public View getGroupView(int groupPosition, boolean isExpanded,
+                             View convertView, ViewGroup parent) {
+
+        TextView textViewDiscipline = new TextView(context);
+        textViewDiscipline.setText(namesDisciplines[groupPosition]);
+        textViewDiscipline.setPadding(40, 10, 0, 10);
+        textViewDiscipline.setTextSize(20);
+        textViewDiscipline.setTypeface(null, Typeface.BOLD);
+
+        return textViewDiscipline;
+    }
+\end{lstlisting}

@@ -1,0 +1,20 @@
+\begin{lstlisting}[style=custom_JAVA]
+private String getRegistrationId(Context context) {
+
+        final SharedPreferences prefs = getGcmPreferences(context);
+
+        String registrationId = prefs.getString(PROPERTY_REG_ID, "");
+        if (registrationId.isEmpty()) {
+            Log.i(TAG, "Falha ao registrar.");
+            return "";
+        }
+  
+        int registeredVersion = prefs.getInt(PROPERTY_APP_VERSION, Integer.MIN_VALUE);
+        int currentVersion = getAppVersion(context);
+        if (registeredVersion != currentVersion) {
+            Log.i(TAG, "Versao alterada do aplicativo.");
+            return "";
+        }
+        return ;
+}
+\end{lstlisting}

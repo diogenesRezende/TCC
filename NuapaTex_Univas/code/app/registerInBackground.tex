@@ -1,0 +1,30 @@
+\begin{lstlisting}[style=custom_JAVA]
+private void registerInBackground() {
+
+        new AsyncTask<Void, Void, String>() {
+            @Override
+            protected String doInBackground(Void... params) {
+                String msg = "";
+                try {
+                    if (gcm == null) {
+                        gcm = GoogleCloudMessaging.getInstance(context);
+                    }
+                    regid = gcm.register(SENDER_ID);
+                    msg = "Dispositivo registrado, registro ID=" + regid;
+
+                    sendRegistrationIdToBackend(regid);
+
+                    storeRegistrationId(context, regid);
+                } catch (IOException ex) {
+                    msg = "Error :" + ex.getMessage();
+                }
+                return msg;
+            }
+
+            @Override
+            protected void onPostExecute(String msg) {
+                Toast.makeText(new MainActivity(), msg, Toast.LENGTH_SHORT).show();
+            }
+        }.execute(null, null, null);
+    }
+\end{lstlisting}
