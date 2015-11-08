@@ -2,8 +2,8 @@
 
 	\par Para que os alunos sejam notificados quando houver alguma mudança no
 portal do aluno, será utilizada uma API oferecida pela Google denominada
-\textit{Google Cloud Messaging} ou simplesmente GCM, um recurso que tem por
-objetivo notificar as aplicações \textit{Android}. Segundo \citeonline{leal2014}, ele
+Google Cloud Messaging ou simplesmente GCM, um recurso que tem por
+objetivo notificar as aplicações Android. Segundo \citeonline{leal2014}, ele
 permite que aplicações servidoras possam enviar pequenas mensagens de até 4
 KB\footnote{\textit{KB - Kilobytes}} para os aplicativos móveis, sem que este
 necessite estar em execução. Ainda de acordo com \citeonline{leal2014} para o
@@ -16,12 +16,12 @@ componentes:
 	Será utilizado pelo servidores da Google para identificar a aplicação
 	que envia a mensagem.
 	
-	\item \textit{Application ID}: é o identificador da aplicação \textit{Android}. O
+	\item \textit{Application ID}: é o identificador da aplicação Android. O
 	identificador é o nome do pacote do projeto que consta no
 	\texttt{AndroidManifest.xml}.
 	
 	\item \textit{Registration ID}: é o identificador gerado pelo servidor GCM
-	quando aplicação \textit{Android} se conecta a ele. Este deve ser enviado
+	quando aplicação Android se conecta a ele. Este deve ser enviado
 	também à aplicação servidora.
 	
 	\item \textit{Sender Auth Token}: é uma chave que é incluída no cabeçalho
@@ -32,6 +32,6 @@ componentes:
 \end{itemize}
 
 	\par De acordo com os componentes acima citados, quando uma aplicação servidora
-enviar uma mensagem para o aplicativo \textit{Android}, na verdade está
+enviar uma mensagem para o aplicativo Android, na verdade está
 enviando para o servidor GCM que será encarregado de enviar a mensagem para a aplicação
 \textit{mobile}.

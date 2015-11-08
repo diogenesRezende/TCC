@@ -25,9 +25,7 @@ instalá-lo.
 arquivo XML\footnote{XML - \textit{Extensible Markup Language}.} denominado
 \texttt{AndroidManifest.xml}, que se localiza na pasta raiz do projeto. Para
 \citeonline{lecheta2010}, as informações devem estar entre \textit{tags}
-correspondentes ao recurso. Para ser possível acessar a internet pelo
-aplicativo é preciso declarar a permissão de acesso da seguinte forma:
-\texttt{<uses-permission android:name="android.permission.internet" />}.
+correspondentes ao recurso.
 
 	\par \citeonline{lecheta2010} diz que as Intents são recursos tão importantes
 que podem ser consideradas como o coração do Android e que estão presentes em
@@ -36,16 +34,16 @@ objetos responsáveis por passar informações, como se fossem mensagens, para o
 principais componentes da API do Android, como as Activities, Services e
 BroadCast Receivers". \citeonline{monteiro2012} diz que as Intents são criadas
 quando se tem a intenção de realizar algo como por exemplo compartilhar uma
-imagem, utilizando os APP's já existentes no dispositivo. Existem dois tipos de
+imagem, utilizando os app's já existentes no dispositivo. Existem dois tipos de
 Intents:
 	
 	\begin{itemize}
 	  
-	  \item Intents implícitas: quando não é informada qual Activity deve ser
+	  \item Intents implícitas: quando não é informada qual activity deve ser
 	  chamada, ficando assim por conta do sistema operacional verificar qual é a
 	  melhor opção.
 	  
-	  \item Intents explícitas: quando é informada qual Activity deve ser chamada.
+	  \item Intents explícitas: quando é informada qual activity deve ser chamada.
 	  Usada normalmente para chamar \textit{activities} da mesma aplicação.
 	  
 	\end{itemize}
@@ -97,31 +95,51 @@ ligação será executado o método \texttt{onRestart()} e voltar para a
 
 	\par No arquivo \texttt{AndroidManifest.xml} as \textit{activities} devem estar
 entre as tags \texttt{<activity> </activity>} e a \textit{activity} principal,
-ou seja, pela qual será iniciada a aplicação deve conter a tag
+ou seja, pela qual será iniciada a aplicação deve conter a \textit{tag}
 \texttt{<intent-filter>} além de \texttt{<action
 android:name="android.intent.action.MAIN"/>} indicando que essa atividade
 deverá ser chamada ao iniciar a aplicação e \texttt{<category
 android:\\name="android.intent.category.LAUNCHER"/>} que implica que esse
-APP ficará disponível junto
-aos outros aplicativos no dispositivo.
+APP ficará disponível junto aos outros aplicativos no dispositivo.
+Na figura \ref{fig:qt2} é apresentado o código do arquivo
+\texttt{AndroidManifest.xml}. Nela, pode-se ver o nome da classe que será
+iniciada e no atributo \textit{label} o nome que aparecerá na tela para o
+usuário.
+	
+	\begin{figure}
+		\begin{lstlisting}[style=custom_XML]
+		  <activity
+	            android:name=".MainActivity"
+	            android:label="@string/app_name" >
+	            <intent-filter>
+	                <action android:name="android.intent.action.MAIN" />
+	                <category android:name="android.intent.category.LAUNCHER" />
+	            </intent-filter>
+	      </activity>
+		\end{lstlisting}
+		\caption[Ciclo de Vida de uma Activity]{Ciclo de Vida de uma
+		Activity.
+		 \textbf{Fonte:}\citeonline{lecheta2010}}
+		\label{fig:qt2}
+	\end{figure}
 
-	\par A Activity a ser utilizada para iniciar a aplicação é uma
-Navigation Drawer, que segundo o site \citeonline{android2015}, ela exibe
+	\par A \textit{Activity} a ser utilizada para iniciar a aplicação é uma
+\texttt{Navigation Drawer}, que segundo o site \citeonline{android2015}, ela exibe
 do lado esquerdo as principais funções do software, semelhante a um
 menu, que fica normalmente escondida aparecendo apenas quando clicado no canto
-superior esquerdo.
+superior esquerdo. 
 
-	\par Segundo \citeonline{lecheta2010}, a classe Service existe com o intuito
+	\par Segundo \citeonline{lecheta2010}, a classe \texttt{Service} existe com o intuito
 de executar processos que levarão um tempo indeterminado para serem executados
 e que normalmente consomem um alto nível de memória e processamento. Esses
 processos são executados em segundo plano enquanto o cliente realiza outra
 tarefa. Assim um usuário pode navegar na internet enquanto é feito um
-\textit{download}. O serviço é geralmente iniciado pelo Broadcast Receiver e
+\textit{download}. O serviço é geralmente iniciado pelo \texttt{Broadcast Receiver} e
 quem o gerencia é o sistema operacional que só o finalizará ao concluir a
 tarefa, salvo quando o espaço em memória é insuficiente.
 
-	\par Para \citeonline{lecheta2010}, um Content Provider provê conteúdos de
-forma pública para todas as aplicações, possibilitando às aplicações consultar,
+	\par Para \citeonline{lecheta2010}, um \texttt{Content Provider} provê conteúdos de
+forma pública para todas as aplicações, possibilitando aos aplicativos consultar,
 salvar, deletar e alterar informações no \textit{smartphone}. Assim afirma
 \citeonline[p.413]{lecheta2010} “o Android tem uma série de provedores de
 conteúdo nativos, como, por exemplo, consultar contatos da agenda, visualizar
@@ -129,7 +147,25 @@ os arquivos, imagens e vídeos disponíveis no celular”. Portanto, um contato
 pode ser salvo na agenda de contatos do dispositivo por um aplicativo e
 alterado por outro.
 
-	\par Para \citeonline{monteiro2012}, o Broadcast Receiver,
+	\par Para \citeonline{monteiro2012}, o \texttt{Broadcast Receiver},
 é um componente do Android responsável por responder a eventos do sistema.
 Ele não possui interface gráfica e normalmente interage com os usuários através
 de notificações.
+
+	\par Outra ferramenta importante e muito utilizada do Android é a Notificação.
+Segundo \citeonline{phillips2013} quando uma aplicação está sendo
+executada em segundo plano e necessita comunicar-se com o usuário, o aplicativo
+cria uma notificação. Normalmente as notificações aparecem na barra superior, o
+qual pode ser acessado arrastando para baixo a partir da parte superior da
+tela. Assim que o usuário clica na notificação ela cria uma \textit{activity}
+para abrir  aplicação em questão.
+
+	\par O Android traz embarcado em sua plataforma o banco de dados
+\texttt{SQLite}, que armazena tabelas, \textit{views}, índices,
+\textit{triggers} em apenas um arquivo em disco. Somente é possível acessa-lo
+pela aplicação a qual o criou e, é deletado caso o aplicativo seja removido.
+
+	\par Na seção abaixo serão descritos os elementos gráficos presentes no
+Android.
+
+	
