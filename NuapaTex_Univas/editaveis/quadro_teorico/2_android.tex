@@ -106,7 +106,7 @@ Na figura \ref{fig:qt2} é apresentado o código do arquivo
 iniciada e no atributo \textit{label} o nome que aparecerá na tela para o
 usuário.
 	
-	\begin{figure}
+	\begin{figure}[h!]
 		\begin{lstlisting}[style=custom_XML]
 		  <activity
 	            android:name=".MainActivity"
@@ -117,12 +117,14 @@ usuário.
 	            </intent-filter>
 	      </activity>
 		\end{lstlisting}
-		\caption[Ciclo de Vida de uma Activity]{Ciclo de Vida de uma
-		Activity.
-		 \textbf{Fonte:}\citeonline{lecheta2010}}
+		\caption[Código do arquivo
+		AndroidManifest.xml indicando qual activity deve ser executada quando a
+		aplicação iniciar]{Código do arquivo \texttt{AndroidManifest.xml} indicando
+		qual \textit{activity} deve ser executada quando a aplicação iniciar.
+		 \textbf{Fonte:}Elaborado pelos autores}
 		\label{fig:qt2}
 	\end{figure}
-
+	
 	\par A \textit{Activity} a ser utilizada para iniciar a aplicação é uma
 \texttt{Navigation Drawer}, que segundo o site \citeonline{android2015}, ela exibe
 do lado esquerdo as principais funções do software, semelhante a um
