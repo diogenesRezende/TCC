@@ -397,12 +397,14 @@ o título e a mensagem, a notificação é exibida ao usuário. Na Figura
 
 	\begin{figure}[h!] 
 		%\input{code/app/sendNotification}
+		\centerline{\includegraphics[scale=.80]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/send1.png}}
 		\caption[Método sendNotification()]{ Método \texttt{sendNotification()}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:app17}
 	\end{figure}
 	
-
+	\pagebreak
+	
 	\par A notificação acontece toda vez que o GCM envia uma informação ao
 dispositivo. Para tratar essas ocorrências foi projetada uma classe para ser o
 \texttt{BroadcastReceiver} chamada de \texttt{GcmBroadcastReceiverUnivas}. Ela
@@ -448,6 +450,8 @@ GCM. Na Figura \ref{fig:app20}, é apresentado o método checkPlayServices().
 		\label{fig:app20}
 	\end{figure}
 	
+	\pagebreak
+	
 	\par Logo após é chamado o método \texttt{getRegistrationId()}, que é incumbido
 de retornar o \textit{Registration} ID. Na Figura \ref{fig:app21} é possível ver
 este método, no entanto, se o registro retornado for nulo, isso significa que o
@@ -470,6 +474,8 @@ Figura \ref{fig:app22}.
 		\label{fig:app22}
 	\end{figure}
 	
+		\pagebreak
+		
 	\par Desta forma, quando o \textit{web service} envia uma informação ao GCM, o
 \textit{Registration} ID é transmitido junto aos dados, gerado pelo método
 \texttt{registerInBackground()}, possibilitando ao serviço da Google
