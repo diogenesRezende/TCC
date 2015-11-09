@@ -151,7 +151,7 @@ vista no diagrama de classes que esta apresentado na Figura \ref{fig:desws12}.
 	
 	
 	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.55]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/diagrama.png}}
+		\centerline{\includegraphics[scale=0.6]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/diagrama.png}}
 		\caption[Diagrama de classes do pacote model]{Diagrama de classes do pacote
 		model.
 			\textbf{Fonte:}Elaborado pelos autores.}
@@ -167,7 +167,7 @@ fisíco do banco de dados pode ser visto na Figura \ref{fig:desws12_1}.
 	
 	
 	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.55]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/mer_ws.pdf}}
+		\centerline{\includegraphics[scale=0.50]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/mer_ws.pdf}}
 		\caption[Modelo fisíco do banco de dados]{Modelo fisíco do banco de dados.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws12_1}
@@ -502,8 +502,12 @@ um determinado aluno através de sua matrícula. Já o método
 \texttt{disciplines}, que tem por responsabilidade retornar todas as
 disciplinas cursadas por um aluno em um período. A URL\footnote{URL - Uniform
 Resource Locator} para acessar o recurso relativo ao método
-\texttt{getEventsByStudentRegistration()} usando REST tem o seguinte formato:\\
-\url{http://localhost:8080/WebServiceAppUnivas/students/events/{registration}}
+\texttt{getEventsByStudentRegistration()} usan-do REST tem o seguinte
+formato:\\
+		
+		\begin{center}
+			http://localhost:8080/WebServiceAppUnivas/students/events/{registration}		
+		\end{center}
 	
 	\par Esta pode ser dividida da seguinte forma:
 

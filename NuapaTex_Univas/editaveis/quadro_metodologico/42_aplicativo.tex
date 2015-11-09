@@ -20,7 +20,7 @@ a gravação dos dados no banco de dados.
 
 	\par Quando o usuário clica na notificação, é apresentada a ele uma
 \textit{activity} a qual exibe as informações recebidas. Neste contexto, quando
-se tratar de uma nota será aberta a \textit{activity}
+o evento recebido se tratar de uma nota será aberta a \textit{activity}
 \texttt{NotificationResultsActivity}, no caso de ser uma falta é executada a
 \textit{activity} \texttt{NotificationFoulsActivity} e caso for um evento de
 provas agendadas então é mostrada a \textit{activity}
@@ -78,20 +78,18 @@ not turned on.}” A solução foi acessar a BIOS da máquina e habilitar o
 assistente de hardware para virtualização. Daí em diante, foi possível executar
 no emulador as aplicações feitas no Android Studio.
 
-	\par Com o ambiente já configurado, foi criado um repositório no controlador de
-versão Github, o qual pode ser acessado através do endereço
-\url{https://github.com/diegodnunes12/AppTCC} e compartilhado entre os
-participantes do projeto.
+	\par Com o ambiente já configurado, houve a necessidade de se criar um
+repositório no controlador de versão Github, o qual pode ser acessado através
+do endereço \url{https://github.com/diegodnunes12/AppTCC} e compartilhado entre
+os participantes do projeto.
 
 	\par A partir de então, passou-se a desenvolver o software. A princípio, foi
 construída uma \textit{activity}, que é acessível ao aluno logo que a aplicação
 se inicia. Essa \textit{activity} é do tipo \textit{Navigation Drawer Layout},
 ou seja, é um painel que permite inserir as opções de navegação do aplicativo,
-semelhante a um menu.
-
-	\par Ao criar essa \textit{activity}, o Android Studio gera automaticamente a
-classe \texttt{NavigationDrawerFragment} e um arquivo XML na pasta
-\textit{layout}, chamado \texttt{fragment\_navigation\_drawer.xml}.
+semelhante a um menu.	Ao criar essa \textit{activity}, o Android Studio gera
+automaticamente a classe \texttt{NavigationDrawerFragment} e um arquivo XML na
+pasta \textit{layout}, chamado \texttt{fragment\_navigation\_drawer.xml}.
 
 	\par No arquivo \texttt{fragment\_navigation\_drawer.xml} foram inseridos três
 \textit{widgets}, sendo dois do tipo \texttt{textView}, para o cabeçalho com a
@@ -101,8 +99,8 @@ com as opções que o software oferece ao aluno.
 
 	\par O \textit{layout} desta \textit{activity} chama-se
 \textit{relativeLayout}, o qual permite um elemento ser posicionado em relação
-ao outro. Desta forma o \textit{widget} \textit{listView} utiliza a propriedade
-\texttt{android:layout\_below="@+id/headerView"} para se posicionar abaixo do
+a um outro. Desta forma o \textit{widget} \textit{listView} do Android, utiliza
+a propriedade \texttt{android:layout\_below="@+id/headerView"} para se posicionar abaixo do
 componente com id \textit{headerView} e a propriedade
 \texttt{android:layout\_above="@+id/footerView"} indicando que ela deve preceder
 o \textit{widget} com id \textit{footerView}. Na Figura \ref{fig:app2}, pode
@@ -359,11 +357,11 @@ lista do tipo \texttt{expandableListView}.
 	\pagebreak
 	
 	\par Na classe \texttt{ListResultsActivity}, é preciso informar o layout a ser
-chamado através do método \texttt{setContentView()}. Também foi necessário
-passar para a classe \texttt{ListResultsAdapter} a lista de disciplinas que o
-discente está cursando e a lista com as notas referentes a cada matéria vindas
-do banco de dados. Na Figura \ref{fig:app16} é exibido o método
-\texttt{onCreate()} da classe \texttt{ListResultsActivity}. 
+chamado através do método \texttt{setContentView()}. Além disso, também foi
+necessário passar para a classe \texttt{ListResultsAdapter} a lista de
+disciplinas que o discente está cursando e a lista com as notas referentes a
+cada matéria vindas do banco de dados. Na Figura \ref{fig:app16} é exibido o
+método \texttt{onCreate()} da classe \texttt{ListResultsActivity}. 
 	
 	
 	\begin{figure}[h!] 
@@ -374,9 +372,9 @@ do banco de dados. Na Figura \ref{fig:app16} é exibido o método
 		\label{fig:app16}
 	\end{figure}
 
-	\par Estes procedimentos realizados para as classes
-\texttt{ListResultsActivity} e \texttt{ListResultsAdapter} foram necessários
-para apresentar as notas dos exercícios resolvidos. Desta mesma forma foi
+	\par Estes procedimentos que foram realizados para as classes
+\texttt{ListResultsActivity} e \texttt{ListResultsAdapter}, eram necessários
+para se apresentar as notas dos exercícios resolvidos. Desta mesma forma foi
 preciso criar uma \textit{activity} e um \texttt{adapter} tanto para faltas
 quanto para provas agendadas seguindo a mesma lógica.
 
