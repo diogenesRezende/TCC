@@ -1,0 +1,45 @@
+\begin{tiny}
+\begin{enumerate}
+	\item \textbf{Contexto da Aplicação} -
+	http://<enderecoDoServidor>/WebServiceAppUnivas/
+		\begin{itemize}
+			\item \textbf{Contextos internos}
+				\begin{itemize}
+					\item \textbf{students} - contexto relacionados aos dados dos alunos
+							\begin{itemize}
+								
+								\item events - recurso referente aos dados sobre eventos relacionados a
+								alunos;
+									\begin{itemize}
+									  \item \textbf{GET} - recebe como parâmetro a matrícula do aluno
+									  através da url, e devolve um JSON, com todos os eventos do semestre corrente
+									  relacionados ao aluno;\\ Ex.: 
+									  http://<enderecoDoServidor>/WebServiceAppUnivas/students/events/98004095
+									  \item \textbf{POST} - Não Implementado
+									  \item \textbf{PUT} - Não Implementado
+									  \item \textbf{DELETE} - Não Implementado
+									\end{itemize}									
+								\item disciplines - recurso referente aos dados sobre disciplinas de
+								alunos;
+									\begin{itemize}
+									  \item \textbf{GET} - recebe como parâmetro a matrícula do aluno
+									  através da url, e devolve um JSON, com todos os disciplinas do semestre
+									  corrente relacionadas ao aluno;\\ Ex.: 
+									  http://<enderecoDoServidor>/WebServiceAppUnivas/students/disciplines/98004095
+									  \item \textbf{POST} - Não Implementado
+									  \item \textbf{PUT} - Não Implementado
+									  \item \textbf{DELETE} - Não Implementado
+									\end{itemize}
+							\end{itemize}
+					\item \textbf{users} - contexto relacionados aos dados dos usuários
+						\begin{itemize}
+									  \item \textbf{GET} - Não Implementado
+									  \item \textbf{POST} - Não Implementado
+									  \item \textbf{PUT} - recebe um JSON com os dados dos usuário e
+									  retorna um cabeçalho com o código de  \textit{status} 200;
+									  \item \textbf{DELETE} - Não Implementado
+									\end{itemize}
+				\end{itemize}
+		\end{itemize}
+\end{enumerate}
+\end{tiny}
