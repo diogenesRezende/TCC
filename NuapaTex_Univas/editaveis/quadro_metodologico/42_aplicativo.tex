@@ -140,8 +140,8 @@ executado no momento em que o usuário clica em algum item da lista.
 	\pagebreak
 	
 	\par Nesse caso, quando for selecionada alguma opção da tela principal será
-executado o método \texttt{selectItem()} apresentado na \ref{fig:app4}, o qual
-é responsável por retornar a posição do \textit{array} em que se encontra a
+executado o método \texttt{selectItem()} apresentado na Figura \ref{fig:app4}, o
+qual é responsável por retornar a posição do \textit{array} em que se encontra a
 opção selecionada pelo aluno.
 	
 	\begin{figure}[h!] 
@@ -209,15 +209,15 @@ para conseguir recuperar as informações armazenadas no banco de dados é preci
 adquirir a instância de leitura da classe \texttt{SQLiteDatabase} através do
 método \texttt{getReadableDatabase()}. Por meio dele pode-se realizar a
 consulta, que devolve um \textit{Cursor} para navegar pelos resultados. Por
-fim, é composto um objeto do tipo \textit{EventTO} e inserido na lista. Na
+fim, é composto um objeto do tipo \texttt{EventTO} e inserido na lista. Na
 Figura \ref{fig:app7} é apresentado o método \texttt{getResults()}.
 
 	\par Foram inseridos mais dois métodos semelhantes ao \texttt{getResults()},
-chamados de \texttt{getFouls()} e \texttt{getAgendas()} para recuperar as
-faltas e provas agendadas respectivamente. O que diferencia-os é a consulta
-SQL, já que no \texttt{getFouls()}  foram buscados os dados onde o
+que são os métodos de \texttt{getFouls()} e \texttt{getAgendas()} para
+recuperar as faltas e provas agendadas respectivamente. O que diferencia-os é a
+consulta SQL, já que no \texttt{getFouls()}  foram buscados os dados onde o
 \texttt{tipo\_evento = ‘FALTAS'} e no \texttt{getAgendas()} onde o
-\texttt{tipo\_evento = 'PROVA\_AGENDADA'}.
+\texttt{tipo\_evento = ‘PROVA\_AGENDADA'}.
 
 	\begin{figure}[h!] 
 		\input{code/app/getResults}
@@ -281,7 +281,7 @@ apresenta a Figura \ref{fig:app10}.
 	
 	\par Na Figura \ref{fig:app11}, é mostrado o código onde é utilizado a
 	biblioteca GSON. O sistema lê os dados vindos em JSON e envia para o GSON que faz a conversão dos
-dados no formato da classe \textit{EventTO}.
+dados no formato da classe \texttt{EventTO}.
 
 	\begin{figure}[h!] 
 		\input{code/app/GSON}
@@ -294,7 +294,7 @@ dados no formato da classe \textit{EventTO}.
 dos dados vindos do banco de dados com a interface que listará as informações
 aos usuários. Essa classe recebeu o nome de \texttt{ListResultsAdapter} e
 estende da classe nativa do Android denominada
-\textit{BaseExpandableListAdapter}.
+\texttt{BaseExpandableListAdapter}.
 
 	\par Nesta classe foi criado um construtor que recebe a lista de disciplinas
 cursadas pelo aluno e uma lista com as notas de cada matéria. Os nomes das

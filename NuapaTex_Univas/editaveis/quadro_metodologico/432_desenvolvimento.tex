@@ -287,13 +287,13 @@ aplicação.
 	
 	\par Depois de finalizada a criação da camada de persistência do projeto foi
 necessário uma configuração adicional. Percebeu-se que além das bibliotecas já
-usadas no projeto, seriam necessárias mais algumas bibliotecas para que se
-pudesse chegar ao resultado final esperado. Por esse motivo tornava-se inviável
-ficar controlando as bibliotecas de maneira manual no projeto. Foi necessário
-então, fazer a conversão do projeto para um projeto que fosse controlado pelo
-Maven. Para tanto foi necessário clicar com o botão direito do mouse sobre o
-projeto e navegar até a opção \textbf{Configure -> Convert to Maven Project},
-como pode ser visto na Figura \ref{fig:desws18}
+usadas no projeto, seriam necessárias mais algumas bibliotecas tais como Jersey
+Json e Jersey Servlet, para que se pudesse chegar ao resultado final esperado.
+Por esse motivo tornava-se inviável ficar controlando as bibliotecas de maneira
+manual no projeto. Foi necessário então, fazer a conversão do projeto para um
+projeto que fosse controlado pelo Maven. Para tanto foi necessário clicar com o
+botão direito do mouse sobre o projeto e navegar até a opção \textbf{Configure
+-> Convert to Maven Project}, como pode ser visto na Figura \ref{fig:desws18}
 
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws18.png}}
@@ -311,7 +311,7 @@ campos \textbf{Group id}, \textbf{Artifact id}, \textbf{Version} e
 	  que recebeu o nome de "\texttt{br.edu.univas}".
 	  \item \textbf{Artifact id:} foi preenchido com o nome do próprio projeto já
 	  criado anteriormente pois, este seria o nome do artefato final do gerado pelo
-	  projeto.
+	  Maven.
 	  \item \textbf{Version:} versão a qual está o projeto. Neste caso manteve-se
 	  o que já veio por padrão.
 	  \item \textbf{Packaging:} a forma como o projeto seria empacotado após a
@@ -324,44 +324,45 @@ campos \textbf{Group id}, \textbf{Artifact id}, \textbf{Version} e
 faça a gerência do projeto. Este arquivo possui, além das informações
 apresentadas anteriormente (\textbf{Group id}, \textbf{Artifact id},
 \textbf{Version} e \textbf{Packaging}), algumas informações a respeito da
-compilação do projeto e o principal que é a gerência das dependências do
-projeto. Inicialmente foi incluída somente as dependências referentes ao
-\textit{driver} JDBC do PostGreSql e a biblioteca Hibernate como pode ser visto
-na Figura \ref{fig:desws18}.
+compilação do projeto e um recurso importante, que é a gerência das
+dependências do projeto. Inicialmente foi incluída somente as dependências
+referentes ao \textit{driver} JDBC do PostGreSql e a biblioteca Hibernate como
+pode ser visto na Figura \ref{fig:desws18_1}.
 	
 	\begin{figure}[h!]
 		\input{code/pom_xml_hibernate}
 		\caption[Arquivo pom.xml]{Arquivo \texttt{pom.xml}.
 		\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws18}
+		\label{fig:desws18_1}
 	\end{figure}
 
 	\par Em seguida a essa configuração foi necessário apagar a pasta \texttt{libs}
 do projeto, pois esta já não era mais necessária, haja vista que as bibliotecas
 usadas no projeto já estavam sendo gerenciadas pelo Maven. A partir daí foi
-necessário criar a parte de disponibilização dos serviços REST. Para isto foram
-criados três novos pacotes para abrigar as classes que formaram a parte de
-serviços do \textit{web service}, são eles:
+necessário criar o código de disponibilização dos serviços REST. Para isto
+foram criados três novos pacotes para abrigar as classes que formaram a parte
+de serviços do \textit{web service}, são eles:
 	
 	\begin{itemize}
 	  \item \texttt{br.edu.univas.restapiappunivas.controllers}: pacote responsável
-	  por agrupar as classes responsaveis por realizar as consultas na camada de
+	  por agrupar as classes responsáveis por realizar as consultas na camada de
 	  persistência do projeto e prover o resultados para publicação nos serviços.
 	  \item \texttt{br.edu.univas.restapiappunivas.entities}: pacote responsável
 	  por agrupar as classes que serviriam para abrigar os dados retonados nas
 	  consultas dos \textit{controllers} e servir como retorno aos métodos das
 	  classes de serviços.
 	  \item \texttt{br.edu.univas.restapiappunivas.resources}: pacote responsável
-	  por agrupar as classes responsaveis por prover os serviços REST.
+	  por agrupar as classes responsáveis por prover os serviços REST.
 	\end{itemize}
 
 
 	\par Foi necessário criar algumas classes que eram responsáveis por fazer as
 consultas no banco de dados usando o Hibernate. Estas classes tinham alguns
-métodos que tinham a responsabilidade de fazer a consulta e retornar os dados
-que seriam usados pelas classes que iam tornar disponíveis os serviços do
-\textit{web service}. Uma destas classes é a \texttt{StudentEventsCtrl.java},
-que pode ser vista na Figura \ref{fig:desws19}.
+métodos que com a responsabilidade de fazer a consulta e retornar os dados
+que seriam usados pelas classes que continham os serviços do \textit{web
+service}.
+Uma destas classes é a \texttt{StudentEventsCtrl.java}, que pode ser vista na
+Figura \ref{fig:desws19}.
 	
 	\begin{figure}[h!]
 		\input{code/student_event_ctrl}
@@ -374,14 +375,13 @@ que pode ser vista na Figura \ref{fig:desws19}.
 	\pagebreak
 	
 	\par Esta classe é composta unicamente pelo método
-\texttt{getEventsByRegistration()} o qual era responsável por fazer a busca de
+\texttt{getEventsByRegistration()} o qual é responsável por fazer a busca de
 todos os eventos de um determinado aluno pela sua matrícula. Ainda na Figura
-\ref{fig:desws19} é perceptível que dentro deste método são usadas instancias
-das classes \texttt{StudentEvent} e \texttt{StudentEvents}. A classe
-\texttt{StudentEvent} foi criada apenas para servir como como um simples POJO
-que conteria os retorno da consulta JPQL\footnote{JPQL - \textit{Java
-Persistence Query Language}}. O código desta classe pode ser visto na Figura
-\ref{fig:desws20}.
+\ref{fig:desws19} são usadas instâncias das classes \texttt{StudentEvent} e
+\texttt{StudentEvents}. A classe \texttt{StudentEvent} foi criada apenas para
+servir como como um simples POJO que contém o retorno da consulta
+JPQL\footnote{JPQL - \textit{Java Persistence Query Language}}. O código desta
+classe pode ser visto na Figura \ref{fig:desws20}.
 	
 	\begin{figure}[h!]
 		\input{code/student_event}
@@ -408,7 +408,7 @@ ser visto na Figura \ref{fig:desws21}.
 \ref{fig:desws21} foram criadas dentro do pacote\\ 
 \texttt{br.edu.univas.restapiappunivas.entities}. Além delas foi criada também
 a classe \texttt{StudentDisciplines} no mesmo pacote. Esta classe foi usada com
-o mesmo propósito da \texttt{StudentEvents}, que era encpsular um resultado e
+o mesmo propósito da \texttt{StudentEvents}, que é encapsular um resultado e
 posterior conversão para JSON. O código fonte desta classe pode ser visto na
 Figura \ref{fig:desws22}.
 
@@ -423,7 +423,7 @@ Figura \ref{fig:desws22}.
 	\par Ainda foi criada mais uma classe que tinha basicamente a mesma função da
 classe \texttt{StudentEventsCtrl.java} que era de fazer a consulta e retornar
 os dados que seriam usados pelas classes que iam tornar disponíveis os serviços
-do \textit{web service}. Esta classe foi chmada de
+do \textit{web service}. Esta classe foi chamada de
 \texttt{StudentDisciplinesCtrl.java} e seu código fonte pode ser visto na
 Figura \ref{fig:desws23}.
 
@@ -436,11 +436,12 @@ Figura \ref{fig:desws23}.
 	\end{figure}
 	
 	\par Em seguida à construção das classes que fazem a busca e retorno dos dados
-na camada de persistência, foi desenvolvido a parte de disponibilização de
-serviços \textit{RESTful}, fazendo uso do \textit{framework} Jersey em sua
-versão de numero {1.19}. Para isso primeiramente foi necessário incluir no
-arquivo \texttt{pom.xml}, a dependência referente ao \texttt{framework} Jersey
-no arquivo \texttt{pom.xml} como pode ser visto na Figura \ref{fig:desws24}.
+na camada de persistência, foram desenvolvidas as classes responsáveis pela
+disponibilização de serviços \textit{RESTful}, fazendo uso do
+\textit{framework} Jersey em sua versão de número {1.19}. Para isso,
+primeiramente foi necessário incluir no arquivo \texttt{pom.xml}, a dependência
+referente ao \textit{framework} Jersey como pode ser visto na Figura
+\ref{fig:desws24}.
 
 	\begin{figure}[h!]
 		\input{code/pom_xml}
@@ -453,13 +454,14 @@ no arquivo \texttt{pom.xml} como pode ser visto na Figura \ref{fig:desws24}.
 	
 	\pagebreak
 
-	\par Além desta configuração outras foram necessárias. Foi necessário apontar
-no arquivo \texttt{web.xml} da aplicação, que pode ser encontardo dentro da
-pasta \texttt{WebContent -> WEB-INF} do projeto, qual seria o \textit{servlet}
-que seria responsável por prover os serviços, que para esta aplicação foi a
-classe \texttt{com.sun.jersey.spi.container.servlet.ServletContainer}. Mais uma
-configuração foi acrescentada no \textit{web.xml}, que foi a definição de em
-que pacotes se encontrariam as classes que representam os serviços REST da
+	\par Além desta configuração, foi necessário apontar no arquivo
+\texttt{web.xml} da aplicação, que pode ser encontardo dentro da pasta
+\texttt{WebContent -> WEB-INF} do projeto, qual seria o \textit{servlet}
+responsável por prover os serviços, que para esta aplicação foi a classe, foi
+a classe do \textit{framework} Jersey
+\texttt{com.sun.jersey.spi.container.servlet.ServletContainer}. Mais uma
+configuração foi acrescentada no \texttt{web.xml}, que foi a definição dos
+pacotes onde se encontrariam as classes que fornecem os serviços REST da
 aplicação, que no caso foi o pacote
 \texttt{br.edu.univas.restapiappunivas.resources}. Estas duas configurações
 podem ser vistas na Figura \ref{fig:desws25}.
@@ -476,14 +478,14 @@ podem ser vistas na Figura \ref{fig:desws25}.
 	\par Com isso pode-se construir as classes que representam de fato os serviços
 do \textit{web service}, que são as classes \texttt{StudentResouce.java} e
 \texttt{UserResource.java}. Estas classes representam contextos REST desta
-aplicação que segundo \citeonline[p.6]{saudate2012}, são "a raiz pela qual a
+aplicação, que segundo \citeonline[p.6]{saudate2012}, são "a raiz pela qual a
 aplicação está sendo fornecida para o cliente". Dentro de um contexto pode haver
-inumeros recursos que ainda segundo \citeonline[p.5]{saudate2012} podem ser
-definidos como "conjuntos de dados que são trafegados pelo protocolo".
+inúmeros recursos que segundo \citeonline[p.5]{saudate2012}, podem ser definidos
+como "conjuntos de dados que são trafegados pelo protocolo".
 
 	\par Inicialmente foi contruída a classe \texttt{StudentResouce.java}, que
-representa o contexto \texttt{students} desta aplicação. Esta classe está
-representada na Figura \ref{fig:desws25_1}.
+representa o contexto \texttt{students} desta aplicação, representada na Figura
+\ref{fig:desws25_1}.
 
 	\begin{figure}[h!]
 		\input{code/students_resouces}
@@ -493,38 +495,36 @@ representada na Figura \ref{fig:desws25_1}.
 	\end{figure}
 		
 	\par A classe \texttt{StudentResouce.java}, representa o contexto
-\texttt{Students}. O primeiro deles é \texttt{getEventsByStudentRegistration()}
-que representa o recurso \texttt{events} e faz o retorno de todos o eventos de
+\texttt{students}. O primeiro deles é \texttt{getEventsByStudentRegistration()}
+que representa o recurso \texttt{events} e faz o retorno de todos os eventos de
 um determinado aluno através de sua matrícula. Já o método
 \texttt{getDisciplinesByStudentRegistration()} representa o recurso
 \texttt{disciplines}, que tem por responsabilidade retornar todas as
-disciplinas cursadas por um aluno em determinado periodo. A url para acessar o recurso
-relativo ao método \texttt{getEventsByStudentRegistration()} usando REST
-tomaria o seguinte formato:\\
+disciplinas cursadas por um aluno em um período. A URL\footnote{URL - Uniform
+Resource Locator} para acessar o recurso relativo ao método
+\texttt{getEventsByStudentRegistration()} usando REST tem o seguinte formato:\\
 \url{http://localhost:8080/WebServiceAppUnivas/students/events/{registration}}
 	
 	\par Esta pode ser dividida da seguinte forma:
 
 	\begin{itemize}
-	  \item http:// : mostra qual protocolo está sendo usado para troca de
-	  mensagenes que no caso é o HTTP;
-	  \item localhost:8080 : indica o endereço e porta do servidor que fornece este
+	  \item localhost:8080: indica o endereço e porta do servidor que fornece este
 	  serviço;
 	  \item WebServiceAppUnivas: representa o contexto universal da aplicação; 
-	  \item students :representa um contexto específico dentro da aplicação;
-	  \item events : representa um recurso;
-	  \item registration: representa um parametro passado para o serviço, que
-	  neste caso é o número da matricula do aluno;
+	  \item students: representa um contexto específico dentro da aplicação;
+	  \item events: representa um recurso;
+	  \item registration: representa um parâmetro passado para o serviço, que
+	  neste caso é o número da matrícula do aluno.
 	\end{itemize}
 
-	\par Além da classe \texttt{StudentResouce.java}, foi desenvolvida
-a classe também a classe \texttt{UserResources.java}. Esta por sua vez
-represente o serviço mais importante do \textit{web service} que é responsável
-por receber os \texttt{registration\_id} do dispositivo gerado pelo GCM. Sem
-este não é possível enviar as mensagens aos servidores do GCM e
-consequentemente não seria possível manter os aplicativos  dos alunos
-constantemente atualizados. O código fonte desta classe pode ser visto na
-Figura \ref{fig:desws26}.
+	\par Além da classe \texttt{StudentResouce.java}, foi desenvolvida também a
+classe responsável pelo contexto \texttt{users},
+que é \texttt{UserResources.java}. Esta por sua vez representa o serviço mais
+importante do \textit{web service} que é responsável por receber os valores de
+\texttt{registration\_id} do dispositivo gerado pelo GCM. Sem estes  id's não
+seria possível enviar as mensagens aos servidores do GCM e consequentemente não
+manter os aplicativos dos alunos constantemente atualizados. O código fonte
+desta classe pode ser visto na Figura \ref{fig:desws26}.
 
 	\begin{figure}[h!]
 		\input{code/user_res}
@@ -535,7 +535,7 @@ Figura \ref{fig:desws26}.
 	
 	\par A classe \texttt{UserResources.java} recebe um objeto do tipo
 \texttt{User.java} que tem em seu conteúdo o id gerado pelo GCM preenchido e
-usa um objeto da classe \texttt{UserCtrl.java} para buscar o usuario que é o
+usa um objeto da classe \texttt{UserCtrl.java} para buscar o usuário que é o
 dono do id recebido e em seguida persiste o mesmo no banco de dados para o
 posterior uso. A classe \texttt{UserCtrl.java} está apresentada na Figura
 \ref{fig:desws27}.
@@ -561,10 +561,10 @@ lista com as principais anotações usadas nessa aplicação e suas funcionalida
 	  classes quanto em métodos;
 	  \item \texttt{@PathParam}: permite o recebimento de parâmetros através URL de
 	  chamada do serviço;
-	  \item \texttt{@Produces}: determina qual o tipo de conteúdo é aceito pela
+	  \item \texttt{@Produces}: determina qual o tipo de conteúdo é produzido pela
 	  classe ou método que ele anota, no momento da chamada do serviço. Aceita
 	  variados tipos sendo os principais XML e JSON;
-	  \item \texttt{@Consumes}: determina qual o tipo de conteúdo é produzido pela
+	  \item \texttt{@Consumes}: determina qual o tipo de conteúdo é aceito pela
 	  classe ou método que ele anota. 
 	  \item \texttt{@GET}: Representa que método anotado, deverá responder somente
 	  ao método HTTP GET;
@@ -574,21 +574,21 @@ lista com as principais anotações usadas nessa aplicação e suas funcionalida
 	
 	\par De acordo com o desenvolvimento destes serviços, percebeu-se que com certa
 frequência ocorria um situação que se mostrava um tanto quanto estranha.
-Trata-se do seguinte caso, muitas das vezes em que um serviço era invocado,
-todas as consultas eram realizadas pela camada de persistência da aplicação,
-porém os resultados não eram apresentados. Além disso o \textit{servlet}
-responsável por este serviço retornava um cabeçalho com um erro HTTP {500}, que
-trata-se de um código genérico de erro e que representa a ocorrência de um erro
-interno da aplicação servidora. Isto acontecia, porém ao examinar os
-\textit{log's} de execução da aplicação não era possível  encontrar nem um tipo
-erro e nem mesmo algum tipo de \texttt{Exception} lançada pela aplicação. 
+Trata-se do seguinte caso: muitas vezes em que um serviço era invocado, todas
+as consultas eram realizadas pela camada de persistência da aplicação, porém os
+resultados não eram apresentados. Além disso o \textit{servlet} responsável por
+este serviço retornava um cabeçalho com um erro HTTP {500}, que trata-se de um
+código genérico de erro e que representa a ocorrência de um erro interno da
+aplicação servidora. Isto acontecia, porém ao examinar os \textit{log's} de
+execução da aplicação não era possível  encontrar nem um tipo erro e nem mesmo
+algum tipo de \texttt{Exception} lançada pela aplicação.
 	
 	\par Porém após algum tempo de pesquisa, descobriu-se que era necessário
-contruir uma classe seria responsável por disponibilizar em tempo de execução,
-uma forma de converter corretamente os objetos  usados na aplicação por um
-formato ao qual a aplicação usava como resposta, que no caso é o JSON. Esta
-classe. A classe construída foi \texttt{JerseyProvider.java}. Esta pode ser
-vista na Figura \ref{fig:desws27_1}.
+contruir uma classe responsável por disponibilizar em tempo de execução, uma
+forma de converter corretamente os objetos  usados na aplicação por um formato
+ao qual a aplicação usava como resposta, que no caso é o JSON. A classe
+construída foi \texttt{JerseyProvider.java}, que pode ser vista na Figura
+\ref{fig:desws27_1}.
 
 	\begin{figure}[h!]
 		\input{code/JerseyProvider}
@@ -600,7 +600,7 @@ vista na Figura \ref{fig:desws27_1}.
 	
 	\par A principal função desta classe, era a de ser uma provedora de um contexto
 para que se pudesse ocorrer a serialização de objetos e a conversão dos mesmos
-para JSON que é o o formato usado no \textit{web service}. E com isso foi
+para JSON que é o o formato usado no \textit{web service}. E assim foi
 concluída a parte de fornecimento de serviços da aplicação.
 	
 	\par Era necessário também, que a cada novo evento lançado no banco de dados do
@@ -613,7 +613,7 @@ ficaram contidas no pacote \texttt{br.edu.univas.restapiappunivas.gcm}.
 	\par A primeira classe a ser criada foi \texttt{ContentMessageGCM.java}. Esta
 classe tinha por finalidade estruturar o conteúdo da mensagem que seria
 entregue ao GCM. Dentre os conteúdos da mensagem estão os
-\texttt{registration\_ids}, que são os id's dos dispositivos dos alunos, que
+\texttt{registration\_ids}, que são os ids dos dispositivos dos alunos, que
 foram registrados nos servidores do GCM e \texttt{data} que é o conteúdo da
 mensagem. O código fonte desta classe pode ser visto na Figura
 \ref{fig:desws30}.
@@ -629,7 +629,7 @@ mensagem. O código fonte desta classe pode ser visto na Figura
 	\pagebreak
 	
 	\par Além disso foi criada a classe estática \texttt{PostToGCM.java}, a qual
-foi responsável por, converter o conteúdo da menssagem para o formato aceito
+é responsável por, converter o conteúdo da menssagem para o formato aceito
 pelo GCM e enviá-lo através do método POST do HTTP. Para que a mensagem pudesse
 ser convertida em JSON um objeto do tipo \texttt{ObjectMapper} foi usado, e
 para enviar a mensagem para o GCM é usado um objeto do tipo
@@ -646,15 +646,16 @@ está apresentada na Figura \ref{fig:desws31}.
 	\pagebreak
 	
 	\par Além disso esta classe coleta a resposta retornada pelo GCM e lança este
-retorno nos \textit{log's} da aplicação. E por fim para que estas duas classes
-pudessem trabalhar conjuntamente foi necessário necessário criar a classe
+retorno nos \textit{log's} da aplicação e por fim para que estas duas classes
+pudessem trabalhar conjuntamente, foi necessário criar a classe
 \texttt{SendMessageGCM.java} que foi responsável por receber o conteúdo a ser
 enviado e os ids dos dispositivos aos quais seriam enviadas estas mensagens, e
-invocar o método \texttt{post()} da classe \texttt{PostToGCM.java} para que os
-mesmos pudessem ser enviados. Foi nessa classe também que estava contida a
-chave de autorização de envio de mensagens ao GCM, que foi atribuída ao
-atributo \texttt{apiKey}. Esta classe pode ser vista na Figura
-\ref{fig:desws32}.
+invocar o método \texttt{post()} da classe \texttt{PostToGCM.java}. Foi nessa
+classe também que estava contida a chave de autorização de envio de mensagens
+ao GCM, que foi atribuída ao atributo \texttt{apiKey} e que foi obtida através
+da criação de um projeto no site do Google \textit{Developers}, já mostrado na
+seção 3.4.2.
+Esta classe pode ser vista na Figura \ref{fig:desws32}.
 
 	\begin{figure}[h!]
 		\input{code/SendMessageGCM}
@@ -665,9 +666,9 @@ atributo \texttt{apiKey}. Esta classe pode ser vista na Figura
 	
 	\pagebreak		
 	
-	\par Era necessário também que  de tempos em tempos o próprio \textit{web
+	\par Era necessário também, que  de tempos em tempos, o próprio \textit{web
 service} fizesse uma varredura, buscando por novos eventos lançados para os
-alunos, para que as classes reponsáveis por enviar as mensagens ao GCM, pudessem
+alunos, para que as classes reponsáveis por enviar as mensagens ao GCM pudessem
 enviar tais notificações. Para isto primeiramente foi criada a classe
 \texttt{ListenerAtualizations.java} que pode ser vista na Figura
 \ref{fig:desws33}.
@@ -681,12 +682,12 @@ enviar tais notificações. Para isto primeiramente foi criada a classe
 	\end{figure}
 	
 	\par Para que esta classe pudesse funcionar como um \textit{timer} que
-dispara uma rotina de tempos foram necessárias dois detalhes. O primeiro detalhe
-era fazê-la implementar a \textit{interface} \texttt{ServletContextListener}, para
-que esta pudesse funcionar como um \textit{listener} que inicializa-se essa
-classe, assim que aplicação fosse ativada. O segundo foi acrescentar no arquivo
-\texttt{web.xml} a configuração refente ao \textit{listener} que pode ser visto
-na Figura \ref{fig:desws34}.
+dispara uma rotina, foram necessários dois detalhes, que foram de extrema
+importância. O primeiro era fazê-la implementar a \textit{interface}
+\texttt{ServletContextListener}, para que esta pudesse funcionar como um
+\textit{listener} que inicializa-se essa classe, assim que aplicação fosse
+ativada. O segundo foi acrescentar no arquivo \texttt{web.xml} a configuração
+refente ao \textit{listener} que pode ser visto na Figura \ref{fig:desws34}.
 
 	\begin{figure}[h!]
 		\input{code/listenerwebxml}
@@ -699,7 +700,7 @@ na Figura \ref{fig:desws34}.
 	\par Além disso essa classe internamente acionava um \textit{timer} que era
 atualizado a cada 5000 milisegundos. Dentro deste \textit{timer} era criado um
 objeto do tipo \texttt{TimerTask} que era o criador de um nova \textit{thread}
-para a execução das tarefas realtivas a busca por novos eventos lançados e a
+para a execução das tarefas relativas à busca por novos eventos lançados e a
 notificações pelo GCM.
 	
 	\par E ainda, para que fosse possível transmitir dados para o aplicativo, era
@@ -710,7 +711,8 @@ para a base de dados do \textit{web service}.
 
 	\par Este por sua vez terá a responsabilidade de fazer a importação dos dados
 periodicamente, e ainda tratar os tipos de dados recebidos para tipos
-aplicáveis ao banco de dados local. Para esta pesquisa o módulo foi simulado.
+aplicáveis ao banco de dados local. Para esta pesquisa, este módulo foi
+simulado.
 
-	\par Estes procedimentos acima citados foram os passos realizados com o
-propósito de se alcançar os resultados esperados para essa pesquisa. 
+	\par Estes procedimentos foram os passos realizados com o propósito de se
+alcançar os resultados esperados para essa pesquisa.

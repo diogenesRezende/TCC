@@ -6,18 +6,19 @@ pesquisa através de uma explicação teórico-prática.
 
 	\par O presente trabalho teve por objetivos desenvolver uma solução que
 permitisse disponibilizar informações da Universidade do Vale do Sapucaí
-através de serviços e a construção de um aplicativo que utilizaria este serviço
-criado, permitindo aos seus alunos consultarem suas notas, faltas e provas
-agendadas do semestre corrente através de seus dispositivos móveis com sistema
-operacional Android.
+através de serviços e a construção de um aplicativo utilize o serviço criado,
+permitindo aos seus alunos consultarem suas notas, faltas e provas agendadas do
+semestre corrente através de seus dispositivos móveis com sistema operacional
+Android.
 
 	\par Entre os principais benefícios alcançados por esta pesquisa, pode-se
-afirmar que o web service criou uma estrutura para que a universidade pudesse
-disponibilizar informações através de serviços. Atualmente, o \textit{web
-service} disponibiliza via REST a consulta de notas, faltas e provas agendadas.
+afirmar que o \textit{web service} criou uma estrutura para que a universidade
+possa disponibilizar informações através de serviços. Neste trabalho, o
+\textit{web service} disponibiliza via REST a consulta de notas, faltas e
+provas agendadas.
 
 	\par O aplicativo Android, consome o serviço do \textit{web service} trazendo
-as informações aos estudantes de forma ágil, além de ser mais cômodo para o
+as informações aos estudantes de forma hábil, além de ser mais cômodo para o
 usuário, uma vez que ele recebe os dados onde quer que esteja, desde que possua
 acesso à internet.
 
@@ -30,9 +31,9 @@ encarrega de avisá-lo.
 instalado em dispositivos de diferentes fabricantes, evitando ficar preso a um
 hardware específico.
 
-	\par Durante o período de desenvolvimento foram realizados vários testes
+	\par Durante o período de desenvolvimento, foram realizados vários testes
 através do emulador Android, presente na IDE Android Studio e em um
-\textit{smartphone} Samsung S3 Mini. Percebeu-se aí, que no dispositivo real a
+\textit{smartphone} Samsung S{3} Mini. Percebeu-se aí, que no dispositivo real a
 velocidade da execução do aplicativo é bem maior se comparada ao emulador.
 
 	\par Como os testes foram realizados sempre nos mesmos modelos de dispositivos,
@@ -58,7 +59,7 @@ navegação do aplicativo.
 \end{figure}
 
 	\par Para apresentar as informações aos graduandos, foi utilizado uma lista do
-tipo \texttt{expandableListView} que segundo \citeonline{android3}, é um
+tipo \texttt{ExpandableListView} que segundo \citeonline{android3}, é um
 \textit{widget} que exibe uma lista de itens e ao selecionar um desses
 elementos, a tela é estendida apresentando os subitens da opção escolhida. Na
 Figura \ref{fig:dr1} é mostrada a tela que lista as disciplinas sendo que
@@ -78,14 +79,14 @@ Tópicos Avançados está selecionada.
 servidor para o aplicativo. Com ele, a troca de dados tornou-se mais rápido e
 simples, pois toda a lógica de entrega fica por conta da Google.
 
-	\par Quando se trata de apenas uma informação para um único dispositivo o
-controle é simples, mas a partir do momento em há vários equipamentos para
+	\par Quando se trata de apenas uma informação para um único dispositivo, o
+controle é simples, mas a partir do momento em que há vários equipamentos para
 receber informações distintas, o gerenciamento torna-se mais complexo. Por
 isso, pode-se afirmar que o GCM solucionou este problema, mostrando-se eficaz
-na transmissão dos dados, além de ser de fácil configuração. Na Figura
-\ref{fig:dr2}, ilustra uma notificação logo após que o GCM entregou uma
-mensagem. Ao baixar a paleta de notificação será apresentado um resumo da
-notificação, como apresenta a Figura \ref{fig:dr3}.
+na transmissão dos dados, além de ser de fácil configuração. A Figura
+\ref{fig:dr2}, ilustra uma notificação logo após o GCM ter entregue uma
+mensagem ao aplicativo. Ao baixar a paleta de notificação será apresentado um
+resumo da notificação, como apresenta a Figura \ref{fig:dr3}.
 
 
 \begin{figure}[h!]
@@ -121,9 +122,7 @@ informações de um evento de notas.
 
 	\par Portanto, sabendo-se que esta pesquisa enquadra-se no tipo de pesquisa
 aplicada, o qual tem por finalidade desenvolver um produto real para resolver
-um determinado problema e que a solução construída auxilia tanto a Univás que
-terá um nova forma de disponibilizar suas informações quanto aos alunos que
+um determinado problema e que a solução construída auxilia tanto a Univás, que
+terá um nova forma de disponibilizar suas informações, quanto aos alunos, que
 possuem a opção de consultarem suas informações acadêmicas através de
-dispositivos móveis, entende-se que este trabalho atingiu suas expectativas.
-
-	
+dispositivos móveis, entende-se que este trabalho atingiu suas expectativas.	
