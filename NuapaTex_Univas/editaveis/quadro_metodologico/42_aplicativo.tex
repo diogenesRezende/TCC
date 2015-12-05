@@ -11,8 +11,8 @@ com o GCM e o \textit{web service}.
 	\par Quando o servidor precisa enviar uma informação para os dispositivos
 móveis, ele envia a mensagem ao GCM, que a transfere para aplicativo. Ao
 receber os dados, a classe \texttt{GcmBroadcastReceiverUnivas} executa a classe
-\texttt{GcmIntentServiceUnivas} que por sua vez irá notificar o usuário,
-contudo antes de notificá-lo, ela envia as informações para a classe
+\texttt{GcmIntentServiceUnivas} que, por sua vez, irá notificar o usuário.
+Contudo antes de notificá-lo, ela envia as informações para a classe
 \texttt{HttpUtil}, que faz a conversão dos dados vindos em JSON para o formato
 da classe \texttt{EventTO}. Ao finalizar a leitura e conversão dos elementos,
 as informações são enviadas para a classe \texttt{DatabaseExecute} que realiza
@@ -151,8 +151,8 @@ opção selecionada pelo aluno.
 	
 	\par O próximo passo foi criar o banco de dados do aplicativo para salvar as
 informações recebidas do \textit{web service}. Para que isso fosse possível,
-elaborou-se uma classe denominada \texttt{DatabaseHelper} que estende da classe
-\texttt{SQLiteOpenHelper} do Android, com dois métodos, um chamado
+elaborou-se uma classe denominada \texttt{DatabaseHelper} que se estende da
+classe \texttt{SQLiteOpenHelper} do Android, com dois métodos, um chamado
 \textit{onCreate()} que cria a estrutura do banco de dados e outro conhecido
 por \textit{onUpgrade()}, usado se for necessário atualizar a estrutura do
 banco de dados.
@@ -212,7 +212,7 @@ Figura \ref{fig:app7} é apresentado o método \texttt{getResults()}.
 
 	\par Foram inseridos mais dois métodos semelhantes ao \texttt{getResults()},
 que são os métodos de \texttt{getFouls()} e \texttt{getAgendas()} para
-recuperar as faltas e provas agendadas respectivamente. O que diferencia-os é a
+recuperar as faltas e provas agendadas respectivamente. O que os diferencia é a
 consulta SQL, já que no \texttt{getFouls()}  foram buscados os dados onde o
 \texttt{tipo\_evento = ‘FALTAS'} e no \texttt{getAgendas()} onde o
 \texttt{tipo\_evento = ‘PROVA\_AGENDADA'}.
@@ -236,7 +236,7 @@ informações recebidas do \textit{web service}. Ela estende da classe
 \texttt{AsyncTask} que executa a consulta em paralelo com a \textit{thread
 main}, evitando travar a aplicação enquanto recebe as informações vindas do
 \textit{web service}. Estes dados estão em formato JSON e foi utilizada a
-biblioteca GSON para convertê-las para o formato da classe \texttt{EventTO}.
+biblioteca GSON para convertê-los para o formato da classe \texttt{EventTO}.
 Após a leitura, o objeto da classe \texttt{EventTO} é enviado para a classe
 \texttt{DatabaseExecute}, a fim de realizar a inserção os dados no banco. A
 Figura \ref{fig:app8}, mostra a classe \texttt{HttpUtilUnivas}.
@@ -266,9 +266,9 @@ dependências, conforme mostra a Figura \ref{fig:app9}.
 		\label{fig:app9}
 	\end{figure}
 	
-	\par Na tela em que foi aberta localizou-se a biblioteca GSON com o endereço da
-Google, logo após selecionou-a e clicou no botão Ok para adicioná-la, como
-apresenta a Figura \ref{fig:app10}.
+	\par Na tela que foi aberta localizou-se a biblioteca GSON com o endereço da
+Google, logo após ela foi selecionada e clicou-se no botão Ok para adicioná-la,
+como apresenta a Figura \ref{fig:app10}.
 	
 	\begin{figure}[h!] 
 		\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app9.png}}
@@ -277,7 +277,7 @@ apresenta a Figura \ref{fig:app10}.
 		\label{fig:app10}
 	\end{figure}
 	
-	\par Na Figura \ref{fig:app11}, é mostrado o código onde é utilizado a
+	\par Na Figura \ref{fig:app11}, é mostrado o código em que é utilizada a
 	biblioteca GSON. O sistema lê os dados vindos em JSON e envia para o GSON que faz a conversão dos
 dados no formato da classe \texttt{EventTO}.
 
@@ -290,14 +290,14 @@ dados no formato da classe \texttt{EventTO}.
 	
 	\par Depois, fez-se necessário construir uma classe que fizesse o gerenciamento
 dos dados vindos do banco de dados com a interface que listará as informações
-aos usuários. Essa classe recebeu o nome de \texttt{ListResultsAdapter} e
+aos usuários. Essa classe recebeu o nome de \texttt{ListResultsAdapter} e se
 estende da classe nativa do Android denominada
 \texttt{BaseExpandableListAdapter}.
 
 	\par Nesta classe foi criado um construtor que recebe a lista de disciplinas
 cursadas pelo aluno e uma lista com as notas de cada matéria. Os nomes das
 disciplinas foram inseridos em um \textit{array} de \textit{Strings}, já as
-notas foram inseridas em uma matriz. Este procedimento foi necessário devido a
+notas foram inseridas em uma matriz. Este procedimento foi necessário devido à
 estrutura dos métodos \texttt{getGroupView()} e \texttt{getChildView()}
 responsável por apresentar na tela do dispositivo os nomes das disciplinas e as
 notas das matérias respectivamente.  A Figura \ref{fig:app12} apresenta o
@@ -310,11 +310,11 @@ construtor da classe \texttt{ListResultsAdapter}.
 		\label{fig:app12}
 	\end{figure}
 
-	\par Após adicionado os dados no \textit{array} e na matriz é preciso exibí-los
-ao estudante. Na Figura \ref{fig:app13}, pode se ver o método \texttt{getGroupView()}
+	\par Após adicionados os dados no \textit{array} e na matriz é preciso
+	exibí-los ao estudante. Na Figura \ref{fig:app13}, pode se ver o método \texttt{getGroupView()}
 criando um \textit{widget} do tipo \textit{textView}  e inserindo nele o nome
 da matéria, os espaçamentos, o tamanho da fonte e informando que as palavras
-serão escritos em negrito.
+serão escritas em negrito.
 
 	\begin{figure}[h!] 
 		\input{code/app/getGroupView}
@@ -335,13 +335,13 @@ serão escritos em negrito.
 		\label{fig:app14}
 	\end{figure}
 	
-	\par O próximo passo, foi criação de uma \textit{activity} do tipo
+	\par O próximo passo foi a criação de uma \textit{activity} do tipo
 \textit{blank activity} com finalidade de listar as notas. Ao criá-la com o
 nome de \texttt{ListResultsActivity}, o Android Studio gerou dentro da pasta
 \textit{layout} o arquivo XML referente a ela, chamado de
 \texttt{activity\_list\_results.xml}. Neste, foi inserido apenas o
 \textit{widget} \texttt{expandableListView}, que está incumbido de apresentar
-a lista de disciplinas cujo o discente está cursando e ao clicar em alguma
+a lista de disciplinas que o discente está cursando e ao clicar em alguma
 dessas matérias serão apresentadas as notas referentes às atividades
 realizadas nesta disciplina. Na Figura \ref{fig:app15} é possível ver o código XML de uma
 lista do tipo \texttt{expandableListView}.
@@ -373,7 +373,7 @@ método \texttt{onCreate()} da classe \texttt{ListResultsActivity}.
 	\end{figure}
 
 	\par Estes procedimentos que foram realizados para as classes
-\texttt{ListResultsActivity} e \texttt{ListResultsAdapter}, eram necessários
+\texttt{ListResultsActivity} e \texttt{ListResultsAdapter} são necessários
 para se apresentar as notas dos exercícios resolvidos. Desta mesma forma foi
 preciso criar uma \textit{activity} e um \texttt{adapter} tanto para faltas
 quanto para provas agendadas seguindo a mesma lógica.
@@ -388,15 +388,15 @@ informações para o método \texttt{getJsonEvents()} da classe
 \texttt{HttpUtilUnivas}, o qual será responsável por ler os dados e realizar os
 procedimentos de gravação no banco de dados.
 
-	\par Ao salvar o evento é chamado o método \texttt{sendNotification()}, que
+	\par Ao salvar o evento, é chamado o método \texttt{sendNotification()}, que
 receberá um objeto da classe \texttt{EventTO}. Ele realiza uma análise do tipo
 de evento, para saber qual activity deve ser executada quando o usuário clicar
-na notificação. Logo após adicionado os atributos da notificação, como o ícone,
-o título e a mensagem, a notificação é exibida ao usuário. Na Figura
+na notificação. Logo após de adicionados  os atributos da notificação, como o
+ícone, o título e a mensagem, a notificação é exibida ao usuário. Na Figura
 \ref{fig:app17} é visível o método \texttt{sendNotification()}.
 
 	\begin{figure}[h!] 
-		%\input{code/app/sendNotification}
+		\input{code/app/sendNotification}
 		\centerline{\includegraphics[scale=.80]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/send1.png}}
 		\caption[Método sendNotification()]{ Método \texttt{sendNotification()}.
 		\textbf{Fonte:}Elaborado pelos autores.}
@@ -408,10 +408,10 @@ o título e a mensagem, a notificação é exibida ao usuário. Na Figura
 	\par A notificação acontece toda vez que o GCM envia uma informação ao
 dispositivo. Para tratar essas ocorrências foi projetada uma classe para ser o
 \texttt{BroadcastReceiver} chamada de \texttt{GcmBroadcastReceiverUnivas}. Ela
-estende da classe \texttt{WakefulBroadcastReceiver} nativa do Android e possui
-apenas um método chamado de \texttt{onReceive()}, o qual receberá a
+se estende da classe \texttt{WakefulBroadcastReceiver} nativa do Android e
+possui apenas um método chamado de \texttt{onReceive()}, o qual receberá a
 \textit{intent} a ser chamada quando chegar algum dado do GCM. Na Figura
-\ref{fig:app18}, vê-se a classe \texttt{GcmBroadcastReceiverUnivas}, que
+\ref{fig:app18}, vê-se a classe \texttt{GcmBroadcastReceiverUnivas} que,
 através do método \texttt{onReceive()} inicializará a classe
 \texttt{GcmIntentServiceUnivas}.
 
@@ -441,7 +441,8 @@ que tem por objetivo configurar o dispositivo para trabalhar com o GCM.
 
 	\par Nesta classe existe um método denominado \texttt{checkPlayServices()} como
 intuito de verificar se o dispositivo possui os requisitos necessários para o
-GCM. Na Figura \ref{fig:app20}, é apresentado o método checkPlayServices().
+GCM. Na Figura \ref{fig:app20}, é apresentado o método
+\texttt{checkPlayServices()}.
 
 	\begin{figure}[h!] 
 		\input{code/app/checkPlayServices}
