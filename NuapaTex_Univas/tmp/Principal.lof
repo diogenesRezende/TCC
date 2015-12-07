@@ -1,0 +1,74 @@
+\select@language {brazil}
+\contentsline {figure}{\numberline {1}{\ignorespaces Participa\IeC {\c c}\IeC {\~a}o de mercado do Android em 2016}}{14}{figure.caption.10}
+\contentsline {figure}{\numberline {2}{\ignorespaces Ciclo de Vida de uma activity}}{19}{figure.caption.11}
+\contentsline {figure}{\numberline {3}{\ignorespaces C\IeC {\'o}digo do arquivo AndroidManifest.xml indicando qual activity deve ser executada quando a aplica\IeC {\c c}\IeC {\~a}o iniciar}}{20}{figure.caption.12}
+\contentsline {figure}{\numberline {4}{\ignorespaces Infraestrutura e componentes dos servi\IeC {\c c}os \textit {web}. }}{24}{figure.caption.13}
+\contentsline {figure}{\numberline {5}{\ignorespaces Quetion\IeC {\'a}rio Aplicado}}{35}{figure.caption.14}
+\contentsline {figure}{\numberline {6}{\ignorespaces Criando um novo projeto}}{37}{figure.caption.15}
+\contentsline {figure}{\numberline {7}{\ignorespaces Inserindo o nome do projeto}}{37}{figure.caption.16}
+\contentsline {figure}{\numberline {8}{\ignorespaces Tela de configura\IeC {\c c}\IeC {\~a}o do projeto}}{38}{figure.caption.17}
+\contentsline {figure}{\numberline {9}{\ignorespaces N\IeC {\'u}mero do projeto}}{38}{figure.caption.18}
+\contentsline {figure}{\numberline {10}{\ignorespaces Habilitando GCM para Android}}{39}{figure.caption.19}
+\contentsline {figure}{\numberline {11}{\ignorespaces Bot\IeC {\~a}o para ativar o GCM ao projeto}}{39}{figure.caption.20}
+\contentsline {figure}{\numberline {12}{\ignorespaces Criando as credenciais}}{40}{figure.caption.21}
+\contentsline {figure}{\numberline {13}{\ignorespaces Escolhendo a op\IeC {\c c}\IeC {\~a}o Chave de Servidor}}{40}{figure.caption.22}
+\contentsline {figure}{\numberline {14}{\ignorespaces Inserindo dados do servidor}}{41}{figure.caption.23}
+\contentsline {figure}{\numberline {15}{\ignorespaces Chave de API gerada}}{41}{figure.caption.24}
+\contentsline {figure}{\numberline {16}{\ignorespaces Servidor de banco de dados local no PgAdmin}}{43}{figure.caption.25}
+\contentsline {figure}{\numberline {17}{\ignorespaces Op\IeC {\c c}\IeC {\~a}o New Database}}{43}{figure.caption.26}
+\contentsline {figure}{\numberline {18}{\ignorespaces Tela New Database}}{44}{figure.caption.27}
+\contentsline {figure}{\numberline {19}{\ignorespaces Op\IeC {\c c}\IeC {\~a}o Add to Build Path no Eclipse}}{45}{figure.caption.28}
+\contentsline {figure}{\numberline {20}{\ignorespaces Classe Student.java}}{46}{figure.caption.29}
+\contentsline {figure}{\numberline {21}{\ignorespaces Diagrama de classes do pacote model}}{48}{figure.caption.30}
+\contentsline {figure}{\numberline {22}{\ignorespaces Modelo fis\IeC {\'\i }co do banco de dados}}{48}{figure.caption.31}
+\contentsline {figure}{\numberline {23}{\ignorespaces Op\IeC {\c c}\IeC {\~a}o Generate hashCode() and equals()\dots }}{49}{figure.caption.32}
+\contentsline {figure}{\numberline {24}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o os m\IeC {\'e}todos hashCode() e equals()}}{50}{figure.caption.33}
+\contentsline {figure}{\numberline {25}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o da enumera\IeC {\c c}\IeC {\~a}o EventType}}{51}{figure.caption.34}
+\contentsline {figure}{\numberline {26}{\ignorespaces Arquivo persistence.xml}}{52}{figure.caption.35}
+\contentsline {figure}{\numberline {27}{\ignorespaces Classe JpaUtil.java}}{53}{figure.caption.36}
+\contentsline {figure}{\numberline {28}{\ignorespaces Op\IeC {\c c}\IeC {\~a}o para convers\IeC {\~a}o projeto web par projeto Maven}}{53}{figure.caption.37}
+\contentsline {figure}{\numberline {29}{\ignorespaces Arquivo pom.xml}}{54}{figure.caption.38}
+\contentsline {figure}{\numberline {30}{\ignorespaces Classe StudentEventsCtrl.java}}{56}{figure.caption.39}
+\contentsline {figure}{\numberline {31}{\ignorespaces Classe StudentEvent.java}}{57}{figure.caption.40}
+\contentsline {figure}{\numberline {32}{\ignorespaces Classe StudentEvents.java}}{58}{figure.caption.41}
+\contentsline {figure}{\numberline {33}{\ignorespaces Classe StudentDisciplines.java}}{58}{figure.caption.42}
+\contentsline {figure}{\numberline {34}{\ignorespaces Classe StudentDisciplinesCtrl.java}}{59}{figure.caption.43}
+\contentsline {figure}{\numberline {35}{\ignorespaces Trecho do rquivo pom.xml com a configura\IeC {\c c}\IeC {\~a}o do Jersey}}{60}{figure.caption.44}
+\contentsline {figure}{\numberline {36}{\ignorespaces Trecho do arquivo web.xml com a configura\IeC {\c c}\IeC {\~a}o do Jersey}}{60}{figure.caption.45}
+\contentsline {figure}{\numberline {37}{\ignorespaces Classe StudentResouce.java}}{61}{figure.caption.46}
+\contentsline {figure}{\numberline {38}{\ignorespaces Classe UserResouce.java}}{62}{figure.caption.47}
+\contentsline {figure}{\numberline {39}{\ignorespaces Classe UserCtrl.java}}{63}{figure.caption.48}
+\contentsline {figure}{\numberline {40}{\ignorespaces Classe JerseyProvider.java}}{64}{figure.caption.49}
+\contentsline {figure}{\numberline {41}{\ignorespaces Classe ContentMessageGCM.java}}{66}{figure.caption.50}
+\contentsline {figure}{\numberline {42}{\ignorespaces Classe PostToGCM.java}}{67}{figure.caption.51}
+\contentsline {figure}{\numberline {43}{\ignorespaces Classe SendMessageGCM.java}}{68}{figure.caption.52}
+\contentsline {figure}{\numberline {44}{\ignorespaces Classe ListenerAtualizations.java}}{69}{figure.caption.53}
+\contentsline {figure}{\numberline {45}{\ignorespaces Configura\IeC {\c c}\IeC {\~a}o do Listener no arquivo web.xml}}{70}{figure.caption.54}
+\contentsline {figure}{\numberline {46}{\ignorespaces Diagrama de arquitetura do aplicativo}}{71}{figure.caption.55}
+\contentsline {figure}{\numberline {47}{\ignorespaces Diagrama de casos de uso}}{72}{figure.caption.56}
+\contentsline {figure}{\numberline {48}{\ignorespaces C\IeC {\'o}digo dos widgets do arquivo fragment\_navigation\_drawer.xml}}{74}{figure.caption.57}
+\contentsline {figure}{\numberline {49}{\ignorespaces M\IeC {\'e}todo onCreateView()}}{75}{figure.caption.58}
+\contentsline {figure}{\numberline {50}{\ignorespaces m\IeC {\'e}todo selectItem()}}{75}{figure.caption.59}
+\contentsline {figure}{\numberline {51}{\ignorespaces Classe DatabaseHelper}}{76}{figure.caption.60}
+\contentsline {figure}{\numberline {52}{\ignorespaces M\IeC {\'e}todo de inser\IeC {\c c}\IeC {\~a}o de eventos}}{77}{figure.caption.61}
+\contentsline {figure}{\numberline {53}{\ignorespaces M\IeC {\'e}todo getResults()}}{78}{figure.caption.62}
+\contentsline {figure}{\numberline {54}{\ignorespaces C\IeC {\'o}digo da classe HttpUtilUnivas que faz a leitura dos eventos}}{79}{figure.caption.63}
+\contentsline {figure}{\numberline {55}{\ignorespaces Adicionando uma depend\IeC {\^e}ncia ao projeto}}{80}{figure.caption.64}
+\contentsline {figure}{\numberline {56}{\ignorespaces Adicionando a biblioteca GSON ao projeto}}{80}{figure.caption.65}
+\contentsline {figure}{\numberline {57}{\ignorespaces Usando GSON para convers\IeC {\~a}o dos dados}}{80}{figure.caption.66}
+\contentsline {figure}{\numberline {58}{\ignorespaces Construtor da classe ListResultsAdapter}}{81}{figure.caption.67}
+\contentsline {figure}{\numberline {59}{\ignorespaces M\IeC {\'e}todo getGroupView()}}{82}{figure.caption.68}
+\contentsline {figure}{\numberline {60}{\ignorespaces M\IeC {\'e}todo getChildView()}}{82}{figure.caption.69}
+\contentsline {figure}{\numberline {61}{\ignorespaces C\IeC {\'o}digo XML do layout que apresentar\IeC {\'a} a lista de notas}}{83}{figure.caption.70}
+\contentsline {figure}{\numberline {62}{\ignorespaces M\IeC {\'e}todo onCreate() da classe ListResultsActivity}}{83}{figure.caption.71}
+\contentsline {figure}{\numberline {63}{\ignorespaces M\IeC {\'e}todo sendNotification()}}{85}{figure.caption.72}
+\contentsline {figure}{\numberline {64}{\ignorespaces Classe GcmBroadcastReceiverUnivas}}{86}{figure.caption.73}
+\contentsline {figure}{\numberline {65}{\ignorespaces Configura\IeC {\c c}\IeC {\~a}o do BroadcastReceiver no AndroidManifest.XML}}{86}{figure.caption.74}
+\contentsline {figure}{\numberline {66}{\ignorespaces M\IeC {\'e}todo checkPlayServices()}}{87}{figure.caption.75}
+\contentsline {figure}{\numberline {67}{\ignorespaces M\IeC {\'e}todo getRegistrationId()}}{87}{figure.caption.76}
+\contentsline {figure}{\numberline {68}{\ignorespaces M\IeC {\'e}todo registerInBackground()}}{88}{figure.caption.77}
+\contentsline {figure}{\numberline {69}{\ignorespaces Tela principal do aplicativo com as op\IeC {\c c}\IeC {\~o}es de navega\IeC {\c c}\IeC {\~a}o}}{91}{figure.caption.78}
+\contentsline {figure}{\numberline {70}{\ignorespaces Lista de disciplinas}}{92}{figure.caption.79}
+\contentsline {figure}{\numberline {71}{\ignorespaces Notifica\IeC {\c c}\IeC {\~a}o na barra de notifica\IeC {\c c}\IeC {\~o}es do dispositivo.}}{92}{figure.caption.80}
+\contentsline {figure}{\numberline {72}{\ignorespaces Paleta de notifica\IeC {\c c}\IeC {\~a}o estendida}}{93}{figure.caption.81}
+\contentsline {figure}{\numberline {73}{\ignorespaces Tela exibindo os dados ap\IeC {\'o}s clicado na notifica\IeC {\c c}\IeC {\~a}o}}{93}{figure.caption.82}
