@@ -71,11 +71,13 @@ na Figura \ref{fig:desws6_3}.
 
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws6_3.png}}
-		\caption[Opção para geração dos metodos hashCode e equals no Eclipse]{Opção
-		para geração dos metodos hashCode e equals no eclipse.
+		\caption[Opção Add to Build Path no Eclipse]{Opção \textit{Add to Build Path}
+		no Eclipse.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws6_3}
 	\end{figure}
+	
+	\pagebreak
 	
 	\par Com o projeto devidamente configurado, começou-se de fato a desenvolver a
 camada de persistência da aplicação. Para este propósito, primeiramente, foi
@@ -151,14 +153,13 @@ vistas no diagrama de classes que está apresentado na Figura \ref{fig:desws12}.
 	
 	
 	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.6]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/diagrama.png}}
+		\centerline{\includegraphics[scale=0.50]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/diagrama.png}}
 		\caption[Diagrama de classes do pacote model]{Diagrama de classes do pacote
 		model.
 			\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws12}
 	\end{figure}
 	
-	\pagebreak
 	
 	\par Estas classes tinham a mesma finalidade da anterior, porém com pequenas
 diferenças no que diz respeito aos atributos, metodos e anotações. Estas classes
@@ -185,7 +186,7 @@ escolher a opção \textbf{Source -> Generate hashCode() and equals()\ldots} com
 pode ser visto na Figura \ref{fig:desws13}.
 
 	\begin{figure}[h!]
-		\centerline{\includegraphics[scale=0.8]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws13.png}}
+		\centerline{\includegraphics[scale=0.7]{./imagens/2_q_metodologico/4_procedimentos_resultados/43_webservice/432_desenvolvimento/desws13.png}}
 		\caption[Opção Generate hashCode() and equals()\ldots]{Opção Generate
 		hashCode() and equals()\ldots .
 			\textbf{Fonte:}Elaborado pelos autores.}
@@ -193,7 +194,7 @@ pode ser visto na Figura \ref{fig:desws13}.
 	\end{figure}
 	
 	\par Os métodos \texttt{hashCode()} e \texttt{equals()} da classe
-\texttt{Student.java} foram implementados\\ usando o atributo \texttt{idStudent}
+\texttt{Student.java} foram implementados usando o atributo \texttt{idStudent}
 e podem ser vistos na Figura \ref{fig:desws15}.
 
 	\begin{figure}[h!]
@@ -220,20 +221,23 @@ numero limitado de possibilidades. Para esta enumeração foi definido o nome
 	  \item \texttt{FALTAS}: representa o lançamento de faltas;
 	\end{itemize}
 	
-	\par A implementação da enumeração pode ser vista na Figura \ref{fig:desws15}.
+	\par A implementação da enumeração pode ser vista na Figura
+	\ref{fig:desws15_1}.
 
 	\begin{figure}[h!]
 		\input{code/event_type}
 		\caption[Implementação da enumeração EventType]{Implementação da enumeração
 		\texttt{EventType}.\textbf{Fonte:}Elaborado pelos autores.}
-		\label{fig:desws15}
+		\label{fig:desws15_1}
 	\end{figure}
-
-	\par Após a criação das entidades, foi necessário configurar o arquivo
-\texttt{persistence.xml}. Foi necessário criar a pasta META-INF dentro da pasta
-de de códigos fontes do projeto que também é conhecida como \textit{classpath},
-com a finalidade de abrigar este arquivo. Em seguida foi criado o arquivo
-dentro desta pasta. 
+	
+	\pagebreak
+	
+	\par Após a criação das entidades da camada de persistência, foi necessário
+configurar o arquivo \texttt{persistence.xml}. Foi necessário criar a pasta
+META-INF dentro da pasta de de códigos fontes do projeto que também é conhecida
+como \textit{classpath}, com a finalidade de abrigar este arquivo. Em seguida
+foi criado o arquivo dentro desta pasta. 
 
 	\par O arquivo \texttt{persistence.xml} é extremamente importante, pois é nele
 que estão todas as configurações relativas à conexão com o banco de dados,
@@ -346,7 +350,7 @@ de serviços do \textit{web service}, são eles:
 	
 	\begin{itemize}
 	  \item \texttt{br.edu.univas.restapiappunivas.controllers}: pacote responsável
-	  por agrupar as classes responsáveis por realizar as consultas na camada de
+	  por conter as classes responsáveis por realizar as consultas na camada de
 	  persistência do projeto e prover o resultados para publicação nos serviços.
 	  \item \texttt{br.edu.univas.restapiappunivas.entities}: pacote responsável
 	  por agrupar as classes que serviriam para abrigar os dados retornados nas
@@ -391,8 +395,6 @@ classe pode ser visto na Figura \ref{fig:desws20}.
 		\label{fig:desws20}
 	\end{figure}
 
-	\pagebreak
-
 	\par Por outro lado a classe \texttt{StudentEvents} recebe uma coleção de
 \texttt{StudentEvent} para que a mesma pudesse ser convertida corretamente para
 JSON, nas classes que disponibilizam o serviço. O código fonte desta classe pode
@@ -404,6 +406,8 @@ ser visto na Figura \ref{fig:desws21}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws21}
 	\end{figure}
+	
+	\pagebreak
 	
 	\par Estas duas classes mostradas nas Figuras \ref{fig:desws20} e 
 \ref{fig:desws21} foram criadas dentro do pacote\\ 
@@ -458,8 +462,8 @@ referente ao \textit{framework} Jersey como pode ser visto na Figura
 	\par Além desta configuração, foi necessário apontar no arquivo
 \texttt{web.xml} da aplicação, que pode ser encontrado dentro da pasta
 \texttt{WebContent -> WEB-INF} do projeto, qual seria o \textit{servlet}
-responsável por prover os serviços, que para esta aplicação foi a classe foi
-a classe do \textit{framework} Jersey
+responsável pelos serviços, que para esta aplicação foi a classe do
+\textit{framework} Jersey
 \texttt{com.sun.jersey.spi.container.servlet.ServletContainer}. Mais uma
 configuração foi acrescentada no \texttt{web.xml}, que foi a definição dos
 pacotes onde se encontrariam as classes que fornecem os serviços REST da
@@ -496,18 +500,18 @@ representa o contexto \texttt{students} desta aplicação, representada na Figur
 	\end{figure}
 		
 	\par A classe \texttt{StudentResouce.java}, representa o contexto
-\texttt{students}. O primeiro deles é \texttt{getEventsByStudentRegistration()}
-que representa o recurso \texttt{events} e faz o retorno de todos os eventos de
-um determinado aluno através de sua matrícula. Já o método
+\texttt{students} e é composto por alguns métodos. O primeiro deles é
+\texttt{getEventsByStudentRegistration()} que representa o recurso
+\texttt{events} e faz o retorno de todos os eventos de um determinado aluno
+através de sua matrícula. Já o método
 \texttt{getDisciplinesByStudentRegistration()} representa o recurso
 \texttt{disciplines}, que tem, por responsabilidade, retornar todas as
 disciplinas cursadas por um aluno em um período. A URL\footnote{URL - Uniform
 Resource Locator} para acessar o recurso relativo ao método
-\texttt{getEventsByStudentRegistration()} usan-do REST tem o seguinte
-formato:\\
+\texttt{getEventsByStudentRegistration()} usando REST tem o seguinte formato:\\
 		
 		\begin{center}
-			http://localhost:8080/WebServiceAppUnivas/students/events/{registration}		
+			http://localhost:8080/WebServiceAppUnivas/students/events/\{\$registration\}		
 		\end{center}
 	
 	\par Esta pode ser dividida da seguinte forma:
@@ -576,7 +580,7 @@ lista com as principais anotações usadas nessa aplicação e suas funcionalida
 	  ao método HTTP PUT;
 	\end{itemize}
 	
-	\par De acordo com o desenvolvimento destes serviços, percebeu-se que com certa
+	\par De acordo com o desenvolvimento dos serviços, percebeu-se que com certa
 frequência, ocorria um situação que se mostrava um tanto quanto estranha.
 Trata-se do seguinte caso: muitas vezes em que um serviço era invocado, todas
 as consultas eram realizadas pela camada de persistência da aplicação, porém os
@@ -608,11 +612,12 @@ para JSON que é o o formato usado no \textit{web service}. E assim foi
 concluída a parte de fornecimento de serviços da aplicação.
 	
 	\par Era necessário também que, a cada novo evento lançado no banco de dados do
-\textit{web service}, estes eventos fossem enviados ao GCM para que este pudesse
-comunicar aos dispositivos dos alunos. Com a finalidade de sanar esta
-necessidade foram construídas três classes, que eram responsáveis por tratar as
-mensagens a serem enviadas e posteriormente enviá-las ao GCM. Estas classes
-ficaram contidas no pacote \texttt{br.edu.univas.restapiappunivas.gcm}. 
+\textit{web service}, este fosse enviado ao GCM para que este pudesse
+enviar uma notificação aos dispositivos dos alunos. Com a finalidade de sanar
+esta necessidade de forma que fosse mais agíl foram construídas três classes,
+que eram responsáveis por tratar as mensagens a serem enviadas e posteriormente
+enviá-las ao GCM. Estas classes ficaram contidas no pacote
+\texttt{br.edu.univas.restapiappunivas.gcm}.
 
 	\par A primeira classe a ser criada foi \texttt{ContentMessageGCM.java}. Esta
 classe tinha por finalidade estruturar o conteúdo da mensagem que seria
@@ -700,6 +705,8 @@ refente ao \textit{listener} que pode ser visto na Figura \ref{fig:desws34}.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:desws34}
 	\end{figure}
+	
+	\pagebreak
 	
 	\par Além disso essa classe internamente acionava um \textit{timer} que era
 atualizado a cada 5000 milisegundos. Dentro deste \textit{timer} era criado um

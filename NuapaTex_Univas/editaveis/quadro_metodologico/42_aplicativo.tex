@@ -29,11 +29,11 @@ provas agendadas então é mostrada a \textit{activity}
 	\par Para o estudante visualizar suas informações, ele acessará a classe
 \texttt{MainActivity}. Se desejar ver as suas notas, então é apresentada a
 \textit{activity} \texttt{ListResultsActivity}, que utiliza a classe
-\texttt{ListResultsAdapter} para gerenciar as informações e apresentá-las ao
-discente. No entanto, se escolher a opção de faltas, é apresentada a
-\textit{activity} \texttt{ListFoulsActivity}, que receberá as informações da
-classe \texttt{ListFoulsAdapter} e caso decida-se pela opção provas agendadas é
-exibida a \textit{activity} \texttt{ListAgendasActivity}, gerenciada pela
+\texttt{ListResultsAdapter} para gerenciar as informações e apresentá-las. No
+entanto, se escolher a opção de faltas, é apresentada a \textit{activity}
+\texttt{ListFoulsActivity}, que receberá as informações da classe
+\texttt{ListFoulsAdapter} e caso decida-se pela opção provas agendadas será
+apresenta a \textit{activity} \texttt{ListAgendasActivity}, gerenciada pela
 classe \texttt{ListAgendasAdapter}.
 
 	\par A classe \texttt{GcmControllerUnivas}, tem por finalidade cadastrar o
@@ -41,7 +41,7 @@ dispositivo no GCM e enviar a chave gerada para o \textit{web service}. Na
 Figura \ref{fig:app}, é apresentado o diagrama de arquitetura.
 
 	\begin{figure}[h!] 
-		\centerline{\includegraphics[scale=0.42]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app.png}}
+		\centerline{\includegraphics[scale=0.4]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/app.png}}
 		\caption[Diagrama de arquitetura do aplicativo]{Diagrama de arquitetura do aplicativo.
 		\textbf{Fonte:}Elaborado pelos autores.}
 		\label{fig:app}
@@ -98,13 +98,14 @@ Alegre – MG” e um \textit{widget} do tipo \texttt{listView} que contém a li
 com as opções que o software oferece ao aluno.
 
 	\par O \textit{layout} desta \textit{activity} chama-se
-\textit{relativeLayout}, o qual permite um elemento ser posicionado em relação
-a um outro. Desta forma o \textit{widget} \textit{listView} do Android, utiliza
-a propriedade \texttt{android:layout\_below="@+id/headerView"} para se posicionar abaixo do
-componente com id \textit{headerView} e a propriedade
-\texttt{android:layout\_above="@+id/footerView"} indicando que ela deve preceder
-o \textit{widget} com id \textit{footerView}. Na Figura \ref{fig:app2}, pode
-ser visto o código XML dos \textit{widgets} desta tela.
+\textit{relativeLayout}, que permite a um elemento  se posicionar em
+relação a outro. Desta forma o \textit{widget} \textit{listView}
+do Android, utiliza a propriedade
+\texttt{android:layout\_below="@+id/headerView"} para se posicionar abaixo do
+componente de id \textit{headerView} e a propriedade
+\texttt{android:layout\_above="@+id/footerView"} indicando que ela deve
+preceder o \textit{widget} com id \textit{footerView}. Na Figura
+\ref{fig:app2}, pode ser visto o código XML dos \textit{widgets} desta tela.
 
 	\begin{figure}[h!] 
 		\input{code/app/fragment_navigation_drawer}
@@ -192,7 +193,7 @@ notas, faltas ou provas agendadas.
 	
 	\par Este método recebe um objeto da classe \texttt{EventTO} com os elementos
 necessários para inserir o evento no banco de dados. Para que seja possível a
-inserção dos dados, \citeonline{monteiro2012}, afirma que é necessário
+inserção dos dados, \citeonline{monteiro2012}, diz que é necessário
 recuperar a referência da classe \texttt{SQLiteDatabase} através do método
 \texttt{getWritableDatabase()}, logo após é instanciada a classe
 \texttt{ContentValues}, onde são informados os campos da tabela e os
@@ -225,7 +226,7 @@ consulta SQL, já que no \texttt{getFouls()}  foram buscados os dados onde o
 	\end{figure}
 	
 	\pagebreak
-	
+		
 	\par A fim de estabelecer uma conexão entre o aplicativo e o \textit{web
 service}, foi preciso conceder a permissão de acesso à internet no arquivo
 \texttt{AndroidManifest.xml} da seguinte forma: \texttt{<uses-permission
@@ -338,13 +339,12 @@ serão escritas em negrito.
 	\par O próximo passo foi a criação de uma \textit{activity} do tipo
 \textit{blank activity} com finalidade de listar as notas. Ao criá-la com o
 nome de \texttt{ListResultsActivity}, o Android Studio gerou dentro da pasta
-\textit{layout} o arquivo XML referente a ela, chamado de
-\texttt{activity\_list\_results.xml}. Neste, foi inserido apenas o
-\textit{widget} \texttt{expandableListView}, que está incumbido de apresentar
-a lista de disciplinas que o discente está cursando e ao clicar em alguma
-dessas matérias serão apresentadas as notas referentes às atividades
-realizadas nesta disciplina. Na Figura \ref{fig:app15} é possível ver o código XML de uma
-lista do tipo \texttt{expandableListView}.
+\textit{layout} o arquivo XML \texttt{activity\_list\_results.xml} referente a
+ela. Neste, foi inserido apenas o \textit{widget} \texttt{expandableListView},
+que está incumbido de apresentar a lista de disciplinas que o discente está
+cursando e ao clicar em alguma dessas matérias serão apresentadas as notas
+referentes às atividades realizadas nesta disciplina. Na Figura \ref{fig:app15}
+é possível ver o código XML de uma lista do tipo \texttt{expandableListView}.
 
 	\begin{figure}[h!] 
 		\input{code/app/layout}
@@ -396,7 +396,7 @@ na notificação. Logo após de adicionados  os atributos da notificação, como
 \ref{fig:app17} é visível o método \texttt{sendNotification()}.
 
 	\begin{figure}[h!] 
-		\input{code/app/sendNotification}
+		%\input{code/app/sendNotification}
 		\centerline{\includegraphics[scale=.80]{./imagens/2_q_metodologico/4_procedimentos_resultados/42_aplicativo/send1.png}}
 		\caption[Método sendNotification()]{ Método \texttt{sendNotification()}.
 		\textbf{Fonte:}Elaborado pelos autores.}
@@ -407,13 +407,13 @@ na notificação. Logo após de adicionados  os atributos da notificação, como
 	
 	\par A notificação acontece toda vez que o GCM envia uma informação ao
 dispositivo. Para tratar essas ocorrências foi projetada uma classe para ser o
-\texttt{BroadcastReceiver} chamada de \texttt{GcmBroadcastReceiverUnivas}. Ela
-se estende da classe \texttt{WakefulBroadcastReceiver} nativa do Android e
-possui apenas um método chamado de \texttt{onReceive()}, o qual receberá a
-\textit{intent} a ser chamada quando chegar algum dado do GCM. Na Figura
-\ref{fig:app18}, vê-se a classe \texttt{GcmBroadcastReceiverUnivas} que,
-através do método \texttt{onReceive()} inicializará a classe
-\texttt{GcmIntentServiceUnivas}.
+\texttt{BroadcastReceiver} chamada de \texttt{GcmBroadcastReceiverUnivas}. Esta
+classe se estende da classe nativa do Android,
+\texttt{WakefulBroadcastReceiver} e possui apenas método \texttt{onReceive()},
+o qual receberá a \textit{intent} a ser chamada quando chegar algum dado do
+GCM. Na Figura \ref{fig:app18}, vê-se a classe
+\texttt{GcmBroadcastReceiverUnivas} que, através do método \texttt{onReceive()}
+inicializará a classe \texttt{GcmIntentServiceUnivas}.
 
 	\begin{figure}[h!] 
 		\input{code/app/GcmBroadcastReceiverUnivas}

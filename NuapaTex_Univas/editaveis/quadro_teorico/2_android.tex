@@ -93,18 +93,17 @@ seguindo o ciclo normal. Porém se não for encerrada completamente, ao findar a
 ligação será executado o método \texttt{onRestart()} e voltar para a
 \textit{activity} na qual o usuário se encontrava.
 
-	\par No arquivo \texttt{AndroidManifest.xml} as \textit{activities} devem estar
-entre as tags \texttt{<activity> </activity>} e a \textit{activity} principal,
-ou seja, pela qual será iniciada a aplicação deve conter a \textit{tag}
-\texttt{<intent-filter>} além de \texttt{<action
-android:name="android.intent.action.MAIN"/>} indicando que essa atividade
+	\par No arquivo \texttt{AndroidManifest.xml} as \textit{activities} devem
+estar contidas dentro das tags \texttt{<activity></activity>} e a
+\textit{activity} principal, ou seja, pela qual será iniciada a aplicação, deve
+conter a \textit{tag} \texttt{<intent-filter>} além de \texttt{<action
+android:name="android\\.intent.action.MAIN"/>} indicando que essa atividade
 deverá ser chamada ao iniciar a aplicação e \texttt{<category
-android:\\name="android.intent.category.LAUNCHER"/>} que implica que esse
-APP ficará disponível junto aos outros aplicativos no dispositivo.
-Na figura \ref{fig:qt2} é apresentado o código do arquivo
-\texttt{AndroidManifest.xml}. Nela, pode-se ver o nome da classe que será
-iniciada e no atributo \textit{label} o nome que aparecerá na tela para o
-usuário.
+android:name="android.intent.category.LAUNCHER"/>} que implica que esse APP
+ficará disponível junto aos outros aplicativos no dispositivo. Na figura
+\ref{fig:qt2} é apresentado o código do arquivo \texttt{AndroidManifest.xml}.
+Nela, pode-se ver o nome da classe que será iniciada e no atributo
+\textit{label} o nome que aparecerá na tela para o usuário.
 	
 	\begin{figure}[h!]
 		\begin{lstlisting}[style=custom_XML]
